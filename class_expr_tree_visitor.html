@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: ExprTreeVisitor类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_expr_tree_visitor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ExprTreeVisitor类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 ExprTreeVisitor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor__inherit__graph.png" border="0" usemap="#_expr_tree_visitor_inherit__map" alt="Inheritance graph"/></div>
+<map name="_expr_tree_visitor_inherit__map" id="_expr_tree_visitor_inherit__map">
+<area shape="rect" title=" " alt="" coords="41,244,161,271"/>
+<area shape="rect" href="class_expr_visitor.html" title=" " alt="" coords="54,169,147,196"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html" title=" " alt="" coords="5,80,196,121"/>
+<area shape="rect" title=" " alt="" coords="37,5,164,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+ExprTreeVisitor 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor__coll__graph.png" border="0" usemap="#_expr_tree_visitor_coll__map" alt="Collaboration graph"/></div>
+<map name="_expr_tree_visitor_coll__map" id="_expr_tree_visitor_coll__map">
+<area shape="rect" title=" " alt="" coords="41,244,161,271"/>
+<area shape="rect" href="class_expr_visitor.html" title=" " alt="" coords="54,169,147,196"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html" title=" " alt="" coords="5,80,196,121"/>
+<area shape="rect" title=" " alt="" coords="37,5,164,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af24baa372162d7aaf2634bd9e97528ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#af24baa372162d7aaf2634bd9e97528ab">visitProg</a> (<a class="el" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a> *context)</td></tr>
+<tr class="separator:af24baa372162d7aaf2634bd9e97528ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabcbac18c4d830a8de1ed8b80a11b22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#acabcbac18c4d830a8de1ed8b80a11b22">visitPrintExpr</a> (<a class="el" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a> *context)</td></tr>
+<tr class="separator:acabcbac18c4d830a8de1ed8b80a11b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0613e09a012e47eece6c2512a1b71ec6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#a0613e09a012e47eece6c2512a1b71ec6">visitAssign</a> (<a class="el" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a> *context)</td></tr>
+<tr class="separator:a0613e09a012e47eece6c2512a1b71ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37f36826edf6a1e7e58c247bbaaacba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#ad37f36826edf6a1e7e58c247bbaaacba">visitBlank</a> (<a class="el" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a> *context)</td></tr>
+<tr class="separator:ad37f36826edf6a1e7e58c247bbaaacba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50228b02155b0571a4ea2a9a74e6d9b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#a50228b02155b0571a4ea2a9a74e6d9b9">visitParens</a> (<a class="el" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a> *context)</td></tr>
+<tr class="separator:a50228b02155b0571a4ea2a9a74e6d9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573ecffe2105f898e25c8985e00e13a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#a573ecffe2105f898e25c8985e00e13a7">visitMulDiv</a> (<a class="el" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a> *context)</td></tr>
+<tr class="separator:a573ecffe2105f898e25c8985e00e13a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13355f8e721331cb56f52ec6fa2ef696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#a13355f8e721331cb56f52ec6fa2ef696">visitAddSub</a> (<a class="el" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a> *context)</td></tr>
+<tr class="separator:a13355f8e721331cb56f52ec6fa2ef696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbb6c99b2f55c5c3c6f55f29ecf1d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#a1fbb6c99b2f55c5c3c6f55f29ecf1d9c">visitId</a> (<a class="el" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a> *context)</td></tr>
+<tr class="separator:a1fbb6c99b2f55c5c3c6f55f29ecf1d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaca8e3215cb78cce788eb1035c40683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_tree_visitor.html#adaca8e3215cb78cce788eb1035c40683">visitInt</a> (<a class="el" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a> *context)</td></tr>
+<tr class="separator:adaca8e3215cb78cce788eb1035c40683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html">antlr4::tree::AbstractParseTreeVisitor</a></td></tr>
+<tr class="memitem:a2f0e9c7e0c581b3ec08d59d216d7554d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree) override</td></tr>
+<tr class="separator:a2f0e9c7e0c581b3ec08d59d216d7554d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38605a51f1b8828eedb2f2ccb9e6c705 inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *node) override</td></tr>
+<tr class="separator:a38605a51f1b8828eedb2f2ccb9e6c705 inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6045b85607e961bf7f364b91fd50c3ef inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a6045b85607e961bf7f364b91fd50c3ef">visitTerminal</a> (<a class="el" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *) override</td></tr>
+<tr class="separator:a6045b85607e961bf7f364b91fd50c3ef inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd5f0eaaf54140af51f1549d0a6b62d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a4cd5f0eaaf54140af51f1549d0a6b62d">visitErrorNode</a> (<a class="el" href="classantlr4_1_1tree_1_1_error_node.html">ErrorNode</a> *) override</td></tr>
+<tr class="separator:a4cd5f0eaaf54140af51f1549d0a6b62d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00086">86</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a13355f8e721331cb56f52ec6fa2ef696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13355f8e721331cb56f52ec6fa2ef696">&#9670;&nbsp;</a></span>visitAddSub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitAddSub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a7bbbe4b649e4133fde60b265ceb54bbf">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00120">120</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor_a13355f8e721331cb56f52ec6fa2ef696_cgraph.png" border="0" usemap="#class_expr_tree_visitor_a13355f8e721331cb56f52ec6fa2ef696_cgraph" alt=""/></div>
+<map name="class_expr_tree_visitor_a13355f8e721331cb56f52ec6fa2ef696_cgraph" id="class_expr_tree_visitor_a13355f8e721331cb56f52ec6fa2ef696_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,211,32"/>
+<area shape="rect" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844" title="Get the text of the token." alt="" coords="259,5,420,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0613e09a012e47eece6c2512a1b71ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0613e09a012e47eece6c2512a1b71ec6">&#9670;&nbsp;</a></span>visitAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitAssign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#afc856a25a21bc0aa759b47b96150e904">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00099">99</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad37f36826edf6a1e7e58c247bbaaacba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37f36826edf6a1e7e58c247bbaaacba">&#9670;&nbsp;</a></span>visitBlank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitBlank </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a0ab4259d2a8195e350f45c2430c6894f">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00104">104</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1fbb6c99b2f55c5c3c6f55f29ecf1d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbb6c99b2f55c5c3c6f55f29ecf1d9c">&#9670;&nbsp;</a></span>visitId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#acd39dbe2a108246ec9ab972d6a670229">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00126">126</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ID</a>()-&gt;getText();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor_a1fbb6c99b2f55c5c3c6f55f29ecf1d9c_cgraph.png" border="0" usemap="#class_expr_tree_visitor_a1fbb6c99b2f55c5c3c6f55f29ecf1d9c_cgraph" alt=""/></div>
+<map name="class_expr_tree_visitor_a1fbb6c99b2f55c5c3c6f55f29ecf1d9c_cgraph" id="class_expr_tree_visitor_a1fbb6c99b2f55c5c3c6f55f29ecf1d9c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a" title=" " alt="" coords="221,5,405,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adaca8e3215cb78cce788eb1035c40683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaca8e3215cb78cce788eb1035c40683">&#9670;&nbsp;</a></span>visitInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#ac9d4e6e011c94d0ddab50162784671a3">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00132">132</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">INT</a>()-&gt;getText();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor_adaca8e3215cb78cce788eb1035c40683_cgraph.png" border="0" usemap="#class_expr_tree_visitor_adaca8e3215cb78cce788eb1035c40683_cgraph" alt=""/></div>
+<map name="class_expr_tree_visitor_adaca8e3215cb78cce788eb1035c40683_cgraph" id="class_expr_tree_visitor_adaca8e3215cb78cce788eb1035c40683_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,179,32"/>
+<area shape="rect" href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b" title=" " alt="" coords="227,5,424,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a573ecffe2105f898e25c8985e00e13a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573ecffe2105f898e25c8985e00e13a7">&#9670;&nbsp;</a></span>visitMulDiv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitMulDiv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a3c91e5c9d5b3f927d284f51b65a02b09">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00114">114</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_tree_visitor_a573ecffe2105f898e25c8985e00e13a7_cgraph.png" border="0" usemap="#class_expr_tree_visitor_a573ecffe2105f898e25c8985e00e13a7_cgraph" alt=""/></div>
+<map name="class_expr_tree_visitor_a573ecffe2105f898e25c8985e00e13a7_cgraph" id="class_expr_tree_visitor_a573ecffe2105f898e25c8985e00e13a7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,208,32"/>
+<area shape="rect" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844" title="Get the text of the token." alt="" coords="256,5,417,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a50228b02155b0571a4ea2a9a74e6d9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50228b02155b0571a4ea2a9a74e6d9b9">&#9670;&nbsp;</a></span>visitParens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitParens </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a00ed7109ba92395375d104c4ae038e90">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00109">109</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acabcbac18c4d830a8de1ed8b80a11b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabcbac18c4d830a8de1ed8b80a11b22">&#9670;&nbsp;</a></span>visitPrintExpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitPrintExpr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#adc55bbf11bb32be990027edb4ea954ea">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00094">94</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af24baa372162d7aaf2634bd9e97528ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24baa372162d7aaf2634bd9e97528ab">&#9670;&nbsp;</a></span>visitProg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprTreeVisitor::visitProg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visit parse trees produced by <a class="el" href="class_expr_parser.html">ExprParser</a>. </p>
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#ad82face939ecb9a7260342975c62986e">ExprVisitor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00089">89</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="main_8cc_source.html">main.cc</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclass_expr_parser_1_1_mul_div_context_html_aaccbd4ca2cb00acc1f9b625400dfd1d3"><div class="ttname"><a href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">ExprParser::MulDivContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00132">ExprParser.h:132</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a38605a51f1b8828eedb2f2ccb9e6c705"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">antlr4::tree::AbstractParseTreeVisitor::visitChildren</a></div><div class="ttdeci">virtual antlrcpp::Any visitChildren(ParseTree *node) override</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_parse_tree_visitor_8h_source.html#l00034">AbstractParseTreeVisitor.h:34</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_id_context_html_a824b39b78ab8b22f3fca72e20471368a"><div class="ttname"><a href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ExprParser::IdContext::ID</a></div><div class="ttdeci">antlr4::tree::TerminalNode * ID()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00392">ExprParser.cpp:392</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_int_context_html_ae8184981bba3a07bbfea2b404e1df66b"><div class="ttname"><a href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">ExprParser::IntContext::INT</a></div><div class="ttdeci">antlr4::tree::TerminalNode * INT()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00417">ExprParser.cpp:417</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_ae288d9f2d72d0209a24e0cc5215e8844"><div class="ttname"><a href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">antlr4::Token::getText</a></div><div class="ttdeci">virtual std::string getText() const =0</div><div class="ttdoc">Get the text of the token.</div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_add_sub_context_html_a868d2a2dff096d4d8df33d68a4783bf6"><div class="ttname"><a href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">ExprParser::AddSubContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00147">ExprParser.h:147</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

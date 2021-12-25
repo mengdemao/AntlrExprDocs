@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/dfa/DFA.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_a41b729139d531905c1f156c5079ec97.html">dfa</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DFA.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_d_f_a_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_f_a_serializer_8h.html">dfa/DFASerializer.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_lexer_d_f_a_serializer_8h.html">dfa/LexerDFASerializer.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_p_p_utils_8h.html">support/CPPUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_star_loop_entry_state_8h.html">atn/StarLoopEntryState.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_config_set_8h.html">atn/ATNConfigSet.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_f_a_8h.html">dfa/DFA.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlrcpp.html">antlrcpp</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">   18</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">DFA::DFA</a>(<a class="code" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *atnStartState) : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>(atnStartState, 0) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a2597bff5bd2fea39907a0dfb02f9f8ac">   21</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">DFA::DFA</a>(<a class="code" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *atnStartState, <span class="keywordtype">size_t</span> decision)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  : atnStartState(atnStartState), s0(nullptr), decision(decision) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">if</span> (is&lt;atn::StarLoopEntryState *&gt;(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>)) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">atn::StarLoopEntryState</a> *<span class="keyword">&gt;</span>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>)-&gt;isPrecedenceDecision) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = <span class="keyword">new</span> DFAState(std::unique_ptr&lt;atn::ATNConfigSet&gt;(<span class="keyword">new</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a>()));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;isAcceptState = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;requiresFullContext = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a4ada17f3f123b29d5bd965909bac28ee">   35</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">DFA::DFA</a>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> &amp;&amp;other) : atnStartState(other.atnStartState), decision(other.decision) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// Source states are implicitly cleared by the move.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a> = std::move(other.states);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  other.atnStartState = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  other.decision = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = other.s0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  other.s0 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = other._precedenceDfa;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  other._precedenceDfa = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a39dad6c188c8cbb86ecff25423a99936">   47</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a39dad6c188c8cbb86ecff25423a99936">DFA::~DFA</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">bool</span> s0InList = (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *state : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      s0InList = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">delete</span> state;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (!s0InList)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">   59</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">DFA::isPrecedenceDfa</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">   63</a></span>&#160;DFAState* <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">DFA::getPrecedenceStartState</a>(<span class="keywordtype">int</span> precedence)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  assert(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a>); <span class="comment">// Only precedence DFAs may contain a precedence start state.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">auto</span> iterator = <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges.find(precedence);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span> (iterator == <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges.end())</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> iterator-&gt;second;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">DFA::setPrecedenceStartState</a>(<span class="keywordtype">int</span> precedence, DFAState *startState, <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">SingleWriteMultipleReadLock</a> &amp;lock) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a>()) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_state_exception.html">IllegalStateException</a>(<span class="stringliteral">&quot;Only precedence DFAs may contain a precedence start state.&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (precedence &lt; 0) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    lock.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">writeLock</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges[precedence] = startState;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    lock.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">writeUnlock</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">   89</a></span>&#160;std::vector&lt;DFAState *&gt; <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">DFA::getStates</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::vector&lt;DFAState *&gt; result;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *state : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    result.push_back(state);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  std::sort(result.begin(), result.end(), [](DFAState *o1, DFAState *o2) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    return o1-&gt;stateNumber &lt; o2-&gt;stateNumber;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  });</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56">  101</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56">DFA::toString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;tokenNames) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a> serializer(<span class="keyword">this</span>, tokenNames);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> serializer.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">toString</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a47082a53818c84418ed873c64b7d2951">  110</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56">DFA::toString</a>(<span class="keyword">const</span> Vocabulary &amp;vocabulary)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a> serializer(<span class="keyword">this</span>, vocabulary);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> serializer.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">toString</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0">  119</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0">DFA::toLexerString</a>() {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html">LexerDFASerializer</a> serializer(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> serializer.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">toString</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_decision_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_decision_state.html">antlr4::atn::DecisionState</a></div><div class="ttdef"><b>Definition:</b> <a href="_decision_state_8h_source.html#l00013">DecisionState.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_lexer_d_f_a_serializer_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html">antlr4::dfa::LexerDFASerializer</a></div><div class="ttdef"><b>Definition:</b> <a href="_lexer_d_f_a_serializer_8h_source.html#l00013">LexerDFASerializer.h:13</a></div></div>
+<div class="ttc" id="a_d_f_a_serializer_8h_html"><div class="ttname"><a href="_d_f_a_serializer_8h.html">DFASerializer.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a18c119e5450d54f5b359d40112a79dd7"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">antlr4::dfa::DFA::_precedenceDfa</a></div><div class="ttdeci">bool _precedenceDfa</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00087">DFA.h:87</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_adae4f569d3075101ae3571fe67748b56"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56">antlr4::dfa::DFA::toString</a></div><div class="ttdeci">virtual std::string toString(const std::vector&lt; std::string &gt; &amp;tokenNames)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00101">DFA.cpp:101</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a17f180730ab4ac077e4811665ec1e0e0"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0">antlr4::dfa::DFA::toLexerString</a></div><div class="ttdeci">virtual std::string toLexerString()</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00119">DFA.cpp:119</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html">antlr4::dfa::DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00017">DFA.h:17</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00065">CPPUtils.h:65</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a16f04e1d91f059b882505aff2174a1e1"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">antlr4::dfa::DFA::isPrecedenceDfa</a></div><div class="ttdeci">bool isPrecedenceDfa() const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00059">DFA.cpp:59</a></div></div>
+<div class="ttc" id="a_d_f_a_8h_html"><div class="ttname"><a href="_d_f_a_8h.html">DFA.h</a></div></div>
+<div class="ttc" id="a_lexer_d_f_a_serializer_8h_html"><div class="ttname"><a href="_lexer_d_f_a_serializer_8h.html">LexerDFASerializer.h</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_adefecf5fd0a7b3843d4044f10e525f8a"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">antlrcpp::SingleWriteMultipleReadLock::writeUnlock</a></div><div class="ttdeci">void writeUnlock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00231">CPPUtils.cpp:231</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a3e1dda5e0e36edf6b80d8a3965851d1b"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">antlrcpp::SingleWriteMultipleReadLock::writeLock</a></div><div class="ttdeci">void writeLock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00222">CPPUtils.cpp:222</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a0283251c54b224124da6fc0600717617"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">antlr4::dfa::DFA::setPrecedenceStartState</a></div><div class="ttdeci">void setPrecedenceStartState(int precedence, DFAState *startState, antlrcpp::SingleWriteMultipleReadLock &amp;lock)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00073">DFA.cpp:73</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html"><div class="ttname"><a href="namespaceantlrcpp.html">antlrcpp</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00010">ANTLRErrorListener.h:10</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">antlr4::dfa::DFASerializer</a></div><div class="ttdoc">A DFA walker that knows how to dump them to serialized strings.</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8h_source.html#l00014">DFASerializer.h:14</a></div></div>
+<div class="ttc" id="a_star_loop_entry_state_8h_html"><div class="ttname"><a href="_star_loop_entry_state_8h.html">StarLoopEntryState.h</a></div></div>
+<div class="ttc" id="a_a_t_n_config_set_8h_html"><div class="ttname"><a href="_a_t_n_config_set_8h.html">ATNConfigSet.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">antlr4::atn::ATNConfigSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_set_8h_source.html#l00016">ATNConfigSet.h:16</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a6e0d2aca83d6cb0d155d971594c8dc7f"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">antlr4::dfa::DFA::getPrecedenceStartState</a></div><div class="ttdeci">DFAState * getPrecedenceStartState(int precedence) const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00063">DFA.cpp:63</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a42e1ce8d87cbfb6156a6bff4fd86ed32"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">antlr4::dfa::DFA::s0</a></div><div class="ttdeci">DFAState * s0</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00025">DFA.h:25</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_illegal_state_exception_html"><div class="ttname"><a href="classantlr4_1_1_illegal_state_exception.html">antlr4::IllegalStateException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00022">Exceptions.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a287490e94942bf6355b041e13b4fcc1c"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">antlr4::dfa::DFA::states</a></div><div class="ttdeci">std::unordered_set&lt; DFAState *, DFAState::Hasher, DFAState::Comparer &gt; states</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00024">DFA.h:24</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_afe9610a3706058c0d5d1e61f386ccd29"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">antlr4::dfa::DFA::getStates</a></div><div class="ttdeci">virtual std::vector&lt; DFAState * &gt; getStates() const</div><div class="ttdoc">Return a list of all states in this DFA, ordered by state number.</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00089">DFA.cpp:89</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_star_loop_entry_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">antlr4::atn::StarLoopEntryState</a></div><div class="ttdef"><b>Definition:</b> <a href="_star_loop_entry_state_8h_source.html#l00013">StarLoopEntryState.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a96e1072f740839921fb72b3b9e9db330"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">antlr4::dfa::DFA::DFA</a></div><div class="ttdeci">DFA(atn::DecisionState *atnStartState)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00018">DFA.cpp:18</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a3a459289bc5dac02365e5474a51ade1d"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">antlr4::dfa::DFASerializer::toString</a></div><div class="ttdeci">virtual std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00023">DFASerializer.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a83d51316351c6939e7d249dc20b5c9c8"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">antlr4::dfa::DFA::atnStartState</a></div><div class="ttdeci">atn::DecisionState * atnStartState</div><div class="ttdoc">From which ATN state did we create this DFA?</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00023">DFA.h:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a39dad6c188c8cbb86ecff25423a99936"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a39dad6c188c8cbb86ecff25423a99936">antlr4::dfa::DFA::~DFA</a></div><div class="ttdeci">virtual ~DFA()</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00047">DFA.cpp:47</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1dfa_html"><div class="ttname"><a href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00015">DFA.h:15</a></div></div>
+<div class="ttc" id="a_c_p_p_utils_8h_html"><div class="ttname"><a href="_c_p_p_utils_8h.html">CPPUtils.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

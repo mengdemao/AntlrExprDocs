@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/tree/pattern/ParseTreePatternMatcher.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_ec50670f89e9db2ebe67c601b8fdb9e9.html">tree</a></li><li class="navelem"><a class="el" href="dir_c3c19ccb6fc8d4433c249fde93d70781.html">pattern</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ParseTreePatternMatcher.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_parse_tree_pattern_matcher_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_pattern_8h.html">tree/pattern/ParseTreePattern.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_match_8h.html">tree/pattern/ParseTreeMatch.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_terminal_node_8h.html">tree/TerminalNode.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_common_token_stream_8h.html">CommonTokenStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parser_interpreter_8h.html">ParserInterpreter.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_token_tag_token_8h.html">tree/pattern/TokenTagToken.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parser_rule_context_8h.html">ParserRuleContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_rule_tag_token_8h.html">tree/pattern/RuleTagToken.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tag_chunk_8h.html">tree/pattern/TagChunk.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_8h.html">atn/ATN.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_lexer_8h.html">Lexer.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bail_error_strategy_8h.html">BailErrorStrategy.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_list_token_source_8h.html">ListTokenSource.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_text_chunk_8h.html">tree/pattern/TextChunk.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_n_t_l_r_input_stream_8h.html">ANTLRInputStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_arrays_8h.html">support/Arrays.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html">Exceptions.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">support/StringUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_p_p_utils_8h.html">support/CPPUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_pattern_matcher_8h.html">tree/pattern/ParseTreePatternMatcher.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1tree.html">antlr4::tree</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1tree_1_1pattern.html">antlr4::tree::pattern</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlrcpp.html">antlrcpp</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;ParseTreePatternMatcher::CannotInvokeStartRule::CannotInvokeStartRule(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1_runtime_exception.html">RuntimeException</a> &amp;e) : <a class="code" href="classantlr4_1_1_runtime_exception.html">RuntimeException</a>(e.<a class="code" href="namespaceantlrcpp.html#af3bcbdaa031b4e8ca1df1f28e645355d">what</a>()) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;ParseTreePatternMatcher::CannotInvokeStartRule::~CannotInvokeStartRule() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;ParseTreePatternMatcher::StartRuleDoesNotConsumeFullPattern::~StartRuleDoesNotConsumeFullPattern() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;ParseTreePatternMatcher::ParseTreePatternMatcher(<a class="code" href="classantlr4_1_1_lexer.html">Lexer</a> *lexer, <a class="code" href="classantlr4_1_1_parser.html">Parser</a> *parser) : _lexer(lexer), _parser(parser) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  InitializeInstanceFields();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;ParseTreePatternMatcher::~ParseTreePatternMatcher() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> ParseTreePatternMatcher::setDelimiters(<span class="keyword">const</span> std::string &amp;start, <span class="keyword">const</span> std::string &amp;stop, <span class="keyword">const</span> std::string &amp;escapeLeft) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span> (start.empty()) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;start cannot be null or empty&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (stop.empty()) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;stop cannot be null or empty&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; _start = start;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  _stop = stop;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  _escape = escapeLeft;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">bool</span> ParseTreePatternMatcher::matches(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree, <span class="keyword">const</span> std::string &amp;pattern, <span class="keywordtype">int</span> patternRuleIndex) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  ParseTreePattern p = compile(pattern, patternRuleIndex);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> matches(tree, p);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">bool</span> ParseTreePatternMatcher::matches(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree, <span class="keyword">const</span> ParseTreePattern &amp;pattern) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::map&lt;std::string, std::vector&lt;ParseTree *&gt;&gt; labels;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *mismatchedNode = matchImpl(tree, pattern.getPatternTree(), labels);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> mismatchedNode == <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;ParseTreeMatch ParseTreePatternMatcher::match(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree, <span class="keyword">const</span> std::string &amp;pattern, <span class="keywordtype">int</span> patternRuleIndex) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  ParseTreePattern p = compile(pattern, patternRuleIndex);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> match(tree, p);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;ParseTreeMatch ParseTreePatternMatcher::match(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree, <span class="keyword">const</span> ParseTreePattern &amp;pattern) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  std::map&lt;std::string, std::vector&lt;ParseTree *&gt;&gt; labels;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">tree::ParseTree</a> *mismatchedNode = matchImpl(tree, pattern.getPatternTree(), labels);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> ParseTreeMatch(tree, pattern, labels, mismatchedNode);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;ParseTreePattern ParseTreePatternMatcher::compile(<span class="keyword">const</span> std::string &amp;pattern, <span class="keywordtype">int</span> patternRuleIndex) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ListTokenSource tokenSrc(tokenize(pattern));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;tokenSrc);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classantlr4_1_1_parser_interpreter.html">ParserInterpreter</a> parserInterp(_parser-&gt;getGrammarFileName(), _parser-&gt;getVocabulary(),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                 _parser-&gt;getRuleNames(), _parser-&gt;getATNWithBypassAlts(), &amp;tokens);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *tree = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    parserInterp.setErrorHandler(std::make_shared&lt;BailErrorStrategy&gt;());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    tree = parserInterp.parse(patternRuleIndex);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  } <span class="keywordflow">catch</span> (<a class="code" href="classantlr4_1_1_parse_cancellation_exception.html">ParseCancellationException</a> &amp;e) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#if defined(_MSC_FULL_VER) &amp;&amp; _MSC_FULL_VER &lt; 190023026</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// rethrow_if_nested is not available before VS 2015.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    std::rethrow_if_nested(e); <span class="comment">// Unwrap the nested exception.</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  } <span class="keywordflow">catch</span> (RecognitionException &amp;re) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">throw</span> re;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#if defined(_MSC_FULL_VER) &amp;&amp; _MSC_FULL_VER &lt; 190023026</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  } <span class="keywordflow">catch</span> (std::exception &amp;e) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// throw_with_nested is not available before VS 2015.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  } <span class="keywordflow">catch</span> (std::exception &amp; <span class="comment">/*e*/</span>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::throw_with_nested((<span class="keyword">const</span> <span class="keywordtype">char</span>*)<span class="stringliteral">&quot;Cannot invoke start rule&quot;</span>); <span class="comment">// Wrap any other exception. We should however probably use one of the ANTLR exceptions here.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// Make sure tree pattern compilation checks for a complete parse</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (tokens.LA(1) != <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">throw</span> StartRuleDoesNotConsumeFullPattern();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">return</span> ParseTreePattern(<span class="keyword">this</span>, pattern, patternRuleIndex, tree);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<a class="code" href="classantlr4_1_1_lexer.html">Lexer</a>* ParseTreePatternMatcher::getLexer() {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> _lexer;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<a class="code" href="classantlr4_1_1_parser.html">Parser</a>* ParseTreePatternMatcher::getParser() {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">return</span> _parser;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* ParseTreePatternMatcher::matchImpl(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree, <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *patternTree,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                              std::map&lt;std::string, std::vector&lt;ParseTree *&gt;&gt; &amp;labels) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (tree == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;tree cannot be nul&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">if</span> (patternTree == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;patternTree cannot be nul&quot;</span>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="comment">// x and &lt;ID&gt;, x and y, or x and x; or could be mismatched types</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">if</span> (is&lt;TerminalNode *&gt;(tree) &amp;&amp; is&lt;TerminalNode *&gt;(patternTree)) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *t1 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *<span class="keyword">&gt;</span>(tree);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *t2 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *<span class="keyword">&gt;</span>(patternTree);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *mismatchedNode = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// both are tokens and they have same type</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (t1-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>()-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == t2-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>()-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>()) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">if</span> (is&lt;TokenTagToken *&gt;(t2-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>())) { <span class="comment">// x and &lt;ID&gt;</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        TokenTagToken *tokenTagToken = <span class="keyword">dynamic_cast&lt;</span>TokenTagToken *<span class="keyword">&gt;</span>(t2-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// track label-&gt;list-of-nodes for both token name and label (if any)</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        labels[tokenTagToken-&gt;getTokenName()].push_back(tree);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (tokenTagToken-&gt;getLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          labels[tokenTagToken-&gt;getLabel()].push_back(tree);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (t1-&gt;getText() == t2-&gt;getText()) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// x and x</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="comment">// x and y</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (mismatchedNode == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;          mismatchedNode = t1;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordflow">if</span> (mismatchedNode == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        mismatchedNode = t1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> mismatchedNode;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">if</span> (is&lt;ParserRuleContext *&gt;(tree) &amp;&amp; is&lt;ParserRuleContext *&gt;(patternTree)) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *r1 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *<span class="keyword">&gt;</span>(tree);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *r2 = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *<span class="keyword">&gt;</span>(patternTree);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *mismatchedNode = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// (expr ...) and &lt;expr&gt;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    RuleTagToken *ruleTagToken = getRuleTagToken(r2);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (ruleTagToken != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="comment">//ParseTreeMatch *m = nullptr; // unused?</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">if</span> (r1-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">getRuleIndex</a>() == r2-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">getRuleIndex</a>()) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="comment">// track label-&gt;list-of-nodes for both rule name and label (if any)</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        labels[ruleTagToken-&gt;getRuleName()].push_back(tree);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span> (ruleTagToken-&gt;getLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;          labels[ruleTagToken-&gt;getLabel()].push_back(tree);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> (!mismatchedNode) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          mismatchedNode = r1;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordflow">return</span> mismatchedNode;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// (expr ...) and (expr ...)</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span> (r1-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size() != r2-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size()) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">if</span> (mismatchedNode == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        mismatchedNode = r1;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordflow">return</span> mismatchedNode;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    std::size_t n = r1-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *childMatch = matchImpl(r1-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>[i], patternTree-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>[i], labels);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <span class="keywordflow">if</span> (childMatch) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> childMatch;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> mismatchedNode;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// if nodes aren&#39;t both tokens or both rule nodes, can&#39;t match</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">return</span> tree;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;RuleTagToken* ParseTreePatternMatcher::getRuleTagToken(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *t) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size() == 1 &amp;&amp; is&lt;TerminalNode *&gt;(t-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>[0])) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *c = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *<span class="keyword">&gt;</span>(t-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>[0]);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (is&lt;RuleTagToken *&gt;(c-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>())) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>RuleTagToken *<span class="keyword">&gt;</span>(c-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>());</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;std::vector&lt;std::unique_ptr&lt;Token&gt;&gt; ParseTreePatternMatcher::tokenize(<span class="keyword">const</span> std::string &amp;pattern) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// split pattern into chunks: sea (raw input) and islands (&lt;ID&gt;, &lt;expr&gt;)</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  std::vector&lt;Chunk&gt; chunks = <a class="code" href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">split</a>(pattern);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// create token stream from text and tags</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  std::vector&lt;std::unique_ptr&lt;Token&gt;&gt; tokens;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> chunk : chunks) {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span> (is&lt;TagChunk *&gt;(&amp;chunk)) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      TagChunk &amp;tagChunk = (TagChunk&amp;)chunk;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="comment">// add special rule token or conjure up new token from name</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordflow">if</span> (isupper(tagChunk.getTag()[0])) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">size_t</span> ttype = _parser-&gt;getTokenType(tagChunk.getTag());</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (ttype == <a class="code" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97a4b728edee6a494775129eb4d87b0a03e">Token::INVALID_TYPE</a>) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;Unknown token &quot;</span> + tagChunk.getTag() + <span class="stringliteral">&quot; in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        tokens.emplace_back(<span class="keyword">new</span> TokenTagToken(tagChunk.getTag(), (<span class="keywordtype">int</span>)ttype, tagChunk.getLabel()));</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (islower(tagChunk.getTag()[0])) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">size_t</span> ruleIndex = _parser-&gt;getRuleIndex(tagChunk.getTag());</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> (ruleIndex == <a class="code" href="antlr4-common_8h.html#aa96cda3dc4327fc103977fd4483aefb2">INVALID_INDEX</a>) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;Unknown rule &quot;</span> + tagChunk.getTag() + <span class="stringliteral">&quot; in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">size_t</span> ruleImaginaryTokenType = _parser-&gt;getATNWithBypassAlts().ruleToTokenType[ruleIndex];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        tokens.emplace_back(<span class="keyword">new</span> RuleTagToken(tagChunk.getTag(), ruleImaginaryTokenType, tagChunk.getLabel()));</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;invalid tag: &quot;</span> + tagChunk.getTag() + <span class="stringliteral">&quot; in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      TextChunk &amp;textChunk = (TextChunk&amp;)chunk;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input(textChunk.getText());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      _lexer-&gt;setInputStream(&amp;input);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      std::unique_ptr&lt;Token&gt; t(_lexer-&gt;nextToken());</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keywordflow">while</span> (t-&gt;getType() != <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        tokens.push_back(std::move(t));</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        t = _lexer-&gt;nextToken();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      _lexer-&gt;setInputStream(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordflow">return</span> tokens;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;std::vector&lt;Chunk&gt; <a class="code" href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">ParseTreePatternMatcher::split</a>(<span class="keyword">const</span> std::string &amp;pattern) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">size_t</span> p = 0;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">size_t</span> n = pattern.length();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  std::vector&lt;Chunk&gt; chunks;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">// find all start and stop indexes first, then collect</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  std::vector&lt;size_t&gt; starts;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  std::vector&lt;size_t&gt; stops;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordflow">while</span> (p &lt; n) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span> (p == pattern.find(_escape + _start,p)) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      p += _escape.length() + _start.length();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p == pattern.find(_escape + _stop,p)) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      p += _escape.length() + _stop.length();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p == pattern.find(_start,p)) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      starts.push_back(p);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      p += _start.length();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p == pattern.find(_stop,p)) {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      stops.push_back(p);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      p += _stop.length();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      p++;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordflow">if</span> (starts.size() &gt; stops.size()) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;unterminated tag in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keywordflow">if</span> (starts.size() &lt; stops.size()) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;missing start tag in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordtype">size_t</span> ntags = starts.size();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ntags; i++) {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">if</span> (starts[i] &gt;= stops[i]) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_argument_exception.html">IllegalArgumentException</a>(<span class="stringliteral">&quot;tag delimiters out of order in pattern: &quot;</span> + pattern);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="comment">// collect into chunks now</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">if</span> (ntags == 0) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    std::string text = pattern.substr(0, n);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    chunks.push_back(TextChunk(text));</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordflow">if</span> (ntags &gt; 0 &amp;&amp; starts[0] &gt; 0) { <span class="comment">// copy text up to first tag into chunks</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    std::string text = pattern.substr(0, starts[0]);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    chunks.push_back(TextChunk(text));</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ntags; i++) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="comment">// copy inside of &lt;tag&gt;</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    std::string tag = pattern.substr(starts[i] + _start.length(), stops[i] - (starts[i] + _start.length()));</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    std::string ruleOrToken = tag;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    std::string label = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">size_t</span> colon = tag.find(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">if</span> (colon != std::string::npos) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      label = tag.substr(0,colon);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      ruleOrToken = tag.substr(colon + 1, tag.length() - (colon + 1));</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    chunks.push_back(TagChunk(label, ruleOrToken));</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">if</span> (i + 1 &lt; ntags) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="comment">// copy from end of &lt;tag&gt; to start of next</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      std::string text = pattern.substr(stops[i] + _stop.length(), starts[i + 1] - (stops[i] + _stop.length()));</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      chunks.push_back(TextChunk(text));</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordflow">if</span> (ntags &gt; 0) {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">size_t</span> afterLastTag = stops[ntags - 1] + _stop.length();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span> (afterLastTag &lt; n) { <span class="comment">// copy text from end of last tag to end</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      std::string text = pattern.substr(afterLastTag, n - afterLastTag);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      chunks.push_back(TextChunk(text));</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="comment">// strip out all backslashes from text chunks but not tags</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; chunks.size(); i++) {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    Chunk &amp;c = chunks[i];</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">if</span> (is&lt;TextChunk *&gt;(&amp;c)) {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      TextChunk &amp;tc = (TextChunk&amp;)c;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      std::string unescaped = tc.getText();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      unescaped.erase(std::remove(unescaped.begin(), unescaped.end(), <span class="charliteral">&#39;\\&#39;</span>), unescaped.end());</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordflow">if</span> (unescaped.length() &lt; tc.getText().length()) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        chunks[i] = TextChunk(unescaped);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="keywordflow">return</span> chunks;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keywordtype">void</span> ParseTreePatternMatcher::InitializeInstanceFields() {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  _start = <span class="stringliteral">&quot;&lt;&quot;</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  _stop = <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  _escape = <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aantlr4-common_8h_html_aa96cda3dc4327fc103977fd4483aefb2"><div class="ttname"><a href="antlr4-common_8h.html#aa96cda3dc4327fc103977fd4483aefb2">INVALID_INDEX</a></div><div class="ttdeci">#define INVALID_INDEX</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00138">antlr4-common.h:138</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_input_stream_html"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_input_stream.html">antlr4::ANTLRInputStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_input_stream_8h_source.html#l00015">ANTLRInputStream.h:15</a></div></div>
+<div class="ttc" id="a_common_token_stream_8h_html"><div class="ttname"><a href="_common_token_stream_8h.html">CommonTokenStream.h</a></div></div>
+<div class="ttc" id="a_text_chunk_8h_html"><div class="ttname"><a href="_text_chunk_8h.html">TextChunk.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html">antlr4::tree::TerminalNode</a></div><div class="ttdef"><b>Definition:</b> <a href="_terminal_node_8h_source.html#l00013">TerminalNode.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00020">ParseTree.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html_aad52b12c9e03c4a117e1ac00bba74073"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">antlr4::tree::ParseTree::children</a></div><div class="ttdeci">std::vector&lt; ParseTree * &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00038">ParseTree.h:38</a></div></div>
+<div class="ttc" id="a_parse_tree_pattern_matcher_8h_html"><div class="ttname"><a href="_parse_tree_pattern_matcher_8h.html">ParseTreePatternMatcher.h</a></div></div>
+<div class="ttc" id="a_parse_tree_match_8h_html"><div class="ttname"><a href="_parse_tree_match_8h.html">ParseTreeMatch.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_illegal_argument_exception_html"><div class="ttname"><a href="classantlr4_1_1_illegal_argument_exception.html">antlr4::IllegalArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00030">Exceptions.h:30</a></div></div>
+<div class="ttc" id="a_parser_rule_context_8h_html"><div class="ttname"><a href="_parser_rule_context_8h.html">ParserRuleContext.h</a></div></div>
+<div class="ttc" id="a_tag_chunk_8h_html"><div class="ttname"><a href="_tag_chunk_8h.html">TagChunk.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_ab3c47d330254d4224073408522ac6956"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">antlr4::RuleContext::getRuleIndex</a></div><div class="ttdeci">virtual size_t getRuleIndex() const</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00063">RuleContext.cpp:63</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_runtime_exception_html"><div class="ttname"><a href="classantlr4_1_1_runtime_exception.html">antlr4::RuntimeException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00013">Exceptions.h:13</a></div></div>
+<div class="ttc" id="a_terminal_node_8h_html"><div class="ttname"><a href="_terminal_node_8h.html">TerminalNode.h</a></div></div>
+<div class="ttc" id="a_arrays_8h_html"><div class="ttname"><a href="_arrays_8h.html">Arrays.h</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html"><div class="ttname"><a href="namespaceantlrcpp.html">antlrcpp</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00010">ANTLRErrorListener.h:10</a></div></div>
+<div class="ttc" id="a_a_t_n_8h_html"><div class="ttname"><a href="_a_t_n_8h.html">ATN.h</a></div></div>
+<div class="ttc" id="a_list_token_source_8h_html"><div class="ttname"><a href="_list_token_source_8h.html">ListTokenSource.h</a></div></div>
+<div class="ttc" id="a_lexer_8h_html"><div class="ttname"><a href="_lexer_8h.html">Lexer.h</a></div></div>
+<div class="ttc" id="a_bail_error_strategy_8h_html"><div class="ttname"><a href="_bail_error_strategy_8h.html">BailErrorStrategy.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html">antlr4::CommonTokenStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8h_source.html#l00036">CommonTokenStream.h:36</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_token_tag_token_8h_html"><div class="ttname"><a href="_token_tag_token_8h.html">TokenTagToken.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_ad3f8c7dc6262b9048daf59b5ddfd3e97a4b728edee6a494775129eb4d87b0a03e"><div class="ttname"><a href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97a4b728edee6a494775129eb4d87b0a03e">antlr4::Token::INVALID_TYPE</a></div><div class="ttdeci">@ INVALID_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00021">Token.h:21</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_lexer_html"><div class="ttname"><a href="classantlr4_1_1_lexer.html">antlr4::Lexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_lexer_8h_source.html#l00019">Lexer.h:19</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a></div><div class="ttdoc">A rule invocation record for parsing.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00036">ParserRuleContext.h:36</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
+<div class="ttc" id="a_a_n_t_l_r_input_stream_8h_html"><div class="ttname"><a href="_a_n_t_l_r_input_stream_8h.html">ANTLRInputStream.h</a></div></div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
+<div class="ttc" id="a_rule_tag_token_8h_html"><div class="ttname"><a href="_rule_tag_token_8h.html">RuleTagToken.h</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1tree_1_1pattern_html"><div class="ttname"><a href="namespaceantlr4_1_1tree_1_1pattern.html">antlr4::tree::pattern</a></div><div class="ttdef"><b>Definition:</b> <a href="_declarations_8h_source.html#l00140">Declarations.h:140</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_aab499b1852046271f8ace62a76456788"><div class="ttname"><a href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">antlrcpp::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, const std::string &amp;sep, int count)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00100">CPPUtils.cpp:100</a></div></div>
+<div class="ttc" id="a_parse_tree_pattern_8h_html"><div class="ttname"><a href="_parse_tree_pattern_8h.html">ParseTreePattern.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a518342431db9dd9d982880a59ef0e4f4"><div class="ttname"><a href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">antlr4::Token::getType</a></div><div class="ttdeci">virtual size_t getType() const =0</div><div class="ttdoc">Get the token type of the token</div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_interpreter_html"><div class="ttname"><a href="classantlr4_1_1_parser_interpreter.html">antlr4::ParserInterpreter</a></div><div class="ttdoc">A parser simulator that mimics what ANTLR's generated parser code does. A ParserATNSimulator is used ...</div><div class="ttdef"><b>Definition:</b> <a href="_parser_interpreter_8h_source.html#l00030">ParserInterpreter.h:30</a></div></div>
+<div class="ttc" id="a_exceptions_8h_html"><div class="ttname"><a href="_exceptions_8h.html">Exceptions.h</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_af3bcbdaa031b4e8ca1df1f28e645355d"><div class="ttname"><a href="namespaceantlrcpp.html#af3bcbdaa031b4e8ca1df1f28e645355d">antlrcpp::what</a></div><div class="ttdeci">std::string what(std::exception_ptr eptr)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00166">CPPUtils.cpp:166</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html_a05b5c99cbcc8bf436c693979a312e879"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">antlr4::tree::TerminalNode::getSymbol</a></div><div class="ttdeci">virtual Token * getSymbol()=0</div></div>
+<div class="ttc" id="a_c_p_p_utils_8h_html"><div class="ttname"><a href="_c_p_p_utils_8h.html">CPPUtils.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parse_cancellation_exception_html"><div class="ttname"><a href="classantlr4_1_1_parse_cancellation_exception.html">antlr4::ParseCancellationException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00091">Exceptions.h:91</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1tree_html"><div class="ttname"><a href="namespaceantlr4_1_1tree.html">antlr4::tree</a></div><div class="ttdef"><b>Definition:</b> <a href="_declarations_8h_source.html#l00125">Declarations.h:125</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_html"><div class="ttname"><a href="classantlr4_1_1_parser.html">antlr4::Parser</a></div><div class="ttdoc">This is all the parsing support code essentially; most of it is error recovery stuff.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8h_source.html#l00018">Parser.h:18</a></div></div>
+<div class="ttc" id="a_parser_interpreter_8h_html"><div class="ttname"><a href="_parser_interpreter_8h.html">ParserInterpreter.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

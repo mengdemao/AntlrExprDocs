@@ -1,0 +1,1551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::atn::ParserATNSimulator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1atn.html">atn</a></li><li class="navelem"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">ParserATNSimulator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::atn::ParserATNSimulator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::atn::ParserATNSimulator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator__inherit__graph.png" border="0" usemap="#antlr4_1_1atn_1_1_parser_a_t_n_simulator_inherit__map" alt="Inheritance graph"/></div>
+<map name="antlr4_1_1atn_1_1_parser_a_t_n_simulator_inherit__map" id="antlr4_1_1atn_1_1_parser_a_t_n_simulator_inherit__map">
+<area shape="rect" title=" " alt="" coords="11,80,238,107"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html" title=" " alt="" coords="5,155,244,181"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="31,5,218,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::atn::ParserATNSimulator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator__coll__graph.png" border="0" usemap="#antlr4_1_1atn_1_1_parser_a_t_n_simulator_coll__map" alt="Collaboration graph"/></div>
+<map name="antlr4_1_1atn_1_1_parser_a_t_n_simulator_coll__map" id="antlr4_1_1atn_1_1_parser_a_t_n_simulator_coll__map">
+<area shape="rect" title=" " alt="" coords="1351,145,1577,172"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="338,79,525,105"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html" title=" " alt="" coords="690,44,830,71"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html" title=" " alt="" coords="5,71,216,113"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html" title=" " alt="" coords="1037,145,1160,172"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="667,145,853,172"/>
+<area shape="rect" title=" " alt="" coords="390,145,473,172"/>
+<area shape="rect" href="classantlr4_1_1_parser_rule_context.html" title="A rule invocation record for parsing." alt="" coords="1005,235,1193,261"/>
+<area shape="rect" href="classantlr4_1_1_rule_context.html" title=" " alt="" coords="686,235,834,261"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree.html" title=" " alt="" coords="349,235,513,261"/>
+<area shape="rect" href="classantlr4_1_1_token.html" title=" " alt="" coords="707,285,813,312"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html" title=" " alt="" coords="992,286,1205,327"/>
+<area shape="rect" href="classantlr4_1_1_parser.html" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="1045,44,1153,71"/>
+<area shape="rect" href="classantlr4_1_1_proxy_error_listener.html" title=" " alt="" coords="337,5,525,32"/>
+<area shape="rect" href="classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="13,5,208,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3a4a291fbbd42c48c1b604b68f52925a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">ParserATNSimulator</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="memdesc:a3a4a291fbbd42c48c1b604b68f52925a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing only!  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">更多...</a><br /></td></tr>
+<tr class="separator:a3a4a291fbbd42c48c1b604b68f52925a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee56c1f43a9dd6385b13aead6021cc3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aee56c1f43a9dd6385b13aead6021cc3e">ParserATNSimulator</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>, const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="separator:aee56c1f43a9dd6385b13aead6021cc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c8564d19c23bdb33d53008d823c387"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a05c8564d19c23bdb33d53008d823c387">reset</a> () override</td></tr>
+<tr class="separator:a05c8564d19c23bdb33d53008d823c387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846da7dc607b212d443cb401f5830bae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a846da7dc607b212d443cb401f5830bae">clearDFA</a> () override</td></tr>
+<tr class="separator:a846da7dc607b212d443cb401f5830bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d4e987d48fc4d0b506184670a8a1e5"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5">adaptivePredict</a> (TokenStream *input, size_t decision, <a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *outerContext)</td></tr>
+<tr class="separator:a80d4e987d48fc4d0b506184670a8a1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3212501674dd0323d4875461304d976c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3212501674dd0323d4875461304d976c">canDropLoopEntryEdgeInLeftRecursiveRule</a> (<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> *config) const</td></tr>
+<tr class="separator:a3212501674dd0323d4875461304d976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183b00733905fd53dc42e8e2655c5853"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a183b00733905fd53dc42e8e2655c5853">getRuleName</a> (size_t index)</td></tr>
+<tr class="separator:a183b00733905fd53dc42e8e2655c5853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c127196f9e2214fe8451d680bdb5e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a75c127196f9e2214fe8451d680bdb5e3">precedenceTransition</a> (<a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt; const &amp;config, <a class="el" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html">PrecedencePredicateTransition</a> *pt, bool collectPredicates, bool inContext, bool fullCtx)</td></tr>
+<tr class="separator:a75c127196f9e2214fe8451d680bdb5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5fc9f6a099bdc9931f9afc50f35232"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a0b5fc9f6a099bdc9931f9afc50f35232">setPredictionMode</a> (<a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">PredictionMode</a> newMode)</td></tr>
+<tr class="separator:a0b5fc9f6a099bdc9931f9afc50f35232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b226f17f38266404b543d286717b28d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">PredictionMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a6b226f17f38266404b543d286717b28d">getPredictionMode</a> ()</td></tr>
+<tr class="separator:a6b226f17f38266404b543d286717b28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76320b0c4de94dc4e4615346c659f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac76320b0c4de94dc4e4615346c659f0b">getParser</a> ()</td></tr>
+<tr class="separator:ac76320b0c4de94dc4e4615346c659f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f79c144aff232c37c906060e84a3d3f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f">getTokenName</a> (size_t t)</td></tr>
+<tr class="separator:a5f79c144aff232c37c906060e84a3d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b55922ce19b4812b517f717233495a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a">getLookaheadName</a> (TokenStream *input)</td></tr>
+<tr class="separator:a51b55922ce19b4812b517f717233495a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17be01f2a7db2f2c18c973cc2799a5a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a17be01f2a7db2f2c18c973cc2799a5a0">dumpDeadEndConfigs</a> (<a class="el" href="classantlr4_1_1_no_viable_alt_exception.html">NoViableAltException</a> &amp;nvae)</td></tr>
+<tr class="memdesc:a17be01f2a7db2f2c18c973cc2799a5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for debugging in adaptivePredict around execATN but I cut it out for clarity now that alg. works well. We can leave this "dead" code for a bit.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a17be01f2a7db2f2c18c973cc2799a5a0">更多...</a><br /></td></tr>
+<tr class="separator:a17be01f2a7db2f2c18c973cc2799a5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:aea00369023c5b32d3b73e9e4b2726cbe inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aea00369023c5b32d3b73e9e4b2726cbe">ATNSimulator</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="separator:aea00369023c5b32d3b73e9e4b2726cbe inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5022527a241e5a255618cf8c29d29743 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a5022527a241e5a255618cf8c29d29743">~ATNSimulator</a> ()</td></tr>
+<tr class="separator:a5022527a241e5a255618cf8c29d29743 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112cafa9554cff202c037672ddc918e5 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a112cafa9554cff202c037672ddc918e5">getSharedContextCache</a> ()</td></tr>
+<tr class="separator:a112cafa9554cff202c037672ddc918e5 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fb144eaf79bf6052a0abe290f7a3a2 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa4fb144eaf79bf6052a0abe290f7a3a2">getCachedContext</a> (<a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &gt; const &amp;context)</td></tr>
+<tr class="separator:aa4fb144eaf79bf6052a0abe290f7a3a2 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a1e32f99f820baf3079b4bb631e5ada4f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a></td></tr>
+<tr class="separator:a1e32f99f820baf3079b4bb631e5ada4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:afec8e232a4c11c864ecc770252a2bcb6 inherit pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">const ATN &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a></td></tr>
+<tr class="separator:afec8e232a4c11c864ecc770252a2bcb6 inherit pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a8c639842e974461b22d4b4c314ee4d1d"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a8c639842e974461b22d4b4c314ee4d1d">TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</a> = ParserATNSimulator::getLrLoopSetting()</td></tr>
+<tr class="separator:a8c639842e974461b22d4b4c314ee4d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; dfa::DFAState &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">ERROR</a> = std::make_shared&lt;DFAState&gt;(INT32_MAX)</td></tr>
+<tr class="memdesc:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Must distinguish between missing edge and edge we know leads nowhere.  <a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">更多...</a><br /></td></tr>
+<tr class="separator:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ac7fbaf0a637744b43e6709660a5b12f2"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">execATN</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, dfa::DFAState *s0, TokenStream *input, size_t startIndex, <a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *outerContext)</td></tr>
+<tr class="memdesc:ac7fbaf0a637744b43e6709660a5b12f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs ATN simulation to compute a predicted alternative based upon the remaining input, but also updates the DFA cache to avoid having to traverse the ATN again for the same input sequence.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">更多...</a><br /></td></tr>
+<tr class="separator:ac7fbaf0a637744b43e6709660a5b12f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ad4351ce091415097bb205d647cecfb86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a></td></tr>
+<tr class="separator:ad4351ce091415097bb205d647cecfb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d885910cc6f113c761a232d297e8e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html">PredictionContextMergeCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">mergeCache</a></td></tr>
+<tr class="memdesc:aa4d885910cc6f113c761a232d297e8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each prediction operation uses a cache for merge of prediction contexts. Don't keep around as it wastes huge amounts of memory. The merge cache isn't synchronized but we're ok since two threads shouldn't reuse same parser/atnsim object because it can only handle one input at a time. This maps graphs a and b to merged result c. (a,b)-&gt;c. We can avoid the merge if we ever see a and b again. Note that (b,a)-&gt;c should also be examined during cache lookup.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">更多...</a><br /></td></tr>
+<tr class="separator:aa4d885910cc6f113c761a232d297e8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823106102e611d8c746145640956c34f"><td class="memItemLeft" align="right" valign="top">TokenStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a></td></tr>
+<tr class="separator:a823106102e611d8c746145640956c34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad970329e7a96edbc93ce38604608f0b2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">_startIndex</a></td></tr>
+<tr class="separator:ad970329e7a96edbc93ce38604608f0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32cd2d2a9fdee36456898fba307f03b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad32cd2d2a9fdee36456898fba307f03b">_outerContext</a></td></tr>
+<tr class="separator:ad32cd2d2a9fdee36456898fba307f03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4900c86546ea8b582b5ebb935c142d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4900c86546ea8b582b5ebb935c142d8">_dfa</a></td></tr>
+<tr class="separator:aa4900c86546ea8b582b5ebb935c142d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">_sharedContextCache</a></td></tr>
+<tr class="memdesc:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The context cache maps all <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> objects that are equals() to a single cached copy. This cache is shared across all contexts in all ATNConfigs in all DFA states. We rebuild each <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> to use only cached nodes/graphs in addDFAState(). We don't want to fill this during closure() since there are lots of contexts that pop up but are not used ever again. It also greatly slows down closure(). This cache makes a huge difference in memory and a little bit in speed. For the Java grammar on java.*, it dropped the memory requirements at the end from 25M to 16M. We don't store any of the full context graphs in the DFA because they are limited to local context only, but apparently there's a lot of repetition there as well. We optimize the config contexts before storing the config set in the DFA states by literally rebuilding them with cached subgraphs only. I tried a cache for use during closure operations, that was whacked after each adaptivePredict(). It cost a little bit more time I think and doesn't save on the overall footprint so it's not worth the complexity.  <a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">更多...</a><br /></td></tr>
+<tr class="separator:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:ae516df637ee1f4be4787d533ed88b3b9 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static ATN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ae516df637ee1f4be4787d533ed88b3b9">deserialize</a> (const std::vector&lt; uint16_t &gt; &amp;data)</td></tr>
+<tr class="separator:ae516df637ee1f4be4787d533ed88b3b9 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa827be017f3bf3a431ef91972d38e3d1 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">checkCondition</a> (bool condition)</td></tr>
+<tr class="separator:aa827be017f3bf3a431ef91972d38e3d1 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394cdeb1e2d6028bc73e0f1d22830b3d inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a394cdeb1e2d6028bc73e0f1d22830b3d">checkCondition</a> (bool condition, const std::string &amp;message)</td></tr>
+<tr class="separator:a394cdeb1e2d6028bc73e0f1d22830b3d inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3fc8caefaecf90ac5eb45561aafdcc inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a8e3fc8caefaecf90ac5eb45561aafdcc">edgeFactory</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, int type, int src, int trg, int arg1, int arg2, int arg3, const std::vector&lt; <a class="el" href="classantlr4_1_1misc_1_1_interval_set.html">misc::IntervalSet</a> &gt; &amp;sets)</td></tr>
+<tr class="separator:a8e3fc8caefaecf90ac5eb45561aafdcc inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57878604b6496cc6aa80e29811e05660 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static ATNState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a57878604b6496cc6aa80e29811e05660">stateFactory</a> (int type, int ruleIndex)</td></tr>
+<tr class="separator:a57878604b6496cc6aa80e29811e05660 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Protected 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a0ceff3caefbd8f9067c549fdf60e973b inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a0ceff3caefbd8f9067c549fdf60e973b">_stateLock</a></td></tr>
+<tr class="separator:a0ceff3caefbd8f9067c549fdf60e973b inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c0921267abe8227f51aa4f1201a82a inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ab3c0921267abe8227f51aa4f1201a82a">_edgeLock</a></td></tr>
+<tr class="separator:ab3c0921267abe8227f51aa4f1201a82a inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The embodiment of the adaptive LL(*), ALL(*), parsing strategy.</p>
+<p>The basic complexity of the adaptive strategy makes it harder to understand. We begin with ATN simulation to build paths in a DFA. Subsequent prediction requests go through the DFA first. If they reach a state without an edge for the current symbol, the algorithm fails over to the ATN simulation to complete the DFA path for the current input (until it finds a conflict state or uniquely predicting state).</p>
+<p>All of that is done without using the outer context because we want to create a DFA that is not dependent upon the rule invocation stack when we do a prediction. One DFA works in all contexts. We avoid using context not necessarily because it's slower, although it can be, but because of the DFA caching problem. The closure routine only considers the rule invocation stack created during prediction beginning in the decision rule. For example, if prediction occurs without invoking another rule's ATN, there are no context stacks in the configurations. When lack of context leads to a conflict, we don't know if it's an ambiguity or a weakness in the strong LL(*) parsing strategy (versus full LL(*)).</p>
+<p>When SLL yields a configuration set with conflict, we rewind the input and retry the ATN simulation, this time using full outer context without adding to the DFA. Configuration context stacks will be the full invocation stacks from the start rule. If we get a conflict using full context, then we can definitively say we have a true ambiguity for that input sequence. If we don't get a conflict, it implies that the decision is sensitive to the outer context. (It is not context-sensitive in the sense of context-sensitive grammars.)</p>
+<p>The next time we reach this DFA state with an SLL conflict, through DFA simulation, we will again retry the ATN simulation using full context mode. This is slow because we can't save the results and have to "interpret" the ATN each time we get that input.</p>
+<p><b>CACHING FULL CONTEXT PREDICTIONS</b></p>
+<p>We could cache results from full context to predicted alternative easily and that saves a lot of time but doesn't work in presence of predicates. The set of visible predicates from the ATN start state changes depending on the context, because closure can fall off the end of a rule. I tried to cache tuples (stack context, semantic context, predicted alt) but it was slower than interpreting and much more complicated. Also required a huge amount of memory. The goal is not to create the world's fastest parser anyway. I'd like to keep this algorithm simple. By launching multiple threads, we can improve the speed of parsing across a large number of files.</p>
+<p>There is no strict ordering between the amount of input used by SLL vs LL, which makes it really hard to build a cache for full context. Let's say that we have input A B C that leads to an SLL conflict with full context X. That implies that using X we might only use A B but we could also use A B C D to resolve conflict. Input A B C D could predict alternative 1 in one position in the input and A B C E could predict alternative 2 in another position in input. The conflicting SLL configurations could still be non-unique in the full context prediction, which would lead us to requiring more input than the original A B C. To make a prediction cache work, we have to track the exact input used during the previous prediction. That amounts to a cache that maps X to a specific DFA for that context.</p>
+<p>Something should be done for left-recursive expression predictions. They are likely LL(1) + pred eval. Easier to do the whole SLL unless error and retry with full LL thing Sam does.</p>
+<p><b>AVOIDING FULL CONTEXT PREDICTION</b></p>
+<p>We avoid doing full context retry when the outer context is empty, we did not dip into the outer context by falling off the end of the decision state rule, or when we force SLL mode.</p>
+<p>As an example of the not dip into outer context case, consider as super constructor calls versus function calls. One grammar might look like this:</p>
+<pre>
+ctorBody
+  : '{' superCall? stat* '}'
+  ;
+</pre><p>Or, you might see something like</p>
+<pre>
+stat
+  : superCall ';'
+  | expression ';'
+  | ...
+  ;
+</pre><p>In both cases I believe that no closure operations will dip into the outer context. In the first case ctorBody in the worst case will stop at the '}'. In the 2nd case it should stop at the ';'. Both cases should stay within the entry rule and not dip into the outer context.</p>
+<p><b>PREDICATES</b></p>
+<p>Predicates are always evaluated if present in either SLL or LL both. SLL and LL simulation deals with predicates differently. SLL collects predicates as it performs closure operations like ANTLR v3 did. It delays predicate evaluation until it reaches and accept state. This allows us to cache the SLL ATN simulation whereas, if we had evaluated predicates on-the-fly during closure, the DFA state configuration sets would be different and we couldn't build up a suitable DFA.</p>
+<p>When building a DFA accept state during ATN simulation, we evaluate any predicates and return the sole semantically valid alternative. If there is more than 1 alternative, we report an ambiguity. If there are 0 alternatives, we throw an exception. Alternatives without predicates act like they have true predicates. The simple way to think about it is to strip away all alternatives with false predicates and choose the minimum alternative that remains.</p>
+<p>When we start in the DFA and reach an accept state that's predicated, we test those and return the minimum semantically viable alternative. If no alternatives are viable, we throw an exception.</p>
+<p>During full LL ATN simulation, closure always evaluates predicates and on-the-fly. This is crucial to reducing the configuration set size during closure. It hits a landmine when parsing with the Java grammar, for example, without this on-the-fly evaluation.</p>
+<p><b>SHARING DFA</b></p>
+<p>All instances of the same parser share the same decision DFAs through a static field. Each instance gets its own ATN simulator but they share the same <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a> field. They also share a <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> object that makes sure that all <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> objects are shared among the DFA states. This makes a big size difference.</p>
+<p><b>THREAD SAFETY</b></p>
+<p>The <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">ParserATNSimulator</a> locks on the <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a> field when it adds a new DFA object to that array. <a class="el" href="">addDFAEdge</a> locks on the DFA for the current decision when setting the <a class="el" href="">DFAState#edges</a> field. <a class="el" href="">addDFAState</a> locks on the DFA for the current decision when looking up a DFA state to see if it already exists. We must make sure that all requests to add DFA states that are equivalent result in the same shared DFA object. This is because lots of threads will be trying to update the DFA at once. The <a class="el" href="">addDFAState</a> method also locks inside the DFA lock but this time on the shared context cache when it rebuilds the configurations' <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> objects using cached subgraphs/nodes. No other locking occurs, even during DFA simulation. This is safe as long as we can guarantee that all threads referencing </p><div class="fragment"><div class="line">s.edge[t] </div>
+</div><!-- fragment --><p> get the same physical target <a class="el" href="">DFAState</a>, or </p><div class="fragment"><div class="line"><span class="keyword">null</span> </div>
+</div><!-- fragment --><p> . Once into the DFA, the DFA simulation does not reference the <a class="el" href="">DFA#states</a> map. It follows the <a class="el" href="">DFAState#edges</a> field to new targets. The DFA simulator will either find <a class="el" href="">DFAState#edges</a> to be </p><div class="fragment"><div class="line"><span class="keyword">null</span> </div>
+</div><!-- fragment --><p> , to be non-</p><div class="fragment"><div class="line"><span class="keyword">null</span> </div>
+</div><!-- fragment --><p> and</p><div class="fragment"><div class="line">dfa.edges[t] </div>
+</div><!-- fragment --><p> null, or </p><div class="fragment"><div class="line">dfa.edges[t] </div>
+</div><!-- fragment --><p> to be non-null. The <a class="el" href="">addDFAEdge</a> method could be racing to set the field but in either case the DFA simulator works; if</p><div class="fragment"><div class="line"><span class="keyword">null</span> </div>
+</div><!-- fragment --><p> , and requests ATN simulation. It could also race trying to get</p><div class="fragment"><div class="line">dfa.edges[t] </div>
+</div><!-- fragment --><p> , but either way it will work because it's not doing a test and set operation.</p>
+<p><b>Starting with SLL then failing to combined SLL/LL (Two-Stage Parsing)</b></p>
+<p>Sam pointed out that if SLL does not give a syntax error, then there is no point in doing full LL, which is slower. We only have to try LL if we get a syntax error. For maximum speed, Sam starts the parser set to pure SLL mode with the <a class="el" href="">BailErrorStrategy</a>:</p>
+<pre>
+parser.<a class="el" href="classantlr4_1_1_recognizer.html#a926f7b518ef08afd27eb9ab1af2e2757"> getInterpreter()</a>.<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a0b5fc9f6a099bdc9931f9afc50f35232"> setPredictionMode</a><div class="fragment"><div class="line">( </div>
+</div><!-- fragment --> <a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25aae2ecfbd95d475ddf08876080d57e3d9">PredictionMode#SLL</a><div class="fragment"><div class="line">) </div>
+</div><!-- fragment --> ;
+parser.<a class="el" href=""> setErrorHandler</a>(new <a class="el" href="">BailErrorStrategy</a>());
+</pre><p>If it does not get a syntax error, then we're done. If it does get a syntax error, we need to retry with the combined SLL/LL strategy.</p>
+<p>The reason this works is as follows. If there are no SLL conflicts, then the grammar is SLL (at least for that input set). If there is an SLL conflict, the full LL analysis must yield a set of viable alternatives which is a subset of the alternatives reported by SLL. If the LL set is a singleton, then the grammar is LL but not SLL. If the LL set is the same size as the SLL set, the decision is SLL. If the LL set has size &gt; 1, then that decision is truly ambiguous on the current input. If the LL set is smaller, then the SLL conflict resolution might choose an alternative that the full LL would rule out as a possibility based upon better context information. If that's the case, then the SLL parse will definitely get an error because the full LL analysis says it's not viable. If SLL conflict resolution chooses an alternative within the LL set, them both SLL and LL would choose the same alternative because they both choose the minimum of multiple conflicting alternatives.</p>
+<p>Let's say we have a set of SLL conflicting alternatives</p><div class="fragment"><div class="line">{1, 2, 3} </div>
+</div><!-- fragment --><p> and a smaller LL set called <em>s</em>. If <em>s</em> is</p><div class="fragment"><div class="line">{2, 3} </div>
+</div><!-- fragment --><p> , then SLL parsing will get an error because SLL will pursue alternative 1. If <em>s</em> is</p><div class="fragment"><div class="line">{1, 2} </div>
+</div><!-- fragment --><p> or</p><div class="fragment"><div class="line">{1, 3} </div>
+</div><!-- fragment --><p> then both SLL and LL will choose the same alternative because alternative one is the minimum of either set. If <em>s</em> is</p><div class="fragment"><div class="line">{2} </div>
+</div><!-- fragment --><p> or</p><div class="fragment"><div class="line">{3} </div>
+</div><!-- fragment --><p> then SLL will get a syntax error. If <em>s</em> is</p><div class="fragment"><div class="line">{1} </div>
+</div><!-- fragment --><p> then SLL will succeed.</p>
+<p>Of course, if the input is invalid, then we will get an error for sure in both SLL and LL parsing. Erroneous input will therefore require 2 passes over the input.</p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00245">245</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3a4a291fbbd42c48c1b604b68f52925a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4a291fbbd42c48c1b604b68f52925a">&#9670;&nbsp;</a></span>ParserATNSimulator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParserATNSimulator::ParserATNSimulator </td>
+          <td>(</td>
+          <td class="paramtype">const ATN &amp;&#160;</td>
+          <td class="paramname"><em>atn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>decisionToDFA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td>
+          <td class="paramname"><em>sharedContextCache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Testing only! </p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00049">49</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;: <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">ParserATNSimulator</a>(<span class="keyword">nullptr</span>, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>, sharedContextCache) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aee56c1f43a9dd6385b13aead6021cc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee56c1f43a9dd6385b13aead6021cc3e">&#9670;&nbsp;</a></span>ParserATNSimulator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParserATNSimulator::ParserATNSimulator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ATN &amp;&#160;</td>
+          <td class="paramname"><em>atn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>decisionToDFA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td>
+          <td class="paramname"><em>sharedContextCache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00054">54</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;: <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aea00369023c5b32d3b73e9e4b2726cbe">ATNSimulator</a>(<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, sharedContextCache), <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>), <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  InitializeInstanceFields();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a80d4e987d48fc4d0b506184670a8a1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d4e987d48fc4d0b506184670a8a1e5">&#9670;&nbsp;</a></span>adaptivePredict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ParserATNSimulator::adaptivePredict </td>
+          <td>(</td>
+          <td class="paramtype">TokenStream *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>decision</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td>
+          <td class="paramname"><em>outerContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143">antlr4::atn::ProfilingATNSimulator</a> 重载.</p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00071">71</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                                                                               {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#if DEBUG_ATN == 1 || DEBUG_LIST_ATN_DECISIONS == 1</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;adaptivePredict decision &quot;</span> &lt;&lt; decision &lt;&lt; <span class="stringliteral">&quot; exec LA(1)==&quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a">getLookaheadName</a>(input) &lt;&lt; <span class="stringliteral">&quot; line &quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      &lt;&lt; input-&gt;LT(1)-&gt;getLine() &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; input-&gt;LT(1)-&gt;getCharPositionInLine() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a> = input;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">_startIndex</a> = input-&gt;index();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad32cd2d2a9fdee36456898fba307f03b">_outerContext</a> = outerContext;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa = <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>[decision];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4900c86546ea8b582b5ebb935c142d8">_dfa</a> = &amp;dfa;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  ssize_t m = input-&gt;mark();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">size_t</span> index = <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">_startIndex</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// Now we are certain to have a specific decision&#39;s DFA</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// But, do we still need an initial state?</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">auto</span> onExit = <span class="keywordflow">finally</span>([<span class="keyword">this</span>, input, index, m] {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">mergeCache</a>.<a class="code" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html#acf7501a4cd385b70239191dfcf16e9c1">clear</a>(); <span class="comment">// wack cache after each prediction</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4900c86546ea8b582b5ebb935c142d8">_dfa</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    input-&gt;seek(index);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    input-&gt;release(m);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  });</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  dfa::DFAState *s0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">if</span> (dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a>()) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// the start state for a precedence DFA depends on the current</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// parser precedence, and is provided by a DFA method.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    s0 = dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">getPrecedenceStartState</a>(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>-&gt;getPrecedence());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// the start state for a &quot;regular&quot; DFA is just s0</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    s0 = dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">if</span> (s0 == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">bool</span> fullCtx = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::unique_ptr&lt;ATNConfigSet&gt; s0_closure = computeStartState(<span class="keyword">dynamic_cast&lt;</span>ATNState *<span class="keyword">&gt;</span>(dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>),</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                                                 &amp;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">ParserRuleContext::EMPTY</a>, fullCtx);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a0ceff3caefbd8f9067c549fdf60e973b">_stateLock</a>.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">writeLock</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a>()) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="comment">/* If this is a precedence DFA, we use applyPrecedenceFilter</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">       * to convert the computed start state to a precedence start</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">       * state. We then use DFA.setPrecedenceStartState to set the</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">       * appropriate start state for the precedence level rather</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">       * than simply setting DFA.s0.</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">       */</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;configs = std::move(s0_closure); <span class="comment">// not used for prediction but useful to know start configs anyway</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      dfa::DFAState *newState = <span class="keyword">new</span> dfa::DFAState(applyPrecedenceFilter(dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;configs.get())); <span class="comment">/* mem-check: managed by the DFA or deleted below */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      s0 = addDFAState(dfa, newState);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">setPrecedenceStartState</a>(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>-&gt;getPrecedence(), s0, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ab3c0921267abe8227f51aa4f1201a82a">_edgeLock</a>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">if</span> (s0 != newState) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">delete</span> newState; <span class="comment">// If there was already a state with this config set we don&#39;t need the new one.</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      dfa::DFAState *newState = <span class="keyword">new</span> dfa::DFAState(std::move(s0_closure)); <span class="comment">/* mem-check: managed by the DFA or deleted below */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      s0 = addDFAState(dfa, newState);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">if</span> (dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> != s0) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">delete</span> dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>; <span class="comment">// Delete existing s0 DFA state, if there&#39;s any.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = s0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordflow">if</span> (s0 != newState) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">delete</span> newState; <span class="comment">// If there was already a state with this config set we don&#39;t need the new one.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a0ceff3caefbd8f9067c549fdf60e973b">_stateLock</a>.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">writeUnlock</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// We can start with an existing DFA.</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">size_t</span> alt = <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">execATN</a>(dfa, s0, input, index, outerContext != <span class="keyword">nullptr</span> ? outerContext : &amp;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">ParserRuleContext::EMPTY</a>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">return</span> alt;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,217,232,259"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html#acf7501a4cd385b70239191dfcf16e9c1" title=" " alt="" coords="287,5,500,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="280,123,507,164"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a" title=" " alt="" coords="561,64,787,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f" title=" " alt="" coords="280,188,507,229"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1" title=" " alt="" coords="555,275,793,302"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617" title=" " alt="" coords="281,305,506,347"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b" title=" " alt="" coords="569,332,779,373"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a" title=" " alt="" coords="569,408,779,449"/>
+<area shape="rect" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500" title=" " alt="" coords="575,130,773,157"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f" title=" " alt="" coords="841,64,1068,105"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="1116,64,1256,105"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_icgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_icgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_icgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a80d4e987d48fc4d0b506184670a8a1e5_icgraph">
+<area shape="rect" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3212501674dd0323d4875461304d976c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3212501674dd0323d4875461304d976c">&#9670;&nbsp;</a></span>canDropLoopEntryEdgeInLeftRecursiveRule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParserATNSimulator::canDropLoopEntryEdgeInLeftRecursiveRule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Implements first-edge (loop entry) elimination as an optimization during closure operations. See antlr/antlr4#1398.</p>
+<p>The optimization is to avoid adding the loop entry config when the exit path can only lead back to the same <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> after popping context at the rule end state (traversing only epsilon edges, so we're still in closure, in this same rule).</p>
+<p>We need to detect any state that can reach loop entry on epsilon w/o exiting rule. We don't have to look at FOLLOW links, just ensure that all stack tops for config refer to key states in LR rule.</p>
+<p>To verify we are in the right situation we must first check closure is at a <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> generated during LR removal. Then we check that each stack top of context is a return state from one of these cases:</p>
+<ol type="1">
+<li>'not' expr, '(' type ')' expr. The return state points at loop entry state</li>
+<li>expr op expr. The return state is the block end of internal block of (...)*</li>
+<li>'between' expr 'and' expr. The return state of 2nd expr reference. That state points at block end of internal block of (...)*.</li>
+<li>expr '?' expr ':' expr. The return state points at block end, which points at loop entry state.</li>
+</ol>
+<p>If any is true for each stack top, then closure does not add a config to the current config set for edge[0], the loop entry branch.</p>
+<p>Conditions fail if any context for the current config is:</p>
+<p>a. empty (we'd fall out of expr to do a global FOLLOW which could even be to some weird spot in expr) or, b. lies outside of expr or, c. lies within expr but at a state not the <a class="el" href="classantlr4_1_1atn_1_1_block_end_state.html" title="Terminal node of a simple {">BlockEndState</a> generated during LR removal</p>
+<p>Do we need to evaluate predicates ever in closure for this case?</p>
+<p>No. Predicates, including precedence predicates, are only evaluated when computing a DFA start state. I.e., only before the lookahead (but not parser) consumes a token.</p>
+<p>There are no epsilon edges allowed in LR rule alt blocks or in the "primary" part (ID here). If closure is in <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> any lookahead operation will have consumed a token as there are no epsilon-paths that lead to <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a>. We do not have to evaluate predicates therefore if we are in the generated <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> of a LR rule. Note that when making a prediction starting at that decision point, decision d=2, compute-start-state performs closure starting at edges[0], edges[1] emanating from <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a>. That means it is not performing closure on <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> during compute-start-state.</p>
+<p>How do we know this always gives same prediction answer?</p>
+<p>Without predicates, loop entry and exit paths are ambiguous upon remaining input +b (in, say, a+b). Either paths lead to valid parses. Closure can lead to consuming + immediately or by falling out of this call to expr back into expr and loop back again to <a class="el" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> to match +b. In this special case, we choose the more efficient path, which is to take the bypass path.</p>
+<p>The lookahead language has not changed because closure chooses one path over the other. Both paths lead to consuming the same remaining input during a lookahead operation. If the next token is an operator, lookahead will enter the choice block with operators. If it is not, lookahead will exit expr. Same as if closure had chosen to enter the choice block immediately.</p>
+<p>Closure is examining one config (some loopentrystate, some alt, context) which means it is considering exactly one alt. Closure always copies the same alt to any derived configs.</p>
+<p>How do we know this optimization doesn't mess up precedence in our parse trees?</p>
+<p>Looking through expr from left edge of stat only has to confirm that an input, say, a+b+c; begins with any valid interpretation of an expression. The precedence actually doesn't matter when making a decision in stat seeing through expr. It is only when parsing rule expr that we must use the precedence to get the right interpretation and, hence, parse tree. </p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00954">954</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;                                                                                        {</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a8c639842e974461b22d4b4c314ee4d1d">TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</a>)</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  ATNState *p = config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#ae2e2757839f60f245b1a30c1f83bd52d">state</a>;</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160; </div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  <span class="comment">// First check to see if we are in StarLoopEntryState generated during</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  <span class="comment">// left-recursion elimination. For efficiency, also check if</span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;  <span class="comment">// the context has an empty stack case. If so, it would mean</span></div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;  <span class="comment">// global FOLLOW so we can&#39;t perform optimization</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;  <span class="keywordflow">if</span> (p-&gt;getStateType() != ATNState::STAR_LOOP_ENTRY ||</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;      !((<a class="code" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">StarLoopEntryState</a> *)p)-&gt;isPrecedenceDecision || <span class="comment">// Are we the special loop entry/exit state?</span></div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;      config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">context</a>-&gt;isEmpty() ||                      <span class="comment">// If SLL wildcard</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;      config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">context</a>-&gt;hasEmptyPath())</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  {</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;  }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160; </div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;  <span class="comment">// Require all return states to return back to the same rule</span></div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;  <span class="comment">// that p is in.</span></div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  <span class="keywordtype">size_t</span> numCtxs = config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">context</a>-&gt;size();</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; numCtxs; i++) { <span class="comment">// for each stack context</span></div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    ATNState *returnState = <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>.states[config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">context</a>-&gt;getReturnState(i)];</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="keywordflow">if</span> (returnState-&gt;ruleIndex != p-&gt;ruleIndex)</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;  }</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160; </div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_block_start_state.html">BlockStartState</a> *decisionStartState = (<a class="code" href="classantlr4_1_1atn_1_1_block_start_state.html">BlockStartState</a> *)p-&gt;transitions[0]-&gt;target;</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;  <span class="keywordtype">size_t</span> blockEndStateNum = decisionStartState-&gt;<a class="code" href="classantlr4_1_1atn_1_1_block_start_state.html#aa79f25cca90ec823d50f4a8f7b7ec017">endState</a>-&gt;stateNumber;</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_block_end_state.html">BlockEndState</a> *blockEndState = (<a class="code" href="classantlr4_1_1atn_1_1_block_end_state.html">BlockEndState</a> *)<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>.states[blockEndStateNum];</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160; </div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;  <span class="comment">// Verify that the top of each stack context leads to loop entry/exit</span></div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;  <span class="comment">// state through epsilon edges and w/o leaving rule.</span></div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; numCtxs; i++) {                           <span class="comment">// for each stack context</span></div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;    <span class="keywordtype">size_t</span> returnStateNumber = config-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">context</a>-&gt;getReturnState(i);</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    ATNState *returnState = <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>.states[returnStateNumber];</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;    <span class="comment">// All states must have single outgoing epsilon edge.</span></div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;    <span class="keywordflow">if</span> (returnState-&gt;transitions.size() != 1 || !returnState-&gt;transitions[0]-&gt;isEpsilon())</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;    {</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    }</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160; </div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="comment">// Look for prefix op case like &#39;not expr&#39;, (&#39; type &#39;)&#39; expr</span></div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    ATNState *returnStateTarget = returnState-&gt;transitions[0]-&gt;target;</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;    <span class="keywordflow">if</span> (returnState-&gt;getStateType() == ATNState::BLOCK_END &amp;&amp; returnStateTarget == p) {</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;    }</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160; </div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;    <span class="comment">// Look for &#39;expr op expr&#39; or case where expr&#39;s return state is block end</span></div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    <span class="comment">// of (...)* internal block; the block end points to loop back</span></div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;    <span class="comment">// which points to p but we don&#39;t need to check that</span></div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;    <span class="keywordflow">if</span> (returnState == blockEndState) {</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    }</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160; </div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    <span class="comment">// Look for ternary expr ? expr : expr. The return state points at block end,</span></div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    <span class="comment">// which points at loop entry state</span></div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;    <span class="keywordflow">if</span> (returnStateTarget == blockEndState) {</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    }</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160; </div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    <span class="comment">// Look for complex prefix &#39;between expr and expr&#39; case where 2nd expr&#39;s</span></div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <span class="comment">// return state points at block end state of (...)* internal block</span></div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    <span class="keywordflow">if</span> (returnStateTarget-&gt;getStateType() == ATNState::BLOCK_END &amp;&amp;</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;        returnStateTarget-&gt;transitions.size() == 1 &amp;&amp;</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;        returnStateTarget-&gt;transitions[0]-&gt;isEpsilon() &amp;&amp;</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;        returnStateTarget-&gt;transitions[0]-&gt;target == p)</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    {</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    }</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160; </div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;    <span class="comment">// Anything else ain&#39;t conforming.</span></div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;  }</div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160; </div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a846da7dc607b212d443cb401f5830bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846da7dc607b212d443cb401f5830bae">&#9670;&nbsp;</a></span>clearDFA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserATNSimulator::clearDFA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clear the DFA cache used by the current instance. Since the DFA cache may be shared by multiple ATN simulators, this method may affect the performance (but not accuracy) of other parsers which are being used concurrently.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classantlr4_1_1_unsupported_operation_exception.html">UnsupportedOperationException</a></td><td>if the current instance does not support clearing the DFA.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>自从</dt><dd>4.3 </dd></dl>
+
+<p>重载 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a3358fa3e8ebcb4abeeceb914b0b07f10">antlr4::atn::ATNSimulator</a> .</p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00063">63</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                  {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">int</span> size = (int)<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>.size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>.clear();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; size; ++d) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>.push_back(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a>(<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>.getDecisionState(d), d));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a17be01f2a7db2f2c18c973cc2799a5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17be01f2a7db2f2c18c973cc2799a5a0">&#9670;&nbsp;</a></span>dumpDeadEndConfigs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserATNSimulator::dumpDeadEndConfigs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_no_viable_alt_exception.html">NoViableAltException</a> &amp;&#160;</td>
+          <td class="paramname"><em>nvae</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used for debugging in adaptivePredict around execATN but I cut it out for clarity now that alg. works well. We can leave this "dead" code for a bit. </p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01205">1205</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                                                                      {</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;  std::cerr &lt;&lt; <span class="stringliteral">&quot;dead end configs: &quot;</span>;</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : nvae.<a class="code" href="classantlr4_1_1_no_viable_alt_exception.html#af4879eed620656f49a4d0365eb27e64b">getDeadEndConfigs</a>()-&gt;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a5404495afc6bb7823429d202a1625bdc">configs</a>) {</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;    std::string trans = <span class="stringliteral">&quot;no edges&quot;</span>;</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    <span class="keywordflow">if</span> (c-&gt;state-&gt;transitions.size() &gt; 0) {</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      <a class="code" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> *t = c-&gt;state-&gt;transitions[0];</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;      <span class="keywordflow">if</span> (is&lt;AtomTransition*&gt;(t)) {</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;        <a class="code" href="classantlr4_1_1atn_1_1_atom_transition.html">AtomTransition</a> *at = <span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1atn_1_1_atom_transition.html">AtomTransition</a>*<span class="keyword">&gt;</span>(t);</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;        trans = <span class="stringliteral">&quot;Atom &quot;</span> + <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f">getTokenName</a>(at-&gt;<a class="code" href="classantlr4_1_1atn_1_1_atom_transition.html#ac793fab5323d347fe2b7c159c9b9c556">_label</a>);</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (is&lt;SetTransition*&gt;(t)) {</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;        <a class="code" href="classantlr4_1_1atn_1_1_set_transition.html">SetTransition</a> *st = <span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1atn_1_1_set_transition.html">SetTransition</a>*<span class="keyword">&gt;</span>(t);</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;        <span class="keywordtype">bool</span> is_not = is&lt;NotSetTransition*&gt;(st);</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;        trans = (is_not ? <span class="stringliteral">&quot;~&quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;        trans += <span class="stringliteral">&quot;Set &quot;</span>;</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        trans += st-&gt;<a class="code" href="classantlr4_1_1atn_1_1_set_transition.html#acab185db21bb0e76034526595150fd80">set</a>.<a class="code" href="classantlr4_1_1misc_1_1_interval_set.html#a8ad8fd554f7cf35c896287e7e2be1e63">toString</a>();</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;      }</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;    }</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;    std::cerr &lt;&lt; c-&gt;toString(<span class="keyword">true</span>) + <span class="stringliteral">&quot;:&quot;</span> + trans;</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;  }</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a17be01f2a7db2f2c18c973cc2799a5a0_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a17be01f2a7db2f2c18c973cc2799a5a0_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a17be01f2a7db2f2c18c973cc2799a5a0_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a17be01f2a7db2f2c18c973cc2799a5a0_cgraph">
+<area shape="rect" title="Used for debugging in adaptivePredict around execATN but I cut it out for clarity now that alg...." alt="" coords="5,71,232,112"/>
+<area shape="rect" href="classantlr4_1_1_no_viable_alt_exception.html#af4879eed620656f49a4d0365eb27e64b" title=" " alt="" coords="289,5,498,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f" title=" " alt="" coords="280,71,507,112"/>
+<area shape="rect" href="classantlr4_1_1misc_1_1_interval_set.html#a8ad8fd554f7cf35c896287e7e2be1e63" title=" " alt="" coords="304,136,483,177"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="555,71,695,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7fbaf0a637744b43e6709660a5b12f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7fbaf0a637744b43e6709660a5b12f2">&#9670;&nbsp;</a></span>execATN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ParserATNSimulator::execATN </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dfa::DFAState *&#160;</td>
+          <td class="paramname"><em>s0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TokenStream *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td>
+          <td class="paramname"><em>outerContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs ATN simulation to compute a predicted alternative based upon the remaining input, but also updates the DFA cache to avoid having to traverse the ATN again for the same input sequence. </p>
+<p>There are some key conditions we're looking for after computing a new set of ATN configs (proposed DFA state): if the set is empty, there is no viable alternative for current symbol does the state uniquely predict an alternative? does the state have a conflict that would prevent us from putting it on the work list?</p>
+<p>We also have some key operations to do: add an edge from previous DFA state to potentially new DFA state, D, upon current symbol but only if adding to work list, which means in all cases except no viable alternative (and possibly non-greedy decisions?) collecting predicates and adding semantic context to DFA accept states adding rule context to context-sensitive DFA accept states consuming an input symbol reporting a conflict reporting an ambiguity reporting a context sensitivity reporting insufficient predicates</p>
+<p>cover these cases: dead end single alt single alt + preds conflict conflict + preds</p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00147">147</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#if DEBUG_ATN == 1 || DEBUG_LIST_ATN_DECISIONS == 1</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;execATN decision &quot;</span> &lt;&lt; dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a> &lt;&lt; <span class="stringliteral">&quot; exec LA(1)==&quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a">getLookaheadName</a>(input) &lt;&lt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="stringliteral">&quot; line &quot;</span> &lt;&lt; input-&gt;LT(1)-&gt;getLine() &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; input-&gt;LT(1)-&gt;getCharPositionInLine() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  dfa::DFAState *previousD = s0;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#if DEBUG_ATN == 1</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;s0 = &quot;</span> &lt;&lt; s0 &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">size_t</span> t = input-&gt;LA(1);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>) { <span class="comment">// while more work</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    dfa::DFAState *D = getExistingTargetState(previousD, t);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span> (D == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      D = computeTargetState(dfa, previousD, t);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (D == <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">ERROR</a>.get()) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="comment">// if any configs in previous dipped into outer context, that</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="comment">// means that input up to t actually finished entry rule</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="comment">// at least for SLL decision. Full LL doesn&#39;t dip into outer</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="comment">// so don&#39;t need special case.</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="comment">// We will get an error no matter what so delay until after</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="comment">// decision; better error message. Also, no reachable target</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="comment">// ATN states in SLL implies LL will also get nowhere.</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="comment">// If conflict in states that dip out, choose min since we</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="comment">// will get error no matter what.</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <a class="code" href="classantlr4_1_1_no_viable_alt_exception.html">NoViableAltException</a> e = noViableAlt(input, outerContext, previousD-&gt;configs.get(), startIndex, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      input-&gt;seek(startIndex);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">size_t</span> alt = getSynValidOrSemInvalidAltThatFinishedDecisionEntryRule(previousD-&gt;configs.get(), outerContext);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordflow">if</span> (alt != ATN::INVALID_ALT_NUMBER) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> alt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (D-&gt;requiresFullContext &amp;&amp; _mode != <a class="code" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25aae2ecfbd95d475ddf08876080d57e3d9">PredictionMode::SLL</a>) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="comment">// IF PREDS, MIGHT RESOLVE TO SINGLE ALT =&gt; SLL (or syntax error)</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <a class="code" href="classantlrcpp_1_1_bit_set.html">BitSet</a> conflictingAlts;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keywordflow">if</span> (D-&gt;predicates.size() != 0) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#if DEBUG_ATN == 1</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;          std::cout &lt;&lt; <span class="stringliteral">&quot;DFA state has preds in DFA sim LL failover&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">size_t</span> conflictIndex = input-&gt;index();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span> (conflictIndex != startIndex) {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;          input-&gt;seek(startIndex);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        conflictingAlts = evalSemanticContext(D-&gt;predicates, outerContext, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span> (conflictingAlts.count() == 1) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#if DEBUG_ATN == 1</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Full LL avoided&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          <span class="keywordflow">return</span> conflictingAlts.<a class="code" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500">nextSetBit</a>(0);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (conflictIndex != startIndex) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;          <span class="comment">// restore the index so reporting the fallback to full</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          <span class="comment">// context occurs with the index at the correct spot</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;          input-&gt;seek(conflictIndex);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#if DEBUG_DFA == 1</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;ctx sensitive state &quot;</span> &lt;&lt; outerContext &lt;&lt; <span class="stringliteral">&quot; in &quot;</span> &lt;&lt; D &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordtype">bool</span> fullCtx = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfigSet&gt;</a> s0_closure = computeStartState(dfa.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>, outerContext, fullCtx);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      reportAttemptingFullContext(dfa, conflictingAlts, D-&gt;configs.get(), startIndex, input-&gt;index());</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordtype">size_t</span> alt = execATNWithFullContext(dfa, D, s0_closure.get(), input, startIndex, outerContext);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">return</span> alt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (D-&gt;isAcceptState) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">if</span> (D-&gt;predicates.empty()) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> D-&gt;prediction;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordtype">size_t</span> stopIndex = input-&gt;index();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      input-&gt;seek(startIndex);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <a class="code" href="classantlrcpp_1_1_bit_set.html">BitSet</a> alts = evalSemanticContext(D-&gt;predicates, outerContext, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keywordflow">switch</span> (alts.count()) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;          <span class="keywordflow">throw</span> noViableAlt(input, outerContext, D-&gt;configs.get(), startIndex, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          <span class="keywordflow">return</span> alts.<a class="code" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500">nextSetBit</a>(0);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          <span class="comment">// report ambiguity after predicate evaluation to make sure the correct</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          <span class="comment">// set of ambig alts is reported.</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          reportAmbiguity(dfa, D, startIndex, stopIndex, <span class="keyword">false</span>, alts, D-&gt;configs.get());</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          <span class="keywordflow">return</span> alts.<a class="code" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500">nextSetBit</a>(0);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    previousD = D;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span> (t != <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      input-&gt;consume();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      t = input-&gt;LA(1);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_cgraph">
+<area shape="rect" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="5,35,232,76"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a" title=" " alt="" coords="280,5,507,47"/>
+<area shape="rect" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500" title=" " alt="" coords="294,71,493,98"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f" title=" " alt="" coords="555,5,781,47"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="829,5,969,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_icgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_icgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_icgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_ac7fbaf0a637744b43e6709660a5b12f2_icgraph">
+<area shape="rect" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="567,5,793,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51b55922ce19b4812b517f717233495a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b55922ce19b4812b517f717233495a">&#9670;&nbsp;</a></span>getLookaheadName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParserATNSimulator::getLookaheadName </td>
+          <td>(</td>
+          <td class="paramtype">TokenStream *&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01201">1201</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;                                                                 {</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f">getTokenName</a>(input-&gt;LA(1));</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f" title=" " alt="" coords="280,5,507,47"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="555,5,695,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_icgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_icgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_icgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a51b55922ce19b4812b517f717233495a_icgraph">
+<area shape="rect" title=" " alt="" coords="841,5,1068,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="567,35,793,76"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac76320b0c4de94dc4e4615346c659f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76320b0c4de94dc4e4615346c659f0b">&#9670;&nbsp;</a></span>getParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> * ParserATNSimulator::getParser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01347">1347</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;                                      {</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>;</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b226f17f38266404b543d286717b28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b226f17f38266404b543d286717b28d">&#9670;&nbsp;</a></span>getPredictionMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">atn::PredictionMode</a> ParserATNSimulator::getPredictionMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01343">1343</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;                                                        {</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  <span class="keywordflow">return</span> _mode;</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a183b00733905fd53dc42e8e2655c5853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183b00733905fd53dc42e8e2655c5853">&#9670;&nbsp;</a></span>getRuleName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParserATNSimulator::getRuleName </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01032">1032</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;                                                      {</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>-&gt;<a class="code" href="classantlr4_1_1_recognizer.html#a5dfb52dbae6c4c6f41217769ae90717e">getRuleNames</a>()[index];</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;  }</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;rule &quot;</span> + std::to_string(index) + <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a183b00733905fd53dc42e8e2655c5853_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a183b00733905fd53dc42e8e2655c5853_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a183b00733905fd53dc42e8e2655c5853_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a183b00733905fd53dc42e8e2655c5853_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,47"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#a5dfb52dbae6c4c6f41217769ae90717e" title=" " alt="" coords="280,5,420,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f79c144aff232c37c906060e84a3d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f79c144aff232c37c906060e84a3d3f">&#9670;&nbsp;</a></span>getTokenName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParserATNSimulator::getTokenName </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01187">1187</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                                                   {</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;  <span class="keywordflow">if</span> (t == <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;EOF&quot;</span>;</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  }</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160; </div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;  <span class="keyword">const</span> dfa::Vocabulary &amp;vocabulary = <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a> != <span class="keyword">nullptr</span> ? <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>-&gt;<a class="code" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946">getVocabulary</a>() : dfa::Vocabulary::EMPTY_VOCABULARY;</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  std::string displayName = vocabulary.getDisplayName(t);</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;  <span class="keywordflow">if</span> (displayName == std::to_string(t)) {</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    <span class="keywordflow">return</span> displayName;</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;  }</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160; </div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;  <span class="keywordflow">return</span> displayName + <span class="stringliteral">&quot;&lt;&quot;</span> + std::to_string(t) + <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,47"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="280,5,420,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_icgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_icgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_icgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a5f79c144aff232c37c906060e84a3d3f_icgraph">
+<area shape="rect" title=" " alt="" coords="1116,39,1343,80"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a17be01f2a7db2f2c18c973cc2799a5a0" title="Used for debugging in adaptivePredict around execATN but I cut it out for clarity now that alg...." alt="" coords="841,5,1068,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a" title=" " alt="" coords="841,71,1068,112"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,71,519,112"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="567,100,793,141"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,71,244,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75c127196f9e2214fe8451d680bdb5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c127196f9e2214fe8451d680bdb5e3">&#9670;&nbsp;</a></span>precedenceTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt; ParserATNSimulator::precedenceTransition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html">PrecedencePredicateTransition</a> *&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>collectPredicates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullCtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01083">1083</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;                                                          {</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="preprocessor">#if DEBUG_DFA == 1</span></div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;PRED (collectPredicates=&quot;</span> &lt;&lt; collectPredicates &lt;&lt; <span class="stringliteral">&quot;) &quot;</span> &lt;&lt; pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a2fb179a0fe34a3264488fbb5e8286fc0">precedence</a> &lt;&lt; <span class="stringliteral">&quot;&gt;=_p&quot;</span> &lt;&lt; <span class="stringliteral">&quot;, ctx dependent=true&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;context surrounding pred is &quot;</span> &lt;&lt; Arrays::listToString(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>-&gt;getRuleInvocationStack(), <span class="stringliteral">&quot;, &quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    }</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160; </div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;  <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfig&gt;</a> c;</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;  <span class="keywordflow">if</span> (collectPredicates &amp;&amp; inContext) {</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext::PrecedencePredicate&gt;</a> predicate = pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a40ff738d5bd550cb3075f21dc38320f6">getPredicate</a>();</div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160; </div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    <span class="keywordflow">if</span> (fullCtx) {</div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;      <span class="comment">// In full context mode, we can evaluate predicates on-the-fly</span></div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;      <span class="comment">// during closure, which dramatically reduces the size of</span></div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;      <span class="comment">// the config sets. It also obviates the need to test predicates</span></div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;      <span class="comment">// later during conflict resolution.</span></div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;      <span class="keywordtype">size_t</span> currentPosition = <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a>-&gt;index();</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;      <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a>-&gt;seek(<a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">_startIndex</a>);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;      <span class="keywordtype">bool</span> predSucceeds = evalSemanticContext(pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a40ff738d5bd550cb3075f21dc38320f6">getPredicate</a>(), <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad32cd2d2a9fdee36456898fba307f03b">_outerContext</a>, config-&gt;alt, fullCtx);</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;      <a class="code" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a>-&gt;seek(currentPosition);</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;      <span class="keywordflow">if</span> (predSucceeds) {</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;        c = std::make_shared&lt;ATNConfig&gt;(config, pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a>); <span class="comment">// no pred context</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;      }</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;      <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> newSemCtx = <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17">SemanticContext::And</a>(config-&gt;semanticContext, predicate);</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;      c = std::make_shared&lt;ATNConfig&gt;(config, pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a>, newSemCtx);</div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    }</div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    c = std::make_shared&lt;ATNConfig&gt;(config, pt-&gt;<a class="code" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a>);</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;  }</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160; </div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="preprocessor">#if DEBUG_DFA == 1</span></div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;config from pred transition=&quot;</span> &lt;&lt; c &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160; </div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;  <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a75c127196f9e2214fe8451d680bdb5e3_cgraph.png" border="0" usemap="#classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a75c127196f9e2214fe8451d680bdb5e3_cgraph" alt=""/></div>
+<map name="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a75c127196f9e2214fe8451d680bdb5e3_cgraph" id="classantlr4_1_1atn_1_1_parser_a_t_n_simulator_a75c127196f9e2214fe8451d680bdb5e3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,232,69"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17" title=" " alt="" coords="280,5,523,32"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a40ff738d5bd550cb3075f21dc38320f6" title=" " alt="" coords="285,57,518,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05c8564d19c23bdb33d53008d823c387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c8564d19c23bdb33d53008d823c387">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserATNSimulator::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a282a76fb17fd8529c48e695b4dc5134c">antlr4::atn::ATNSimulator</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l00060">60</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                               {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b5fc9f6a099bdc9931f9afc50f35232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5fc9f6a099bdc9931f9afc50f35232">&#9670;&nbsp;</a></span>setPredictionMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserATNSimulator::setPredictionMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">PredictionMode</a>&#160;</td>
+          <td class="paramname"><em>newMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a> 第 <a class="el" href="_parser_a_t_n_simulator_8cpp_source.html#l01339">1339</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;                                                                 {</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;  _mode = newMode;</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aa4900c86546ea8b582b5ebb935c142d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4900c86546ea8b582b5ebb935c142d8">&#9670;&nbsp;</a></span>_dfa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a>* antlr4::atn::ParserATNSimulator::_dfa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00388">388</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a823106102e611d8c746145640956c34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823106102e611d8c746145640956c34f">&#9670;&nbsp;</a></span>_input</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TokenStream* antlr4::atn::ParserATNSimulator::_input</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00385">385</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad32cd2d2a9fdee36456898fba307f03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32cd2d2a9fdee36456898fba307f03b">&#9670;&nbsp;</a></span>_outerContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a>* antlr4::atn::ParserATNSimulator::_outerContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00387">387</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad970329e7a96edbc93ce38604608f0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad970329e7a96edbc93ce38604608f0b2">&#9670;&nbsp;</a></span>_startIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t antlr4::atn::ParserATNSimulator::_startIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00386">386</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1e32f99f820baf3079b4bb631e5ada4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e32f99f820baf3079b4bb631e5ada4f">&#9670;&nbsp;</a></span>decisionToDFA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a>&gt;&amp; antlr4::atn::ParserATNSimulator::decisionToDFA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00260">260</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa4d885910cc6f113c761a232d297e8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d885910cc6f113c761a232d297e8e4">&#9670;&nbsp;</a></span>mergeCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html">PredictionContextMergeCache</a> antlr4::atn::ParserATNSimulator::mergeCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Each prediction operation uses a cache for merge of prediction contexts. Don't keep around as it wastes huge amounts of memory. The merge cache isn't synchronized but we're ok since two threads shouldn't reuse same parser/atnsim object because it can only handle one input at a time. This maps graphs a and b to merged result c. (a,b)-&gt;c. We can avoid the merge if we ever see a and b again. Note that (b,a)-&gt;c should also be examined during cache lookup. </p>
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00382">382</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad4351ce091415097bb205d647cecfb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4351ce091415097bb205d647cecfb86">&#9670;&nbsp;</a></span>parser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1_parser.html">Parser</a>* const antlr4::atn::ParserATNSimulator::parser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00371">371</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8c639842e974461b22d4b4c314ee4d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c639842e974461b22d4b4c314ee4d1d">&#9670;&nbsp;</a></span>TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool ParserATNSimulator::TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT = ParserATNSimulator::getLrLoopSetting()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a> 第 <a class="el" href="_parser_a_t_n_simulator_8h_source.html#l00258">258</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/atn/<a class="el" href="_parser_a_t_n_simulator_8h_source.html">ParserATNSimulator.h</a></li>
+<li>runtime/atn/<a class="el" href="_parser_a_t_n_simulator_8cpp_source.html">ParserATNSimulator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassantlrcpp_1_1_bit_set_html"><div class="ttname"><a href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_bit_set_8h_source.html#l00012">BitSet.h:12</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html_ad9285036b2a01af0109507c442ea0e25aae2ecfbd95d475ddf08876080d57e3d9"><div class="ttname"><a href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25aae2ecfbd95d475ddf08876080d57e3d9">antlr4::atn::PredictionMode::SLL</a></div><div class="ttdeci">@ SLL</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></div><div class="ttdoc">An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,...</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00026">Transition.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a51b55922ce19b4812b517f717233495a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a">antlr4::atn::ParserATNSimulator::getLookaheadName</a></div><div class="ttdeci">virtual std::string getLookaheadName(TokenStream *input)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8cpp_source.html#l01201">ParserATNSimulator.cpp:1201</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_aa4d885910cc6f113c761a232d297e8e4"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">antlr4::atn::ParserATNSimulator::mergeCache</a></div><div class="ttdeci">PredictionContextMergeCache mergeCache</div><div class="ttdoc">Each prediction operation uses a cache for merge of prediction contexts. Don't keep around as it wast...</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00382">ParserATNSimulator.h:382</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_ae2e2757839f60f245b1a30c1f83bd52d"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#ae2e2757839f60f245b1a30c1f83bd52d">antlr4::atn::ATNConfig::state</a></div><div class="ttdeci">ATNState * state</div><div class="ttdoc">The ATN state associated with this configuration.</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00038">ATNConfig.h:38</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ae5fa5f9f1afcb130e72a863261dfdf17"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17">antlr4::atn::SemanticContext::And</a></div><div class="ttdeci">static Ref&lt; SemanticContext &gt; And(Ref&lt; SemanticContext &gt; const &amp;a, Ref&lt; SemanticContext &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_semantic_context_8cpp_source.html#l00325">SemanticContext.cpp:325</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html">antlr4::dfa::DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00017">DFA.h:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a1a88e9a52986711b319268c6e6faf6c6"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">antlr4::atn::ATNSimulator::ERROR</a></div><div class="ttdeci">static const Ref&lt; dfa::DFAState &gt; ERROR</div><div class="ttdoc">Must distinguish between missing edge and edge we know leads nowhere.</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00019">ATNSimulator.h:19</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a3a4a291fbbd42c48c1b604b68f52925a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">antlr4::atn::ParserATNSimulator::ParserATNSimulator</a></div><div class="ttdeci">ParserATNSimulator(const ATN &amp;atn, std::vector&lt; dfa::DFA &gt; &amp;decisionToDFA, PredictionContextCache &amp;sharedContextCache)</div><div class="ttdoc">Testing only!</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8cpp_source.html#l00049">ParserATNSimulator.cpp:49</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a5f79c144aff232c37c906060e84a3d3f"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f">antlr4::atn::ParserATNSimulator::getTokenName</a></div><div class="ttdeci">virtual std::string getTokenName(size_t t)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8cpp_source.html#l01187">ParserATNSimulator.cpp:1187</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a16f04e1d91f059b882505aff2174a1e1"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">antlr4::dfa::DFA::isPrecedenceDfa</a></div><div class="ttdeci">bool isPrecedenceDfa() const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00059">DFA.cpp:59</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_aaaed7f4ddda71e156b36de33e88f66a7"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">antlr4::atn::Transition::target</a></div><div class="ttdeci">ATNState * target</div><div class="ttdoc">The target of this transition.</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00046">Transition.h:46</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_ad32cd2d2a9fdee36456898fba307f03b"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad32cd2d2a9fdee36456898fba307f03b">antlr4::atn::ParserATNSimulator::_outerContext</a></div><div class="ttdeci">ParserRuleContext * _outerContext</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00387">ParserATNSimulator.h:387</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_atom_transition_html_ac793fab5323d347fe2b7c159c9b9c556"><div class="ttname"><a href="classantlr4_1_1atn_1_1_atom_transition.html#ac793fab5323d347fe2b7c159c9b9c556">antlr4::atn::AtomTransition::_label</a></div><div class="ttdeci">const size_t _label</div><div class="ttdoc">The token type or character value; or, signifies special label.</div><div class="ttdef"><b>Definition:</b> <a href="_atom_transition_8h_source.html#l00017">AtomTransition.h:17</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_adefecf5fd0a7b3843d4044f10e525f8a"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">antlrcpp::SingleWriteMultipleReadLock::writeUnlock</a></div><div class="ttdeci">void writeUnlock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00231">CPPUtils.cpp:231</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a3e1dda5e0e36edf6b80d8a3965851d1b"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">antlrcpp::SingleWriteMultipleReadLock::writeLock</a></div><div class="ttdeci">void writeLock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00222">CPPUtils.cpp:222</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_precedence_predicate_transition_html_a40ff738d5bd550cb3075f21dc38320f6"><div class="ttname"><a href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a40ff738d5bd550cb3075f21dc38320f6">antlr4::atn::PrecedencePredicateTransition::getPredicate</a></div><div class="ttdeci">Ref&lt; SemanticContext::PrecedencePredicate &gt; getPredicate() const</div><div class="ttdef"><b>Definition:</b> <a href="_precedence_predicate_transition_8cpp_source.html#l00026">PrecedencePredicateTransition.cpp:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_block_start_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_block_start_state.html">antlr4::atn::BlockStartState</a></div><div class="ttdoc">The start of a regular {</div><div class="ttdef"><b>Definition:</b> <a href="_block_start_state_8h_source.html#l00014">BlockStartState.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html_aae7ec953d3f35749e62ccb96fa3e0946"><div class="ttname"><a href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946">antlr4::Recognizer::getVocabulary</a></div><div class="ttdeci">virtual dfa::Vocabulary const  &amp; getVocabulary() const</div><div class="ttdef"><b>Definition:</b> <a href="_recognizer_8cpp_source.html#l00033">Recognizer.cpp:33</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a0283251c54b224124da6fc0600717617"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">antlr4::dfa::DFA::setPrecedenceStartState</a></div><div class="ttdeci">void setPrecedenceStartState(int precedence, DFAState *startState, antlrcpp::SingleWriteMultipleReadLock &amp;lock)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00073">DFA.cpp:73</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_set_transition_html_acab185db21bb0e76034526595150fd80"><div class="ttname"><a href="classantlr4_1_1atn_1_1_set_transition.html#acab185db21bb0e76034526595150fd80">antlr4::atn::SetTransition::set</a></div><div class="ttdeci">const misc::IntervalSet set</div><div class="ttdef"><b>Definition:</b> <a href="_set_transition_8h_source.html#l00017">SetTransition.h:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_block_start_state_html_aa79f25cca90ec823d50f4a8f7b7ec017"><div class="ttname"><a href="classantlr4_1_1atn_1_1_block_start_state.html#aa79f25cca90ec823d50f4a8f7b7ec017">antlr4::atn::BlockStartState::endState</a></div><div class="ttdeci">BlockEndState * endState</div><div class="ttdef"><b>Definition:</b> <a href="_block_start_state_8h_source.html#l00017">BlockStartState.h:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_set_html_a8ad8fd554f7cf35c896287e7e2be1e63"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval_set.html#a8ad8fd554f7cf35c896287e7e2be1e63">antlr4::misc::IntervalSet::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_set_8cpp_source.html#l00336">IntervalSet.cpp:336</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_block_end_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_block_end_state.html">antlr4::atn::BlockEndState</a></div><div class="ttdoc">Terminal node of a simple {</div><div class="ttdef"><b>Definition:</b> <a href="_block_end_state_8h_source.html#l00014">BlockEndState.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_prediction_context_merge_cache_html_acf7501a4cd385b70239191dfcf16e9c1"><div class="ttname"><a href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html#acf7501a4cd385b70239191dfcf16e9c1">antlr4::atn::PredictionContextMergeCache::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="_prediction_context_8cpp_source.html#l00643">PredictionContext.cpp:643</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_no_viable_alt_exception_html"><div class="ttname"><a href="classantlr4_1_1_no_viable_alt_exception.html">antlr4::NoViableAltException</a></div><div class="ttdef"><b>Definition:</b> <a href="_no_viable_alt_exception_8h_source.html#l00018">NoViableAltException.h:18</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_aea00369023c5b32d3b73e9e4b2726cbe"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aea00369023c5b32d3b73e9e4b2726cbe">antlr4::atn::ATNSimulator::ATNSimulator</a></div><div class="ttdeci">ATNSimulator(const ATN &amp;atn, PredictionContextCache &amp;sharedContextCache)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00022">ATNSimulator.cpp:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_no_viable_alt_exception_html_af4879eed620656f49a4d0365eb27e64b"><div class="ttname"><a href="classantlr4_1_1_no_viable_alt_exception.html#af4879eed620656f49a4d0365eb27e64b">antlr4::NoViableAltException::getDeadEndConfigs</a></div><div class="ttdeci">virtual atn::ATNConfigSet * getDeadEndConfigs() const</div><div class="ttdef"><b>Definition:</b> <a href="_no_viable_alt_exception_8cpp_source.html#l00044">NoViableAltException.cpp:44</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_ad970329e7a96edbc93ce38604608f0b2"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">antlr4::atn::ParserATNSimulator::_startIndex</a></div><div class="ttdeci">size_t _startIndex</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00386">ParserATNSimulator.h:386</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a1e32f99f820baf3079b4bb631e5ada4f"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">antlr4::atn::ParserATNSimulator::decisionToDFA</a></div><div class="ttdeci">std::vector&lt; dfa::DFA &gt; &amp; decisionToDFA</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00260">ParserATNSimulator.h:260</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a1f30878a632f67672f16b52eefb01f26"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">antlr4::atn::ATNConfig::context</a></div><div class="ttdeci">Ref&lt; PredictionContext &gt; context</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00048">ATNConfig.h:48</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_set_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_set_transition.html">antlr4::atn::SetTransition</a></div><div class="ttdoc">A transition containing a set of values.</div><div class="ttdef"><b>Definition:</b> <a href="_set_transition_8h_source.html#l00015">SetTransition.h:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_a5404495afc6bb7823429d202a1625bdc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a5404495afc6bb7823429d202a1625bdc">antlr4::atn::ATNConfigSet::configs</a></div><div class="ttdeci">std::vector&lt; Ref&lt; ATNConfig &gt; &gt; configs</div><div class="ttdoc">Track the elements as they are added to the set; supports get(i)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_set_8h_source.html#l00019">ATNConfigSet.h:19</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_ab3c0921267abe8227f51aa4f1201a82a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ab3c0921267abe8227f51aa4f1201a82a">antlr4::atn::ATNSimulator::_edgeLock</a></div><div class="ttdeci">static antlrcpp::SingleWriteMultipleReadLock _edgeLock</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00060">ATNSimulator.h:60</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a6e0d2aca83d6cb0d155d971594c8dc7f"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">antlr4::dfa::DFA::getPrecedenceStartState</a></div><div class="ttdeci">DFAState * getPrecedenceStartState(int precedence) const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00063">DFA.cpp:63</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_atom_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_atom_transition.html">antlr4::atn::AtomTransition</a></div><div class="ttdoc">TODO: make all transitions sets? no, should remove set edges.</div><div class="ttdef"><b>Definition:</b> <a href="_atom_transition_8h_source.html#l00014">AtomTransition.h:14</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_bit_set_html_a42f487492a858e90b594a24615241500"><div class="ttname"><a href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500">antlrcpp::BitSet::nextSetBit</a></div><div class="ttdeci">size_t nextSetBit(size_t pos) const</div><div class="ttdef"><b>Definition:</b> <a href="_bit_set_8h_source.html#l00014">BitSet.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a42e1ce8d87cbfb6156a6bff4fd86ed32"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">antlr4::dfa::DFA::s0</a></div><div class="ttdeci">DFAState * s0</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00025">DFA.h:25</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00139">antlr4-common.h:139</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_afec8e232a4c11c864ecc770252a2bcb6"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">antlr4::atn::ATNSimulator::atn</a></div><div class="ttdeci">const ATN &amp; atn</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00020">ATNSimulator.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a0ceff3caefbd8f9067c549fdf60e973b"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a0ceff3caefbd8f9067c549fdf60e973b">antlr4::atn::ATNSimulator::_stateLock</a></div><div class="ttdeci">static antlrcpp::SingleWriteMultipleReadLock _stateLock</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00059">ATNSimulator.h:59</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_star_loop_entry_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">antlr4::atn::StarLoopEntryState</a></div><div class="ttdef"><b>Definition:</b> <a href="_star_loop_entry_state_8h_source.html#l00013">StarLoopEntryState.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_ac7fbaf0a637744b43e6709660a5b12f2"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">antlr4::atn::ParserATNSimulator::execATN</a></div><div class="ttdeci">virtual size_t execATN(dfa::DFA &amp;dfa, dfa::DFAState *s0, TokenStream *input, size_t startIndex, ParserRuleContext *outerContext)</div><div class="ttdoc">Performs ATN simulation to compute a predicted alternative based upon the remaining input,...</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8cpp_source.html#l00147">ParserATNSimulator.cpp:147</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a41d719f482d60677ec1fbf08b7e5e77c"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">antlr4::ParserRuleContext::EMPTY</a></div><div class="ttdeci">static ParserRuleContext EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00038">ParserRuleContext.h:38</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_ad4351ce091415097bb205d647cecfb86"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">antlr4::atn::ParserATNSimulator::parser</a></div><div class="ttdeci">Parser *const parser</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00371">ParserATNSimulator.h:371</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a83d51316351c6939e7d249dc20b5c9c8"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">antlr4::dfa::DFA::atnStartState</a></div><div class="ttdeci">atn::DecisionState * atnStartState</div><div class="ttdoc">From which ATN state did we create this DFA?</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00023">DFA.h:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html_a5dfb52dbae6c4c6f41217769ae90717e"><div class="ttname"><a href="classantlr4_1_1_recognizer.html#a5dfb52dbae6c4c6f41217769ae90717e">antlr4::Recognizer::getRuleNames</a></div><div class="ttdeci">virtual std::vector&lt; std::string &gt; const  &amp; getRuleNames() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a823106102e611d8c746145640956c34f"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">antlr4::atn::ParserATNSimulator::_input</a></div><div class="ttdeci">TokenStream * _input</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00385">ParserATNSimulator.h:385</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_precedence_predicate_transition_html_a2fb179a0fe34a3264488fbb5e8286fc0"><div class="ttname"><a href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a2fb179a0fe34a3264488fbb5e8286fc0">antlr4::atn::PrecedencePredicateTransition::precedence</a></div><div class="ttdeci">const int precedence</div><div class="ttdef"><b>Definition:</b> <a href="_precedence_predicate_transition_8h_source.html#l00016">PrecedencePredicateTransition.h:16</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_a8c639842e974461b22d4b4c314ee4d1d"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a8c639842e974461b22d4b4c314ee4d1d">antlr4::atn::ParserATNSimulator::TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</a></div><div class="ttdeci">static const bool TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00258">ParserATNSimulator.h:258</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_afaf75312829a34946e8e69b07748a230"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">antlr4::dfa::DFA::decision</a></div><div class="ttdeci">size_t decision</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00026">DFA.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_parser_a_t_n_simulator_html_aa4900c86546ea8b582b5ebb935c142d8"><div class="ttname"><a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4900c86546ea8b582b5ebb935c142d8">antlr4::atn::ParserATNSimulator::_dfa</a></div><div class="ttdeci">dfa::DFA * _dfa</div><div class="ttdef"><b>Definition:</b> <a href="_parser_a_t_n_simulator_8h_source.html#l00388">ParserATNSimulator.h:388</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

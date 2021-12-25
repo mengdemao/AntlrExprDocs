@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/ANTLRFileStream.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ANTLRFileStream.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_n_t_l_r_file_stream_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">support/StringUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_n_t_l_r_file_stream_8h.html">ANTLRFileStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#ae8d8fcf45ba9498dcba5d4664fea76ad">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#ae8d8fcf45ba9498dcba5d4664fea76ad">ANTLRFileStream::loadFromFile</a>(<span class="keyword">const</span> std::string &amp;fileName) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a0b0c3fc70ad26d5bda57cbdfc503198e">_fileName</a> = fileName;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a0b0c3fc70ad26d5bda57cbdfc503198e">_fileName</a>.empty()) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  std::ifstream stream(<a class="code" href="namespaceantlrcpp.html#ae60d77de3a127a9c8d58df512abaf49d">antlrcpp::s2ws</a>(fileName), std::ios::binary);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  std::ifstream stream(fileName, std::ios::binary);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html#ae962ece9c34a19c1aeb5100ccab8b81a">ANTLRInputStream::load</a>(stream);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a9c3954984c435d8e1a2a9bb898017486">   27</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a9c3954984c435d8e1a2a9bb898017486">ANTLRFileStream::getSourceName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a0b0c3fc70ad26d5bda57cbdfc503198e">_fileName</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_file_stream_html_ae8d8fcf45ba9498dcba5d4664fea76ad"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_file_stream.html#ae8d8fcf45ba9498dcba5d4664fea76ad">antlr4::ANTLRFileStream::loadFromFile</a></div><div class="ttdeci">virtual void loadFromFile(const std::string &amp;fileName)</div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_file_stream_8cpp_source.html#l00012">ANTLRFileStream.cpp:12</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_file_stream_html_a9c3954984c435d8e1a2a9bb898017486"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a9c3954984c435d8e1a2a9bb898017486">antlr4::ANTLRFileStream::getSourceName</a></div><div class="ttdeci">virtual std::string getSourceName() const override</div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_file_stream_8cpp_source.html#l00027">ANTLRFileStream.cpp:27</a></div></div>
+<div class="ttc" id="a_a_n_t_l_r_file_stream_8h_html"><div class="ttname"><a href="_a_n_t_l_r_file_stream_8h.html">ANTLRFileStream.h</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_ae60d77de3a127a9c8d58df512abaf49d"><div class="ttname"><a href="namespaceantlrcpp.html#ae60d77de3a127a9c8d58df512abaf49d">antlrcpp::s2ws</a></div><div class="ttdeci">std::wstring s2ws(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="_string_utils_8cpp_source.html#l00034">StringUtils.cpp:34</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_file_stream_html_a0b0c3fc70ad26d5bda57cbdfc503198e"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_file_stream.html#a0b0c3fc70ad26d5bda57cbdfc503198e">antlr4::ANTLRFileStream::_fileName</a></div><div class="ttdeci">std::string _fileName</div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_file_stream_8h_source.html#l00027">ANTLRFileStream.h:27</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_input_stream_html_ae962ece9c34a19c1aeb5100ccab8b81a"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_input_stream.html#ae962ece9c34a19c1aeb5100ccab8b81a">antlr4::ANTLRInputStream::load</a></div><div class="ttdeci">virtual void load(const std::string &amp;input)</div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_input_stream_8cpp_source.html#l00044">ANTLRInputStream.cpp:44</a></div></div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

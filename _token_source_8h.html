@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/TokenSource.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle">
+<div class="title">TokenSource.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_token_factory_8h_source.html">TokenFactory.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+TokenSource.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_token_source_8h__incl.png" border="0" usemap="#runtime_2_token_source_8h" alt=""/></div>
+<map name="runtime_2_token_source_8h" id="runtime_2_token_source_8h">
+<area shape="rect" title=" " alt="" coords="1211,5,1381,32"/>
+<area shape="rect" href="_token_factory_8h.html" title=" " alt="" coords="1238,80,1354,107"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1229,155,1363,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,91,256"/>
+<area shape="rect" title=" " alt="" coords="115,229,189,256"/>
+<area shape="rect" title=" " alt="" coords="213,229,280,256"/>
+<area shape="rect" title=" " alt="" coords="304,229,371,256"/>
+<area shape="rect" title=" " alt="" coords="395,229,469,256"/>
+<area shape="rect" title=" " alt="" coords="371,304,451,331"/>
+<area shape="rect" title=" " alt="" coords="886,229,957,256"/>
+<area shape="rect" title=" " alt="" coords="981,229,1040,256"/>
+<area shape="rect" title=" " alt="" coords="1065,229,1135,256"/>
+<area shape="rect" title=" " alt="" coords="1160,229,1203,256"/>
+<area shape="rect" title=" " alt="" coords="1227,229,1277,256"/>
+<area shape="rect" title=" " alt="" coords="1301,229,1379,256"/>
+<area shape="rect" title=" " alt="" coords="1403,229,1445,256"/>
+<area shape="rect" title=" " alt="" coords="1469,229,1544,256"/>
+<area shape="rect" title=" " alt="" coords="475,304,546,331"/>
+<area shape="rect" title=" " alt="" coords="1569,229,1639,256"/>
+<area shape="rect" title=" " alt="" coords="571,304,645,331"/>
+<area shape="rect" title=" " alt="" coords="1663,229,1721,256"/>
+<area shape="rect" title=" " alt="" coords="768,304,827,331"/>
+<area shape="rect" title=" " alt="" coords="1745,229,1821,256"/>
+<area shape="rect" title=" " alt="" coords="1845,229,1937,256"/>
+<area shape="rect" title=" " alt="" coords="1961,229,2085,256"/>
+<area shape="rect" title=" " alt="" coords="2109,229,2224,256"/>
+<area shape="rect" title=" " alt="" coords="2249,229,2309,256"/>
+<area shape="rect" title=" " alt="" coords="851,304,914,331"/>
+<area shape="rect" title=" " alt="" coords="2333,229,2397,256"/>
+<area shape="rect" title=" " alt="" coords="2422,229,2509,256"/>
+<area shape="rect" title=" " alt="" coords="2533,229,2592,256"/>
+<area shape="rect" title=" " alt="" coords="2617,229,2759,256"/>
+<area shape="rect" title=" " alt="" coords="2783,229,2857,256"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="645,229,760,256"/>
+<area shape="rect" href="_declarations_8h.html" title=" " alt="" coords="2881,229,3050,256"/>
+<area shape="rect" title=" " alt="" coords="669,304,744,331"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_token_source_8h__dep__incl.png" border="0" usemap="#runtime_2_token_source_8hdep" alt=""/></div>
+<map name="runtime_2_token_source_8hdep" id="runtime_2_token_source_8hdep">
+<area shape="rect" title=" " alt="" coords="5498,5,5669,32"/>
+<area shape="rect" href="_parser_8h.html" title=" " alt="" coords="1589,80,1717,107"/>
+<area shape="rect" href="_lexer_8h.html" title=" " alt="" coords="4526,80,4649,107"/>
+<area shape="rect" href="_common_token_8cpp.html" title=" " alt="" coords="5373,80,5573,107"/>
+<area shape="rect" href="_list_token_source_8h.html" title=" " alt="" coords="5597,80,5791,107"/>
+<area shape="rect" href="_token_source_8cpp.html" title=" " alt="" coords="5815,80,6000,107"/>
+<area shape="rect" href="_unbuffered_token_stream_8cpp.html" title=" " alt="" coords="6024,80,6284,107"/>
+<area shape="rect" href="_parser_a_t_n_simulator_8cpp.html" title=" " alt="" coords="5,162,263,189"/>
+<area shape="rect" href="_profiling_a_t_n_simulator_8cpp.html" title=" " alt="" coords="287,162,557,189"/>
+<area shape="rect" href="_bail_error_strategy_8cpp.html" title=" " alt="" coords="582,162,795,189"/>
+<area shape="rect" href="_failed_predicate_exception_8cpp.html" title=" " alt="" coords="819,162,1086,189"/>
+<area shape="rect" href="_input_mismatch_exception_8cpp.html" title=" " alt="" coords="1111,162,1376,189"/>
+<area shape="rect" href="_no_viable_alt_exception_8cpp.html" title=" " alt="" coords="1401,162,1646,189"/>
+<area shape="rect" href="_parser_8cpp.html" title=" " alt="" coords="2540,162,2683,189"/>
+<area shape="rect" href="_parser_interpreter_8h.html" title=" " alt="" coords="2318,162,2515,189"/>
+<area shape="rect" href="_parser_rule_context_8cpp.html" title=" " alt="" coords="1670,162,1894,189"/>
+<area shape="rect" href="_rule_context_8cpp.html" title=" " alt="" coords="1918,162,2102,189"/>
+<area shape="rect" href="_trees_8cpp.html" title=" " alt="" coords="2126,162,2294,189"/>
+<area shape="rect" href="_parser_interpreter_8cpp.html" title=" " alt="" coords="2463,251,2675,278"/>
+<area shape="rect" href="_parse_tree_pattern_matcher_8cpp.html" title=" " alt="" coords="5466,244,5679,285"/>
+<area shape="rect" href="_lexer_a_t_n_simulator_8cpp.html" title=" " alt="" coords="5611,162,5863,189"/>
+<area shape="rect" href="_lexer_channel_action_8cpp.html" title=" " alt="" coords="5887,155,6077,196"/>
+<area shape="rect" href="_lexer_custom_action_8cpp.html" title=" " alt="" coords="6101,162,6356,189"/>
+<area shape="rect" href="_lexer_indexed_custom_action_8cpp.html" title=" " alt="" coords="2759,155,2947,196"/>
+<area shape="rect" href="_lexer_mode_action_8cpp.html" title=" " alt="" coords="2971,162,3212,189"/>
+<area shape="rect" href="_lexer_more_action_8cpp.html" title=" " alt="" coords="3236,162,3475,189"/>
+<area shape="rect" href="_lexer_pop_mode_action_8cpp.html" title=" " alt="" coords="3499,155,3697,196"/>
+<area shape="rect" href="_lexer_push_mode_action_8cpp.html" title=" " alt="" coords="3721,155,3925,196"/>
+<area shape="rect" href="_lexer_skip_action_8cpp.html" title=" " alt="" coords="3949,162,4183,189"/>
+<area shape="rect" href="_lexer_type_action_8cpp.html" title=" " alt="" coords="4207,162,4442,189"/>
+<area shape="rect" href="_buffered_token_stream_8cpp.html" title=" " alt="" coords="4466,162,4709,189"/>
+<area shape="rect" href="_lexer_8cpp.html" title=" " alt="" coords="4733,162,4871,189"/>
+<area shape="rect" href="_lexer_interpreter_8h.html" title=" " alt="" coords="4895,162,5087,189"/>
+<area shape="rect" href="_lexer_no_viable_alt_exception_8cpp.html" title=" " alt="" coords="5111,155,5301,196"/>
+<area shape="rect" href="_interval_set_8cpp.html" title=" " alt="" coords="5325,162,5535,189"/>
+<area shape="rect" href="_list_token_source_8cpp.html" title=" " alt="" coords="6431,162,6639,189"/>
+</map>
+</div>
+</div>
+<p><a href="_token_source_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_source.html">antlr4::TokenSource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A source of tokens must provide a sequence of tokens via </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token_source.html#a41e3a36074ba6dcd3e0dab9250d4b179">nextToken()</a>, <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>, CharStream</dd></dl>
+<p>and also must reveal it's source of characters; 's text is computed from a ; it only store indices into the char stream. Errors from the lexer are never passed to the parser. Either you want to keep going or you do not upon token recognition error. If you do not want to continue lexing then you do not want to continue parsing. Just throw an exception not under </p><dl class="section see"><dt>参见</dt><dd>RecognitionException</dd></dl>
+<p>and Java will naturally toss you all the way out of the recognizers. If you want to continue lexing then you should not throw an exception to the parser&ndash;it has already requested a token. Keep lexing until you get a valid one. Just report errors and keep going, looking for a valid token.  <a href="classantlr4_1_1_token_source.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceantlr4"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlr4.html">antlr4</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

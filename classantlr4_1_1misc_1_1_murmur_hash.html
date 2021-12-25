@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::misc::MurmurHash类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1misc.html">misc</a></li><li class="navelem"><a class="el" href="classantlr4_1_1misc_1_1_murmur_hash.html">MurmurHash</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="classantlr4_1_1misc_1_1_murmur_hash-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::misc::MurmurHash类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_murmur_hash_8h_source.html">MurmurHash.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af97273b2763fc46f8ad80160863614a9"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1misc_1_1_murmur_hash.html#af97273b2763fc46f8ad80160863614a9">initialize</a> ()</td></tr>
+<tr class="separator:af97273b2763fc46f8ad80160863614a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18efedac23dc5b9dd3f6487cfc010af9"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1misc_1_1_murmur_hash.html#a18efedac23dc5b9dd3f6487cfc010af9">initialize</a> (size_t seed)</td></tr>
+<tr class="memdesc:a18efedac23dc5b9dd3f6487cfc010af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the hash using the specified seed.  <a href="classantlr4_1_1misc_1_1_murmur_hash.html#a18efedac23dc5b9dd3f6487cfc010af9">更多...</a><br /></td></tr>
+<tr class="separator:a18efedac23dc5b9dd3f6487cfc010af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:ae29b00191cbdaf4fa67a3fbbbee00ff9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: size_t { <a class="el" href="classantlr4_1_1misc_1_1_murmur_hash.html#ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f">DEFAULT_SEED</a> = 0
+ }</td></tr>
+<tr class="separator:ae29b00191cbdaf4fa67a3fbbbee00ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_murmur_hash_8h_source.html">MurmurHash.h</a> 第 <a class="el" href="_murmur_hash_8h_source.html#l00013">13</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="ae29b00191cbdaf4fa67a3fbbbee00ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29b00191cbdaf4fa67a3fbbbee00ff9">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : size_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f"></a>DEFAULT_SEED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="_murmur_hash_8h_source.html">MurmurHash.h</a> 第 <a class="el" href="_murmur_hash_8h_source.html#l00019">19</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;         : <span class="keywordtype">size_t</span> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="classantlr4_1_1misc_1_1_murmur_hash.html#ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f">DEFAULT_SEED</a> = 0,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af97273b2763fc46f8ad80160863614a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97273b2763fc46f8ad80160863614a9">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t MurmurHash::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialize the hash using the default seed value. Returns the intermediate hash value. </p>
+
+<p class="definition">在文件 <a class="el" href="_murmur_hash_8cpp_source.html">MurmurHash.cpp</a> 第 <a class="el" href="_murmur_hash_8cpp_source.html#l00052">52</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                              {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_murmur_hash.html#af97273b2763fc46f8ad80160863614a9">initialize</a>(<a class="code" href="classantlr4_1_1misc_1_1_murmur_hash.html#ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f">DEFAULT_SEED</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1misc_1_1_murmur_hash_af97273b2763fc46f8ad80160863614a9_icgraph.png" border="0" usemap="#classantlr4_1_1misc_1_1_murmur_hash_af97273b2763fc46f8ad80160863614a9_icgraph" alt=""/></div>
+<map name="classantlr4_1_1misc_1_1_murmur_hash_af97273b2763fc46f8ad80160863614a9_icgraph" id="classantlr4_1_1misc_1_1_murmur_hash_af97273b2763fc46f8ad80160863614a9_icgraph">
+<area shape="rect" title=" " alt="" coords="520,136,711,177"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_lexer_a_t_n_config.html#a0ed4e64c3fdce753b37952985f29a718" title=" " alt="" coords="271,37,470,79"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a54366241b4eab72f182ce26e6b9d55fb" title=" " alt="" coords="289,103,453,144"/>
+<area shape="rect" href="classantlr4_1_1misc_1_1_interval_set.html#aad88eb36ed05f285f0871982070a8fa7" title=" " alt="" coords="281,168,460,209"/>
+<area shape="rect" href="struct_alt_and_context_config_hasher.html#aaff11232d12d08e88422318bff2ba22f" title=" " alt="" coords="269,233,472,275"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_ordered_a_t_n_config_set.html#a598e9582e6f59e7a07429c4fdc8ef125" title=" " alt="" coords="5,5,221,47"/>
+<area shape="rect" href="structantlr4_1_1atn_1_1_a_t_n_config_1_1_hasher.html#a2191f995ae4700d00c26c996a13ff578" title=" " alt="" coords="31,71,195,112"/>
+<area shape="rect" href="structstd_1_1hash_3_01_a_t_n_config_01_4.html#a3b58290a2ab5ed695e1522ec87eec938" title=" " alt="" coords="32,136,195,177"/>
+<area shape="rect" href="structstd_1_1hash_3_01_interval_set_01_4.html#a0f95e3249d4523142ac0d7e15ed91e3d" title=" " alt="" coords="30,201,197,243"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18efedac23dc5b9dd3f6487cfc010af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18efedac23dc5b9dd3f6487cfc010af9">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t MurmurHash::initialize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the hash using the specified seed. </p>
+
+<p class="definition">在文件 <a class="el" href="_murmur_hash_8cpp_source.html">MurmurHash.cpp</a> 第 <a class="el" href="_murmur_hash_8cpp_source.html#l00056">56</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                         {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> seed;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/misc/<a class="el" href="_murmur_hash_8h_source.html">MurmurHash.h</a></li>
+<li>runtime/misc/<a class="el" href="_murmur_hash_8cpp_source.html">MurmurHash.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_murmur_hash_html_af97273b2763fc46f8ad80160863614a9"><div class="ttname"><a href="classantlr4_1_1misc_1_1_murmur_hash.html#af97273b2763fc46f8ad80160863614a9">antlr4::misc::MurmurHash::initialize</a></div><div class="ttdeci">static size_t initialize()</div><div class="ttdef"><b>Definition:</b> <a href="_murmur_hash_8cpp_source.html#l00052">MurmurHash.cpp:52</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_murmur_hash_html_ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f"><div class="ttname"><a href="classantlr4_1_1misc_1_1_murmur_hash.html#ae29b00191cbdaf4fa67a3fbbbee00ff9a1773dd89bbada93baec53772c8ddcc1f">antlr4::misc::MurmurHash::DEFAULT_SEED</a></div><div class="ttdeci">@ DEFAULT_SEED</div><div class="ttdef"><b>Definition:</b> <a href="_murmur_hash_8h_source.html#l00020">MurmurHash.h:20</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/CommonTokenStream.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CommonTokenStream.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_common_token_stream_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_token_8h.html">Token.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_common_token_stream_8h.html">CommonTokenStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">   12</a></span>&#160;<a class="code" href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">CommonTokenStream::CommonTokenStream</a>(<a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource) : <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a>(tokenSource, <a class="code" href="classantlr4_1_1_token.html">Token</a>::DEFAULT_CHANNEL) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#a3565e4d1910fb5e13b49d6a1f12e5cd7">   15</a></span>&#160;<a class="code" href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">CommonTokenStream::CommonTokenStream</a>(<a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource, <span class="keywordtype">size_t</span> channel_)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;: <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>(tokenSource), channel(channel_) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#a5b8a9ff0beab08b379df20c5306b98cc">   19</a></span>&#160;ssize_t <a class="code" href="classantlr4_1_1_common_token_stream.html#a5b8a9ff0beab08b379df20c5306b98cc">CommonTokenStream::adjustSeekIndex</a>(<span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> nextTokenOnChannel(i, <a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">   23</a></span>&#160;<a class="code" href="classantlr4_1_1_token.html">Token</a>* <a class="code" href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">CommonTokenStream::LB</a>(<span class="keywordtype">size_t</span> k) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (k == 0 || k &gt; <a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">_p</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  ssize_t i = <span class="keyword">static_cast&lt;</span>ssize_t<span class="keyword">&gt;</span>(<a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">_p</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">size_t</span> n = 1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// find k good tokens looking backwards</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">while</span> (n &lt;= k) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// skip off-channel tokens</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    i = previousTokenOnChannel(i - 1, <a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    n++;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (i &lt; 0) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>[i].get();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#ab92b8381589e1a5aacf6e7ffdcf89dfc">   43</a></span>&#160;<a class="code" href="classantlr4_1_1_token.html">Token</a>* <a class="code" href="classantlr4_1_1_common_token_stream.html#ab92b8381589e1a5aacf6e7ffdcf89dfc">CommonTokenStream::LT</a>(ssize_t k) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  lazyInit();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">if</span> (k == 0) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span> (k &lt; 0) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">LB</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(-k));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">size_t</span> i = <a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">_p</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  ssize_t n = 1; <span class="comment">// we know tokens[p] is a good one</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                 <span class="comment">// find k good tokens</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (n &lt; k) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// skip off-channel tokens, but make sure to not look past EOF</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (sync(i + 1)) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      i = nextTokenOnChannel(i + 1, <a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    n++;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>[i].get();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classantlr4_1_1_common_token_stream.html#aafecb98aeb51496b59bc3bb19e228128">   65</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classantlr4_1_1_common_token_stream.html#aafecb98aeb51496b59bc3bb19e228128">CommonTokenStream::getNumberOfOnChannelTokens</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">int</span> n = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classantlr4_1_1_buffered_token_stream.html#a373c27c4d4ec7358ba6985f4839e988a">fill</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>.size(); i++) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classantlr4_1_1_token.html">Token</a> *t = <a class="code" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>[i].get();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">getChannel</a>() == <a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a>) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      n++;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_common_token_stream_8h_html"><div class="ttname"><a href="_common_token_stream_8h.html">CommonTokenStream.h</a></div></div>
+<div class="ttc" id="a_token_8h_html"><div class="ttname"><a href="_token_8h.html">Token.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_ab92b8381589e1a5aacf6e7ffdcf89dfc"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#ab92b8381589e1a5aacf6e7ffdcf89dfc">antlr4::CommonTokenStream::LT</a></div><div class="ttdeci">virtual Token * LT(ssize_t k) override</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00043">CommonTokenStream.cpp:43</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_a2efe72e48498674a5db9d664aaea9d65"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">antlr4::CommonTokenStream::LB</a></div><div class="ttdeci">virtual Token * LB(size_t k) override</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00023">CommonTokenStream.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html">antlr4::CommonTokenStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8h_source.html#l00036">CommonTokenStream.h:36</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_aad59d04a125961d8ba1cffdf4a1a0bcf"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">antlr4::CommonTokenStream::channel</a></div><div class="ttdeci">size_t channel</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8h_source.html#l00071">CommonTokenStream.h:71</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_aa8ab272f9ef3f5195ef8aeb4da15f9ca"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">antlr4::BufferedTokenStream::_p</a></div><div class="ttdeci">size_t _p</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8h_source.html#l00123">BufferedTokenStream.h:123</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a92991c0566e4cb00ae2c5f9e7d8fe6b4"><div class="ttname"><a href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">antlr4::Token::getChannel</a></div><div class="ttdeci">virtual size_t getChannel() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_a5b8a9ff0beab08b379df20c5306b98cc"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#a5b8a9ff0beab08b379df20c5306b98cc">antlr4::CommonTokenStream::adjustSeekIndex</a></div><div class="ttdeci">virtual ssize_t adjustSeekIndex(size_t i) override</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00019">CommonTokenStream.cpp:19</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html">antlr4::BufferedTokenStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8h_source.html#l00024">BufferedTokenStream.h:24</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a518342431db9dd9d982880a59ef0e4f4"><div class="ttname"><a href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">antlr4::Token::getType</a></div><div class="ttdeci">virtual size_t getType() const =0</div><div class="ttdoc">Get the token type of the token</div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_source_html"><div class="ttname"><a href="classantlr4_1_1_token_source.html">antlr4::TokenSource</a></div><div class="ttdoc">A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,...</div><div class="ttdef"><b>Definition:</b> <a href="_token_source_8h_source.html#l00027">TokenSource.h:27</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_ac681a8540466ec9aab6cff49bbcbdb4b"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">antlr4::BufferedTokenStream::_tokens</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Token &gt; &gt; _tokens</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8h_source.html#l00108">BufferedTokenStream.h:108</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_a373c27c4d4ec7358ba6985f4839e988a"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#a373c27c4d4ec7358ba6985f4839e988a">antlr4::BufferedTokenStream::fill</a></div><div class="ttdeci">virtual void fill()</div><div class="ttdoc">Get all tokens from lexer until EOF.</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8cpp_source.html#l00400">BufferedTokenStream.cpp:400</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_aafecb98aeb51496b59bc3bb19e228128"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#aafecb98aeb51496b59bc3bb19e228128">antlr4::CommonTokenStream::getNumberOfOnChannelTokens</a></div><div class="ttdeci">virtual int getNumberOfOnChannelTokens()</div><div class="ttdoc">Count EOF just once.</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00065">CommonTokenStream.cpp:65</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html"><div class="ttname"><a href="classantlr4_1_1_token.html">antlr4::Token</a></div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00015">Token.h:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_a70ef318ad41bc2f99f44549027f886e1"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">antlr4::CommonTokenStream::CommonTokenStream</a></div><div class="ttdeci">CommonTokenStream(TokenSource *tokenSource)</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00012">CommonTokenStream.cpp:12</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

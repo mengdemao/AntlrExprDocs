@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/RuleTransition.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RuleTransition.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rule_transition_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_rule_start_state_8h.html">atn/RuleStartState.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_rule_transition_8h.html">atn/RuleTransition.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1atn.html">antlr4::atn</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#a231adc7c039edce028eacf27526bd6b2">   11</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a231adc7c039edce028eacf27526bd6b2">RuleTransition::RuleTransition</a>(<a class="code" href="classantlr4_1_1atn_1_1_rule_start_state.html">RuleStartState</a> *ruleStart, <span class="keywordtype">size_t</span> ruleIndex, ATNState *followState)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  : <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html">RuleTransition</a>(ruleStart, ruleIndex, 0, followState) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#aeecb4b5ead4ffe23c97b3ea64e57d111">   15</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a231adc7c039edce028eacf27526bd6b2">RuleTransition::RuleTransition</a>(<a class="code" href="classantlr4_1_1atn_1_1_rule_start_state.html">RuleStartState</a> *ruleStart, <span class="keywordtype">size_t</span> ruleIndex, <span class="keywordtype">int</span> precedence, ATNState *followState)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  : <a class="code" href="classantlr4_1_1atn_1_1_transition.html">Transition</a>(ruleStart), ruleIndex(ruleIndex), precedence(precedence) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  this-&gt;followState = <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a9ba63114a2ee50709140026ca76b9a99">followState</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#ad8f28809d50d4c753fcaa7699a49fc78">   20</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">Transition::SerializationType</a> <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#ad8f28809d50d4c753fcaa7699a49fc78">RuleTransition::getSerializationType</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a0c77d5c5af327043a19c51ec0c5416e9">RULE</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#a899ddb9161a918c929cd90371aeec15b">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a899ddb9161a918c929cd90371aeec15b">RuleTransition::isEpsilon</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#a5bb8c825bf3b5ebdf1c8511c728df6cc">   28</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a5bb8c825bf3b5ebdf1c8511c728df6cc">RuleTransition::matches</a>(<span class="keywordtype">size_t</span> <span class="comment">/*symbol*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*minVocabSymbol*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*maxVocabSymbol*/</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_rule_transition.html#af49b98f3a3c4c26194ee44af455eba81">   32</a></span>&#160;std::string <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#af49b98f3a3c4c26194ee44af455eba81">RuleTransition::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::stringstream ss;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  ss &lt;&lt; <span class="stringliteral">&quot;RULE &quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105">Transition::toString</a>() &lt;&lt; <span class="stringliteral">&quot; { ruleIndex: &quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a061f690f1db9171f23d70e38b6fc2ec3">ruleIndex</a> &lt;&lt; <span class="stringliteral">&quot;, precedence: &quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#ad7dd686620691fa1b89a176ecc92a043">precedence</a> &lt;&lt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="stringliteral">&quot;, followState: &quot;</span> &lt;&lt; std::hex &lt;&lt; <a class="code" href="classantlr4_1_1atn_1_1_rule_transition.html#a9ba63114a2ee50709140026ca76b9a99">followState</a> &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_a5bb8c825bf3b5ebdf1c8511c728df6cc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#a5bb8c825bf3b5ebdf1c8511c728df6cc">antlr4::atn::RuleTransition::matches</a></div><div class="ttdeci">virtual bool matches(size_t symbol, size_t minVocabSymbol, size_t maxVocabSymbol) const override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8cpp_source.html#l00028">RuleTransition.cpp:28</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_a9ba63114a2ee50709140026ca76b9a99"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#a9ba63114a2ee50709140026ca76b9a99">antlr4::atn::RuleTransition::followState</a></div><div class="ttdeci">ATNState * followState</div><div class="ttdoc">What node to begin computations following ref to rule.</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8h_source.html#l00021">RuleTransition.h:21</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></div><div class="ttdoc">An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,...</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00026">Transition.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_start_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_start_state.html">antlr4::atn::RuleStartState</a></div><div class="ttdef"><b>Definition:</b> <a href="_rule_start_state_8h_source.html#l00013">RuleStartState.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_a899ddb9161a918c929cd90371aeec15b"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#a899ddb9161a918c929cd90371aeec15b">antlr4::atn::RuleTransition::isEpsilon</a></div><div class="ttdeci">virtual bool isEpsilon() const override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8cpp_source.html#l00024">RuleTransition.cpp:24</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html"><div class="ttname"><a href="namespaceantlr4_1_1atn.html">antlr4::atn</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_predicate_transition_8h_source.html#l00011">AbstractPredicateTransition.h:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_ad8f28809d50d4c753fcaa7699a49fc78"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#ad8f28809d50d4c753fcaa7699a49fc78">antlr4::atn::RuleTransition::getSerializationType</a></div><div class="ttdeci">virtual SerializationType getSerializationType() const override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8cpp_source.html#l00020">RuleTransition.cpp:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_af49b98f3a3c4c26194ee44af455eba81"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#af49b98f3a3c4c26194ee44af455eba81">antlr4::atn::RuleTransition::toString</a></div><div class="ttdeci">virtual std::string toString() const override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8cpp_source.html#l00032">RuleTransition.cpp:32</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html">antlr4::atn::RuleTransition</a></div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8h_source.html#l00013">RuleTransition.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_ac98fee69542c40aaadbd330e28c91105"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105">antlr4::atn::Transition::toString</a></div><div class="ttdeci">virtual std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8cpp_source.html#l00039">Transition.cpp:39</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_a231adc7c039edce028eacf27526bd6b2"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#a231adc7c039edce028eacf27526bd6b2">antlr4::atn::RuleTransition::RuleTransition</a></div><div class="ttdeci">RuleTransition(RuleStartState *ruleStart, size_t ruleIndex, ATNState *followState)</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8cpp_source.html#l00011">RuleTransition.cpp:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_a05a5668a4bc551c4ef1a90721fb80843a0c77d5c5af327043a19c51ec0c5416e9"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a0c77d5c5af327043a19c51ec0c5416e9">antlr4::atn::Transition::RULE</a></div><div class="ttdeci">@ RULE</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00032">Transition.h:32</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_ad7dd686620691fa1b89a176ecc92a043"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#ad7dd686620691fa1b89a176ecc92a043">antlr4::atn::RuleTransition::precedence</a></div><div class="ttdeci">const int precedence</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8h_source.html#l00018">RuleTransition.h:18</a></div></div>
+<div class="ttc" id="a_rule_transition_8h_html"><div class="ttname"><a href="_rule_transition_8h.html">RuleTransition.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_a05a5668a4bc551c4ef1a90721fb80843"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">antlr4::atn::Transition::SerializationType</a></div><div class="ttdeci">SerializationType</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00029">Transition.h:29</a></div></div>
+<div class="ttc" id="a_rule_start_state_8h_html"><div class="ttname"><a href="_rule_start_state_8h.html">RuleStartState.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_rule_transition_html_a061f690f1db9171f23d70e38b6fc2ec3"><div class="ttname"><a href="classantlr4_1_1atn_1_1_rule_transition.html#a061f690f1db9171f23d70e38b6fc2ec3">antlr4::atn::RuleTransition::ruleIndex</a></div><div class="ttdeci">const size_t ruleIndex</div><div class="ttdoc">Ptr to the rule definition object for this rule ref.</div><div class="ttdef"><b>Definition:</b> <a href="_rule_transition_8h_source.html#l00016">RuleTransition.h:16</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/ATNSimulator.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ATNSimulator.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_t_n_simulator_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_type_8h.html">atn/ATNType.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_config_set_8h.html">atn/ATNConfigSet.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_f_a_state_8h.html">dfa/DFAState.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_deserializer_8h.html">atn/ATNDeserializer.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_empty_prediction_context_8h.html">atn/EmptyPredictionContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_simulator_8h.html">atn/ATNSimulator.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1atn.html">antlr4::atn</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;DFAState&gt;</a> ATNSimulator::ERROR = std::make_shared&lt;DFAState&gt;(INT32_MAX);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a> ATNSimulator::_stateLock;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a> ATNSimulator::_edgeLock;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aea00369023c5b32d3b73e9e4b2726cbe">   22</a></span>&#160;ATNSimulator::ATNSimulator(<span class="keyword">const</span> ATN &amp;atn, <a class="code" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;: atn(atn), _sharedContextCache(sharedContextCache) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a5022527a241e5a255618cf8c29d29743">   26</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a5022527a241e5a255618cf8c29d29743">ATNSimulator::~ATNSimulator</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a3358fa3e8ebcb4abeeceb914b0b07f10">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a3358fa3e8ebcb4abeeceb914b0b07f10">ATNSimulator::clearDFA</a>() {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_unsupported_operation_exception.html">UnsupportedOperationException</a>(<span class="stringliteral">&quot;This ATN simulator does not support clearing the DFA.&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a112cafa9554cff202c037672ddc918e5">   33</a></span>&#160;<a class="code" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a>&amp; <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a112cafa9554cff202c037672ddc918e5">ATNSimulator::getSharedContextCache</a>() {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">_sharedContextCache</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa4fb144eaf79bf6052a0abe290f7a3a2">   37</a></span>&#160;<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa4fb144eaf79bf6052a0abe290f7a3a2">ATNSimulator::getCachedContext</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <span class="keyword">const</span>&amp; context) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// This function must only be called with an active state lock, as we are going to change a shared structure.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  std::map&lt;Ref&lt;PredictionContext&gt;, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a>&gt; visited;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> PredictionContext::getCachedContext(context, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">_sharedContextCache</a>, visited);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ae516df637ee1f4be4787d533ed88b3b9">   43</a></span>&#160;ATN <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ae516df637ee1f4be4787d533ed88b3b9">ATNSimulator::deserialize</a>(<span class="keyword">const</span> std::vector&lt;uint16_t&gt; &amp;data) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html">ATNDeserializer</a> deserializer;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> deserializer.<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#aefd9354c6031246ae9d09a2bba89cb47">deserialize</a>(data);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">ATNSimulator::checkCondition</a>(<span class="keywordtype">bool</span> condition) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#acc8c93e4b176da3869d143f1e01960cc">ATNDeserializer::checkCondition</a>(condition);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a394cdeb1e2d6028bc73e0f1d22830b3d">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">ATNSimulator::checkCondition</a>(<span class="keywordtype">bool</span> condition, <span class="keyword">const</span> std::string &amp;message) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#acc8c93e4b176da3869d143f1e01960cc">ATNDeserializer::checkCondition</a>(condition, message);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a8e3fc8caefaecf90ac5eb45561aafdcc">   56</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> *<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a8e3fc8caefaecf90ac5eb45561aafdcc">ATNSimulator::edgeFactory</a>(<span class="keyword">const</span> ATN &amp;atn, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> src, <span class="keywordtype">int</span> trg, <span class="keywordtype">int</span> arg1, <span class="keywordtype">int</span> arg2, <span class="keywordtype">int</span> arg3,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                      <span class="keyword">const</span> std::vector&lt;misc::IntervalSet&gt; &amp;sets) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#a42f8e8a738438bb7320be3e0db340fea">ATNDeserializer::edgeFactory</a>(<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, type, src, trg, arg1, arg2, arg3, sets);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a57878604b6496cc6aa80e29811e05660">   61</a></span>&#160;ATNState *<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a57878604b6496cc6aa80e29811e05660">ATNSimulator::stateFactory</a>(<span class="keywordtype">int</span> type, <span class="keywordtype">int</span> ruleIndex) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#a1942c23ca9c2b004374dfcf55f8a5bb3">ATNDeserializer::stateFactory</a>(type, ruleIndex);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html_aefd9354c6031246ae9d09a2bba89cb47"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#aefd9354c6031246ae9d09a2bba89cb47">antlr4::atn::ATNDeserializer::deserialize</a></div><div class="ttdeci">virtual ATN deserialize(const std::vector&lt; uint16_t &gt; &amp;input)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8cpp_source.html#l00156">ATNDeserializer.cpp:156</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html_acc8c93e4b176da3869d143f1e01960cc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#acc8c93e4b176da3869d143f1e01960cc">antlr4::atn::ATNDeserializer::checkCondition</a></div><div class="ttdeci">static void checkCondition(bool condition)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8cpp_source.html#l00621">ATNDeserializer.cpp:621</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a57878604b6496cc6aa80e29811e05660"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a57878604b6496cc6aa80e29811e05660">antlr4::atn::ATNSimulator::stateFactory</a></div><div class="ttdeci">static ATNState * stateFactory(int type, int ruleIndex)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00061">ATNSimulator.cpp:61</a></div></div>
+<div class="ttc" id="a_d_f_a_state_8h_html"><div class="ttname"><a href="_d_f_a_state_8h.html">DFAState.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_ae516df637ee1f4be4787d533ed88b3b9"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ae516df637ee1f4be4787d533ed88b3b9">antlr4::atn::ATNSimulator::deserialize</a></div><div class="ttdeci">static ATN deserialize(const std::vector&lt; uint16_t &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00043">ATNSimulator.cpp:43</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></div><div class="ttdoc">An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,...</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00026">Transition.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a8e3fc8caefaecf90ac5eb45561aafdcc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a8e3fc8caefaecf90ac5eb45561aafdcc">antlr4::atn::ATNSimulator::edgeFactory</a></div><div class="ttdeci">static Transition * edgeFactory(const ATN &amp;atn, int type, int src, int trg, int arg1, int arg2, int arg3, const std::vector&lt; misc::IntervalSet &gt; &amp;sets)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00056">ATNSimulator.cpp:56</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a5022527a241e5a255618cf8c29d29743"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a5022527a241e5a255618cf8c29d29743">antlr4::atn::ATNSimulator::~ATNSimulator</a></div><div class="ttdeci">virtual ~ATNSimulator()</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00026">ATNSimulator.cpp:26</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00065">CPPUtils.h:65</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_aa4fb144eaf79bf6052a0abe290f7a3a2"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa4fb144eaf79bf6052a0abe290f7a3a2">antlr4::atn::ATNSimulator::getCachedContext</a></div><div class="ttdeci">virtual Ref&lt; PredictionContext &gt; getCachedContext(Ref&lt; PredictionContext &gt; const &amp;context)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00037">ATNSimulator.cpp:37</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_aa827be017f3bf3a431ef91972d38e3d1"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">antlr4::atn::ATNSimulator::checkCondition</a></div><div class="ttdeci">static void checkCondition(bool condition)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00048">ATNSimulator.cpp:48</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html_a1c45e22af88cac4a7ce0f823dc39f26b"><div class="ttname"><a href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">antlr4::atn::PredictionContextCache</a></div><div class="ttdeci">std::unordered_set&lt; Ref&lt; PredictionContext &gt;, PredictionContextHasher, PredictionContextComparer &gt; PredictionContextCache</div><div class="ttdef"><b>Definition:</b> <a href="_prediction_context_8h_source.html#l00017">PredictionContext.h:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_unsupported_operation_exception_html"><div class="ttname"><a href="classantlr4_1_1_unsupported_operation_exception.html">antlr4::UnsupportedOperationException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00054">Exceptions.h:54</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html">antlr4::atn::ATNDeserializer</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8h_source.html#l00014">ATNDeserializer.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a112cafa9554cff202c037672ddc918e5"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a112cafa9554cff202c037672ddc918e5">antlr4::atn::ATNSimulator::getSharedContextCache</a></div><div class="ttdeci">virtual PredictionContextCache &amp; getSharedContextCache()</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00033">ATNSimulator.cpp:33</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html_a1942c23ca9c2b004374dfcf55f8a5bb3"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#a1942c23ca9c2b004374dfcf55f8a5bb3">antlr4::atn::ATNDeserializer::stateFactory</a></div><div class="ttdeci">static ATNState * stateFactory(size_t type, size_t ruleIndex)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8cpp_source.html#l00676">ATNDeserializer.cpp:676</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a73bf77d58d1457cc0543600da3201bea"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">antlr4::atn::ATNSimulator::_sharedContextCache</a></div><div class="ttdeci">PredictionContextCache &amp; _sharedContextCache</div><div class="ttdoc">The context cache maps all PredictionContext objects that are equals() to a single cached copy....</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00083">ATNSimulator.h:83</a></div></div>
+<div class="ttc" id="a_a_t_n_config_set_8h_html"><div class="ttname"><a href="_a_t_n_config_set_8h.html">ATNConfigSet.h</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html"><div class="ttname"><a href="namespaceantlr4_1_1atn.html">antlr4::atn</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_predicate_transition_8h_source.html#l00011">AbstractPredicateTransition.h:11</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_a_t_n_deserializer_8h_html"><div class="ttname"><a href="_a_t_n_deserializer_8h.html">ATNDeserializer.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html_a42f8e8a738438bb7320be3e0db340fea"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#a42f8e8a738438bb7320be3e0db340fea">antlr4::atn::ATNDeserializer::edgeFactory</a></div><div class="ttdeci">static Transition * edgeFactory(const ATN &amp;atn, size_t type, size_t src, size_t trg, size_t arg1, size_t arg2, size_t arg3, const std::vector&lt; misc::IntervalSet &gt; &amp;sets)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8cpp_source.html#l00636">ATNDeserializer.cpp:636</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00139">antlr4-common.h:139</a></div></div>
+<div class="ttc" id="a_a_t_n_simulator_8h_html"><div class="ttname"><a href="_a_t_n_simulator_8h.html">ATNSimulator.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_afec8e232a4c11c864ecc770252a2bcb6"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">antlr4::atn::ATNSimulator::atn</a></div><div class="ttdeci">const ATN &amp; atn</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8h_source.html#l00020">ATNSimulator.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html_a3358fa3e8ebcb4abeeceb914b0b07f10"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a3358fa3e8ebcb4abeeceb914b0b07f10">antlr4::atn::ATNSimulator::clearDFA</a></div><div class="ttdeci">virtual void clearDFA()</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_simulator_8cpp_source.html#l00029">ATNSimulator.cpp:29</a></div></div>
+<div class="ttc" id="a_empty_prediction_context_8h_html"><div class="ttname"><a href="_empty_prediction_context_8h.html">EmptyPredictionContext.h</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1dfa_html"><div class="ttname"><a href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00015">DFA.h:15</a></div></div>
+<div class="ttc" id="a_a_t_n_type_8h_html"><div class="ttname"><a href="_a_t_n_type_8h.html">ATNType.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

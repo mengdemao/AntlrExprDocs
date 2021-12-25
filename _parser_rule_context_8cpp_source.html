@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/ParserRuleContext.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ParserRuleContext.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_parser_rule_context_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_terminal_node_8h.html">tree/TerminalNode.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_error_node_8h.html">tree/ErrorNode.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_interval_8h.html">misc/Interval.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parser_8h.html">Parser.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_token_8h.html">Token.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_p_p_utils_8h.html">support/CPPUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parser_rule_context_8h.html">ParserRuleContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1tree.html">antlr4::tree</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlrcpp.html">antlrcpp</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> <a class="code" href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">ParserRuleContext::EMPTY</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a76df90a9d4991b09b7d9ce68681c08ac">   23</a></span>&#160;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a76df90a9d4991b09b7d9ce68681c08ac">ParserRuleContext::ParserRuleContext</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  : start(nullptr), stop(nullptr) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a13e9a86b7d2ccb34c2d50550deb4b36d">   27</a></span>&#160;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a76df90a9d4991b09b7d9ce68681c08ac">ParserRuleContext::ParserRuleContext</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *parent, <span class="keywordtype">size_t</span> invokingStateNumber)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;: <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a>(parent, invokingStateNumber), start(nullptr), stop(nullptr) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a32e160f0c98a6475424ffe193040cdae">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#a32e160f0c98a6475424ffe193040cdae">ParserRuleContext::copyFrom</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *ctx) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// from RuleContext</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  this-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a> = ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  this-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#a2c4b8b84636c681f98dcd86d5c5a8459">invokingState</a> = ctx-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#a2c4b8b84636c681f98dcd86d5c5a8459">invokingState</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  this-&gt;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a> = ctx-&gt;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  this-&gt;<a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a> = ctx-&gt;<a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// copy any error nodes to alt label node</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">if</span> (!ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.empty()) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> *child : ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">auto</span> *errorNode = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_error_node.html">ErrorNode</a> *<span class="keyword">&gt;</span>(child);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span> (errorNode != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        errorNode-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#ae3a053a21cb472c8198eb831f8757a95">setParent</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.push_back(errorNode);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Remove the just reparented error nodes from the source context.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.erase(std::remove_if(ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.begin(), ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.end(), [<span class="keyword">this</span>](<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">tree::ParseTree</a> *e) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      return std::find(children.begin(), children.end(), e) != children.end();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }), ctx-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.end());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f">ParserRuleContext::enterRule</a>(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">tree::ParseTreeListener</a> * <span class="comment">/*listener*/</span>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe">ParserRuleContext::exitRule</a>(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">tree::ParseTreeListener</a> * <span class="comment">/*listener*/</span>) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a402addbef275358076e63253db77b0c4">   62</a></span>&#160;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a>* <a class="code" href="classantlr4_1_1_parser_rule_context.html#a402addbef275358076e63253db77b0c4">ParserRuleContext::addChild</a>(<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a> *t) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  t-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#ae3a053a21cb472c8198eb831f8757a95">setParent</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.push_back(t);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#ab31addd41aee593b86d5e15c243c084e">   68</a></span>&#160;<a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a>* <a class="code" href="classantlr4_1_1_parser_rule_context.html#a402addbef275358076e63253db77b0c4">ParserRuleContext::addChild</a>(<a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *ruleInvocation) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.push_back(ruleInvocation);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> ruleInvocation;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a0d7e71fc8e12b036014820a1d530b8bb">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#a0d7e71fc8e12b036014820a1d530b8bb">ParserRuleContext::removeLastChild</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.empty()) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.pop_back();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a7c7888fb2f93de0a8d68101192a1eb51">   79</a></span>&#160;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a>* <a class="code" href="classantlr4_1_1_parser_rule_context.html#a7c7888fb2f93de0a8d68101192a1eb51">ParserRuleContext::getToken</a>(<span class="keywordtype">size_t</span> ttype, <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (i &gt;= <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size()) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">size_t</span> j = 0; <span class="comment">// what token with ttype have we found?</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *o : <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (is&lt;tree::TerminalNode *&gt;(o)) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a> *tnode = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a> *<span class="keyword">&gt;</span>(o);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="classantlr4_1_1_token.html">Token</a> *symbol = tnode-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">if</span> (symbol-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == ttype) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (j++ == i) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          <span class="keywordflow">return</span> tnode;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a642538341e37d3391db1ad558cbb30ab">  100</a></span>&#160;std::vector&lt;tree::TerminalNode *&gt; <a class="code" href="classantlr4_1_1_parser_rule_context.html#a642538341e37d3391db1ad558cbb30ab">ParserRuleContext::getTokens</a>(<span class="keywordtype">size_t</span> ttype) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  std::vector&lt;tree::TerminalNode *&gt; tokens;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;o : <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (is&lt;tree::TerminalNode *&gt;(o)) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a> *tnode = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">tree::TerminalNode</a> *<span class="keyword">&gt;</span>(o);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <a class="code" href="classantlr4_1_1_token.html">Token</a> *symbol = tnode-&gt;<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">getSymbol</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span> (symbol-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == ttype) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        tokens.push_back(tnode);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> tokens;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a8d1858e04ce2a478986ded6dced62dc4">  115</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a> <a class="code" href="classantlr4_1_1_parser_rule_context.html#a8d1858e04ce2a478986ded6dced62dc4">ParserRuleContext::getSourceInterval</a>() {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">misc::Interval::INVALID</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a> == <span class="keyword">nullptr</span> || <a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>() &lt; <a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>()) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>(), <a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>() - 1); <span class="comment">// empty</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>(), <a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>());</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a069cff86aad00ea0618985e78291e8fa">  126</a></span>&#160;<a class="code" href="classantlr4_1_1_token.html">Token</a>* <a class="code" href="classantlr4_1_1_parser_rule_context.html#a069cff86aad00ea0618985e78291e8fa">ParserRuleContext::getStart</a>() {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a51432e71c46225602c504768c50ad776">  130</a></span>&#160;<a class="code" href="classantlr4_1_1_token.html">Token</a>* <a class="code" href="classantlr4_1_1_parser_rule_context.html#a51432e71c46225602c504768c50ad776">ParserRuleContext::getStop</a>() {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classantlr4_1_1_parser_rule_context.html#a36fdb4f19d0b2dce76164b3ffee6d81e">  134</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_parser_rule_context.html#a36fdb4f19d0b2dce76164b3ffee6d81e">ParserRuleContext::toInfoString</a>(<a class="code" href="classantlr4_1_1_parser.html">Parser</a> *recognizer) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  std::vector&lt;std::string&gt; rules = recognizer-&gt;getRuleInvocationStack(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  std::reverse(rules.begin(), rules.end());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  std::string rulesStr = <a class="code" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">antlrcpp::arrayToString</a>(rules);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;ParserRuleContext&quot;</span> + rulesStr + <span class="stringliteral">&quot;{start=&quot;</span> + std::to_string(<a class="code" href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">start</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>()) + <span class="stringliteral">&quot;, stop=&quot;</span> +</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    std::to_string(<a class="code" href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">stop</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">getTokenIndex</a>()) + <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_error_node_8h_html"><div class="ttname"><a href="_error_node_8h.html">ErrorNode.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html_ae3a053a21cb472c8198eb831f8757a95"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html#ae3a053a21cb472c8198eb831f8757a95">antlr4::tree::TerminalNode::setParent</a></div><div class="ttdeci">virtual void setParent(RuleContext *parent)=0</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_listener_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree_listener.html">antlr4::tree::ParseTreeListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_listener_8h_source.html#l00024">ParseTreeListener.h:24</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_ab5a3e2dbb7315e1245be9b90f93a53b5"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#ab5a3e2dbb7315e1245be9b90f93a53b5">antlr4::ParserRuleContext::stop</a></div><div class="ttdeci">Token * stop</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00062">ParserRuleContext.h:62</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html">antlr4::tree::TerminalNode</a></div><div class="ttdef"><b>Definition:</b> <a href="_terminal_node_8h_source.html#l00013">TerminalNode.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00020">ParseTree.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a2e3580cf80f49dc92cec0ad4c8ea9ba0"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a2e3580cf80f49dc92cec0ad4c8ea9ba0">antlr4::ParserRuleContext::start</a></div><div class="ttdeci">Token * start</div><div class="ttdoc">For debugging/tracing purposes, we want to track all of the nodes in the ATN traversed by the parser ...</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00061">ParserRuleContext.h:61</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html_aad52b12c9e03c4a117e1ac00bba74073"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">antlr4::tree::ParseTree::children</a></div><div class="ttdeci">std::vector&lt; ParseTree * &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00038">ParseTree.h:38</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a642538341e37d3391db1ad558cbb30ab"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a642538341e37d3391db1ad558cbb30ab">antlr4::ParserRuleContext::getTokens</a></div><div class="ttdeci">virtual std::vector&lt; tree::TerminalNode * &gt; getTokens(size_t ttype)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00100">ParserRuleContext.cpp:100</a></div></div>
+<div class="ttc" id="a_token_8h_html"><div class="ttname"><a href="_token_8h.html">Token.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a51432e71c46225602c504768c50ad776"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a51432e71c46225602c504768c50ad776">antlr4::ParserRuleContext::getStop</a></div><div class="ttdeci">virtual Token * getStop()</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00130">ParserRuleContext.cpp:130</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a76df90a9d4991b09b7d9ce68681c08ac"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a76df90a9d4991b09b7d9ce68681c08ac">antlr4::ParserRuleContext::ParserRuleContext</a></div><div class="ttdeci">ParserRuleContext()</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00023">ParserRuleContext.cpp:23</a></div></div>
+<div class="ttc" id="a_parser_rule_context_8h_html"><div class="ttname"><a href="_parser_rule_context_8h.html">ParserRuleContext.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a0d7e71fc8e12b036014820a1d530b8bb"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a0d7e71fc8e12b036014820a1d530b8bb">antlr4::ParserRuleContext::removeLastChild</a></div><div class="ttdeci">virtual void removeLastChild()</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00073">ParserRuleContext.cpp:73</a></div></div>
+<div class="ttc" id="a_terminal_node_8h_html"><div class="ttname"><a href="_terminal_node_8h.html">TerminalNode.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_acd661fddddc4e72900091d23f6c81afe"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe">antlr4::ParserRuleContext::exitRule</a></div><div class="ttdeci">virtual void exitRule(tree::ParseTreeListener *listener)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00059">ParserRuleContext.cpp:59</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html_a83402632670316b68280c04e6be70d50"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">antlr4::tree::ParseTree::parent</a></div><div class="ttdeci">ParseTree * parent</div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00030">ParseTree.h:30</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html"><div class="ttname"><a href="namespaceantlrcpp.html">antlrcpp</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00010">ANTLRErrorListener.h:10</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a32e160f0c98a6475424ffe193040cdae"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a32e160f0c98a6475424ffe193040cdae">antlr4::ParserRuleContext::copyFrom</a></div><div class="ttdeci">virtual void copyFrom(ParserRuleContext *ctx)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00031">ParserRuleContext.cpp:31</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a36fdb4f19d0b2dce76164b3ffee6d81e"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a36fdb4f19d0b2dce76164b3ffee6d81e">antlr4::ParserRuleContext::toInfoString</a></div><div class="ttdeci">virtual std::string toInfoString(Parser *recognizer)</div><div class="ttdoc">Used for rule context info debugging during parse-time, not so much for ATN debugging</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00134">ParserRuleContext.cpp:134</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_parser_8h_html"><div class="ttname"><a href="_parser_8h.html">Parser.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html">antlr4::misc::Interval</a></div><div class="ttdoc">An immutable inclusive interval a..b</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00020">Interval.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a></div><div class="ttdoc">A rule invocation record for parsing.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00036">ParserRuleContext.h:36</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_ac6ea228343730365ed4159f2420ad2aa"><div class="ttname"><a href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">antlrcpp::arrayToString</a></div><div class="ttdeci">std::string arrayToString(const std::vector&lt; std::string &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00073">CPPUtils.cpp:73</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8h_source.html#l00062">RuleContext.h:62</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_aa26e0c29e8bfab7088fcc323f66e9f6c"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">antlr4::misc::Interval::INVALID</a></div><div class="ttdeci">static const Interval INVALID</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00022">Interval.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a8d1858e04ce2a478986ded6dced62dc4"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a8d1858e04ce2a478986ded6dced62dc4">antlr4::ParserRuleContext::getSourceInterval</a></div><div class="ttdeci">virtual misc::Interval getSourceInterval() override</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00115">ParserRuleContext.cpp:115</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_aaa5bda604b301abc3a84bc0f477750d5"><div class="ttname"><a href="classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5">antlr4::Token::getTokenIndex</a></div><div class="ttdeci">virtual size_t getTokenIndex() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a518342431db9dd9d982880a59ef0e4f4"><div class="ttname"><a href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">antlr4::Token::getType</a></div><div class="ttdeci">virtual size_t getType() const =0</div><div class="ttdoc">Get the token type of the token</div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a402addbef275358076e63253db77b0c4"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a402addbef275358076e63253db77b0c4">antlr4::ParserRuleContext::addChild</a></div><div class="ttdeci">tree::TerminalNode * addChild(tree::TerminalNode *t)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00062">ParserRuleContext.cpp:62</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a41d719f482d60677ec1fbf08b7e5e77c"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">antlr4::ParserRuleContext::EMPTY</a></div><div class="ttdeci">static ParserRuleContext EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00038">ParserRuleContext.h:38</a></div></div>
+<div class="ttc" id="a_interval_8h_html"><div class="ttname"><a href="_interval_8h.html">Interval.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_aee63c438f6be836d5592cf1f045c735f"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f">antlr4::ParserRuleContext::enterRule</a></div><div class="ttdeci">virtual void enterRule(tree::ParseTreeListener *listener)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00056">ParserRuleContext.cpp:56</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html_a05b5c99cbcc8bf436c693979a312e879"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">antlr4::tree::TerminalNode::getSymbol</a></div><div class="ttdeci">virtual Token * getSymbol()=0</div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html"><div class="ttname"><a href="classantlr4_1_1_token.html">antlr4::Token</a></div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00015">Token.h:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_error_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_error_node.html">antlr4::tree::ErrorNode</a></div><div class="ttdef"><b>Definition:</b> <a href="_error_node_8h_source.html#l00013">ErrorNode.h:13</a></div></div>
+<div class="ttc" id="a_c_p_p_utils_8h_html"><div class="ttname"><a href="_c_p_p_utils_8h.html">CPPUtils.h</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1tree_html"><div class="ttname"><a href="namespaceantlr4_1_1tree.html">antlr4::tree</a></div><div class="ttdef"><b>Definition:</b> <a href="_declarations_8h_source.html#l00125">Declarations.h:125</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_html"><div class="ttname"><a href="classantlr4_1_1_parser.html">antlr4::Parser</a></div><div class="ttdoc">This is all the parsing support code essentially; most of it is error recovery stuff.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8h_source.html#l00018">Parser.h:18</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a069cff86aad00ea0618985e78291e8fa"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a069cff86aad00ea0618985e78291e8fa">antlr4::ParserRuleContext::getStart</a></div><div class="ttdeci">virtual Token * getStart()</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00126">ParserRuleContext.cpp:126</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a2c4b8b84636c681f98dcd86d5c5a8459"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a2c4b8b84636c681f98dcd86d5c5a8459">antlr4::RuleContext::invokingState</a></div><div class="ttdeci">size_t invokingState</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8h_source.html#l00067">RuleContext.h:67</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a7c7888fb2f93de0a8d68101192a1eb51"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a7c7888fb2f93de0a8d68101192a1eb51">antlr4::ParserRuleContext::getToken</a></div><div class="ttdeci">virtual tree::TerminalNode * getToken(size_t ttype, std::size_t i)</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8cpp_source.html#l00079">ParserRuleContext.cpp:79</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

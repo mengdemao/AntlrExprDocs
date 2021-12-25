@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::dfa::DFA类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1dfa.html">dfa</a></li><li class="navelem"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classantlr4_1_1dfa_1_1_d_f_a-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::dfa::DFA类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d_f_a_8h_source.html">DFA.h</a>&gt;</code></p>
+<div class="dynheader">
+antlr4::dfa::DFA 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a__coll__graph.png" border="0" usemap="#antlr4_1_1dfa_1_1_d_f_a_coll__map" alt="Collaboration graph"/></div>
+<map name="antlr4_1_1dfa_1_1_d_f_a_coll__map" id="antlr4_1_1dfa_1_1_d_f_a_coll__map">
+<area shape="rect" title=" " alt="" coords="37,171,160,197"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="5,81,192,108"/>
+<area shape="rect" title=" " alt="" coords="57,5,140,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a96e1072f740839921fb72b3b9e9db330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">DFA</a> (<a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>)</td></tr>
+<tr class="separator:a96e1072f740839921fb72b3b9e9db330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2597bff5bd2fea39907a0dfb02f9f8ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a2597bff5bd2fea39907a0dfb02f9f8ac">DFA</a> (<a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>, size_t <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a>)</td></tr>
+<tr class="separator:a2597bff5bd2fea39907a0dfb02f9f8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25516f53c648275fb491921d7f421260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a25516f53c648275fb491921d7f421260">DFA</a> (const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> &amp;other)=delete</td></tr>
+<tr class="separator:a25516f53c648275fb491921d7f421260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ada17f3f123b29d5bd965909bac28ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a4ada17f3f123b29d5bd965909bac28ee">DFA</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a4ada17f3f123b29d5bd965909bac28ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39dad6c188c8cbb86ecff25423a99936"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a39dad6c188c8cbb86ecff25423a99936">~DFA</a> ()</td></tr>
+<tr class="separator:a39dad6c188c8cbb86ecff25423a99936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f04e1d91f059b882505aff2174a1e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a> () const</td></tr>
+<tr class="separator:a16f04e1d91f059b882505aff2174a1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0d2aca83d6cb0d155d971594c8dc7f"><td class="memItemLeft" align="right" valign="top">DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f">getPrecedenceStartState</a> (int precedence) const</td></tr>
+<tr class="separator:a6e0d2aca83d6cb0d155d971594c8dc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0283251c54b224124da6fc0600717617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617">setPrecedenceStartState</a> (int precedence, DFAState *startState, <a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a> &amp;lock)</td></tr>
+<tr class="separator:a0283251c54b224124da6fc0600717617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9610a3706058c0d5d1e61f386ccd29"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; DFAState * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">getStates</a> () const</td></tr>
+<tr class="memdesc:afe9610a3706058c0d5d1e61f386ccd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list of all states in this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>, ordered by state number.  <a href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">更多...</a><br /></td></tr>
+<tr class="separator:afe9610a3706058c0d5d1e61f386ccd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae4f569d3075101ae3571fe67748b56"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56">toString</a> (const std::vector&lt; std::string &gt; &amp;tokenNames)</td></tr>
+<tr class="separator:adae4f569d3075101ae3571fe67748b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47082a53818c84418ed873c64b7d2951"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a47082a53818c84418ed873c64b7d2951">toString</a> (const Vocabulary &amp;vocabulary) const</td></tr>
+<tr class="separator:a47082a53818c84418ed873c64b7d2951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f180730ab4ac077e4811665ec1e0e0"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0">toLexerString</a> ()</td></tr>
+<tr class="separator:a17f180730ab4ac077e4811665ec1e0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a83d51316351c6939e7d249dc20b5c9c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a></td></tr>
+<tr class="memdesc:a83d51316351c6939e7d249dc20b5c9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">From which ATN state did we create this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>?  <a href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">更多...</a><br /></td></tr>
+<tr class="separator:a83d51316351c6939e7d249dc20b5c9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a287490e94942bf6355b041e13b4fcc1c"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; DFAState *, DFAState::Hasher, DFAState::Comparer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a></td></tr>
+<tr class="separator:a287490e94942bf6355b041e13b4fcc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e1ce8d87cbfb6156a6bff4fd86ed32"><td class="memItemLeft" align="right" valign="top">DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a></td></tr>
+<tr class="separator:a42e1ce8d87cbfb6156a6bff4fd86ed32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf75312829a34946e8e69b07748a230"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a></td></tr>
+<tr class="separator:afaf75312829a34946e8e69b07748a230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a18c119e5450d54f5b359d40112a79dd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a></td></tr>
+<tr class="separator:a18c119e5450d54f5b359d40112a79dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00017">17</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a96e1072f740839921fb72b3b9e9db330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e1072f740839921fb72b3b9e9db330">&#9670;&nbsp;</a></span>DFA() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFA::DFA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *&#160;</td>
+          <td class="paramname"><em>atnStartState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00018">18</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                        : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">DFA</a>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>, 0) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2597bff5bd2fea39907a0dfb02f9f8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2597bff5bd2fea39907a0dfb02f9f8ac">&#9670;&nbsp;</a></span>DFA() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFA::DFA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a> *&#160;</td>
+          <td class="paramname"><em>atnStartState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>decision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00021">21</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>), <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>(<span class="keyword">nullptr</span>), <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">if</span> (is&lt;atn::StarLoopEntryState *&gt;(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>)) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">atn::StarLoopEntryState</a> *<span class="keyword">&gt;</span>(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>)-&gt;isPrecedenceDecision) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = <span class="keyword">new</span> DFAState(std::unique_ptr&lt;atn::ATNConfigSet&gt;(<span class="keyword">new</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a>()));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;isAcceptState = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;requiresFullContext = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a25516f53c648275fb491921d7f421260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25516f53c648275fb491921d7f421260">&#9670;&nbsp;</a></span>DFA() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">antlr4::dfa::DFA::DFA </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ada17f3f123b29d5bd965909bac28ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ada17f3f123b29d5bd965909bac28ee">&#9670;&nbsp;</a></span>DFA() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFA::DFA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00035">35</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>(other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a>), <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a>(other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// Source states are implicitly cleared by the move.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a> = std::move(other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">atnStartState</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">decision</a> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  other.<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a39dad6c188c8cbb86ecff25423a99936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dad6c188c8cbb86ecff25423a99936">&#9670;&nbsp;</a></span>~DFA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFA::~DFA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">bool</span> s0InList = (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *state : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      s0InList = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">delete</span> state;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (!s0InList)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6e0d2aca83d6cb0d155d971594c8dc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0d2aca83d6cb0d155d971594c8dc7f">&#9670;&nbsp;</a></span>getPrecedenceStartState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFAState * DFA::getPrecedenceStartState </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>precedence</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the start state for a specific precedence value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">precedence</td><td>The current precedence. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The start state corresponding to the specified precedence, or <div class="fragment"><div class="line"><span class="keyword">null</span> </div>
+</div><!-- fragment --> if no start state exists for the specified precedence.</dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classantlr4_1_1_illegal_state_exception.html">IllegalStateException</a></td><td>if this is not a precedence <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa()</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00063">63</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                           {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  assert(<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a>); <span class="comment">// Only precedence DFAs may contain a precedence start state.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">auto</span> iterator = <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges.find(precedence);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span> (iterator == <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges.end())</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> iterator-&gt;second;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a6e0d2aca83d6cb0d155d971594c8dc7f_icgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a6e0d2aca83d6cb0d155d971594c8dc7f_icgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a6e0d2aca83d6cb0d155d971594c8dc7f_icgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a6e0d2aca83d6cb0d155d971594c8dc7f_icgraph">
+<area shape="rect" title=" " alt="" coords="567,5,793,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afe9610a3706058c0d5d1e61f386ccd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9610a3706058c0d5d1e61f386ccd29">&#9670;&nbsp;</a></span>getStates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; DFAState * &gt; DFA::getStates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a list of all states in this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>, ordered by state number. </p>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00089">89</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                           {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::vector&lt;DFAState *&gt; result;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *state : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    result.push_back(state);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  std::sort(result.begin(), result.end(), [](DFAState *o1, DFAState *o2) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    return o1-&gt;stateNumber &lt; o2-&gt;stateNumber;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  });</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_afe9610a3706058c0d5d1e61f386ccd29_icgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_afe9610a3706058c0d5d1e61f386ccd29_icgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_afe9610a3706058c0d5d1e61f386ccd29_icgraph" id="classantlr4_1_1dfa_1_1_d_f_a_afe9610a3706058c0d5d1e61f386ccd29_icgraph">
+<area shape="rect" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="465,42,657,69"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="235,35,417,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0" title=" " alt="" coords="7,5,185,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56" title=" " alt="" coords="5,71,187,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a16f04e1d91f059b882505aff2174a1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f04e1d91f059b882505aff2174a1e1">&#9670;&nbsp;</a></span>isPrecedenceDfa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DFA::isPrecedenceDfa </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets whether this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> is a precedence <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>. Precedence DFAs use a special start state <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> which is not stored in <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">states</a>. The <a class="el" href="">DFAState#edges</a> array for this start state contains outgoing edges supplying individual start states corresponding to specific precedence values.</p>
+<dl class="section return"><dt>返回</dt><dd><div class="fragment"><div class="line"><span class="keyword">true</span> </div>
+</div><!-- fragment --> if this is a precedence <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>; otherwise, <div class="fragment"><div class="line"><span class="keyword">false</span> </div>
+</div><!-- fragment --> . </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>Parser::getPrecedence() </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00059">59</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">_precedenceDfa</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a16f04e1d91f059b882505aff2174a1e1_icgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a16f04e1d91f059b882505aff2174a1e1_icgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a16f04e1d91f059b882505aff2174a1e1_icgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a16f04e1d91f059b882505aff2174a1e1_icgraph">
+<area shape="rect" title=" " alt="" coords="840,13,1079,39"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617" title=" " alt="" coords="567,35,792,76"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0283251c54b224124da6fc0600717617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0283251c54b224124da6fc0600717617">&#9670;&nbsp;</a></span>setPrecedenceStartState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DFA::setPrecedenceStartState </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>precedence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DFAState *&#160;</td>
+          <td class="paramname"><em>startState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a> &amp;&#160;</td>
+          <td class="paramname"><em>lock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the start state for a specific precedence value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">precedence</td><td>The current precedence. </td></tr>
+    <tr><td class="paramname">startState</td><td>The start state corresponding to the specified precedence.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classantlr4_1_1_illegal_state_exception.html">IllegalStateException</a></td><td>if this is not a precedence <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa()</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00073">73</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                                                                         {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a>()) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classantlr4_1_1_illegal_state_exception.html">IllegalStateException</a>(<span class="stringliteral">&quot;Only precedence DFAs may contain a precedence start state.&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (precedence &lt; 0) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    lock.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">writeLock</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a>-&gt;edges[precedence] = startState;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    lock.<a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">writeUnlock</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_cgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_cgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_cgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_cgraph">
+<area shape="rect" title=" " alt="" coords="5,57,231,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1" title=" " alt="" coords="279,5,517,32"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b" title=" " alt="" coords="293,57,503,98"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a" title=" " alt="" coords="293,122,503,163"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_icgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_icgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_icgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a0283251c54b224124da6fc0600717617_icgraph">
+<area shape="rect" title=" " alt="" coords="567,5,792,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17f180730ab4ac077e4811665ec1e0e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f180730ab4ac077e4811665ec1e0e0">&#9670;&nbsp;</a></span>toLexerString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFA::toLexerString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00119">119</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                             {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html">LexerDFASerializer</a> serializer(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> serializer.toString();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a17f180730ab4ac077e4811665ec1e0e0_cgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a17f180730ab4ac077e4811665ec1e0e0_cgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a17f180730ab4ac077e4811665ec1e0e0_cgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a17f180730ab4ac077e4811665ec1e0e0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,64,184,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="232,64,415,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610" title=" " alt="" coords="467,5,650,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="463,71,655,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa" title=" " alt="" coords="467,123,650,164"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adae4f569d3075101ae3571fe67748b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae4f569d3075101ae3571fe67748b56">&#9670;&nbsp;</a></span>toString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFA::toString </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tokenNames</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">弃用:</a></b></dt><dd>Use <a class="el" href="">toString(Vocabulary)</a> instead. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00101">101</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                              {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a> serializer(<span class="keyword">this</span>, tokenNames);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> serializer.toString();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_adae4f569d3075101ae3571fe67748b56_cgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_adae4f569d3075101ae3571fe67748b56_cgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_adae4f569d3075101ae3571fe67748b56_cgraph" id="classantlr4_1_1dfa_1_1_d_f_a_adae4f569d3075101ae3571fe67748b56_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,187,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="235,64,417,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610" title=" " alt="" coords="470,5,653,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="465,71,657,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa" title=" " alt="" coords="470,123,653,164"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47082a53818c84418ed873c64b7d2951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47082a53818c84418ed873c64b7d2951">&#9670;&nbsp;</a></span>toString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFA::toString </td>
+          <td>(</td>
+          <td class="paramtype">const Vocabulary &amp;&#160;</td>
+          <td class="paramname"><em>vocabulary</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a> 第 <a class="el" href="_d_f_a_8cpp_source.html#l00110">110</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                          {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a> serializer(<span class="keyword">this</span>, vocabulary);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> serializer.toString();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_a47082a53818c84418ed873c64b7d2951_cgraph.png" border="0" usemap="#classantlr4_1_1dfa_1_1_d_f_a_a47082a53818c84418ed873c64b7d2951_cgraph" alt=""/></div>
+<map name="classantlr4_1_1dfa_1_1_d_f_a_a47082a53818c84418ed873c64b7d2951_cgraph" id="classantlr4_1_1dfa_1_1_d_f_a_a47082a53818c84418ed873c64b7d2951_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,187,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="235,64,417,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610" title=" " alt="" coords="470,5,653,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="465,71,657,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa" title=" " alt="" coords="470,123,653,164"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a18c119e5450d54f5b359d40112a79dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c119e5450d54f5b359d40112a79dd7">&#9670;&nbsp;</a></span>_precedenceDfa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool antlr4::dfa::DFA::_precedenceDfa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="keyword">true</span> </div>
+</div><!-- fragment --><p> if this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> is for a precedence decision; otherwise, </p><div class="fragment"><div class="line"><span class="keyword">false</span> </div>
+</div><!-- fragment --><p> . This is the backing field for <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">isPrecedenceDfa</a>. </p>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00087">87</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a83d51316351c6939e7d249dc20b5c9c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d51316351c6939e7d249dc20b5c9c8">&#9670;&nbsp;</a></span>atnStartState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1atn_1_1_decision_state.html">atn::DecisionState</a>* antlr4::dfa::DFA::atnStartState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>From which ATN state did we create this <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>? </p>
+<p>A set of all <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> states. Use a map so we can get old state back. Set only allows you to see if it's there. </p>
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afaf75312829a34946e8e69b07748a230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf75312829a34946e8e69b07748a230">&#9670;&nbsp;</a></span>decision</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t antlr4::dfa::DFA::decision</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a42e1ce8d87cbfb6156a6bff4fd86ed32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e1ce8d87cbfb6156a6bff4fd86ed32">&#9670;&nbsp;</a></span>s0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFAState* antlr4::dfa::DFA::s0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a287490e94942bf6355b041e13b4fcc1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287490e94942bf6355b041e13b4fcc1c">&#9670;&nbsp;</a></span>states</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt;DFAState *, DFAState::Hasher, DFAState::Comparer&gt; antlr4::dfa::DFA::states</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_d_f_a_8h_source.html">DFA.h</a> 第 <a class="el" href="_d_f_a_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/dfa/<a class="el" href="_d_f_a_8h_source.html">DFA.h</a></li>
+<li>runtime/dfa/<a class="el" href="_d_f_a_8cpp_source.html">DFA.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_lexer_d_f_a_serializer_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html">antlr4::dfa::LexerDFASerializer</a></div><div class="ttdef"><b>Definition:</b> <a href="_lexer_d_f_a_serializer_8h_source.html#l00013">LexerDFASerializer.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a18c119e5450d54f5b359d40112a79dd7"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a18c119e5450d54f5b359d40112a79dd7">antlr4::dfa::DFA::_precedenceDfa</a></div><div class="ttdeci">bool _precedenceDfa</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00087">DFA.h:87</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a16f04e1d91f059b882505aff2174a1e1"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1">antlr4::dfa::DFA::isPrecedenceDfa</a></div><div class="ttdeci">bool isPrecedenceDfa() const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00059">DFA.cpp:59</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_adefecf5fd0a7b3843d4044f10e525f8a"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">antlrcpp::SingleWriteMultipleReadLock::writeUnlock</a></div><div class="ttdeci">void writeUnlock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00231">CPPUtils.cpp:231</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a3e1dda5e0e36edf6b80d8a3965851d1b"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">antlrcpp::SingleWriteMultipleReadLock::writeLock</a></div><div class="ttdeci">void writeLock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00222">CPPUtils.cpp:222</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">antlr4::dfa::DFASerializer</a></div><div class="ttdoc">A DFA walker that knows how to dump them to serialized strings.</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8h_source.html#l00014">DFASerializer.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">antlr4::atn::ATNConfigSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_set_8h_source.html#l00016">ATNConfigSet.h:16</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a42e1ce8d87cbfb6156a6bff4fd86ed32"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">antlr4::dfa::DFA::s0</a></div><div class="ttdeci">DFAState * s0</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00025">DFA.h:25</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_illegal_state_exception_html"><div class="ttname"><a href="classantlr4_1_1_illegal_state_exception.html">antlr4::IllegalStateException</a></div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00022">Exceptions.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a287490e94942bf6355b041e13b4fcc1c"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a287490e94942bf6355b041e13b4fcc1c">antlr4::dfa::DFA::states</a></div><div class="ttdeci">std::unordered_set&lt; DFAState *, DFAState::Hasher, DFAState::Comparer &gt; states</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00024">DFA.h:24</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_star_loop_entry_state_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_star_loop_entry_state.html">antlr4::atn::StarLoopEntryState</a></div><div class="ttdef"><b>Definition:</b> <a href="_star_loop_entry_state_8h_source.html#l00013">StarLoopEntryState.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a96e1072f740839921fb72b3b9e9db330"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a96e1072f740839921fb72b3b9e9db330">antlr4::dfa::DFA::DFA</a></div><div class="ttdeci">DFA(atn::DecisionState *atnStartState)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00018">DFA.cpp:18</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a83d51316351c6939e7d249dc20b5c9c8"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a83d51316351c6939e7d249dc20b5c9c8">antlr4::dfa::DFA::atnStartState</a></div><div class="ttdeci">atn::DecisionState * atnStartState</div><div class="ttdoc">From which ATN state did we create this DFA?</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00023">DFA.h:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_afaf75312829a34946e8e69b07748a230"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#afaf75312829a34946e8e69b07748a230">antlr4::dfa::DFA::decision</a></div><div class="ttdeci">size_t decision</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00026">DFA.h:26</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

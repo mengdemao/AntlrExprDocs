@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/tree/xpath/XPathLexer.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_ec50670f89e9db2ebe67c601b8fdb9e9.html">tree</a></li><li class="navelem"><a class="el" href="dir_a19c9d7266b6c8f1796f563ed01b6145.html">xpath</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">XPathLexer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_x_path_lexer_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_x_path_lexer_8h.html">XPathLexer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a86da2f3416d5f572235c249863610c8b">    7</a></span>&#160;<a class="code" href="class_x_path_lexer.html#a86da2f3416d5f572235c249863610c8b">XPathLexer::XPathLexer</a>(CharStream *input) : <a class="code" href="classantlr4_1_1_lexer.html">Lexer</a>(input) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <a class="code" href="classantlr4_1_1_recognizer.html#a10d4a0c974079f58d5e668072149590a">_interpreter</a> = <span class="keyword">new</span> atn::LexerATNSimulator(<span class="keyword">this</span>, <a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">_atn</a>, <a class="code" href="class_x_path_lexer.html#a6347c7e77bce2247ab0bbe9c840d1873">_decisionToDFA</a>, <a class="code" href="class_x_path_lexer.html#ae2a8ada13c8e483d0c25d33276d7e0b0">_sharedContextCache</a>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a21266c669c91bad8a9f6dd64f1da6a6d">   11</a></span>&#160;<a class="code" href="class_x_path_lexer.html#a21266c669c91bad8a9f6dd64f1da6a6d">XPathLexer::~XPathLexer</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">delete</span> <a class="code" href="classantlr4_1_1_recognizer.html#a10d4a0c974079f58d5e668072149590a">_interpreter</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#aa212943fac87921b6793fda3b6dae10f">   15</a></span>&#160;std::string <a class="code" href="class_x_path_lexer.html#aa212943fac87921b6793fda3b6dae10f">XPathLexer::getGrammarFileName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;XPathLexer.g4&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a0e6dcedfc42e02c2cf3f0d40ed5ea5a3">   19</a></span>&#160;<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="class_x_path_lexer.html#a0e6dcedfc42e02c2cf3f0d40ed5ea5a3">XPathLexer::getRuleNames</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#aa4fe8a230fef9895cf786e83d2f81d91">_ruleNames</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a38173fc37660e52b56a052adc21a9496">   23</a></span>&#160;<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="class_x_path_lexer.html#a38173fc37660e52b56a052adc21a9496">XPathLexer::getChannelNames</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#ad7b67005da573e5aaf6fc49434b75f64">_channelNames</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a2901d6cf7543e6b0a7336f962b042af8">   27</a></span>&#160;<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="class_x_path_lexer.html#a2901d6cf7543e6b0a7336f962b042af8">XPathLexer::getModeNames</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#a8cf7c4a45f65dfe818e982a1a626606a">_modeNames</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a6d2373c466f6a3d92ced0a2d79380a0d">   31</a></span>&#160;<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code" href="class_x_path_lexer.html#a6d2373c466f6a3d92ced0a2d79380a0d">XPathLexer::getTokenNames</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#a76eb680a41cbcb571833ab1aabe2c35e">_tokenNames</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#acf45ddece8356cd0fcaa1189687c1f64">   35</a></span>&#160;dfa::Vocabulary&amp; <a class="code" href="class_x_path_lexer.html#acf45ddece8356cd0fcaa1189687c1f64">XPathLexer::getVocabulary</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#adfa63895922b921b755f246cd806fe1a">_vocabulary</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a59ee9cba029ff18c8468321b75da8f66">   39</a></span>&#160;<span class="keyword">const</span> std::vector&lt;uint16_t&gt; <a class="code" href="class_x_path_lexer.html#a59ee9cba029ff18c8468321b75da8f66">XPathLexer::getSerializedATN</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#a4113005bf65d0fd8c95d23e40f6590bc">_serializedATN</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#aa666e42449466c1524c3b2a02e2c1b7c">   43</a></span>&#160;<span class="keyword">const</span> atn::ATN&amp; <a class="code" href="class_x_path_lexer.html#aa666e42449466c1524c3b2a02e2c1b7c">XPathLexer::getATN</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">_atn</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#ae56d96954dd9727bbebe547c56718c74">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_x_path_lexer.html#ae56d96954dd9727bbebe547c56718c74">XPathLexer::action</a>(<a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *context, <span class="keywordtype">size_t</span> ruleIndex, <span class="keywordtype">size_t</span> actionIndex) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">switch</span> (ruleIndex) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">case</span> 4: <a class="code" href="class_x_path_lexer.html#a15bb35194bd48afd291c9c9425e0cd12">IDAction</a>(<span class="keyword">dynamic_cast&lt;</span><a class="code" href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a> *<span class="keyword">&gt;</span>(context), actionIndex); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_x_path_lexer.html#a15bb35194bd48afd291c9c9425e0cd12">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_x_path_lexer.html#a15bb35194bd48afd291c9c9425e0cd12">XPathLexer::IDAction</a>(<a class="code" href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a> * <span class="comment">/*context*/</span>, <span class="keywordtype">size_t</span> actionIndex) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">switch</span> (actionIndex) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">case</span> 0: </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">if</span> (isupper(<a class="code" href="classantlr4_1_1_lexer.html#aafc9e77d18978addc5c1fb99cc458f27">getText</a>()[0]))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                      <a class="code" href="classantlr4_1_1_lexer.html#a6666e0322f9058c1c9cd30a6b818f705">setType</a>(<a class="code" href="class_x_path_lexer.html#a1b855632756b6d338a79a89b73338589a5d866b9eda9b2996f55d73c2c680fd64">TOKEN_REF</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                      <a class="code" href="classantlr4_1_1_lexer.html#a6666e0322f9058c1c9cd30a6b818f705">setType</a>(<a class="code" href="class_x_path_lexer.html#a1b855632756b6d338a79a89b73338589a196ac811702b1c771041e8f25a53d280">RULE_REF</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                     <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// Static vars and initialization.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;std::vector&lt;dfa::DFA&gt; <a class="code" href="class_x_path_lexer.html#a6347c7e77bce2247ab0bbe9c840d1873">XPathLexer::_decisionToDFA</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">atn::PredictionContextCache</a> <a class="code" href="class_x_path_lexer.html#ae2a8ada13c8e483d0c25d33276d7e0b0">XPathLexer::_sharedContextCache</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// We own the ATN which in turn owns the ATN states.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;atn::ATN <a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">XPathLexer::_atn</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;std::vector&lt;uint16_t&gt; <a class="code" href="class_x_path_lexer.html#a4113005bf65d0fd8c95d23e40f6590bc">XPathLexer::_serializedATN</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#aa4fe8a230fef9895cf786e83d2f81d91">XPathLexer::_ruleNames</a> = {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="stringliteral">&quot;ANYWHERE&quot;</span>, <span class="stringliteral">&quot;ROOT&quot;</span>, <span class="stringliteral">&quot;WILDCARD&quot;</span>, <span class="stringliteral">&quot;BANG&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;NameChar&quot;</span>, <span class="stringliteral">&quot;NameStartChar&quot;</span>, </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="stringliteral">&quot;STRING&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#ad7b67005da573e5aaf6fc49434b75f64">XPathLexer::_channelNames</a> = {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="stringliteral">&quot;DEFAULT_TOKEN_CHANNEL&quot;</span>, <span class="stringliteral">&quot;HIDDEN&quot;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#a8cf7c4a45f65dfe818e982a1a626606a">XPathLexer::_modeNames</a> = {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="stringliteral">&quot;DEFAULT_MODE&quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#a13a7dfcb3ffe584d3b4974fa1827d8e6">XPathLexer::_literalNames</a> = {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&#39;//&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;/&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;*&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;!&#39;&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#a942f3141b5e15218a5c951818dbfd41d">XPathLexer::_symbolicNames</a> = {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;TOKEN_REF&quot;</span>, <span class="stringliteral">&quot;RULE_REF&quot;</span>, <span class="stringliteral">&quot;ANYWHERE&quot;</span>, <span class="stringliteral">&quot;ROOT&quot;</span>, <span class="stringliteral">&quot;WILDCARD&quot;</span>, <span class="stringliteral">&quot;BANG&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="stringliteral">&quot;STRING&quot;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;dfa::Vocabulary <a class="code" href="class_x_path_lexer.html#adfa63895922b921b755f246cd806fe1a">XPathLexer::_vocabulary</a>(_literalNames, _symbolicNames);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_x_path_lexer.html#a76eb680a41cbcb571833ab1aabe2c35e">XPathLexer::_tokenNames</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="struct_x_path_lexer_1_1_initializer.html#aa21ba32b75713a7330cfbf1771f241ed">  107</a></span>&#160;<a class="code" href="struct_x_path_lexer_1_1_initializer.html#aa21ba32b75713a7330cfbf1771f241ed">XPathLexer::Initializer::Initializer</a>() {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// This code could be in a static initializer lambda, but VS doesn&#39;t allow access to private class members from there.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="class_x_path_lexer.html#a942f3141b5e15218a5c951818dbfd41d">_symbolicNames</a>.size(); ++i) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::string name = <a class="code" href="class_x_path_lexer.html#adfa63895922b921b755f246cd806fe1a">_vocabulary</a>.getLiteralName(i);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (name.empty()) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            name = <a class="code" href="class_x_path_lexer.html#adfa63895922b921b755f246cd806fe1a">_vocabulary</a>.getSymbolicName(i);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (name.empty()) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="class_x_path_lexer.html#a76eb680a41cbcb571833ab1aabe2c35e">_tokenNames</a>.push_back(<span class="stringliteral">&quot;&lt;INVALID&gt;&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <a class="code" href="class_x_path_lexer.html#a76eb680a41cbcb571833ab1aabe2c35e">_tokenNames</a>.push_back(name);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="class_x_path_lexer.html#a4113005bf65d0fd8c95d23e40f6590bc">_serializedATN</a> = {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    0x3, 0x430, 0xd6d1, 0x8206, 0xad2d, 0x4417, 0xaef1, 0x8d80, 0xaadd, </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    0x2, 0xa, 0x34, 0x8, 0x1, 0x4, 0x2, 0x9, 0x2, 0x4, 0x3, 0x9, 0x3, 0x4, </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    0x4, 0x9, 0x4, 0x4, 0x5, 0x9, 0x5, 0x4, 0x6, 0x9, 0x6, 0x4, 0x7, 0x9, </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    0x7, 0x4, 0x8, 0x9, 0x8, 0x4, 0x9, 0x9, 0x9, 0x3, 0x2, 0x3, 0x2, 0x3, </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    0x2, 0x3, 0x3, 0x3, 0x3, 0x3, 0x4, 0x3, 0x4, 0x3, 0x5, 0x3, 0x5, 0x3, </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    0x6, 0x3, 0x6, 0x7, 0x6, 0x1f, 0xa, 0x6, 0xc, 0x6, 0xe, 0x6, 0x22, 0xb, </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    0x6, 0x3, 0x6, 0x3, 0x6, 0x3, 0x7, 0x3, 0x7, 0x5, 0x7, 0x28, 0xa, 0x7, </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    0x3, 0x8, 0x3, 0x8, 0x3, 0x9, 0x3, 0x9, 0x7, 0x9, 0x2e, 0xa, 0x9, 0xc, </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    0x9, 0xe, 0x9, 0x31, 0xb, 0x9, 0x3, 0x9, 0x3, 0x9, 0x3, 0x2f, 0x2, 0xa, </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    0x3, 0x5, 0x5, 0x6, 0x7, 0x7, 0x9, 0x8, 0xb, 0x9, 0xd, 0x2, 0xf, 0x2, </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    0x11, 0xa, 0x3, 0x2, 0x4, 0x7, 0x2, 0x32, 0x3b, 0x61, 0x61, 0xb9, 0xb9, </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    0x302, 0x371, 0x2041, 0x2042, 0xf, 0x2, 0x43, 0x5c, 0x63, 0x7c, 0xc2, </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    0xd8, 0xda, 0xf8, 0xfa, 0x301, 0x372, 0x37f, 0x381, 0x2001, 0x200e, </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    0x200f, 0x2072, 0x2191, 0x2c02, 0x2ff1, 0x3003, 0xd801, 0xf902, 0xfdd1, </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    0xfdf2, 0x1, 0x34, 0x2, 0x3, 0x3, 0x2, 0x2, 0x2, 0x2, 0x5, 0x3, 0x2, </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    0x2, 0x2, 0x2, 0x7, 0x3, 0x2, 0x2, 0x2, 0x2, 0x9, 0x3, 0x2, 0x2, 0x2, </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    0x2, 0xb, 0x3, 0x2, 0x2, 0x2, 0x2, 0x11, 0x3, 0x2, 0x2, 0x2, 0x3, 0x13, </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    0x3, 0x2, 0x2, 0x2, 0x5, 0x16, 0x3, 0x2, 0x2, 0x2, 0x7, 0x18, 0x3, 0x2, </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    0x2, 0x2, 0x9, 0x1a, 0x3, 0x2, 0x2, 0x2, 0xb, 0x1c, 0x3, 0x2, 0x2, 0x2, </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    0xd, 0x27, 0x3, 0x2, 0x2, 0x2, 0xf, 0x29, 0x3, 0x2, 0x2, 0x2, 0x11, </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    0x2b, 0x3, 0x2, 0x2, 0x2, 0x13, 0x14, 0x7, 0x31, 0x2, 0x2, 0x14, 0x15, </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    0x7, 0x31, 0x2, 0x2, 0x15, 0x4, 0x3, 0x2, 0x2, 0x2, 0x16, 0x17, 0x7, </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    0x31, 0x2, 0x2, 0x17, 0x6, 0x3, 0x2, 0x2, 0x2, 0x18, 0x19, 0x7, 0x2c, </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    0x2, 0x2, 0x19, 0x8, 0x3, 0x2, 0x2, 0x2, 0x1a, 0x1b, 0x7, 0x23, 0x2, </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    0x2, 0x1b, 0xa, 0x3, 0x2, 0x2, 0x2, 0x1c, 0x20, 0x5, 0xf, 0x8, 0x2, </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    0x1d, 0x1f, 0x5, 0xd, 0x7, 0x2, 0x1e, 0x1d, 0x3, 0x2, 0x2, 0x2, 0x1f, </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    0x22, 0x3, 0x2, 0x2, 0x2, 0x20, 0x1e, 0x3, 0x2, 0x2, 0x2, 0x20, 0x21, </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    0x3, 0x2, 0x2, 0x2, 0x21, 0x23, 0x3, 0x2, 0x2, 0x2, 0x22, 0x20, 0x3, </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    0x2, 0x2, 0x2, 0x23, 0x24, 0x8, 0x6, 0x2, 0x2, 0x24, 0xc, 0x3, 0x2, </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    0x2, 0x2, 0x25, 0x28, 0x5, 0xf, 0x8, 0x2, 0x26, 0x28, 0x9, 0x2, 0x2, </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    0x2, 0x27, 0x25, 0x3, 0x2, 0x2, 0x2, 0x27, 0x26, 0x3, 0x2, 0x2, 0x2, </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    0x28, 0xe, 0x3, 0x2, 0x2, 0x2, 0x29, 0x2a, 0x9, 0x3, 0x2, 0x2, 0x2a, </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    0x10, 0x3, 0x2, 0x2, 0x2, 0x2b, 0x2f, 0x7, 0x29, 0x2, 0x2, 0x2c, 0x2e, </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    0xb, 0x2, 0x2, 0x2, 0x2d, 0x2c, 0x3, 0x2, 0x2, 0x2, 0x2e, 0x31, 0x3, </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    0x2, 0x2, 0x2, 0x2f, 0x30, 0x3, 0x2, 0x2, 0x2, 0x2f, 0x2d, 0x3, 0x2, </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    0x2, 0x2, 0x30, 0x32, 0x3, 0x2, 0x2, 0x2, 0x31, 0x2f, 0x3, 0x2, 0x2, </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    0x2, 0x32, 0x33, 0x7, 0x29, 0x2, 0x2, 0x33, 0x12, 0x3, 0x2, 0x2, 0x2, </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    0x6, 0x2, 0x20, 0x27, 0x2f, 0x3, 0x3, 0x6, 0x2, </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  };</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html">atn::ATNDeserializer</a> deserializer;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">_atn</a> = deserializer.<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#aefd9354c6031246ae9d09a2bba89cb47">deserialize</a>(<a class="code" href="class_x_path_lexer.html#a4113005bf65d0fd8c95d23e40f6590bc">_serializedATN</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">size_t</span> count = <a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">_atn</a>.getNumberOfDecisions();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="class_x_path_lexer.html#a6347c7e77bce2247ab0bbe9c840d1873">_decisionToDFA</a>.reserve(count);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; count; i++) { </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="class_x_path_lexer.html#a6347c7e77bce2247ab0bbe9c840d1873">_decisionToDFA</a>.emplace_back(<a class="code" href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">_atn</a>.getDecisionState(i), i);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="struct_x_path_lexer_1_1_initializer.html">XPathLexer::Initializer</a> <a class="code" href="class_x_path_lexer.html#aaa7e34366bd967fd5115baee55d6791c">XPathLexer::_init</a>;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_x_path_lexer_html_a6347c7e77bce2247ab0bbe9c840d1873"><div class="ttname"><a href="class_x_path_lexer.html#a6347c7e77bce2247ab0bbe9c840d1873">XPathLexer::_decisionToDFA</a></div><div class="ttdeci">static std::vector&lt; antlr4::dfa::DFA &gt; _decisionToDFA</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00032">XPathLexer.h:32</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html_aefd9354c6031246ae9d09a2bba89cb47"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html#aefd9354c6031246ae9d09a2bba89cb47">antlr4::atn::ATNDeserializer::deserialize</a></div><div class="ttdeci">virtual ATN deserialize(const std::vector&lt; uint16_t &gt; &amp;input)</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8cpp_source.html#l00156">ATNDeserializer.cpp:156</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a38173fc37660e52b56a052adc21a9496"><div class="ttname"><a href="class_x_path_lexer.html#a38173fc37660e52b56a052adc21a9496">XPathLexer::getChannelNames</a></div><div class="ttdeci">virtual const std::vector&lt; std::string &gt; &amp; getChannelNames() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00023">XPathLexer.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_lexer_html_aafc9e77d18978addc5c1fb99cc458f27"><div class="ttname"><a href="classantlr4_1_1_lexer.html#aafc9e77d18978addc5c1fb99cc458f27">antlr4::Lexer::getText</a></div><div class="ttdeci">virtual std::string getText()</div><div class="ttdef"><b>Definition:</b> <a href="_lexer_8cpp_source.html#l00193">Lexer.cpp:193</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a2901d6cf7543e6b0a7336f962b042af8"><div class="ttname"><a href="class_x_path_lexer.html#a2901d6cf7543e6b0a7336f962b042af8">XPathLexer::getModeNames</a></div><div class="ttdeci">virtual const std::vector&lt; std::string &gt; &amp; getModeNames() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00027">XPathLexer.cpp:27</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a76eb680a41cbcb571833ab1aabe2c35e"><div class="ttname"><a href="class_x_path_lexer.html#a76eb680a41cbcb571833ab1aabe2c35e">XPathLexer::_tokenNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _tokenNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00035">XPathLexer.h:35</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a59ee9cba029ff18c8468321b75da8f66"><div class="ttname"><a href="class_x_path_lexer.html#a59ee9cba029ff18c8468321b75da8f66">XPathLexer::getSerializedATN</a></div><div class="ttdeci">virtual const std::vector&lt; uint16_t &gt; getSerializedATN() const override</div><div class="ttdoc">If this recognizer was generated, it will have a serialized ATN representation of the grammar....</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00039">XPathLexer.cpp:39</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_ae2a8ada13c8e483d0c25d33276d7e0b0"><div class="ttname"><a href="class_x_path_lexer.html#ae2a8ada13c8e483d0c25d33276d7e0b0">XPathLexer::_sharedContextCache</a></div><div class="ttdeci">static antlr4::atn::PredictionContextCache _sharedContextCache</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00033">XPathLexer.h:33</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_ad7b67005da573e5aaf6fc49434b75f64"><div class="ttname"><a href="class_x_path_lexer.html#ad7b67005da573e5aaf6fc49434b75f64">XPathLexer::_channelNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _channelNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00036">XPathLexer.h:36</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html_a1c45e22af88cac4a7ce0f823dc39f26b"><div class="ttname"><a href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">antlr4::atn::PredictionContextCache</a></div><div class="ttdeci">std::unordered_set&lt; Ref&lt; PredictionContext &gt;, PredictionContextHasher, PredictionContextComparer &gt; PredictionContextCache</div><div class="ttdef"><b>Definition:</b> <a href="_prediction_context_8h_source.html#l00017">PredictionContext.h:17</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a13a7dfcb3ffe584d3b4974fa1827d8e6"><div class="ttname"><a href="class_x_path_lexer.html#a13a7dfcb3ffe584d3b4974fa1827d8e6">XPathLexer::_literalNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _literalNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00039">XPathLexer.h:39</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_acf45ddece8356cd0fcaa1189687c1f64"><div class="ttname"><a href="class_x_path_lexer.html#acf45ddece8356cd0fcaa1189687c1f64">XPathLexer::getVocabulary</a></div><div class="ttdeci">virtual antlr4::dfa::Vocabulary &amp; getVocabulary() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00035">XPathLexer.cpp:35</a></div></div>
+<div class="ttc" id="astruct_x_path_lexer_1_1_initializer_html"><div class="ttname"><a href="struct_x_path_lexer_1_1_initializer.html">XPathLexer::Initializer</a></div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00051">XPathLexer.h:51</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_aa212943fac87921b6793fda3b6dae10f"><div class="ttname"><a href="class_x_path_lexer.html#aa212943fac87921b6793fda3b6dae10f">XPathLexer::getGrammarFileName</a></div><div class="ttdeci">virtual std::string getGrammarFileName() const override</div><div class="ttdoc">For debugging and other purposes, might want the grammar name. Have ANTLR generate an implementation ...</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00015">XPathLexer.cpp:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_deserializer_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_deserializer.html">antlr4::atn::ATNDeserializer</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_deserializer_8h_source.html#l00014">ATNDeserializer.h:14</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_adfa63895922b921b755f246cd806fe1a"><div class="ttname"><a href="class_x_path_lexer.html#adfa63895922b921b755f246cd806fe1a">XPathLexer::_vocabulary</a></div><div class="ttdeci">static antlr4::dfa::Vocabulary _vocabulary</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00041">XPathLexer.h:41</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a0e6dcedfc42e02c2cf3f0d40ed5ea5a3"><div class="ttname"><a href="class_x_path_lexer.html#a0e6dcedfc42e02c2cf3f0d40ed5ea5a3">XPathLexer::getRuleNames</a></div><div class="ttdeci">virtual const std::vector&lt; std::string &gt; &amp; getRuleNames() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00019">XPathLexer.cpp:19</a></div></div>
+<div class="ttc" id="a_x_path_lexer_8h_html"><div class="ttname"><a href="_x_path_lexer_8h.html">XPathLexer.h</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a8cf7c4a45f65dfe818e982a1a626606a"><div class="ttname"><a href="class_x_path_lexer.html#a8cf7c4a45f65dfe818e982a1a626606a">XPathLexer::_modeNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _modeNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00037">XPathLexer.h:37</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a6d2373c466f6a3d92ced0a2d79380a0d"><div class="ttname"><a href="class_x_path_lexer.html#a6d2373c466f6a3d92ced0a2d79380a0d">XPathLexer::getTokenNames</a></div><div class="ttdeci">virtual const std::vector&lt; std::string &gt; &amp; getTokenNames() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00031">XPathLexer.cpp:31</a></div></div>
+<div class="ttc" id="astruct_x_path_lexer_1_1_initializer_html_aa21ba32b75713a7330cfbf1771f241ed"><div class="ttname"><a href="struct_x_path_lexer_1_1_initializer.html#aa21ba32b75713a7330cfbf1771f241ed">XPathLexer::Initializer::Initializer</a></div><div class="ttdeci">Initializer()</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00107">XPathLexer.cpp:107</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a1b855632756b6d338a79a89b73338589a196ac811702b1c771041e8f25a53d280"><div class="ttname"><a href="class_x_path_lexer.html#a1b855632756b6d338a79a89b73338589a196ac811702b1c771041e8f25a53d280">XPathLexer::RULE_REF</a></div><div class="ttdeci">@ RULE_REF</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00012">XPathLexer.h:12</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_abd827494622a9b09cfdc1819339f8427"><div class="ttname"><a href="class_x_path_lexer.html#abd827494622a9b09cfdc1819339f8427">XPathLexer::_atn</a></div><div class="ttdeci">static antlr4::atn::ATN _atn</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00042">XPathLexer.h:42</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a942f3141b5e15218a5c951818dbfd41d"><div class="ttname"><a href="class_x_path_lexer.html#a942f3141b5e15218a5c951818dbfd41d">XPathLexer::_symbolicNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _symbolicNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00040">XPathLexer.h:40</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a1b855632756b6d338a79a89b73338589a5d866b9eda9b2996f55d73c2c680fd64"><div class="ttname"><a href="class_x_path_lexer.html#a1b855632756b6d338a79a89b73338589a5d866b9eda9b2996f55d73c2c680fd64">XPathLexer::TOKEN_REF</a></div><div class="ttdeci">@ TOKEN_REF</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00012">XPathLexer.h:12</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_aa666e42449466c1524c3b2a02e2c1b7c"><div class="ttname"><a href="class_x_path_lexer.html#aa666e42449466c1524c3b2a02e2c1b7c">XPathLexer::getATN</a></div><div class="ttdeci">virtual const antlr4::atn::ATN &amp; getATN() const override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00043">XPathLexer.cpp:43</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_lexer_html"><div class="ttname"><a href="classantlr4_1_1_lexer.html">antlr4::Lexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_lexer_8h_source.html#l00019">Lexer.h:19</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a4113005bf65d0fd8c95d23e40f6590bc"><div class="ttname"><a href="class_x_path_lexer.html#a4113005bf65d0fd8c95d23e40f6590bc">XPathLexer::_serializedATN</a></div><div class="ttdeci">static std::vector&lt; uint16_t &gt; _serializedATN</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00043">XPathLexer.h:43</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_aa4fe8a230fef9895cf786e83d2f81d91"><div class="ttname"><a href="class_x_path_lexer.html#aa4fe8a230fef9895cf786e83d2f81d91">XPathLexer::_ruleNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; _ruleNames</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00034">XPathLexer.h:34</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html_a10d4a0c974079f58d5e668072149590a"><div class="ttname"><a href="classantlr4_1_1_recognizer.html#a10d4a0c974079f58d5e668072149590a">antlr4::Recognizer::_interpreter</a></div><div class="ttdeci">atn::ATNSimulator * _interpreter</div><div class="ttdef"><b>Definition:</b> <a href="_recognizer_8h_source.html#l00153">Recognizer.h:153</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8h_source.html#l00062">RuleContext.h:62</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_aaa7e34366bd967fd5115baee55d6791c"><div class="ttname"><a href="class_x_path_lexer.html#aaa7e34366bd967fd5115baee55d6791c">XPathLexer::_init</a></div><div class="ttdeci">static Initializer _init</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8h_source.html#l00054">XPathLexer.h:54</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_ae56d96954dd9727bbebe547c56718c74"><div class="ttname"><a href="class_x_path_lexer.html#ae56d96954dd9727bbebe547c56718c74">XPathLexer::action</a></div><div class="ttdeci">virtual void action(antlr4::RuleContext *context, size_t ruleIndex, size_t actionIndex) override</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00048">XPathLexer.cpp:48</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a21266c669c91bad8a9f6dd64f1da6a6d"><div class="ttname"><a href="class_x_path_lexer.html#a21266c669c91bad8a9f6dd64f1da6a6d">XPathLexer::~XPathLexer</a></div><div class="ttdeci">~XPathLexer()</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00011">XPathLexer.cpp:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_lexer_html_a6666e0322f9058c1c9cd30a6b818f705"><div class="ttname"><a href="classantlr4_1_1_lexer.html#a6666e0322f9058c1c9cd30a6b818f705">antlr4::Lexer::setType</a></div><div class="ttdeci">virtual void setType(size_t ttype)</div><div class="ttdef"><b>Definition:</b> <a href="_lexer_8cpp_source.html#l00212">Lexer.cpp:212</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a86da2f3416d5f572235c249863610c8b"><div class="ttname"><a href="class_x_path_lexer.html#a86da2f3416d5f572235c249863610c8b">XPathLexer::XPathLexer</a></div><div class="ttdeci">XPathLexer(antlr4::CharStream *input)</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00007">XPathLexer.cpp:7</a></div></div>
+<div class="ttc" id="aclass_x_path_lexer_html_a15bb35194bd48afd291c9c9425e0cd12"><div class="ttname"><a href="class_x_path_lexer.html#a15bb35194bd48afd291c9c9425e0cd12">XPathLexer::IDAction</a></div><div class="ttdeci">void IDAction(antlr4::RuleContext *context, size_t actionIndex)</div><div class="ttdef"><b>Definition:</b> <a href="_x_path_lexer_8cpp_source.html#l00057">XPathLexer.cpp:57</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

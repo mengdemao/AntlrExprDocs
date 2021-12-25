@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/Lexer.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle">
+<div class="title">Lexer.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_recognizer_8h_source.html">Recognizer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_token_source_8h_source.html">TokenSource.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_char_stream_8h_source.html">CharStream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_token_8h_source.html">Token.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Lexer.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_lexer_8h__incl.png" border="0" usemap="#runtime_2_lexer_8h" alt=""/></div>
+<map name="runtime_2_lexer_8h" id="runtime_2_lexer_8h">
+<area shape="rect" title=" " alt="" coords="1191,5,1313,32"/>
+<area shape="rect" href="_recognizer_8h.html" title=" " alt="" coords="1006,80,1111,107"/>
+<area shape="rect" href="_token_source_8h.html" title=" " alt="" coords="1136,80,1251,107"/>
+<area shape="rect" href="_char_stream_8h.html" title=" " alt="" coords="1370,80,1481,107"/>
+<area shape="rect" href="_token_8h.html" title=" " alt="" coords="1275,80,1346,107"/>
+<area shape="rect" href="_proxy_error_listener_8h.html" title=" " alt="" coords="982,155,1135,181"/>
+<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="985,229,1143,256"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1019,379,1125,405"/>
+<area shape="rect" href="_recognition_exception_8h.html" title=" " alt="" coords="985,304,1159,331"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1229,453,1363,480"/>
+<area shape="rect" title=" " alt="" coords="5,528,91,555"/>
+<area shape="rect" title=" " alt="" coords="115,528,189,555"/>
+<area shape="rect" title=" " alt="" coords="213,528,280,555"/>
+<area shape="rect" title=" " alt="" coords="304,528,371,555"/>
+<area shape="rect" title=" " alt="" coords="395,528,469,555"/>
+<area shape="rect" title=" " alt="" coords="371,603,451,629"/>
+<area shape="rect" title=" " alt="" coords="886,528,957,555"/>
+<area shape="rect" title=" " alt="" coords="981,528,1040,555"/>
+<area shape="rect" title=" " alt="" coords="1065,528,1135,555"/>
+<area shape="rect" title=" " alt="" coords="1160,528,1203,555"/>
+<area shape="rect" title=" " alt="" coords="1227,528,1277,555"/>
+<area shape="rect" title=" " alt="" coords="1301,528,1379,555"/>
+<area shape="rect" title=" " alt="" coords="1403,528,1445,555"/>
+<area shape="rect" title=" " alt="" coords="1469,528,1544,555"/>
+<area shape="rect" title=" " alt="" coords="475,603,546,629"/>
+<area shape="rect" title=" " alt="" coords="1569,528,1639,555"/>
+<area shape="rect" title=" " alt="" coords="571,603,645,629"/>
+<area shape="rect" title=" " alt="" coords="1663,528,1721,555"/>
+<area shape="rect" title=" " alt="" coords="768,603,827,629"/>
+<area shape="rect" title=" " alt="" coords="1745,528,1821,555"/>
+<area shape="rect" title=" " alt="" coords="1845,528,1937,555"/>
+<area shape="rect" title=" " alt="" coords="1961,528,2085,555"/>
+<area shape="rect" title=" " alt="" coords="2109,528,2224,555"/>
+<area shape="rect" title=" " alt="" coords="2249,528,2309,555"/>
+<area shape="rect" title=" " alt="" coords="851,603,914,629"/>
+<area shape="rect" title=" " alt="" coords="2333,528,2397,555"/>
+<area shape="rect" title=" " alt="" coords="2422,528,2509,555"/>
+<area shape="rect" title=" " alt="" coords="2533,528,2592,555"/>
+<area shape="rect" title=" " alt="" coords="2617,528,2759,555"/>
+<area shape="rect" title=" " alt="" coords="2783,528,2857,555"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="645,528,760,555"/>
+<area shape="rect" href="_declarations_8h.html" title=" " alt="" coords="2881,528,3050,555"/>
+<area shape="rect" title=" " alt="" coords="669,603,744,629"/>
+<area shape="rect" href="_token_factory_8h.html" title=" " alt="" coords="1167,229,1283,256"/>
+<area shape="rect" href="_int_stream_8h.html" title=" " alt="" coords="1272,155,1371,181"/>
+<area shape="rect" href="_interval_8h.html" title=" " alt="" coords="1361,304,1479,331"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_lexer_8h__dep__incl.png" border="0" usemap="#runtime_2_lexer_8hdep" alt=""/></div>
+<map name="runtime_2_lexer_8hdep" id="runtime_2_lexer_8hdep">
+<area shape="rect" title=" " alt="" coords="2150,5,2273,32"/>
+<area shape="rect" href="_lexer_a_t_n_simulator_8cpp.html" title=" " alt="" coords="5,87,257,114"/>
+<area shape="rect" href="_lexer_channel_action_8cpp.html" title=" " alt="" coords="281,80,472,121"/>
+<area shape="rect" href="_lexer_custom_action_8cpp.html" title=" " alt="" coords="496,87,751,114"/>
+<area shape="rect" href="_lexer_indexed_custom_action_8cpp.html" title=" " alt="" coords="775,80,963,121"/>
+<area shape="rect" href="_lexer_mode_action_8cpp.html" title=" " alt="" coords="987,87,1228,114"/>
+<area shape="rect" href="_lexer_more_action_8cpp.html" title=" " alt="" coords="1252,87,1491,114"/>
+<area shape="rect" href="_lexer_pop_mode_action_8cpp.html" title=" " alt="" coords="1515,80,1713,121"/>
+<area shape="rect" href="_lexer_push_mode_action_8cpp.html" title=" " alt="" coords="1737,80,1941,121"/>
+<area shape="rect" href="_lexer_skip_action_8cpp.html" title=" " alt="" coords="1965,87,2199,114"/>
+<area shape="rect" href="_lexer_type_action_8cpp.html" title=" " alt="" coords="2223,87,2458,114"/>
+<area shape="rect" href="_buffered_token_stream_8cpp.html" title=" " alt="" coords="2482,87,2725,114"/>
+<area shape="rect" href="_lexer_8cpp.html" title=" " alt="" coords="2749,87,2887,114"/>
+<area shape="rect" href="_lexer_interpreter_8h.html" title=" " alt="" coords="2911,87,3103,114"/>
+<area shape="rect" href="_lexer_no_viable_alt_exception_8cpp.html" title=" " alt="" coords="3127,80,3317,121"/>
+<area shape="rect" href="_interval_set_8cpp.html" title=" " alt="" coords="3341,87,3551,114"/>
+<area shape="rect" href="_parser_8cpp.html" title=" " alt="" coords="3575,87,3717,114"/>
+<area shape="rect" href="_parser_interpreter_8cpp.html" title=" " alt="" coords="3741,87,3953,114"/>
+<area shape="rect" href="_parse_tree_pattern_matcher_8cpp.html" title=" " alt="" coords="3978,80,4191,121"/>
+</map>
+</div>
+</div>
+<p><a href="_lexer_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_lexer.html">antlr4::Lexer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceantlr4"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlr4.html">antlr4</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

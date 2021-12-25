@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/BaseErrorListener.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BaseErrorListener.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_base_error_listener_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_base_error_listener_8h.html">BaseErrorListener.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_recognition_exception_8h.html">RecognitionException.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classantlr4_1_1_base_error_listener.html#a86b96cc4abf3a17ef8845ff5beda6803">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_base_error_listener.html#a86b96cc4abf3a17ef8845ff5beda6803">BaseErrorListener::syntaxError</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> * <span class="comment">/*recognizer*/</span>, <a class="code" href="classantlr4_1_1_token.html">Token</a> * <span class="comment">/*offendingSymbol*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*line*/</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">size_t</span> <span class="comment">/*charPositionInLine*/</span>, <span class="keyword">const</span> std::string &amp;<span class="comment">/*msg*/</span>, std::exception_ptr <span class="comment">/*e*/</span>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classantlr4_1_1_base_error_listener.html#aaf3905e37251e779283c074f14588be9">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_base_error_listener.html#aaf3905e37251e779283c074f14588be9">BaseErrorListener::reportAmbiguity</a>(<a class="code" href="classantlr4_1_1_parser.html">Parser</a> * <span class="comment">/*recognizer*/</span>, <span class="keyword">const</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;<span class="comment">/*dfa*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*startIndex*/</span>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">size_t</span> <span class="comment">/*stopIndex*/</span>, <span class="keywordtype">bool</span> <span class="comment">/*exact*/</span>, <span class="keyword">const</span> <a class="code" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;<span class="comment">/*ambigAlts*/</span>, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> * <span class="comment">/*configs*/</span>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classantlr4_1_1_base_error_listener.html#a41cfe8c435c0b3eefda58e4c4e712049">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_base_error_listener.html#a41cfe8c435c0b3eefda58e4c4e712049">BaseErrorListener::reportAttemptingFullContext</a>(<a class="code" href="classantlr4_1_1_parser.html">Parser</a> * <span class="comment">/*recognizer*/</span>, <span class="keyword">const</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;<span class="comment">/*dfa*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*startIndex*/</span>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">size_t</span> <span class="comment">/*stopIndex*/</span>, <span class="keyword">const</span> <a class="code" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;<span class="comment">/*conflictingAlts*/</span>, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> * <span class="comment">/*configs*/</span>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1_base_error_listener.html#a86aadb5fde2c3e588ee9fe53c29cdc9f">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_base_error_listener.html#a86aadb5fde2c3e588ee9fe53c29cdc9f">BaseErrorListener::reportContextSensitivity</a>(<a class="code" href="classantlr4_1_1_parser.html">Parser</a> * <span class="comment">/*recognizer*/</span>, <span class="keyword">const</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;<span class="comment">/*dfa*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*startIndex*/</span>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">size_t</span> <span class="comment">/*stopIndex*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*prediction*/</span>, <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> * <span class="comment">/*configs*/</span>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html"><div class="ttname"><a href="classantlr4_1_1_recognizer.html">antlr4::Recognizer</a></div><div class="ttdef"><b>Definition:</b> <a href="_recognizer_8h_source.html#l00012">Recognizer.h:12</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_base_error_listener_html_a86aadb5fde2c3e588ee9fe53c29cdc9f"><div class="ttname"><a href="classantlr4_1_1_base_error_listener.html#a86aadb5fde2c3e588ee9fe53c29cdc9f">antlr4::BaseErrorListener::reportContextSensitivity</a></div><div class="ttdeci">virtual void reportContextSensitivity(Parser *recognizer, const dfa::DFA &amp;dfa, size_t startIndex, size_t stopIndex, size_t prediction, atn::ATNConfigSet *configs) override</div><div class="ttdef"><b>Definition:</b> <a href="_base_error_listener_8cpp_source.html#l00023">BaseErrorListener.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_bit_set_html"><div class="ttname"><a href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_bit_set_8h_source.html#l00012">BitSet.h:12</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html">antlr4::dfa::DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00017">DFA.h:17</a></div></div>
+<div class="ttc" id="a_recognition_exception_8h_html"><div class="ttname"><a href="_recognition_exception_8h.html">RecognitionException.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_base_error_listener_html_aaf3905e37251e779283c074f14588be9"><div class="ttname"><a href="classantlr4_1_1_base_error_listener.html#aaf3905e37251e779283c074f14588be9">antlr4::BaseErrorListener::reportAmbiguity</a></div><div class="ttdeci">virtual void reportAmbiguity(Parser *recognizer, const dfa::DFA &amp;dfa, size_t startIndex, size_t stopIndex, bool exact, const antlrcpp::BitSet &amp;ambigAlts, atn::ATNConfigSet *configs) override</div><div class="ttdef"><b>Definition:</b> <a href="_base_error_listener_8cpp_source.html#l00015">BaseErrorListener.cpp:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">antlr4::atn::ATNConfigSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_set_8h_source.html#l00016">ATNConfigSet.h:16</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_base_error_listener_8h_html"><div class="ttname"><a href="_base_error_listener_8h.html">BaseErrorListener.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_base_error_listener_html_a86b96cc4abf3a17ef8845ff5beda6803"><div class="ttname"><a href="classantlr4_1_1_base_error_listener.html#a86b96cc4abf3a17ef8845ff5beda6803">antlr4::BaseErrorListener::syntaxError</a></div><div class="ttdeci">virtual void syntaxError(Recognizer *recognizer, Token *offendingSymbol, size_t line, size_t charPositionInLine, const std::string &amp;msg, std::exception_ptr e) override</div><div class="ttdef"><b>Definition:</b> <a href="_base_error_listener_8cpp_source.html#l00011">BaseErrorListener.cpp:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_base_error_listener_html_a41cfe8c435c0b3eefda58e4c4e712049"><div class="ttname"><a href="classantlr4_1_1_base_error_listener.html#a41cfe8c435c0b3eefda58e4c4e712049">antlr4::BaseErrorListener::reportAttemptingFullContext</a></div><div class="ttdeci">virtual void reportAttemptingFullContext(Parser *recognizer, const dfa::DFA &amp;dfa, size_t startIndex, size_t stopIndex, const antlrcpp::BitSet &amp;conflictingAlts, atn::ATNConfigSet *configs) override</div><div class="ttdef"><b>Definition:</b> <a href="_base_error_listener_8cpp_source.html#l00019">BaseErrorListener.cpp:19</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html"><div class="ttname"><a href="classantlr4_1_1_token.html">antlr4::Token</a></div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00015">Token.h:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_html"><div class="ttname"><a href="classantlr4_1_1_parser.html">antlr4::Parser</a></div><div class="ttdoc">This is all the parsing support code essentially; most of it is error recovery stuff.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8h_source.html#l00018">Parser.h:18</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

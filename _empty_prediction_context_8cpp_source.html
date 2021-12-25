@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/EmptyPredictionContext.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EmptyPredictionContext.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_empty_prediction_context_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_empty_prediction_context_8h.html">atn/EmptyPredictionContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1atn.html">antlr4::atn</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a32cc1d5ef703160ce335a8a83bc73634">   10</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a32cc1d5ef703160ce335a8a83bc73634">EmptyPredictionContext::EmptyPredictionContext</a>() : <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a>(nullptr, EMPTY_RETURN_STATE) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a0216ff499b88ca1443ae9e720541b5ce">   13</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a0216ff499b88ca1443ae9e720541b5ce">EmptyPredictionContext::isEmpty</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a92d4e1c48bc9daf37cec387a06fc6fad">   17</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a92d4e1c48bc9daf37cec387a06fc6fad">EmptyPredictionContext::size</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#acd1aaea5711a69c01f23942a78e4678e">   21</a></span>&#160;<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#acd1aaea5711a69c01f23942a78e4678e">EmptyPredictionContext::getParent</a>(<span class="keywordtype">size_t</span> <span class="comment">/*index*/</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a50f13a4b417ac47340985f3212fd81f1">   25</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a50f13a4b417ac47340985f3212fd81f1">EmptyPredictionContext::getReturnState</a>(<span class="keywordtype">size_t</span> <span class="comment">/*index*/</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">returnState</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a05692e3c3260fa7669c27b1cc531b780">   29</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a05692e3c3260fa7669c27b1cc531b780">EmptyPredictionContext::operator == </a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &amp;o)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;o;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#ad1e91bf65a589ebdfcefb9d719b3f991">   33</a></span>&#160;std::string <a class="code" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#ad1e91bf65a589ebdfcefb9d719b3f991">EmptyPredictionContext::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;$&quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_a92d4e1c48bc9daf37cec387a06fc6fad"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a92d4e1c48bc9daf37cec387a06fc6fad">antlr4::atn::EmptyPredictionContext::size</a></div><div class="ttdeci">virtual size_t size() const override</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00017">EmptyPredictionContext.cpp:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_prediction_context_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_prediction_context.html">antlr4::atn::PredictionContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_prediction_context_8h_source.html#l00021">PredictionContext.h:21</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_singleton_prediction_context_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">antlr4::atn::SingletonPredictionContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_singleton_prediction_context_8h_source.html#l00013">SingletonPredictionContext.h:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_singleton_prediction_context_html_a7fcf91e83cd1d904d964ae9a67779653"><div class="ttname"><a href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">antlr4::atn::SingletonPredictionContext::returnState</a></div><div class="ttdeci">const size_t returnState</div><div class="ttdef"><b>Definition:</b> <a href="_singleton_prediction_context_8h_source.html#l00021">SingletonPredictionContext.h:21</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_acd1aaea5711a69c01f23942a78e4678e"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#acd1aaea5711a69c01f23942a78e4678e">antlr4::atn::EmptyPredictionContext::getParent</a></div><div class="ttdeci">virtual Ref&lt; PredictionContext &gt; getParent(size_t index) const override</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00021">EmptyPredictionContext.cpp:21</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_a32cc1d5ef703160ce335a8a83bc73634"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a32cc1d5ef703160ce335a8a83bc73634">antlr4::atn::EmptyPredictionContext::EmptyPredictionContext</a></div><div class="ttdeci">EmptyPredictionContext()</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00010">EmptyPredictionContext.cpp:10</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html"><div class="ttname"><a href="namespaceantlr4_1_1atn.html">antlr4::atn</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_predicate_transition_8h_source.html#l00011">AbstractPredicateTransition.h:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_ad1e91bf65a589ebdfcefb9d719b3f991"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#ad1e91bf65a589ebdfcefb9d719b3f991">antlr4::atn::EmptyPredictionContext::toString</a></div><div class="ttdeci">virtual std::string toString() const override</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00033">EmptyPredictionContext.cpp:33</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_a05692e3c3260fa7669c27b1cc531b780"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a05692e3c3260fa7669c27b1cc531b780">antlr4::atn::EmptyPredictionContext::operator==</a></div><div class="ttdeci">virtual bool operator==(const PredictionContext &amp;o) const override</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00029">EmptyPredictionContext.cpp:29</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00139">antlr4-common.h:139</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_a0216ff499b88ca1443ae9e720541b5ce"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a0216ff499b88ca1443ae9e720541b5ce">antlr4::atn::EmptyPredictionContext::isEmpty</a></div><div class="ttdeci">virtual bool isEmpty() const override</div><div class="ttdoc">This means only the EMPTY (wildcard? not sure) context is in set.</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00013">EmptyPredictionContext.cpp:13</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_empty_prediction_context_html_a50f13a4b417ac47340985f3212fd81f1"><div class="ttname"><a href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a50f13a4b417ac47340985f3212fd81f1">antlr4::atn::EmptyPredictionContext::getReturnState</a></div><div class="ttdeci">virtual size_t getReturnState(size_t index) const override</div><div class="ttdef"><b>Definition:</b> <a href="_empty_prediction_context_8cpp_source.html#l00025">EmptyPredictionContext.cpp:25</a></div></div>
+<div class="ttc" id="a_empty_prediction_context_8h_html"><div class="ttname"><a href="_empty_prediction_context_8h.html">EmptyPredictionContext.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

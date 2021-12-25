@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/TokenStream.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TokenStream.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_int_stream_8h_source.html">IntStream.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+TokenStream.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_token_stream_8h__incl.png" border="0" usemap="#runtime_2_token_stream_8h" alt=""/></div>
+<map name="runtime_2_token_stream_8h" id="runtime_2_token_stream_8h">
+<area shape="rect" title=" " alt="" coords="1209,5,1383,32"/>
+<area shape="rect" href="_int_stream_8h.html" title=" " alt="" coords="1247,80,1345,107"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1229,155,1363,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,91,256"/>
+<area shape="rect" title=" " alt="" coords="115,229,189,256"/>
+<area shape="rect" title=" " alt="" coords="213,229,280,256"/>
+<area shape="rect" title=" " alt="" coords="304,229,371,256"/>
+<area shape="rect" title=" " alt="" coords="395,229,469,256"/>
+<area shape="rect" title=" " alt="" coords="371,304,451,331"/>
+<area shape="rect" title=" " alt="" coords="886,229,957,256"/>
+<area shape="rect" title=" " alt="" coords="981,229,1040,256"/>
+<area shape="rect" title=" " alt="" coords="1065,229,1135,256"/>
+<area shape="rect" title=" " alt="" coords="1160,229,1203,256"/>
+<area shape="rect" title=" " alt="" coords="1227,229,1277,256"/>
+<area shape="rect" title=" " alt="" coords="1301,229,1379,256"/>
+<area shape="rect" title=" " alt="" coords="1403,229,1445,256"/>
+<area shape="rect" title=" " alt="" coords="1469,229,1544,256"/>
+<area shape="rect" title=" " alt="" coords="475,304,546,331"/>
+<area shape="rect" title=" " alt="" coords="1569,229,1639,256"/>
+<area shape="rect" title=" " alt="" coords="571,304,645,331"/>
+<area shape="rect" title=" " alt="" coords="1663,229,1721,256"/>
+<area shape="rect" title=" " alt="" coords="768,304,827,331"/>
+<area shape="rect" title=" " alt="" coords="1745,229,1821,256"/>
+<area shape="rect" title=" " alt="" coords="1845,229,1937,256"/>
+<area shape="rect" title=" " alt="" coords="1961,229,2085,256"/>
+<area shape="rect" title=" " alt="" coords="2109,229,2224,256"/>
+<area shape="rect" title=" " alt="" coords="2249,229,2309,256"/>
+<area shape="rect" title=" " alt="" coords="851,304,914,331"/>
+<area shape="rect" title=" " alt="" coords="2333,229,2397,256"/>
+<area shape="rect" title=" " alt="" coords="2422,229,2509,256"/>
+<area shape="rect" title=" " alt="" coords="2533,229,2592,256"/>
+<area shape="rect" title=" " alt="" coords="2617,229,2759,256"/>
+<area shape="rect" title=" " alt="" coords="2783,229,2857,256"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="645,229,760,256"/>
+<area shape="rect" href="_declarations_8h.html" title=" " alt="" coords="2881,229,3050,256"/>
+<area shape="rect" title=" " alt="" coords="669,304,744,331"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_token_stream_8h__dep__incl.png" border="0" usemap="#runtime_2_token_stream_8hdep" alt=""/></div>
+<map name="runtime_2_token_stream_8hdep" id="runtime_2_token_stream_8hdep">
+<area shape="rect" title=" " alt="" coords="1699,5,1872,32"/>
+<area shape="rect" href="_parser_8h.html" title=" " alt="" coords="1539,80,1667,107"/>
+<area shape="rect" href="_buffered_token_stream_8h.html" title=" " alt="" coords="274,80,502,107"/>
+<area shape="rect" href="_token_stream_8cpp.html" title=" " alt="" coords="1691,80,1879,107"/>
+<area shape="rect" href="_token_stream_rewriter_8cpp.html" title=" " alt="" coords="1904,80,2147,107"/>
+<area shape="rect" href="_unbuffered_token_stream_8h.html" title=" " alt="" coords="2588,80,2833,107"/>
+<area shape="rect" href="_parser_a_t_n_simulator_8cpp.html" title=" " alt="" coords="493,237,750,263"/>
+<area shape="rect" href="_profiling_a_t_n_simulator_8cpp.html" title=" " alt="" coords="1201,155,1471,181"/>
+<area shape="rect" href="_bail_error_strategy_8cpp.html" title=" " alt="" coords="1496,155,1709,181"/>
+<area shape="rect" href="_failed_predicate_exception_8cpp.html" title=" " alt="" coords="1733,155,2000,181"/>
+<area shape="rect" href="_input_mismatch_exception_8cpp.html" title=" " alt="" coords="2025,155,2290,181"/>
+<area shape="rect" href="_no_viable_alt_exception_8cpp.html" title=" " alt="" coords="2315,155,2560,181"/>
+<area shape="rect" href="_parser_8cpp.html" title=" " alt="" coords="2585,155,2727,181"/>
+<area shape="rect" href="_parser_interpreter_8h.html" title=" " alt="" coords="979,155,1176,181"/>
+<area shape="rect" href="_parser_rule_context_8cpp.html" title=" " alt="" coords="2752,155,2976,181"/>
+<area shape="rect" href="_rule_context_8cpp.html" title=" " alt="" coords="528,155,712,181"/>
+<area shape="rect" href="_trees_8cpp.html" title=" " alt="" coords="736,155,904,181"/>
+<area shape="rect" href="_parser_interpreter_8cpp.html" title=" " alt="" coords="1013,237,1225,263"/>
+<area shape="rect" href="_parse_tree_pattern_matcher_8cpp.html" title=" " alt="" coords="775,229,988,271"/>
+<area shape="rect" href="_buffered_token_stream_8cpp.html" title=" " alt="" coords="5,155,248,181"/>
+<area shape="rect" href="_common_token_stream_8h.html" title=" " alt="" coords="272,155,504,181"/>
+<area shape="rect" href="_common_token_stream_8cpp.html" title=" " alt="" coords="222,237,469,263"/>
+<area shape="rect" href="_unbuffered_token_stream_8cpp.html" title=" " alt="" coords="2999,155,3259,181"/>
+</map>
+</div>
+</div>
+<p><a href="_token_stream_8h_source.html">浏览源代码.</a></p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/RuleContext.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RuleContext.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rule_context_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_trees_8h.html">tree/Trees.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_interval_8h.html">misc/Interval.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parser_8h.html">Parser.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_8h.html">atn/ATN.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_t_n_state_8h.html">atn/ATNState.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_visitor_8h.html">tree/ParseTreeVisitor.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_rule_context_8h.html">RuleContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1atn.html">antlr4::atn</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a36bffc1d972039ab5098076a3782a692">   18</a></span>&#160;<a class="code" href="classantlr4_1_1_rule_context.html#a36bffc1d972039ab5098076a3782a692">RuleContext::RuleContext</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  InitializeInstanceFields();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a3a8366fbdf9e4782e0770cafe361ef4d">   22</a></span>&#160;<a class="code" href="classantlr4_1_1_rule_context.html#a36bffc1d972039ab5098076a3782a692">RuleContext::RuleContext</a>(<a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parent_, <span class="keywordtype">size_t</span> invokingState_) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  InitializeInstanceFields();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  this-&gt;parent = parent_;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  this-&gt;invokingState = invokingState_;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a84b5f07f832e628025b22bd1554c239c">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classantlr4_1_1_rule_context.html#a84b5f07f832e628025b22bd1554c239c">RuleContext::depth</a>() {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> n = 1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *p = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    p = <span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *<span class="keyword">&gt;</span>(p-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    n++;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a9b85b3df53a724a0a3cc2b8bc949045e">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1_rule_context.html#a9b85b3df53a724a0a3cc2b8bc949045e">RuleContext::isEmpty</a>() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> invokingState == ATNState::INVALID_STATE_NUMBER;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a7d1c4ec653dabbe03cec49275c9a5915">   44</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a> <a class="code" href="classantlr4_1_1_rule_context.html#a7d1c4ec653dabbe03cec49275c9a5915">RuleContext::getSourceInterval</a>() {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">misc::Interval::INVALID</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a33302ceb47c02e06e24beffac9b8564e">   48</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a33302ceb47c02e06e24beffac9b8564e">RuleContext::getText</a>() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (children.empty()) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  std::stringstream ss;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; children.size(); i++) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ParseTree *tree = children[i];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (tree != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      ss &lt;&lt; tree-&gt;getText();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">   63</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">RuleContext::getRuleIndex</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="antlr4-common_8h.html#aa96cda3dc4327fc103977fd4483aefb2">INVALID_INDEX</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#abb31efff7ed16c524298b9052c75e8f7">   67</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1_rule_context.html#abb31efff7ed16c524298b9052c75e8f7">RuleContext::getAltNumber</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> atn::ATN::INVALID_ALT_NUMBER;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a13942e9b3fc17ab566e92e6c8c2d88e2">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_rule_context.html#a13942e9b3fc17ab566e92e6c8c2d88e2">RuleContext::setAltNumber</a>(<span class="keywordtype">size_t</span> <span class="comment">/*altNumber*/</span>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a8188a57118653c6dcba7de466e572bfd">   74</a></span>&#160;<a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="classantlr4_1_1_rule_context.html#a8188a57118653c6dcba7de466e572bfd">RuleContext::accept</a>(tree::ParseTreeVisitor *visitor) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">return</span> visitor-&gt;visitChildren(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#acd54893237bae93b8731c915a2e11a3c">   78</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#acd54893237bae93b8731c915a2e11a3c">RuleContext::toStringTree</a>(<a class="code" href="classantlr4_1_1_parser.html">Parser</a> *recog, <span class="keywordtype">bool</span> pretty) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_trees.html#ace5fff86a0ab0fb3011d7ef5a229673c">tree::Trees::toStringTree</a>(<span class="keyword">this</span>, recog, pretty);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#acd976b8a3acddfa0fd88714b1a67b1b5">   82</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#acd54893237bae93b8731c915a2e11a3c">RuleContext::toStringTree</a>(std::vector&lt;std::string&gt; &amp;ruleNames, <span class="keywordtype">bool</span> pretty) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_trees.html#ace5fff86a0ab0fb3011d7ef5a229673c">tree::Trees::toStringTree</a>(<span class="keyword">this</span>, ruleNames, pretty);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#ae3d0f8024a1f5cb5d8b02a8a93244837">   86</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#acd54893237bae93b8731c915a2e11a3c">RuleContext::toStringTree</a>(<span class="keywordtype">bool</span> pretty) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> toStringTree(<span class="keyword">nullptr</span>, pretty);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a73fb65c70dea4528092c6fe5122a04bf">   91</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">RuleContext::toString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;ruleNames) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(ruleNames, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#ac62fa052c96061993df78332adac0430">   96</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">RuleContext::toString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;ruleNames, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *stop) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  std::stringstream ss;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *currentParent = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  ss &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">while</span> (currentParent != stop) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (ruleNames.empty()) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">if</span> (!currentParent-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#a9b85b3df53a724a0a3cc2b8bc949045e">isEmpty</a>()) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        ss &lt;&lt; currentParent-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#a2c4b8b84636c681f98dcd86d5c5a8459">invokingState</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordtype">size_t</span> ruleIndex = currentParent-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">getRuleIndex</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      std::string ruleName = (ruleIndex &lt; ruleNames.size()) ? ruleNames[ruleIndex] : std::to_string(ruleIndex);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      ss &lt;&lt; ruleName;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (currentParent-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a> == <span class="keyword">nullptr</span>) <span class="comment">// No parent anymore.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    currentParent = <span class="keyword">static_cast&lt;</span><a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *<span class="keyword">&gt;</span>(currentParent-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (!ruleNames.empty() || !currentParent-&gt;<a class="code" href="classantlr4_1_1_rule_context.html#a9b85b3df53a724a0a3cc2b8bc949045e">isEmpty</a>()) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      ss &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  ss &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">  126</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">RuleContext::toString</a>() {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a5d3400ab115874c8ae7c8bb9b23b88b6">  130</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">RuleContext::toString</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *recog) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(recog, &amp;<a class="code" href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">ParserRuleContext::EMPTY</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#abe90e4ee8e178f95faf2fd2f36b292be">  134</a></span>&#160;std::string <a class="code" href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">RuleContext::toString</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *recog, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *stop) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (recog == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(std::vector&lt;std::string&gt;(), stop); <span class="comment">// Don&#39;t use an initializer {} here or we end up calling ourselve recursivly.</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(recog-&gt;<a class="code" href="classantlr4_1_1_recognizer.html#a5dfb52dbae6c4c6f41217769ae90717e">getRuleNames</a>(), stop);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classantlr4_1_1_rule_context.html#a77d7610627624b6f4ac3437970a61e51">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classantlr4_1_1_rule_context.html#a77d7610627624b6f4ac3437970a61e51">RuleContext::InitializeInstanceFields</a>() {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  invokingState = <a class="code" href="antlr4-common_8h.html#aa96cda3dc4327fc103977fd4483aefb2">INVALID_INDEX</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_rule_context_8h_html"><div class="ttname"><a href="_rule_context_8h.html">RuleContext.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_abb31efff7ed16c524298b9052c75e8f7"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#abb31efff7ed16c524298b9052c75e8f7">antlr4::RuleContext::getAltNumber</a></div><div class="ttdeci">virtual size_t getAltNumber() const</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00067">RuleContext.cpp:67</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_aa96cda3dc4327fc103977fd4483aefb2"><div class="ttname"><a href="antlr4-common_8h.html#aa96cda3dc4327fc103977fd4483aefb2">INVALID_INDEX</a></div><div class="ttdeci">#define INVALID_INDEX</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00138">antlr4-common.h:138</a></div></div>
+<div class="ttc" id="a_trees_8h_html"><div class="ttname"><a href="_trees_8h.html">Trees.h</a></div></div>
+<div class="ttc" id="astructantlrcpp_1_1_any_html"><div class="ttname"><a href="structantlrcpp_1_1_any.html">antlrcpp::Any</a></div><div class="ttdef"><b>Definition:</b> <a href="_any_8h_source.html#l00022">Any.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html"><div class="ttname"><a href="classantlr4_1_1_recognizer.html">antlr4::Recognizer</a></div><div class="ttdef"><b>Definition:</b> <a href="_recognizer_8h_source.html#l00012">Recognizer.h:12</a></div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a377b903dbd6c57c2d3c9d885de177a83"><div class="ttname"><a href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">antlrcpp::toString</a></div><div class="ttdeci">std::string toString(const T &amp;o)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00054">CPPUtils.h:54</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_trees_html_ace5fff86a0ab0fb3011d7ef5a229673c"><div class="ttname"><a href="classantlr4_1_1tree_1_1_trees.html#ace5fff86a0ab0fb3011d7ef5a229673c">antlr4::tree::Trees::toStringTree</a></div><div class="ttdeci">static std::string toStringTree(ParseTree *t, bool pretty=false)</div><div class="ttdef"><b>Definition:</b> <a href="_trees_8cpp_source.html#l00028">Trees.cpp:28</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a8188a57118653c6dcba7de466e572bfd"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a8188a57118653c6dcba7de466e572bfd">antlr4::RuleContext::accept</a></div><div class="ttdeci">virtual antlrcpp::Any accept(tree::ParseTreeVisitor *visitor) override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00074">RuleContext.cpp:74</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_acd54893237bae93b8731c915a2e11a3c"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#acd54893237bae93b8731c915a2e11a3c">antlr4::RuleContext::toStringTree</a></div><div class="ttdeci">virtual std::string toStringTree(Parser *recog, bool pretty=false) override</div><div class="ttdoc">Print out a whole tree, not just a node, in LISP format (root child1 .. childN). Print just a node if...</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00078">RuleContext.cpp:78</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a9b85b3df53a724a0a3cc2b8bc949045e"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a9b85b3df53a724a0a3cc2b8bc949045e">antlr4::RuleContext::isEmpty</a></div><div class="ttdeci">virtual bool isEmpty()</div><div class="ttdoc">A context is empty if there is no invoking state; meaning nobody called current context.</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00040">RuleContext.cpp:40</a></div></div>
+<div class="ttc" id="a_a_t_n_state_8h_html"><div class="ttname"><a href="_a_t_n_state_8h.html">ATNState.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a13942e9b3fc17ab566e92e6c8c2d88e2"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a13942e9b3fc17ab566e92e6c8c2d88e2">antlr4::RuleContext::setAltNumber</a></div><div class="ttdeci">virtual void setAltNumber(size_t altNumber)</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00071">RuleContext.cpp:71</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_ab3c47d330254d4224073408522ac6956"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956">antlr4::RuleContext::getRuleIndex</a></div><div class="ttdeci">virtual size_t getRuleIndex() const</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00063">RuleContext.cpp:63</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html_a83402632670316b68280c04e6be70d50"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">antlr4::tree::ParseTree::parent</a></div><div class="ttdeci">ParseTree * parent</div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00030">ParseTree.h:30</a></div></div>
+<div class="ttc" id="a_a_t_n_8h_html"><div class="ttname"><a href="_a_t_n_8h.html">ATN.h</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html"><div class="ttname"><a href="namespaceantlr4_1_1atn.html">antlr4::atn</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_predicate_transition_8h_source.html#l00011">AbstractPredicateTransition.h:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a36bffc1d972039ab5098076a3782a692"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a36bffc1d972039ab5098076a3782a692">antlr4::RuleContext::RuleContext</a></div><div class="ttdeci">RuleContext()</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00018">RuleContext.cpp:18</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_parser_8h_html"><div class="ttname"><a href="_parser_8h.html">Parser.h</a></div></div>
+<div class="ttc" id="a_parse_tree_visitor_8h_html"><div class="ttname"><a href="_parse_tree_visitor_8h.html">ParseTreeVisitor.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html">antlr4::misc::Interval</a></div><div class="ttdoc">An immutable inclusive interval a..b</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00020">Interval.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a77d7610627624b6f4ac3437970a61e51"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a77d7610627624b6f4ac3437970a61e51">antlr4::RuleContext::InitializeInstanceFields</a></div><div class="ttdeci">void InitializeInstanceFields()</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00140">RuleContext.cpp:140</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8h_source.html#l00062">RuleContext.h:62</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_aa26e0c29e8bfab7088fcc323f66e9f6c"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">antlr4::misc::Interval::INVALID</a></div><div class="ttdeci">static const Interval INVALID</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00022">Interval.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a7d1c4ec653dabbe03cec49275c9a5915"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a7d1c4ec653dabbe03cec49275c9a5915">antlr4::RuleContext::getSourceInterval</a></div><div class="ttdeci">virtual misc::Interval getSourceInterval() override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00044">RuleContext.cpp:44</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html_a41d719f482d60677ec1fbf08b7e5e77c"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html#a41d719f482d60677ec1fbf08b7e5e77c">antlr4::ParserRuleContext::EMPTY</a></div><div class="ttdeci">static ParserRuleContext EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00038">ParserRuleContext.h:38</a></div></div>
+<div class="ttc" id="a_interval_8h_html"><div class="ttname"><a href="_interval_8h.html">Interval.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html_a5dfb52dbae6c4c6f41217769ae90717e"><div class="ttname"><a href="classantlr4_1_1_recognizer.html#a5dfb52dbae6c4c6f41217769ae90717e">antlr4::Recognizer::getRuleNames</a></div><div class="ttdeci">virtual std::vector&lt; std::string &gt; const  &amp; getRuleNames() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a84b5f07f832e628025b22bd1554c239c"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a84b5f07f832e628025b22bd1554c239c">antlr4::RuleContext::depth</a></div><div class="ttdeci">virtual int depth()</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00028">RuleContext.cpp:28</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_html"><div class="ttname"><a href="classantlr4_1_1_parser.html">antlr4::Parser</a></div><div class="ttdoc">This is all the parsing support code essentially; most of it is error recovery stuff.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8h_source.html#l00018">Parser.h:18</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a44d95ea08da34f2539fb84c9386cc48f"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a44d95ea08da34f2539fb84c9386cc48f">antlr4::RuleContext::toString</a></div><div class="ttdeci">virtual std::string toString() override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00126">RuleContext.cpp:126</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a2c4b8b84636c681f98dcd86d5c5a8459"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a2c4b8b84636c681f98dcd86d5c5a8459">antlr4::RuleContext::invokingState</a></div><div class="ttdeci">size_t invokingState</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8h_source.html#l00067">RuleContext.h:67</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html_a33302ceb47c02e06e24beffac9b8564e"><div class="ttname"><a href="classantlr4_1_1_rule_context.html#a33302ceb47c02e06e24beffac9b8564e">antlr4::RuleContext::getText</a></div><div class="ttdeci">virtual std::string getText() override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_context_8cpp_source.html#l00048">RuleContext.cpp:48</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

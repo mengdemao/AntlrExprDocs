@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/dfa/DFASerializer.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_a41b729139d531905c1f156c5079ec97.html">dfa</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DFASerializer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_d_f_a_serializer_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_f_a_8h.html">dfa/DFA.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vocabulary_8h.html">Vocabulary.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_f_a_serializer_8h.html">dfa/DFASerializer.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a4ddb2f4485acb92f0d7c788cc6e3550c">   13</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a4ddb2f4485acb92f0d7c788cc6e3550c">DFASerializer::DFASerializer</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *dfa, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; tokenNames)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  : <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a>(dfa, Vocabulary::fromTokenNames(tokenNames)) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a53b2f8347bf1964c90d0085ae16b0777">   17</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a4ddb2f4485acb92f0d7c788cc6e3550c">DFASerializer::DFASerializer</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *dfa, <span class="keyword">const</span> Vocabulary &amp;vocabulary) : _dfa(dfa), _vocabulary(vocabulary) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a338dc97417f8e9a717ba16514eac2b0c">   20</a></span>&#160;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a338dc97417f8e9a717ba16514eac2b0c">DFASerializer::~DFASerializer</a>() {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">   23</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">DFASerializer::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a80e777d704980e288455b4973cb4f74e">_dfa</a>-&gt;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">s0</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  std::stringstream ss;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  std::vector&lt;DFAState *&gt; states = <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a80e777d704980e288455b4973cb4f74e">_dfa</a>-&gt;<a class="code" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">getStates</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> *s : states) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; s-&gt;edges.size(); i++) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      DFAState *t = s-&gt;edges[i];</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">if</span> (t != <span class="keyword">nullptr</span> &amp;&amp; t-&gt;stateNumber != INT32_MAX) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        ss &lt;&lt; <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">getStateString</a>(s);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::string label = <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610">getEdgeLabel</a>(i);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; label &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">getStateString</a>(t) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610">   44</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610">DFASerializer::getEdgeLabel</a>(<span class="keywordtype">size_t</span> i)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a5836e62d9caaede0070873abe38eff98">_vocabulary</a>.getDisplayName(i); <span class="comment">// ml: no longer needed -1 as we use a map for edges, without offset.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">   48</a></span>&#160;std::string <a class="code" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">DFASerializer::getStateString</a>(DFAState *s)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">size_t</span> n = s-&gt;stateNumber;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">const</span> std::string baseStateStr = std::string(s-&gt;isAcceptState ? <span class="stringliteral">&quot;:&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot;s&quot;</span> + std::to_string(n) +</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    (s-&gt;requiresFullContext ? <span class="stringliteral">&quot;^&quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (s-&gt;isAcceptState) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (!s-&gt;predicates.empty()) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::string buf;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; s-&gt;predicates.size(); i++) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        buf.append(s-&gt;predicates[i]-&gt;toString());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">return</span> baseStateStr + <span class="stringliteral">&quot;=&gt;&quot;</span> + buf;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> baseStateStr + <span class="stringliteral">&quot;=&gt;&quot;</span> + std::to_string(s-&gt;prediction);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> baseStateStr;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_acc1d210c8d845dbc2ecf21c497ecbfaa"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">antlr4::dfa::DFASerializer::getStateString</a></div><div class="ttdeci">virtual std::string getStateString(DFAState *s) const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00048">DFASerializer.cpp:48</a></div></div>
+<div class="ttc" id="a_d_f_a_serializer_8h_html"><div class="ttname"><a href="_d_f_a_serializer_8h.html">DFASerializer.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a80e777d704980e288455b4973cb4f74e"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a80e777d704980e288455b4973cb4f74e">antlr4::dfa::DFASerializer::_dfa</a></div><div class="ttdeci">const DFA * _dfa</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8h_source.html#l00027">DFASerializer.h:27</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html">antlr4::dfa::DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00017">DFA.h:17</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a4ddb2f4485acb92f0d7c788cc6e3550c"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a4ddb2f4485acb92f0d7c788cc6e3550c">antlr4::dfa::DFASerializer::DFASerializer</a></div><div class="ttdeci">DFASerializer(const DFA *dfa, const std::vector&lt; std::string &gt; &amp;tnames)</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00013">DFASerializer.cpp:13</a></div></div>
+<div class="ttc" id="a_d_f_a_8h_html"><div class="ttname"><a href="_d_f_a_8h.html">DFA.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a93719dde2778b820567b40726e896610"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610">antlr4::dfa::DFASerializer::getEdgeLabel</a></div><div class="ttdeci">virtual std::string getEdgeLabel(size_t i) const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00044">DFASerializer.cpp:44</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">antlr4::dfa::DFASerializer</a></div><div class="ttdoc">A DFA walker that knows how to dump them to serialized strings.</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8h_source.html#l00014">DFASerializer.h:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a338dc97417f8e9a717ba16514eac2b0c"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a338dc97417f8e9a717ba16514eac2b0c">antlr4::dfa::DFASerializer::~DFASerializer</a></div><div class="ttdeci">virtual ~DFASerializer()</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00020">DFASerializer.cpp:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a5836e62d9caaede0070873abe38eff98"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a5836e62d9caaede0070873abe38eff98">antlr4::dfa::DFASerializer::_vocabulary</a></div><div class="ttdeci">const Vocabulary &amp; _vocabulary</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8h_source.html#l00028">DFASerializer.h:28</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_a42e1ce8d87cbfb6156a6bff4fd86ed32"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#a42e1ce8d87cbfb6156a6bff4fd86ed32">antlr4::dfa::DFA::s0</a></div><div class="ttdeci">DFAState * s0</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00025">DFA.h:25</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_html_afe9610a3706058c0d5d1e61f386ccd29"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29">antlr4::dfa::DFA::getStates</a></div><div class="ttdeci">virtual std::vector&lt; DFAState * &gt; getStates() const</div><div class="ttdoc">Return a list of all states in this DFA, ordered by state number.</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8cpp_source.html#l00089">DFA.cpp:89</a></div></div>
+<div class="ttc" id="a_vocabulary_8h_html"><div class="ttname"><a href="_vocabulary_8h.html">Vocabulary.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_html_a3a459289bc5dac02365e5474a51ade1d"><div class="ttname"><a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">antlr4::dfa::DFASerializer::toString</a></div><div class="ttdeci">virtual std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_serializer_8cpp_source.html#l00023">DFASerializer.cpp:23</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1dfa_html"><div class="ttname"><a href="namespaceantlr4_1_1dfa.html">antlr4::dfa</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_f_a_8h_source.html#l00015">DFA.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/misc/Interval.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_2b0f32ae22d580461939f4014c0541d2.html">misc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Interval.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_interval_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_interval_8h.html">misc/Interval.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1misc.html">antlr4::misc</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceantlr4_1_1misc.html#a0e91bf04d4794cb0eb49f9a9eafca640">   10</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespaceantlr4_1_1misc.html#a0e91bf04d4794cb0eb49f9a9eafca640">antlr4::misc::numericToSymbol</a>(ssize_t v) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(v);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespaceantlr4_1_1misc.html#afb7b202f598c8cd9533aaf406ca4a417">   14</a></span>&#160;ssize_t <a class="code" href="namespaceantlr4_1_1misc.html#afb7b202f598c8cd9533aaf406ca4a417">antlr4::misc::symbolToNumeric</a>(<span class="keywordtype">size_t</span> v) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ssize_t<span class="keyword">&gt;</span>(v);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> <span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">Interval::INVALID</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">   20</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">Interval::Interval</a>() : <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a>(static_cast&lt;ssize_t&gt;(-1), -2) { <span class="comment">// Need an explicit cast here for VS.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a0ca71c00d96c953a5a51f5853fdd6e2c">   23</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">Interval::Interval</a>(<span class="keywordtype">size_t</span> a_, <span class="keywordtype">size_t</span> b_) : <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a>(<a class="code" href="namespaceantlr4_1_1misc.html#afb7b202f598c8cd9533aaf406ca4a417">symbolToNumeric</a>(a_), <a class="code" href="namespaceantlr4_1_1misc.html#afb7b202f598c8cd9533aaf406ca4a417">symbolToNumeric</a>(b_)) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a6883f4f86cdadb14f8c6996a13f0a680">   26</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">Interval::Interval</a>(ssize_t a_, ssize_t b_) : a(a_), b(b_) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a05e2505cce0c79858b76ad20914c7674">   29</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a05e2505cce0c79858b76ad20914c7674">Interval::length</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> &lt; <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> size_t(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> - <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> + 1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#abc0ddd748c8e5f1f09db46d965f399b0">   36</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#abc0ddd748c8e5f1f09db46d965f399b0">Interval::operator == </a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> == other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &amp;&amp; <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> == other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#aff13999967b0c0c56c9cda5640fc5d32">   40</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#aff13999967b0c0c56c9cda5640fc5d32">Interval::hashCode</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">size_t</span> hash = 23;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  hash = hash * 31 + <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  hash = hash * 31 + <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e">   47</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e">Interval::startsBeforeDisjoint</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &lt; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &amp;&amp; <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> &lt; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a2d716ddeb5c7691092d855e7db3d1a73">   51</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a2d716ddeb5c7691092d855e7db3d1a73">Interval::startsBeforeNonDisjoint</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &lt;= other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &amp;&amp; <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> &gt;= other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#ab42e396d0e2f9ead8ea9125a069a2d88">   55</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ab42e396d0e2f9ead8ea9125a069a2d88">Interval::startsAfter</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &gt; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e">   59</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e">Interval::startsAfterDisjoint</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &gt; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#ad2d4031fc0e21aa5342884b909ff0643">   63</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ad2d4031fc0e21aa5342884b909ff0643">Interval::startsAfterNonDisjoint</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &gt; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &amp;&amp; <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &lt;= other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>; <span class="comment">// b &gt;= other.b implied</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#ae23f94846f2564bf62d30791568c820e">   67</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae23f94846f2564bf62d30791568c820e">Interval::disjoint</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e">startsBeforeDisjoint</a>(other) || <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e">startsAfterDisjoint</a>(other);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a1a32b591f050ea6cfafedb20106410e0">   71</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a1a32b591f050ea6cfafedb20106410e0">Interval::adjacent</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> == other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> + 1 || <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> == other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> - 1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a77ae86e86ef757429862c1b17f82eeed">   75</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a77ae86e86ef757429862c1b17f82eeed">Interval::properlyContains</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">return</span> other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &gt;= <a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a> &amp;&amp; other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a> &lt;= <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a4bb5a05fa042422c5b3d2389a27288c4">   79</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a4bb5a05fa042422c5b3d2389a27288c4">Interval::Union</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">Interval</a>(std::min(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>, other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>), std::max(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>, other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#ad9afae5e2500a81bdbbbd118b4ce88d8">   83</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ad9afae5e2500a81bdbbbd118b4ce88d8">Interval::intersection</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">Interval</a> &amp;other)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">Interval</a>(std::max(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>, other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>), std::min(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>, other.<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classantlr4_1_1misc_1_1_interval.html#a2dbba405744a0c403c030c4bb6559fe7">   87</a></span>&#160;std::string <a class="code" href="classantlr4_1_1misc_1_1_interval.html#a2dbba405744a0c403c030c4bb6559fe7">Interval::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> std::to_string(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">a</a>) + <span class="stringliteral">&quot;..&quot;</span> + std::to_string(<a class="code" href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">b</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_aff13999967b0c0c56c9cda5640fc5d32"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#aff13999967b0c0c56c9cda5640fc5d32">antlr4::misc::Interval::hashCode</a></div><div class="ttdeci">size_t hashCode() const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00040">Interval.cpp:40</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a05e2505cce0c79858b76ad20914c7674"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a05e2505cce0c79858b76ad20914c7674">antlr4::misc::Interval::length</a></div><div class="ttdeci">size_t length() const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00029">Interval.cpp:29</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a8c0c01351c09a483a45ed6314e116d73"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a8c0c01351c09a483a45ed6314e116d73">antlr4::misc::Interval::b</a></div><div class="ttdeci">ssize_t b</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00026">Interval.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a9a0cc6ae72135b1bb58d86e08eef139e"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e">antlr4::misc::Interval::startsAfterDisjoint</a></div><div class="ttdeci">bool startsAfterDisjoint(const Interval &amp;other) const</div><div class="ttdoc">Does this start completely after other? Disjoint</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00059">Interval.cpp:59</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_ae23f94846f2564bf62d30791568c820e"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#ae23f94846f2564bf62d30791568c820e">antlr4::misc::Interval::disjoint</a></div><div class="ttdeci">bool disjoint(const Interval &amp;other) const</div><div class="ttdoc">Are both ranges disjoint? I.e., no overlap?</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00067">Interval.cpp:67</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a2d716ddeb5c7691092d855e7db3d1a73"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a2d716ddeb5c7691092d855e7db3d1a73">antlr4::misc::Interval::startsBeforeNonDisjoint</a></div><div class="ttdeci">bool startsBeforeNonDisjoint(const Interval &amp;other) const</div><div class="ttdoc">Does this start at or before other? Nondisjoint</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00051">Interval.cpp:51</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1misc_html"><div class="ttname"><a href="namespaceantlr4_1_1misc.html">antlr4::misc</a></div><div class="ttdef"><b>Definition:</b> <a href="_interpreter_data_reader_8h_source.html#l00011">InterpreterDataReader.h:11</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1misc_html_afb7b202f598c8cd9533aaf406ca4a417"><div class="ttname"><a href="namespaceantlr4_1_1misc.html#afb7b202f598c8cd9533aaf406ca4a417">antlr4::misc::symbolToNumeric</a></div><div class="ttdeci">ssize_t symbolToNumeric(size_t v)</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00014">Interval.cpp:14</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_abc0ddd748c8e5f1f09db46d965f399b0"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#abc0ddd748c8e5f1f09db46d965f399b0">antlr4::misc::Interval::operator==</a></div><div class="ttdeci">bool operator==(const Interval &amp;other) const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00036">Interval.cpp:36</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1misc_html_a0e91bf04d4794cb0eb49f9a9eafca640"><div class="ttname"><a href="namespaceantlr4_1_1misc.html#a0e91bf04d4794cb0eb49f9a9eafca640">antlr4::misc::numericToSymbol</a></div><div class="ttdeci">size_t numericToSymbol(ssize_t v)</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00010">Interval.cpp:10</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a74cbb460b47b3f30a9b1c974ff96698e"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e">antlr4::misc::Interval::startsBeforeDisjoint</a></div><div class="ttdeci">bool startsBeforeDisjoint(const Interval &amp;other) const</div><div class="ttdoc">Does this start completely before other? Disjoint</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00047">Interval.cpp:47</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_add9bbaf955b783d9625626ff6197c64b"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">antlr4::misc::Interval::a</a></div><div class="ttdeci">ssize_t a</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00025">Interval.h:25</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a2dbba405744a0c403c030c4bb6559fe7"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a2dbba405744a0c403c030c4bb6559fe7">antlr4::misc::Interval::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00087">Interval.cpp:87</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_ab42e396d0e2f9ead8ea9125a069a2d88"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#ab42e396d0e2f9ead8ea9125a069a2d88">antlr4::misc::Interval::startsAfter</a></div><div class="ttdeci">bool startsAfter(const Interval &amp;other) const</div><div class="ttdoc">Does this.a start after other.b? May or may not be disjoint</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00055">Interval.cpp:55</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html">antlr4::misc::Interval</a></div><div class="ttdoc">An immutable inclusive interval a..b</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00020">Interval.h:20</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_ad9afae5e2500a81bdbbbd118b4ce88d8"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#ad9afae5e2500a81bdbbbd118b4ce88d8">antlr4::misc::Interval::intersection</a></div><div class="ttdeci">Interval intersection(const Interval &amp;other) const</div><div class="ttdoc">Return the interval in common between this and o</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00083">Interval.cpp:83</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_aa26e0c29e8bfab7088fcc323f66e9f6c"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#aa26e0c29e8bfab7088fcc323f66e9f6c">antlr4::misc::Interval::INVALID</a></div><div class="ttdeci">static const Interval INVALID</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00022">Interval.h:22</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a4bb5a05fa042422c5b3d2389a27288c4"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a4bb5a05fa042422c5b3d2389a27288c4">antlr4::misc::Interval::Union</a></div><div class="ttdeci">Interval Union(const Interval &amp;other) const</div><div class="ttdoc">Return the interval computed from combining this and other</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00079">Interval.cpp:79</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a1a32b591f050ea6cfafedb20106410e0"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a1a32b591f050ea6cfafedb20106410e0">antlr4::misc::Interval::adjacent</a></div><div class="ttdeci">bool adjacent(const Interval &amp;other) const</div><div class="ttdoc">Are two intervals adjacent such as 0..41 and 42..42?</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00071">Interval.cpp:71</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_ad2d4031fc0e21aa5342884b909ff0643"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#ad2d4031fc0e21aa5342884b909ff0643">antlr4::misc::Interval::startsAfterNonDisjoint</a></div><div class="ttdeci">bool startsAfterNonDisjoint(const Interval &amp;other) const</div><div class="ttdoc">Does this start after other? NonDisjoint</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00063">Interval.cpp:63</a></div></div>
+<div class="ttc" id="a_interval_8h_html"><div class="ttname"><a href="_interval_8h.html">Interval.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_a77ae86e86ef757429862c1b17f82eeed"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#a77ae86e86ef757429862c1b17f82eeed">antlr4::misc::Interval::properlyContains</a></div><div class="ttdeci">bool properlyContains(const Interval &amp;other) const</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00075">Interval.cpp:75</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_ae48b9a9e9f672f81977627b609e32429"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429">antlr4::misc::Interval::Interval</a></div><div class="ttdeci">Interval()</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8cpp_source.html#l00020">Interval.cpp:20</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

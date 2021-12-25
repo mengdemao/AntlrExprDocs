@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/RangeTransition.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">-fb26d0b</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RangeTransition.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_range_transition_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_interval_set_8h.html">misc/IntervalSet.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_range_transition_8h.html">atn/RangeTransition.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4_1_1atn.html">antlr4::atn</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_range_transition.html#ad2dc0d52c370df3ad3e504f4c941838a">   13</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#ad2dc0d52c370df3ad3e504f4c941838a">RangeTransition::RangeTransition</a>(ATNState *target, <span class="keywordtype">size_t</span> from, <span class="keywordtype">size_t</span> to) : <a class="code" href="classantlr4_1_1atn_1_1_transition.html">Transition</a>(target), from(from), to(to) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_range_transition.html#a8551e27d2cee43d4b8f5127d61071034">   16</a></span>&#160;<a class="code" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">Transition::SerializationType</a> <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#a8551e27d2cee43d4b8f5127d61071034">RangeTransition::getSerializationType</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843aba6a77d2b8f171aac44415f96983ba7e">RANGE</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_range_transition.html#a9a2182967156bb6bd3895e06a944cc66">   20</a></span>&#160;<a class="code" href="classantlr4_1_1misc_1_1_interval_set.html">misc::IntervalSet</a> <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#a9a2182967156bb6bd3895e06a944cc66">RangeTransition::label</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1misc_1_1_interval_set.html#ad7b2791799066867e684ab8a69b78fb7">misc::IntervalSet::of</a>((<span class="keywordtype">int</span>)<a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4">from</a>, (<span class="keywordtype">int</span>)<a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#a01d8ac8f8f6ca054ae337b5cf623c3a4">to</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_range_transition.html#ad81b9d5e28e934d76c032bcb7e3eb7c4">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#ad81b9d5e28e934d76c032bcb7e3eb7c4">RangeTransition::matches</a>(<span class="keywordtype">size_t</span> symbol, <span class="keywordtype">size_t</span> <span class="comment">/*minVocabSymbol*/</span>, <span class="keywordtype">size_t</span> <span class="comment">/*maxVocabSymbol*/</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> symbol &gt;= <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4">from</a> &amp;&amp; symbol &lt;= <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#a01d8ac8f8f6ca054ae337b5cf623c3a4">to</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_range_transition.html#af7fafa5d3700cb607bcb029ce25c3914">   28</a></span>&#160;std::string <a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#af7fafa5d3700cb607bcb029ce25c3914">RangeTransition::toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;RANGE &quot;</span> + <a class="code" href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105">Transition::toString</a>() + <span class="stringliteral">&quot; { from: &quot;</span> + std::to_string(<a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4">from</a>) + <span class="stringliteral">&quot;, to: &quot;</span> + std::to_string(<a class="code" href="classantlr4_1_1atn_1_1_range_transition.html#a01d8ac8f8f6ca054ae337b5cf623c3a4">to</a>) + <span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_range_transition_8h_html"><div class="ttname"><a href="_range_transition_8h.html">RangeTransition.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_a01d8ac8f8f6ca054ae337b5cf623c3a4"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#a01d8ac8f8f6ca054ae337b5cf623c3a4">antlr4::atn::RangeTransition::to</a></div><div class="ttdeci">const size_t to</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8h_source.html#l00016">RangeTransition.h:16</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></div><div class="ttdoc">An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,...</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00026">Transition.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_a05a5668a4bc551c4ef1a90721fb80843aba6a77d2b8f171aac44415f96983ba7e"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843aba6a77d2b8f171aac44415f96983ba7e">antlr4::atn::Transition::RANGE</a></div><div class="ttdeci">@ RANGE</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00031">Transition.h:31</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_ad81b9d5e28e934d76c032bcb7e3eb7c4"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#ad81b9d5e28e934d76c032bcb7e3eb7c4">antlr4::atn::RangeTransition::matches</a></div><div class="ttdeci">virtual bool matches(size_t symbol, size_t minVocabSymbol, size_t maxVocabSymbol) const override</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8cpp_source.html#l00024">RangeTransition.cpp:24</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_ac4de64f5aaacba16f5a30801264649b4"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4">antlr4::atn::RangeTransition::from</a></div><div class="ttdeci">const size_t from</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8h_source.html#l00015">RangeTransition.h:15</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_set_html_ad7b2791799066867e684ab8a69b78fb7"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval_set.html#ad7b2791799066867e684ab8a69b78fb7">antlr4::misc::IntervalSet::of</a></div><div class="ttdeci">static IntervalSet of(ssize_t a)</div><div class="ttdoc">Create a set with a single element, el.</div><div class="ttdef"><b>Definition:</b> <a href="_interval_set_8cpp_source.html#l00044">IntervalSet.cpp:44</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_a9a2182967156bb6bd3895e06a944cc66"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#a9a2182967156bb6bd3895e06a944cc66">antlr4::atn::RangeTransition::label</a></div><div class="ttdeci">virtual misc::IntervalSet label() const override</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8cpp_source.html#l00020">RangeTransition.cpp:20</a></div></div>
+<div class="ttc" id="anamespaceantlr4_1_1atn_html"><div class="ttname"><a href="namespaceantlr4_1_1atn.html">antlr4::atn</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_predicate_transition_8h_source.html#l00011">AbstractPredicateTransition.h:11</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_ad2dc0d52c370df3ad3e504f4c941838a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#ad2dc0d52c370df3ad3e504f4c941838a">antlr4::atn::RangeTransition::RangeTransition</a></div><div class="ttdeci">RangeTransition(ATNState *target, size_t from, size_t to)</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8cpp_source.html#l00013">RangeTransition.cpp:13</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="a_interval_set_8h_html"><div class="ttname"><a href="_interval_set_8h.html">IntervalSet.h</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_a8551e27d2cee43d4b8f5127d61071034"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#a8551e27d2cee43d4b8f5127d61071034">antlr4::atn::RangeTransition::getSerializationType</a></div><div class="ttdeci">virtual SerializationType getSerializationType() const override</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8cpp_source.html#l00016">RangeTransition.cpp:16</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_ac98fee69542c40aaadbd330e28c91105"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105">antlr4::atn::Transition::toString</a></div><div class="ttdeci">virtual std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8cpp_source.html#l00039">Transition.cpp:39</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_transition_html_a05a5668a4bc551c4ef1a90721fb80843"><div class="ttname"><a href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">antlr4::atn::Transition::SerializationType</a></div><div class="ttdeci">SerializationType</div><div class="ttdef"><b>Definition:</b> <a href="_transition_8h_source.html#l00029">Transition.h:29</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_set_html"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval_set.html">antlr4::misc::IntervalSet</a></div><div class="ttdef"><b>Definition:</b> <a href="_interval_set_8h_source.html#l00026">IntervalSet.h:26</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_range_transition_html_af7fafa5d3700cb607bcb029ce25c3914"><div class="ttname"><a href="classantlr4_1_1atn_1_1_range_transition.html#af7fafa5d3700cb607bcb029ce25c3914">antlr4::atn::RangeTransition::toString</a></div><div class="ttdeci">virtual std::string toString() const override</div><div class="ttdef"><b>Definition:</b> <a href="_range_transition_8cpp_source.html#l00028">RangeTransition.cpp:28</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
