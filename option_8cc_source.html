@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.1-20a4d9b</span>
+   &#160;<span id="projectnumber">V0.0.1-2dacb4b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -72,35 +72,37 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="option_8cc.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">config.h</a>&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="syslog_8h.html">syslog.h</a>&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="option_8h.html">option.h</a>&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">config.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="option_8h.html">option.h</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="syslog_8h.html">syslog.h</a>&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="version_8h.html">version.h</a>&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;gflags/gflags.h&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using namespace </span>gflags;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="option_8cc.html#a09b2d4eb2f9b9ff44dbc403d820a641a">DEFINE_bool</a>(test, <span class="keyword">false</span>, <span class="stringliteral">&quot;自动化测试&quot;</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="option_8cc.html#af8b07e2f52c3da5cff2a076cbc263c33">DEFINE_string</a>(text, <span class="stringliteral">&quot;&quot;</span>,  <span class="stringliteral">&quot;输入表达式&quot;</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">   33</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    SetUsageMessage(<span class="stringliteral">&quot;表示式计算工具&quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    SetVersionString(<a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ParseCommandLineFlags(&amp;argc, &amp;argv, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="option_8cc.html#a718c759cde599602415a91b0d62e0c94">   19</a></span>&#160;<span class="preprocessor">#define STRIP_FLAG_HELP 1</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;gflags/gflags.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span>gflags;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="option_8cc.html#a09b2d4eb2f9b9ff44dbc403d820a641a">DEFINE_bool</a>(test, <span class="keyword">false</span>, <span class="stringliteral">&quot;自动化测试&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="option_8cc.html#af8b07e2f52c3da5cff2a076cbc263c33">DEFINE_string</a>(text, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;输入表达式&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    SetUsageMessage(<span class="stringliteral">&quot;表示式计算工具&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    SetVersionString(<a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ParseCommandLineFlags(&amp;argc, &amp;argv, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aversion_8h_html_a4a5423e754d3191ebed42d170f2fb4bf"><div class="ttname"><a href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a></div><div class="ttdeci">#define AntlrExpr_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00020">version.h:20</a></div></div>
 <div class="ttc" id="aversion_8h_html"><div class="ttname"><a href="version_8h.html">version.h</a></div><div class="ttdoc">Auto generated version file</div></div>
 <div class="ttc" id="asyslog_8h_html"><div class="ttname"><a href="syslog_8h.html">syslog.h</a></div><div class="ttdoc">日志打印打印</div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00132">ATNConfig.h:132</a></div></div>
-<div class="ttc" id="aoption_8cc_html_a1f11492ffde0c6bf55daa375b167c80b"><div class="ttname"><a href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a></div><div class="ttdeci">int option_init(int argc, char *argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00033">option.cc:33</a></div></div>
+<div class="ttc" id="aoption_8cc_html_a1f11492ffde0c6bf55daa375b167c80b"><div class="ttname"><a href="option_8cc.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a></div><div class="ttdeci">int option_init(int argc, char *argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00035">option.cc:35</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
 <div class="ttc" id="aoption_8cc_html_af8b07e2f52c3da5cff2a076cbc263c33"><div class="ttname"><a href="option_8cc.html#af8b07e2f52c3da5cff2a076cbc263c33">DEFINE_string</a></div><div class="ttdeci">DEFINE_string(text, &quot;&quot;, &quot;输入表达式&quot;)</div></div>
 <div class="ttc" id="aoption_8h_html"><div class="ttname"><a href="option_8h.html">option.h</a></div><div class="ttdoc">解析输入字符串</div></div>

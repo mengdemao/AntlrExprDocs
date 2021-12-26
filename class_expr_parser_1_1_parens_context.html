@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.1-20a4d9b</span>
+   &#160;<span id="projectnumber">V0.0.1-2dacb4b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -229,7 +229,7 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="_expr_parser_8h_source.html">ExprParser.h</a> 第 <a class="el" href="_expr_parser_8h_source.html#l00117">117</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8h_source.html">ExprParser.h</a> 第 <a class="el" href="_expr_parser_8h_source.html#l00115">115</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ae497ca6aee7ebe81076c32850e05f74f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae497ca6aee7ebe81076c32850e05f74f">&#9670;&nbsp;</a></span>ParensContext()</h2>
@@ -247,8 +247,10 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00297">297</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{ <a class="code" href="class_expr_parser_1_1_expr_context.html#aebe8a47a0cf7be1408af474aef2abd60">copyFrom</a>(ctx); }</div>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00320">320</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="class_expr_parser_1_1_expr_context.html#aebe8a47a0cf7be1408af474aef2abd60">copyFrom</a>(ctx);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -277,13 +279,13 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00310">310</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">auto</span> parserVisitor = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_visitor.html">ExprVisitor</a>*<span class="keyword">&gt;</span>(visitor))</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> parserVisitor-&gt;visitParens(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> visitor-&gt;visitChildren(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00338">338</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> parserVisitor = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_visitor.html">ExprVisitor</a>*<span class="keyword">&gt;</span>(visitor))</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">return</span> parserVisitor-&gt;visitParens(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">return</span> visitor-&gt;visitChildren(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -313,12 +315,12 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f">antlr4::ParserRuleContext</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00299">299</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                                                       {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keyword">auto</span> parserListener = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_listener.html">ExprListener</a> *<span class="keyword">&gt;</span>(listener);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordflow">if</span> (parserListener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    parserListener-&gt;<a class="code" href="class_expr_listener.html#a4424059b3f9174b82e266891f056cc8d">enterParens</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00325">325</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keyword">auto</span> parserListener = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_listener.html">ExprListener</a>*<span class="keyword">&gt;</span>(listener);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">if</span> (parserListener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        parserListener-&gt;<a class="code" href="class_expr_listener.html#a4424059b3f9174b82e266891f056cc8d">enterParens</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -357,12 +359,12 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe">antlr4::ParserRuleContext</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00304">304</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keyword">auto</span> parserListener = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_listener.html">ExprListener</a> *<span class="keyword">&gt;</span>(listener);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordflow">if</span> (parserListener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    parserListener-&gt;<a class="code" href="class_expr_listener.html#ab92e88f468930e4eb5ee0ea4025f99e9">exitParens</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00331">331</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">auto</span> parserListener = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_expr_listener.html">ExprListener</a>*<span class="keyword">&gt;</span>(listener);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span> (parserListener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        parserListener-&gt;<a class="code" href="class_expr_listener.html#ab92e88f468930e4eb5ee0ea4025f99e9">exitParens</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -390,10 +392,10 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00293">293</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                                     {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">return</span> getRuleContext&lt;ExprParser::ExprContext&gt;(0);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a> 第 <a class="el" href="_expr_parser_8cpp_source.html#l00315">315</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;{</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> getRuleContext&lt;ExprParser::ExprContext&gt;(0);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -402,10 +404,10 @@ Public 成员函数</h2></td></tr>
 <li>grammar/<a class="el" href="_expr_parser_8cpp_source.html">ExprParser.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_expr_visitor_html"><div class="ttname"><a href="class_expr_visitor.html">ExprVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_visitor_8h_source.html#l00016">ExprVisitor.h:16</a></div></div>
-<div class="ttc" id="aclass_expr_listener_html"><div class="ttname"><a href="class_expr_listener.html">ExprListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_listener_8h_source.html#l00014">ExprListener.h:14</a></div></div>
+<div class="ttc" id="aclass_expr_visitor_html"><div class="ttname"><a href="class_expr_visitor.html">ExprVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_visitor_8h_source.html#l00013">ExprVisitor.h:13</a></div></div>
+<div class="ttc" id="aclass_expr_listener_html"><div class="ttname"><a href="class_expr_listener.html">ExprListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_listener_8h_source.html#l00012">ExprListener.h:12</a></div></div>
 <div class="ttc" id="aclass_expr_listener_html_a4424059b3f9174b82e266891f056cc8d"><div class="ttname"><a href="class_expr_listener.html#a4424059b3f9174b82e266891f056cc8d">ExprListener::enterParens</a></div><div class="ttdeci">virtual void enterParens(ExprParser::ParensContext *ctx)=0</div></div>
-<div class="ttc" id="aclass_expr_parser_1_1_expr_context_html_aebe8a47a0cf7be1408af474aef2abd60"><div class="ttname"><a href="class_expr_parser_1_1_expr_context.html#aebe8a47a0cf7be1408af474aef2abd60">ExprParser::ExprContext::copyFrom</a></div><div class="ttdeci">void copyFrom(ExprContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00287">ExprParser.cpp:287</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_expr_context_html_aebe8a47a0cf7be1408af474aef2abd60"><div class="ttname"><a href="class_expr_parser_1_1_expr_context.html#aebe8a47a0cf7be1408af474aef2abd60">ExprParser::ExprContext::copyFrom</a></div><div class="ttdeci">void copyFrom(ExprContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00308">ExprParser.cpp:308</a></div></div>
 <div class="ttc" id="aclass_expr_listener_html_ab92e88f468930e4eb5ee0ea4025f99e9"><div class="ttname"><a href="class_expr_listener.html#ab92e88f468930e4eb5ee0ea4025f99e9">ExprListener::exitParens</a></div><div class="ttdeci">virtual void exitParens(ExprParser::ParensContext *ctx)=0</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
