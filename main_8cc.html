@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.1-2dacb4b</span>
+   &#160;<span id="projectnumber">V0.0.1-bc0beaf</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -91,7 +91,7 @@ main.cc 的引用(Include)关系图:</div>
 <div class="center"><img src="main_8cc__incl.png" border="0" usemap="#main_8cc" alt=""/></div>
 <map name="main_8cc" id="main_8cc">
 <area shape="rect" title="AntlrExpr主文件" alt="" coords="1665,5,1739,32"/>
-<area shape="rect" href="config_8h.html" title=" " alt="" coords="5,80,79,107"/>
+<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="5,80,79,107"/>
 <area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="1361,80,1507,107"/>
 <area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="1488,229,1591,256"/>
 <area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="1565,304,1693,331"/>
@@ -202,66 +202,66 @@ main.cc 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 返回数据 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00145">145</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classsyslog.html">syslog</a> <a class="code" href="classsyslog.html">syslog</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">string</span> InputString;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">double</span> InputResult = 0;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">double</span> result_walker = 0;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">double</span> result_visitor = 0;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// avoid warning</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    (void)InputResult;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    (void)result_walker;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    (void)result_visitor;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    (void)<a class="code" href="option_8h.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a>(argc, argv);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">// 输入字符串</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (FLAGS_test) {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="class_test_expr.html">TestExpr</a> <a class="code" href="class_test_expr.html">TestExpr</a>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    InputString = <a class="code" href="class_test_expr.html">TestExpr</a>.<a class="code" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">GetExpr</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    InputResult = <a class="code" href="class_test_expr.html">TestExpr</a>.<a class="code" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">GetResult</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    InputString = string(FLAGS_text);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// 追加结束符</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    InputString.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// 生成解析字符串</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input(InputString);</div>
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00151">151</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="classsyslog.html">syslog</a> <a class="code" href="classsyslog.html">syslog</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">string</span> InputString;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">double</span> InputResult = 0;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">double</span> result_walker = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">double</span> result_visitor = 0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// avoid warning</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    (void)InputResult;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    (void)result_walker;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    (void)result_visitor;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    (void)<a class="code" href="option_8h.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a>(argc, argv);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// 输入字符串</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (FLAGS_test) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="class_test_expr.html">TestExpr</a> <a class="code" href="class_test_expr.html">TestExpr</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    InputString = <a class="code" href="class_test_expr.html">TestExpr</a>.<a class="code" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">GetExpr</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    InputResult = <a class="code" href="class_test_expr.html">TestExpr</a>.<a class="code" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">GetResult</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    InputString = string(FLAGS_text);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// 词法解析</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> lexer(&amp;input);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// 追加结束符</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    InputString.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">// 分割单词</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;lexer);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">// 生成解析字符串</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input(InputString);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">// 解析语法单元</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">// 词法解析</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> lexer(&amp;input);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">// 生成语法树</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* tree = parser.prog();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">// 分割单词</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;lexer);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">// 1. Listener模式解析语法树</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="class_expr_tree_listener.html">ExprTreeListener</a> listener;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a>  walker;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;listener, tree);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// 2. Visitor模式解析语法树</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="class_expr_tree_visitor.html">ExprTreeVisitor</a> visitor;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(tree);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// 处于自动化测试状态下返回状态</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">if</span> (FLAGS_test) {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;AntlrExpr Test Success&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">// 解析语法单元</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">// 生成语法树</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* tree = parser.prog();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// 1. Listener模式解析语法树</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="class_expr_tree_listener.html">ExprTreeListener</a> listener;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a>  walker;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;listener, tree);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// 2. Visitor模式解析语法树</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="class_expr_tree_visitor.html">ExprTreeVisitor</a> visitor;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(tree);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">// 处于自动化测试状态下返回状态</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (FLAGS_test) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;AntlrExpr Test Success&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -286,7 +286,7 @@ main.cc 的引用(Include)关系图:</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclass_expr_tree_visitor_html"><div class="ttname"><a href="class_expr_tree_visitor.html">ExprTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00086">main.cc:86</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html"><div class="ttname"><a href="class_expr_tree_visitor.html">ExprTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00092">main.cc:92</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_input_stream_html"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_input_stream.html">antlr4::ANTLRInputStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_input_stream_8h_source.html#l00015">ANTLRInputStream.h:15</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00020">ParseTree.h:20</a></div></div>
 <div class="ttc" id="aclass_expr_parser_html"><div class="ttname"><a href="class_expr_parser.html">ExprParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00008">ExprParser.h:8</a></div></div>

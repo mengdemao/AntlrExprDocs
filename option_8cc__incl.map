@@ -1,6 +1,6 @@
 <map id="src/option.cc" name="src/option.cc">
 <area shape="rect" id="node1" title="解析输入的命令行" alt="" coords="303,5,407,32"/>
-<area shape="rect" id="node2" href="$config_8h.html" title=" " alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node2" href="$config_8h.html" title="Auto generated config file" alt="" coords="5,80,79,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="103,80,183,107"/>
 <area shape="rect" id="node4" href="$option_8h.html" title="解析输入字符串" alt="" coords="207,80,282,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="224,155,340,181"/>

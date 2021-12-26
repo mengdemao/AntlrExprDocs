@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.1-2dacb4b</span>
+   &#160;<span id="projectnumber">V0.0.1-bc0beaf</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -805,8 +805,11 @@ Private 属性</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string getText = node-&gt;getText();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (!getText.empty()) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#ifdef DEBUG_EXPR</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::cout &lt;&lt; getText &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEBUG_EXPR */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -836,12 +839,15 @@ Private 属性</h2></td></tr>
 
 <p>重载 <a class="el" href="class_expr_base_listener.html#a161f136d9da8632b5222238bc5859cf2">ExprBaseListener</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00079">79</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string getText = node-&gt;getText();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (getText != <span class="stringliteral">&quot;\n&quot;</span>) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00082">82</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string getText = node-&gt;getText();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (getText != <span class="stringliteral">&quot;\n&quot;</span>) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#ifdef DEBUG_EXPR</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::cout &lt;&lt; getText &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEBUG_EXPR */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
