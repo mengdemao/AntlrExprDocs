@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-8a5a02d</span>
+   &#160;<span id="projectnumber">v0.0.2-98798ec</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -67,7 +67,7 @@ $(function() {
 <div class="title"><b>AntlrExpr笔记</b> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml"><object type="image/svg+xml" data="https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master" style="pointer-events: none;">CMake</object></a> <img src="https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic" alt="Travis (.com)" class="inline"/> <img src="https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr" alt="GitHub code size in bytes" class="inline"/> <img src="https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total" alt="GitHub all releases" class="inline"/> <img src="https://img.shields.io/github/license/mengdemao/AntlrExpr" alt="GitHub" class="inline"/> <img src="https://img.shields.io/github/v/tag/mengdemao/AntlrExpr" alt="GitHub tag (latest by date)" class="inline"/> <img src="https://img.shields.io/github/commit-activity/y/mengdemao/AntlrExpr" alt="GitHub commit activity" class="inline"/></p>
+<div class="textblock"><p><object type="image/svg+xml" data="https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master" style="pointer-events: none;">Github Action</object> <img src="https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic" alt="Travis" class="inline"/> <img src="https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr" alt="GitHub code size in bytes" class="inline"/> <img src="https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total" alt="GitHub all releases" class="inline"/> <img src="https://img.shields.io/github/license/mengdemao/AntlrExpr" alt="GitHub" class="inline"/> <img src="https://img.shields.io/github/v/tag/mengdemao/AntlrExpr" alt="GitHub tag (latest by date)" class="inline"/> <img src="https://img.shields.io/github/commit-activity/y/mengdemao/AntlrExpr" alt="GitHub commit activity" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md15"></a>
 语法文件</h1>
 <h2><a class="anchor" id="autotoc_md16"></a>
@@ -111,73 +111,16 @@ antlr运行时</h1>
 分析语法分析树</h2>
 <p>测试语句</p>
 <div class="fragment"><div class="line">./AntlrExpr &quot;1 + ( 2 - 3 ) * 4 / 5&quot;</div>
-</div><!-- fragment --><div align="center"> <img src="doc/Expr.png" alt="" class="inline"/> <div></div></div><div align="center"><div></div></div><h3><a class="anchor" id="autotoc_md20"></a>
+</div><!-- fragment --><div class="image">
+<img src="Expr.png" alt=""/>
+<div class="caption">
+表达式自动生成</div></div>
+   <h3><a class="anchor" id="autotoc_md20"></a>
 监听器(Listener)</h3>
-<div align="center"><div> 为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的<code>enter</code>和<code>exit</code>规则</div></div><div align="center"><div><table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">事件 </th><th class="markdownTableHeadNone">数据  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">enterAddSub </td><td class="markdownTableBodyNone">+  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">enterInt </td><td class="markdownTableBodyNone">1  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">exitInt </td><td class="markdownTableBodyNone">1  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">enterMulDiv </td><td class="markdownTableBodyNone">/  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">enterMulDiv </td><td class="markdownTableBodyNone">*  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">enterAddSub </td><td class="markdownTableBodyNone">-  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">enterInt </td><td class="markdownTableBodyNone">2  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">exitInt </td><td class="markdownTableBodyNone">2  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">enterInt </td><td class="markdownTableBodyNone">3  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">exitInt </td><td class="markdownTableBodyNone">3  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">exitAddSub </td><td class="markdownTableBodyNone">-  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">enterInt </td><td class="markdownTableBodyNone">4  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">exitInt </td><td class="markdownTableBodyNone">4  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">exitMulDiv </td><td class="markdownTableBodyNone">*  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">enterInt </td><td class="markdownTableBodyNone">5  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">exitInt </td><td class="markdownTableBodyNone">5  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">exitMulDiv </td><td class="markdownTableBodyNone">/  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">exitAddSub </td><td class="markdownTableBodyNone">+  </td></tr>
-</table>
-</div></div><div align="center"><div></div></div><h3><a class="anchor" id="autotoc_md21"></a>
+<p>为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的<code>enter</code>和<code>exit</code>规则</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
 访问器(Visitor)</h3>
-<div align="center"><div> <table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">事件 </th><th class="markdownTableHeadNone">数据  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">visitAddSub </td><td class="markdownTableBodyNone">+  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">visitInt </td><td class="markdownTableBodyNone">1  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">visitMulDiv </td><td class="markdownTableBodyNone">/  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">visitMulDiv </td><td class="markdownTableBodyNone">*  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">visitAddSub </td><td class="markdownTableBodyNone">-  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">visitInt </td><td class="markdownTableBodyNone">2  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">visitInt </td><td class="markdownTableBodyNone">3  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">visitInt </td><td class="markdownTableBodyNone">4  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">visitInt </td><td class="markdownTableBodyNone">5  </td></tr>
-</table>
-</div></div></div></div><!-- PageDoc -->
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <div class="ttc" id="aclass_expr_parser_html"><div class="ttname"><a href="class_expr_parser.html">ExprParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00012">ExprParser.h:12</a></div></div>
 <div class="ttc" id="aclass_expr_lexer_html"><div class="ttname"><a href="class_expr_lexer.html">ExprLexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_lexer_8h_source.html#l00012">ExprLexer.h:12</a></div></div>

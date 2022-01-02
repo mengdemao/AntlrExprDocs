@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['strip_5fflag_5fhelp_2576',['STRIP_FLAG_HELP',['../option_8cc.html#a718c759cde599602415a91b0d62e0c94',1,'option.cc']]]
+  ['strip_5fflag_5fhelp_2600',['STRIP_FLAG_HELP',['../option_8cc.html#a718c759cde599602415a91b0d62e0c94',1,'option.cc']]]
 ];
