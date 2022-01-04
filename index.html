@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-98798ec</span>
+   &#160;<span id="projectnumber">v0.0.2-5d1cb6a</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -72,7 +72,10 @@ $(function() {
 语法文件</h1>
 <h2><a class="anchor" id="autotoc_md16"></a>
 编译指令</h2>
-<p>antlr4脚本内容 </p><div class="fragment"><div class="line"># antlr4编译脚本</div>
+<div class="fragment"><div class="line">export CLASSPATH=&quot;.:${pwd}/bin/antlr-complete.jar:$CLASSPATH&quot;</div>
+<div class="line">alias antlr4=&#39;java -jar ${pwd}/bin/antlr-complete.jar&#39;</div>
+<div class="line">alias grun=&#39;java org.antlr.v4.gui.TestRig&#39;</div>
+</div><!-- fragment --><p>antlr4脚本内容 </p><div class="fragment"><div class="line"># antlr4编译脚本</div>
 <div class="line">java org.antlr.v4.Tool %*</div>
 <div class="line"> </div>
 <div class="line"># grun运行程序</div>
