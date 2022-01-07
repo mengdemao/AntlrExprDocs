@@ -31,7 +31,7 @@ var searchData=
   ['ambiguities_112',['ambiguities',['../classantlr4_1_1atn_1_1_decision_info.html#a63842cdb1628b1e6ff45ae2c8d4a68d8',1,'antlr4::atn::DecisionInfo']]],
   ['ambiguityinfo_2ecpp_113',['AmbiguityInfo.cpp',['../_ambiguity_info_8cpp.html',1,'']]],
   ['ambiguityinfo_2eh_114',['AmbiguityInfo.h',['../_ambiguity_info_8h.html',1,'']]],
-  ['and_115',['And',['../classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17',1,'antlr4::atn::SemanticContext::And()'],['../classantlr4_1_1misc_1_1_interval_set.html#a181657a8554e9836bd2dc7c9be0a02f0',1,'antlr4::misc::IntervalSet::And()'],['../classantlr4_1_1atn_1_1_semantic_context.html#ac490980398ebba9a265420d20fd14764',1,'antlr4::atn::SemanticContext::AND()']]],
+  ['and_115',['AND',['../classantlr4_1_1atn_1_1_semantic_context.html#ac490980398ebba9a265420d20fd14764',1,'antlr4::atn::SemanticContext::AND(Ref&lt; SemanticContext &gt; const &amp;a, Ref&lt; SemanticContext &gt; const &amp;b)'],['../classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17',1,'antlr4::atn::SemanticContext::And(Ref&lt; SemanticContext &gt; const &amp;a, Ref&lt; SemanticContext &gt; const &amp;b)'],['../classantlr4_1_1misc_1_1_interval_set.html#a181657a8554e9836bd2dc7c9be0a02f0',1,'antlr4::misc::IntervalSet::And()']]],
   ['antlr4_116',['antlr4',['../namespaceantlr4.html',1,'']]],
   ['antlr4_2dcommon_2eh_117',['antlr4-common.h',['../antlr4-common_8h.html',1,'']]],
   ['antlr4_2druntime_2eh_118',['antlr4-runtime.h',['../antlr4-runtime_8h.html',1,'']]],

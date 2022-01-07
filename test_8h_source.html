@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-5d1cb6a</span>
+   &#160;<span id="projectnumber">v0.0.2-4f56b58</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -75,39 +75,40 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __TEST_H__</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __TEST_H__</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_test_expr.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_expr.html">TestExpr</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">   14</a></span>&#160;    std::string <a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>;    <span class="comment">// 生成表达式</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">   15</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a>;  <span class="comment">// 产生的结果</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">   18</a></span>&#160;    <a class="code" href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">TestExpr</a>()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>   = std::string(<span class="stringliteral">&quot;1+2*(3-2)&quot;</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a> = 7;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">   24</a></span>&#160;    std::string <a class="code" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">GetExpr</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">GetResult</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __TEST_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_test_expr.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_expr.html">TestExpr</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">   15</a></span>&#160;    std::string <a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>;    <span class="comment">// 生成表达式</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">   16</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a>;  <span class="comment">// 产生的结果</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">   19</a></span>&#160;    <a class="code" href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">TestExpr</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>   = std::string(<span class="stringliteral">&quot;1+2*(3-2)&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a> = 7;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">   25</a></span>&#160;    std::string <a class="code" href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">GetExpr</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">Expr</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">GetResult</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">result</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __TEST_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_test_expr_html_a13bcf2481e79798cb74656c06f47d37a"><div class="ttname"><a href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">TestExpr::Expr</a></div><div class="ttdeci">std::string Expr</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00014">test.h:14</a></div></div>
-<div class="ttc" id="aclass_test_expr_html"><div class="ttname"><a href="class_test_expr.html">TestExpr</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00011">test.h:11</a></div></div>
-<div class="ttc" id="aclass_test_expr_html_ae29acdae87d382aec6aab62653f8206d"><div class="ttname"><a href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">TestExpr::GetResult</a></div><div class="ttdeci">int GetResult(void)</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00029">test.h:29</a></div></div>
-<div class="ttc" id="aclass_test_expr_html_a2647b24cbbb59c93a852bd27d7233bef"><div class="ttname"><a href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">TestExpr::GetExpr</a></div><div class="ttdeci">std::string GetExpr(void)</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00024">test.h:24</a></div></div>
-<div class="ttc" id="aclass_test_expr_html_a84c5ba14b09ee52f57198f5cc08f38cd"><div class="ttname"><a href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">TestExpr::TestExpr</a></div><div class="ttdeci">TestExpr()</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00018">test.h:18</a></div></div>
-<div class="ttc" id="aclass_test_expr_html_a35c935fddd2a2f285d08a43d82fe3350"><div class="ttname"><a href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">TestExpr::result</a></div><div class="ttdeci">int result</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00015">test.h:15</a></div></div>
+<div class="ttc" id="aclass_test_expr_html_a13bcf2481e79798cb74656c06f47d37a"><div class="ttname"><a href="class_test_expr.html#a13bcf2481e79798cb74656c06f47d37a">TestExpr::Expr</a></div><div class="ttdeci">std::string Expr</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00015">test.h:15</a></div></div>
+<div class="ttc" id="aclass_test_expr_html"><div class="ttname"><a href="class_test_expr.html">TestExpr</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00012">test.h:12</a></div></div>
+<div class="ttc" id="aclass_test_expr_html_ae29acdae87d382aec6aab62653f8206d"><div class="ttname"><a href="class_test_expr.html#ae29acdae87d382aec6aab62653f8206d">TestExpr::GetResult</a></div><div class="ttdeci">int GetResult(void)</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00030">test.h:30</a></div></div>
+<div class="ttc" id="aclass_test_expr_html_a2647b24cbbb59c93a852bd27d7233bef"><div class="ttname"><a href="class_test_expr.html#a2647b24cbbb59c93a852bd27d7233bef">TestExpr::GetExpr</a></div><div class="ttdeci">std::string GetExpr(void)</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00025">test.h:25</a></div></div>
+<div class="ttc" id="aclass_test_expr_html_a84c5ba14b09ee52f57198f5cc08f38cd"><div class="ttname"><a href="class_test_expr.html#a84c5ba14b09ee52f57198f5cc08f38cd">TestExpr::TestExpr</a></div><div class="ttdeci">TestExpr()</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00019">test.h:19</a></div></div>
+<div class="ttc" id="aclass_test_expr_html_a35c935fddd2a2f285d08a43d82fe3350"><div class="ttname"><a href="class_test_expr.html#a35c935fddd2a2f285d08a43d82fe3350">TestExpr::result</a></div><div class="ttdeci">int result</div><div class="ttdef"><b>Definition:</b> <a href="test_8h_source.html#l00016">test.h:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
