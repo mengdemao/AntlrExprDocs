@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-4f56b58</span>
+   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -83,7 +83,69 @@ mDFA</h3>
 <h3><a class="anchor" id="autotoc_md10"></a>
 自顶向下</h3>
 <h3><a class="anchor" id="autotoc_md11"></a>
+LL(1)分析文法</h3>
+<blockquote class="doxtable">
+<p>鉴于自定向下分析法存在回溯的问题,对于现代编译器设计是不可以接受的;由此提出了LL(1)分析文法 </p>
+</blockquote>
+<p>给出文法 </p><div class="fragment"><div class="line">0: S -&gt; N V M</div>
+<div class="line">1: N -&gt; s</div>
+<div class="line">2:   | t</div>
+<div class="line">3:   | g</div>
+<div class="line">4:   | w</div>
+<div class="line">5: V -&gt; e</div>
+<div class="line">6:   | d</div>
+</div><!-- fragment --><p>那么同时给出LL(1)分析表</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter"><code>N\T</code> </th><th class="markdownTableHeadCenter"><code>s</code> </th><th class="markdownTableHeadCenter"><code>t</code> </th><th class="markdownTableHeadCenter"><code>g</code> </th><th class="markdownTableHeadCenter"><code>w</code> </th><th class="markdownTableHeadCenter"><code>e</code> </th><th class="markdownTableHeadCenter"><code>d</code>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>S</code> </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>N</code> </td><td class="markdownTableBodyCenter">1 </td><td class="markdownTableBodyCenter">2 </td><td class="markdownTableBodyCenter">3 </td><td class="markdownTableBodyCenter">4 </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>V</code> </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">5 </td><td class="markdownTableBodyCenter">6  </td></tr>
+</table>
+<p>那么在分析<code>g d w</code>语句的时候,可以得到如下的分析</p>
+<p>解析算法 </p><div class="fragment"><div class="line">tokens[];</div>
+<div class="line">i=0;</div>
+</div><!-- fragment --><p>那么就可以得到一个没有回溯的分析算法,但是怎么得到这个分析表呢？</p>
+<h4><a class="anchor" id="autotoc_md12"></a>
+&lt;tt&gt;FIRST&lt;/tt&gt;集</h4>
+<div class="fragment"><div class="line">令G是一个不含左递归的文法，对G的所有非终结符的每个候选a定义它的终结首符集FIRST(a)为：</div>
+<div class="line">FIRST(α) = { a│α ⇒∗ a…, a∈VT }</div>
+<div class="line">若α ⇒∗ ε ，则规定ε∈FIRST(α)。</div>
+</div><!-- fragment --><p>构造FIRST集</p>
+<ul>
+<li>第一种说明： <blockquote class="doxtable">
+<p>对于文法G的每个文法符号X∈VT∪VN： </p>
+</blockquote>
+<ul>
+<li>若 X ∈ VT，则 FIRST(X) = { X }</li>
+<li>若 X ∈ NULLABLE，则把 ε 加入FIRST(X)</li>
+<li>若 X ∈ VN，且 X → a…, a ∈ VT，则把a加入到FIRST(X)中</li>
+<li>若 X ∈ VN，且 X → Y…, Y ∈ VN，则把FIRST(Y) - {ε}加到FIRST(X)中</li>
+<li>若 X →Y1Y2 … Yi , 且 Y1, Y2, … ,Yi-1 ∈ nullable，则把 FIRST(Yi) - {ε}加到FIRST(X)中</li>
+<li>若 FIRST(Ym) ∈ NULLABLE(1&lt;=m&lt;=i)，则ε∈FIRST(X)</li>
+</ul>
+</li>
+<li>第二种说明： <blockquote class="doxtable">
+<p>对每一X∈VT∪VN，连续使用下面的规则，直至每个集合FIRST不再增大为止： </p>
+</blockquote>
+<ul>
+<li>若X ∈ VT，则FIRST(X)＝{X}。</li>
+<li>若X ∈ VN，且有产生式X→a…，则把a加入到FIRST(X)中；若X→ε也是一条产生式，则把 ε 也加到FIRST(X)中。</li>
+<li>若X→Y…是一个产生式且Y ∈ VN，则把FIRST(Y)中的所有非 ε- 元素都加到FIRST(X)中；若X→Y1Y2…Yi-1Yi…Yk是一个产生式，Y1，…，Yi-1都是非终结符，对于任何j，1&lt;=j&lt;=i-1，FIRST(Yj)都含有 ε (即Y1…Yi-1 ⇒∗ε)， 则把FIRST(Yi)中的所有非 ε-元素都加到FIRST(X)中；若所有的FIRST(Yj)均含有 ε，j＝1，2，…，k，则把 ε 加到FIRST(X)中。</li>
+</ul>
+</li>
+</ul>
+<h4><a class="anchor" id="autotoc_md13"></a>
+&lt;tt&gt;FOLLOW&lt;/tt&gt;集</h4>
+<h4><a class="anchor" id="autotoc_md14"></a>
+&lt;tt&gt;SELECT&lt;/tt&gt;集</h4>
+<h3><a class="anchor" id="autotoc_md15"></a>
 自底向上</h3>
+<h2><a class="anchor" id="autotoc_md16"></a>
+语义分析</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['parser_2554',['PARSER',['../namespaceantlr4_1_1atn.html#a80724df14f5407561b172cf4b3169a1ea1876601211794efd018df152e2f2f5e5',1,'antlr4::atn']]],
-  ['pop_5fmode_2555',['POP_MODE',['../namespaceantlr4_1_1atn.html#acb989d3aa948a42a51d05f3121a5f10daf8c49b20c065692211332bb6db32c471',1,'antlr4::atn']]],
-  ['precedence_2556',['PRECEDENCE',['../classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a3acf4d990a817b8ccba4a5976a03e995',1,'antlr4::atn::Transition']]],
-  ['predicate_2557',['PREDICATE',['../classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a40733d35b31c5bdc4e0e6a210a13bf85',1,'antlr4::atn::Transition']]],
-  ['program_5finit_5fsize_2558',['PROGRAM_INIT_SIZE',['../classantlr4_1_1_token_stream_rewriter.html#a789580caa9f4ca2146eb7842178cdf30a46d26fd1bfccf5cb4ee0dfbb8740e96d',1,'antlr4::TokenStreamRewriter']]],
-  ['push_5fmode_2559',['PUSH_MODE',['../namespaceantlr4_1_1atn.html#acb989d3aa948a42a51d05f3121a5f10da80c5da0f5d368d004d09310e183a9689',1,'antlr4::atn']]]
+  ['newline_2567',['NEWLINE',['../class_expr_lexer.html#aaa8cb357c9aa742e7cfde7e87d5c0ff9a404883ec3fb881b6ca33d09e0261270f',1,'ExprLexer::NEWLINE()'],['../class_expr_parser.html#a1adeed5d8040f807fac5c41dc8a0e0fea75736d7a0e1704f1f8eb172531da3d42',1,'ExprParser::NEWLINE()']]],
+  ['not_5fset_2568',['NOT_SET',['../classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843ae07e272da2f397b3406b124ace5a5123',1,'antlr4::atn::Transition']]]
 ];

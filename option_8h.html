@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-4f56b58</span>
+   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle">
 <div class="title">option.h 文件参考</div>  </div>
@@ -76,94 +77,81 @@ $(function() {
 
 <p>解析输入字符串  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &lt;gflags/gflags.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-option.h 的引用(Include)关系图:</div>
-<div class="dyncontent">
-<div class="center"><img src="option_8h__incl.png" border="0" usemap="#inc_2option_8h" alt=""/></div>
-<map name="inc_2option_8h" id="inc_2option_8h">
-<area shape="rect" title="解析输入字符串" alt="" coords="14,5,113,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,121,107"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
 <div class="center"><img src="option_8h__dep__incl.png" border="0" usemap="#inc_2option_8hdep" alt=""/></div>
 <map name="inc_2option_8hdep" id="inc_2option_8hdep">
-<area shape="rect" title="解析输入字符串" alt="" coords="175,5,274,32"/>
-<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="186,80,263,107"/>
-<area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,155,79,181"/>
-<area shape="rect" href="ast_8cc.html" title="AST实现" alt="" coords="238,155,321,181"/>
-<area shape="rect" href="svm_8h.html" title="栈式虚拟机实现" alt="" coords="26,80,111,107"/>
-<area shape="rect" href="svm_8cc.html" title="栈式虚拟机实现" alt="" coords="103,155,194,181"/>
-<area shape="rect" href="option_8cc.html" title="解析输入的命令行" alt="" coords="338,80,442,107"/>
-<area shape="rect" href="test_8cc.html" title="测试程序" alt="" coords="466,80,554,107"/>
+<area shape="rect" title="解析输入字符串" alt="" coords="222,5,320,32"/>
+<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="107,80,184,107"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="178,155,294,181"/>
+<area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="104,229,177,256"/>
+<area shape="rect" href="ast_8cc.html" title="AST实现" alt="" coords="20,155,103,181"/>
+<area shape="rect" href="svm_8h.html" title="栈式虚拟机实现" alt="" coords="268,80,354,107"/>
+<area shape="rect" href="svm_8cc.html" title="栈式虚拟机实现" alt="" coords="370,155,460,181"/>
+<area shape="rect" href="option_8cc.html" title="解析输入的命令行" alt="" coords="428,80,532,107"/>
+<area shape="rect" href="test_8cc.html" title="测试程序" alt="" coords="556,80,644,107"/>
+<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="202,229,324,256"/>
 </map>
 </div>
 </div>
 <p><a href="option_8h_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a75561444ac0609b8e6039fe59ef56a82"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> { <a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>, 
+<a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>, 
+<a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>
+ }</td></tr>
+<tr class="separator:a75561444ac0609b8e6039fe59ef56a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a18d9f3b9f2a2806b09fb4ae7e0754eee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a18d9f3b9f2a2806b09fb4ae7e0754eee">DECLARE_bool</a> (test)</td></tr>
-<tr class="separator:a18d9f3b9f2a2806b09fb4ae7e0754eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad103d14200d79e519fbb48220fda41fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#ad103d14200d79e519fbb48220fda41fb">DECLARE_string</a> (text)</td></tr>
-<tr class="separator:ad103d14200d79e519fbb48220fda41fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f11492ffde0c6bf55daa375b167c80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a1f11492ffde0c6bf55daa375b167c80b">option_init</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:a1f11492ffde0c6bf55daa375b167c80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#a1f11492ffde0c6bf55daa375b167c80b">更多...</a><br /></td></tr>
-<tr class="separator:a1f11492ffde0c6bf55daa375b167c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d36ee209ab7021194b626237b73934b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a5d36ee209ab7021194b626237b73934b"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">更多...</a><br /></td></tr>
+<tr class="separator:a5d36ee209ab7021194b626237b73934b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>解析输入字符串 </p>
 <dl class="section version"><dt>版本</dt><dd>V0.0.1 </dd></dl>
 
 <p class="definition">在文件 <a class="el" href="option_8h_source.html">option.h</a> 中定义.</p>
-</div><h2 class="groupheader">函数说明</h2>
-<a id="a18d9f3b9f2a2806b09fb4ae7e0754eee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18d9f3b9f2a2806b09fb4ae7e0754eee">&#9670;&nbsp;</a></span>DECLARE_bool()</h2>
+</div><h2 class="groupheader">枚举类型说明</h2>
+<a id="a75561444ac0609b8e6039fe59ef56a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75561444ac0609b8e6039fe59ef56a82">&#9670;&nbsp;</a></span>option_result</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DECLARE_bool </td>
-          <td>(</td>
-          <td class="paramtype">test&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">enum <a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"></a>OPTION_NONEUSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75"></a>OPTION_SUCCESS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862"></a>OPTION_FAILURE&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
+<p class="definition">在文件 <a class="el" href="option_8h_source.html">option.h</a> 第 <a class="el" href="option_8h_source.html#l00010">10</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;             {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>, <span class="comment">// 不需要解析</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>, <span class="comment">// 解析成功</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>, <span class="comment">// 解析失败</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>;</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ad103d14200d79e519fbb48220fda41fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad103d14200d79e519fbb48220fda41fb">&#9670;&nbsp;</a></span>DECLARE_string()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DECLARE_string </td>
-          <td>(</td>
-          <td class="paramtype">text&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1f11492ffde0c6bf55daa375b167c80b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f11492ffde0c6bf55daa375b167c80b">&#9670;&nbsp;</a></span>option_init()</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5d36ee209ab7021194b626237b73934b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d36ee209ab7021194b626237b73934b">&#9670;&nbsp;</a></span>option_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int option_init </td>
+          <td class="memname"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> option_main </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -190,22 +178,59 @@ option.h 的引用(Include)关系图:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>int 执行结果 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>option_result 执行结果 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="option_8cc_source.html">option.cc</a> 第 <a class="el" href="option_8cc_source.html#l00035">35</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    SetUsageMessage(<span class="stringliteral">&quot;表示式计算工具&quot;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    SetVersionString(<a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ParseCommandLineFlags(&amp;argc, &amp;argv, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="option_8cc_source.html">option.cc</a> 第 <a class="el" href="option_8cc_source.html#l00029">29</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        variables_map variables_map;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        options_description description(<span class="stringliteral">&quot;Usage: AntlrExpr [options] text...&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        description.add_options()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            (<span class="stringliteral">&quot;help,h&quot;</span>,    <span class="stringliteral">&quot;Display this information.&quot;</span>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            (<span class="stringliteral">&quot;version,v&quot;</span>, <span class="stringliteral">&quot;Display compiler version information.&quot;</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            (<span class="stringliteral">&quot;file,f&quot;</span>, <span class="stringliteral">&quot;Open file as input.&quot;</span>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            (<span class="stringliteral">&quot;text,t&quot;</span>, <span class="stringliteral">&quot;Use string as input&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        store(parse_command_line(argc, argv, description), variables_map);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        notify(variables_map);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (1 == argc)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;version&quot;</span>)) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;AntlrExpr &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#ab03b31275849638bca75523dd5953140">AntlrExpr_BUILD</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="stringliteral">&quot;Copyright (C) 2022 MengDemao mengdemao19951021@163.com \n&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="stringliteral">&quot;This is free software; see the source for copying conditions.  There is NO\n&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="stringliteral">&quot;warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">catch</span>(std::exception&amp; e) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">catch</span>(...) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Exception of unknown type!\n&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="option_8h_a1f11492ffde0c6bf55daa375b167c80b_icgraph.png" border="0" usemap="#option_8h_a1f11492ffde0c6bf55daa375b167c80b_icgraph" alt=""/></div>
-<map name="option_8h_a1f11492ffde0c6bf55daa375b167c80b_icgraph" id="option_8h_a1f11492ffde0c6bf55daa375b167c80b_icgraph">
-<area shape="rect" title="解析输入的命令行" alt="" coords="108,5,199,32"/>
+<div class="center"><img src="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph.png" border="0" usemap="#option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" alt=""/></div>
+<map name="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" id="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph">
+<area shape="rect" title="解析输入的命令行" alt="" coords="108,5,211,32"/>
 <area shape="rect" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title="主函数" alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -214,6 +239,11 @@ option.h 的引用(Include)关系图:</div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aversion_8h_html_a4a5423e754d3191ebed42d170f2fb4bf"><div class="ttname"><a href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a></div><div class="ttdeci">#define AntlrExpr_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00021">version.h:21</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a></div><div class="ttdeci">option_result</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00010">option.h:10</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a></div><div class="ttdeci">@ OPTION_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00012">option.h:12</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a></div><div class="ttdeci">@ OPTION_FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00013">option.h:13</a></div></div>
+<div class="ttc" id="aversion_8h_html_ab03b31275849638bca75523dd5953140"><div class="ttname"><a href="version_8h.html#ab03b31275849638bca75523dd5953140">AntlrExpr_BUILD</a></div><div class="ttdeci">#define AntlrExpr_BUILD</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00025">version.h:25</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

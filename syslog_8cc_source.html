@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-4f56b58</span>
+   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -78,48 +78,30 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classsyslog.html#af3dedba608664165d70488121fec7eae">   17</a></span>&#160;<a class="code" href="classsyslog.html#abdc05852165dfd695419d6fde7d5f579">syslog::syslog</a>(<span class="keywordtype">int</span> addr, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> rank)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classsyslog.html#af3dedba608664165d70488121fec7eae">   17</a></span>&#160;<a class="code" href="classsyslog.html#af3dedba608664165d70488121fec7eae">syslog::syslog</a>(<span class="keywordtype">int</span> addr, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> rank)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    this-&gt;addr = addr;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;init) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        this-&gt;port = port;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this-&gt;rank = rank;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        this-&gt;init = this-&gt;connect();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;port = port;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    this-&gt;rank = rank;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;init = this-&gt;connect();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">   25</a></span>&#160;<a class="code" href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">syslog::~syslog</a>() </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsyslog.html#a65788840d4e18d6311a242d673c78c55">   28</a></span>&#160;<a class="code" href="classsyslog.html#abdc05852165dfd695419d6fde7d5f579">syslog::syslog</a>(<span class="keywordtype">int</span> rank)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;rank = rank;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classsyslog.html#abdc05852165dfd695419d6fde7d5f579">   33</a></span>&#160;<a class="code" href="classsyslog.html#abdc05852165dfd695419d6fde7d5f579">syslog::syslog</a>()</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// 测试初始化状态</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;init) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this-&gt;addr = addr;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    this-&gt;port = port;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;rank = rank;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    this-&gt;init = this-&gt;connect();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">   47</a></span>&#160;<a class="code" href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">syslog::~syslog</a>() {}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">   49</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">syslog::connect</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">   31</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">syslog::connect</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssyslog_html_a9362f4e6881494dbad752ca2360d2704"><div class="ttname"><a href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">syslog::connect</a></div><div class="ttdeci">bool connect(void)</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00049">syslog.cc:49</a></div></div>
+<div class="ttc" id="aclasssyslog_html_a9362f4e6881494dbad752ca2360d2704"><div class="ttname"><a href="classsyslog.html#a9362f4e6881494dbad752ca2360d2704">syslog::connect</a></div><div class="ttdeci">bool connect(void)</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00031">syslog.cc:31</a></div></div>
+<div class="ttc" id="aclasssyslog_html_af3dedba608664165d70488121fec7eae"><div class="ttname"><a href="classsyslog.html#af3dedba608664165d70488121fec7eae">syslog::syslog</a></div><div class="ttdeci">syslog(int addr, int port, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00017">syslog.cc:17</a></div></div>
 <div class="ttc" id="asyslog_8h_html"><div class="ttname"><a href="syslog_8h.html">syslog.h</a></div><div class="ttdoc">日志打印打印</div></div>
-<div class="ttc" id="aclasssyslog_html_abdc05852165dfd695419d6fde7d5f579"><div class="ttname"><a href="classsyslog.html#abdc05852165dfd695419d6fde7d5f579">syslog::syslog</a></div><div class="ttdeci">syslog()</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00033">syslog.cc:33</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00132">ATNConfig.h:132</a></div></div>
-<div class="ttc" id="aclasssyslog_html_a0821cfeb2c72252cb5d872a7fa294ccd"><div class="ttname"><a href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">syslog::~syslog</a></div><div class="ttdeci">~syslog()</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00047">syslog.cc:47</a></div></div>
+<div class="ttc" id="aclasssyslog_html_a0821cfeb2c72252cb5d872a7fa294ccd"><div class="ttname"><a href="classsyslog.html#a0821cfeb2c72252cb5d872a7fa294ccd">syslog::~syslog</a></div><div class="ttdeci">~syslog()</div><div class="ttdef"><b>Definition:</b> <a href="syslog_8cc_source.html#l00025">syslog.cc:25</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: inc/grammar.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">grammar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="grammar_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __GRAMMAR_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __GRAMMAR_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">config.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_expr_base_visitor_8h.html">ExprBaseVisitor.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_expr_lexer_8h.html">ExprLexer.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_expr_parser_8h.html">ExprParser.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_expr_visitor_8h.html">ExprVisitor.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="antlr4-runtime_8h.html">antlr4-runtime.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_expr_base_listener_8h.html">ExprBaseListener.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="option_8h.html">option.h</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="test_8h.html">test.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="svm_8h.html">svm.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ast_8h.html">ast.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">   28</a></span>&#160;    <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a>,    <span class="comment">// 解析成功</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d">   29</a></span>&#160;    <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d">GRAMMAR_FAILURE</a>, <span class="comment">// 解析失败</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using namespace </span>tree;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef DEBUG_EXPR</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define TRACE()             \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">do {                        \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    std::cout &lt;&lt; __func__   \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">              &lt;&lt; &quot;\t&quot;       \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">              &lt;&lt; __LINE__   \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">              &lt;&lt; &quot;\t&quot;       \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">              &lt;&lt; std::endl; \</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">} while(0)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* DEBUG_EXPR */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">   45</a></span>&#160;<span class="preprocessor">#define TRACE() \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">do {            \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">} while(0)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEBUG_EXPR */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_expr_tree_listener.html">ExprTreeListener</a> : <span class="keyword">public</span> <a class="code" href="class_expr_base_listener.html">ExprBaseListener</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#ad80264ffc21488b9d6d25cc51529a604">   54</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#ad80264ffc21488b9d6d25cc51529a604">enterProg</a>(<a class="code" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a874d2cf2ef40932e325132a380240f85">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a874d2cf2ef40932e325132a380240f85">exitProg</a>(<a class="code" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a4b88b469cb3b06304be43ab305a1c8b7">   64</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a4b88b469cb3b06304be43ab305a1c8b7">enterPrintExpr</a>(<a class="code" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#ab60d97389464c034af186a058e7a9bad">   68</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#ab60d97389464c034af186a058e7a9bad">exitPrintExpr</a>(<a class="code" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a12da2d057d81f1406ef5bd9095ac0677">   73</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a12da2d057d81f1406ef5bd9095ac0677">enterAssign</a>(<a class="code" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a15b1dd5425f57bd2e01f21b79aad8bc1">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a15b1dd5425f57bd2e01f21b79aad8bc1">exitAssign</a>(<a class="code" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#adab3baf122043f1d3ff20d95ac34e2dc">   83</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#adab3baf122043f1d3ff20d95ac34e2dc">enterBlank</a>(<a class="code" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a2b03d351c5c9214a3000f61d1dcab830">   88</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a2b03d351c5c9214a3000f61d1dcab830">exitBlank</a>(<a class="code" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a883148b537fe16e5136972e3e01c7bc8">   93</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a883148b537fe16e5136972e3e01c7bc8">enterParens</a>(<a class="code" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#aadffcbc7798d98aac18bdc593cb0fad1">   98</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#aadffcbc7798d98aac18bdc593cb0fad1">exitParens</a>(<a class="code" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a1171d24300674cc85122d95fa96df17f">  103</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a1171d24300674cc85122d95fa96df17f">enterMulDiv</a>(<a class="code" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a63c856c88730d8a4bc92930bc7104210">  108</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a63c856c88730d8a4bc92930bc7104210">exitMulDiv</a>(<a class="code" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#aeb3d4096a26b6708b0b2a28e88175b2a">  113</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#aeb3d4096a26b6708b0b2a28e88175b2a">enterAddSub</a>(<a class="code" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a9c8ff57757fb6c56016906c7953cc1c7">  118</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a9c8ff57757fb6c56016906c7953cc1c7">exitAddSub</a>(<a class="code" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a41984aef2feb68c1b456f147b95ef572">  123</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a41984aef2feb68c1b456f147b95ef572">enterId</a>(<a class="code" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a057a14fd7d4760d01eaa37bd9a1ccbe6">  128</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a057a14fd7d4760d01eaa37bd9a1ccbe6">exitId</a>(<a class="code" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a969709d5fc5dc9e7632a6a38989ed51e">  133</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a969709d5fc5dc9e7632a6a38989ed51e">enterInt</a>(<a class="code" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a62ae346a20f73f7508eadfb493e010d5">  137</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a62ae346a20f73f7508eadfb493e010d5">exitInt</a>(<a class="code" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a3fe9b3010909cef061bffe7c2a5761c6">  142</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a3fe9b3010909cef061bffe7c2a5761c6">enterEveryRule</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a09addffff518a65f1fbe6a82cad1ba90">  146</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a09addffff518a65f1fbe6a82cad1ba90">exitEveryRule</a>(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">// TRACE();</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#a9bbe5252938fd12ec6c4f9dd87e09062">  151</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#a9bbe5252938fd12ec6c4f9dd87e09062">visitTerminal</a>(<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">antlr4::tree::TerminalNode</a>* node)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_expr_tree_listener.html#aa3104ed133f1471d0e209660eb96c1f2">  156</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_expr_tree_listener.html#aa3104ed133f1471d0e209660eb96c1f2">visitErrorNode</a>(<a class="code" href="classantlr4_1_1tree_1_1_error_node.html">antlr4::tree::ErrorNode</a>* node)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html">  162</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_expr_tree_visitor.html">ExprTreeVisitor</a> : <span class="keyword">public</span> <a class="code" href="class_expr_visitor.html">ExprVisitor</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#af24baa372162d7aaf2634bd9e97528ab">  165</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#af24baa372162d7aaf2634bd9e97528ab">visitProg</a>(<a class="code" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a>* context)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#acabcbac18c4d830a8de1ed8b80a11b22">  170</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#acabcbac18c4d830a8de1ed8b80a11b22">visitPrintExpr</a>(<a class="code" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a>* context)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#a0613e09a012e47eece6c2512a1b71ec6">  175</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#a0613e09a012e47eece6c2512a1b71ec6">visitAssign</a>(<a class="code" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a>* context)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#ad37f36826edf6a1e7e58c247bbaaacba">  180</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#ad37f36826edf6a1e7e58c247bbaaacba">visitBlank</a>(<a class="code" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a>* context)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#a50228b02155b0571a4ea2a9a74e6d9b9">  185</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#a50228b02155b0571a4ea2a9a74e6d9b9">visitParens</a>(<a class="code" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a>* context)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#a573ecffe2105f898e25c8985e00e13a7">  190</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#a573ecffe2105f898e25c8985e00e13a7">visitMulDiv</a>(<a class="code" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a>* context)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#a13355f8e721331cb56f52ec6fa2ef696">  196</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#a13355f8e721331cb56f52ec6fa2ef696">visitAddSub</a>(<a class="code" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a>* context)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#a1fbb6c99b2f55c5c3c6f55f29ecf1d9c">  202</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#a1fbb6c99b2f55c5c3c6f55f29ecf1d9c">visitId</a>(<a class="code" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a>* context)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ID</a>()-&gt;getText();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_expr_tree_visitor.html#adaca8e3215cb78cce788eb1035c40683">  208</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="class_expr_tree_visitor.html#adaca8e3215cb78cce788eb1035c40683">visitInt</a>(<a class="code" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a>* context)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">INT</a>()-&gt;getText();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">return</span> visitChildren(context);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;};</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a> <a class="code" href="grammar_8h.html#a15231a615e449dced0da029f78c5946a">grammar_main</a>(std::string InputString);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __GRAMMAR_H__ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_expr_tree_visitor_html"><div class="ttname"><a href="class_expr_tree_visitor.html">ExprTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00162">grammar.h:162</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_ab60d97389464c034af186a058e7a9bad"><div class="ttname"><a href="class_expr_tree_listener.html#ab60d97389464c034af186a058e7a9bad">ExprTreeListener::exitPrintExpr</a></div><div class="ttdeci">void exitPrintExpr(ExprParser::PrintExprContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00068">grammar.h:68</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_mul_div_context_html"><div class="ttname"><a href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00128">ExprParser.h:128</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a883148b537fe16e5136972e3e01c7bc8"><div class="ttname"><a href="class_expr_tree_listener.html#a883148b537fe16e5136972e3e01c7bc8">ExprTreeListener::enterParens</a></div><div class="ttdeci">void enterParens(ExprParser::ParensContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00093">grammar.h:93</a></div></div>
+<div class="ttc" id="astructantlrcpp_1_1_any_html"><div class="ttname"><a href="structantlrcpp_1_1_any.html">antlrcpp::Any</a></div><div class="ttdef"><b>Definition:</b> <a href="_any_8h_source.html#l00022">Any.h:22</a></div></div>
+<div class="ttc" id="a_expr_lexer_8h_html"><div class="ttname"><a href="_expr_lexer_8h.html">ExprLexer.h</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_aadffcbc7798d98aac18bdc593cb0fad1"><div class="ttname"><a href="class_expr_tree_listener.html#aadffcbc7798d98aac18bdc593cb0fad1">ExprTreeListener::exitParens</a></div><div class="ttdeci">void exitParens(ExprParser::ParensContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00098">grammar.h:98</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_mul_div_context_html_aaccbd4ca2cb00acc1f9b625400dfd1d3"><div class="ttname"><a href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">ExprParser::MulDivContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00132">ExprParser.h:132</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_ad80264ffc21488b9d6d25cc51529a604"><div class="ttname"><a href="class_expr_tree_listener.html#ad80264ffc21488b9d6d25cc51529a604">ExprTreeListener::enterProg</a></div><div class="ttdeci">void enterProg(ExprParser::ProgContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00054">grammar.h:54</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html">antlr4::tree::TerminalNode</a></div><div class="ttdef"><b>Definition:</b> <a href="_terminal_node_8h_source.html#l00013">TerminalNode.h:13</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_id_context_html_a824b39b78ab8b22f3fca72e20471368a"><div class="ttname"><a href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ExprParser::IdContext::ID</a></div><div class="ttdeci">antlr4::tree::TerminalNode * ID()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00392">ExprParser.cpp:392</a></div></div>
+<div class="ttc" id="aclass_expr_visitor_html"><div class="ttname"><a href="class_expr_visitor.html">ExprVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_visitor_8h_source.html#l00016">ExprVisitor.h:16</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a3fe9b3010909cef061bffe7c2a5761c6"><div class="ttname"><a href="class_expr_tree_listener.html#a3fe9b3010909cef061bffe7c2a5761c6">ExprTreeListener::enterEveryRule</a></div><div class="ttdeci">void enterEveryRule(antlr4::ParserRuleContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00142">grammar.h:142</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a2b03d351c5c9214a3000f61d1dcab830"><div class="ttname"><a href="class_expr_tree_listener.html#a2b03d351c5c9214a3000f61d1dcab830">ExprTreeListener::exitBlank</a></div><div class="ttdeci">void exitBlank(ExprParser::BlankContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00088">grammar.h:88</a></div></div>
+<div class="ttc" id="aast_8h_html"><div class="ttname"><a href="ast_8h.html">ast.h</a></div><div class="ttdoc">AST实现</div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a4b88b469cb3b06304be43ab305a1c8b7"><div class="ttname"><a href="class_expr_tree_listener.html#a4b88b469cb3b06304be43ab305a1c8b7">ExprTreeListener::enterPrintExpr</a></div><div class="ttdeci">void enterPrintExpr(ExprParser::PrintExprContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00064">grammar.h:64</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a09addffff518a65f1fbe6a82cad1ba90"><div class="ttname"><a href="class_expr_tree_listener.html#a09addffff518a65f1fbe6a82cad1ba90">ExprTreeListener::exitEveryRule</a></div><div class="ttdeci">void exitEveryRule(antlr4::ParserRuleContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00146">grammar.h:146</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_int_context_html"><div class="ttname"><a href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00169">ExprParser.h:169</a></div></div>
+<div class="ttc" id="agrammar_8h_html_a15231a615e449dced0da029f78c5946a"><div class="ttname"><a href="grammar_8h.html#a15231a615e449dced0da029f78c5946a">grammar_main</a></div><div class="ttdeci">grammar_result grammar_main(std::string InputString)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00018">grammar.cc:18</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_id_context_html"><div class="ttname"><a href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00158">ExprParser.h:158</a></div></div>
+<div class="ttc" id="a_expr_base_listener_8h_html"><div class="ttname"><a href="_expr_base_listener_8h.html">ExprBaseListener.h</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_a573ecffe2105f898e25c8985e00e13a7"><div class="ttname"><a href="class_expr_tree_visitor.html#a573ecffe2105f898e25c8985e00e13a7">ExprTreeVisitor::visitMulDiv</a></div><div class="ttdeci">antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00190">grammar.h:190</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_a0613e09a012e47eece6c2512a1b71ec6"><div class="ttname"><a href="class_expr_tree_visitor.html#a0613e09a012e47eece6c2512a1b71ec6">ExprTreeVisitor::visitAssign</a></div><div class="ttdeci">antlrcpp::Any visitAssign(ExprParser::AssignContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00175">grammar.h:175</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_a50228b02155b0571a4ea2a9a74e6d9b9"><div class="ttname"><a href="class_expr_tree_visitor.html#a50228b02155b0571a4ea2a9a74e6d9b9">ExprTreeVisitor::visitParens</a></div><div class="ttdeci">antlrcpp::Any visitParens(ExprParser::ParensContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00185">grammar.h:185</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_adaca8e3215cb78cce788eb1035c40683"><div class="ttname"><a href="class_expr_tree_visitor.html#adaca8e3215cb78cce788eb1035c40683">ExprTreeVisitor::visitInt</a></div><div class="ttdeci">antlrcpp::Any visitInt(ExprParser::IntContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00208">grammar.h:208</a></div></div>
+<div class="ttc" id="asvm_8h_html"><div class="ttname"><a href="svm_8h.html">svm.h</a></div><div class="ttdoc">栈式虚拟机实现</div></div>
+<div class="ttc" id="agrammar_8h_html_a7d020b5dd8606c615fa96fbe2647a4b0"><div class="ttname"><a href="grammar_8h.html#a7d020b5dd8606c615fa96fbe2647a4b0">TRACE</a></div><div class="ttdeci">#define TRACE()</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00045">grammar.h:45</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_a1fbb6c99b2f55c5c3c6f55f29ecf1d9c"><div class="ttname"><a href="class_expr_tree_visitor.html#a1fbb6c99b2f55c5c3c6f55f29ecf1d9c">ExprTreeVisitor::visitId</a></div><div class="ttdeci">antlrcpp::Any visitId(ExprParser::IdContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00202">grammar.h:202</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a62ae346a20f73f7508eadfb493e010d5"><div class="ttname"><a href="class_expr_tree_listener.html#a62ae346a20f73f7508eadfb493e010d5">ExprTreeListener::exitInt</a></div><div class="ttdeci">void exitInt(ExprParser::IntContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00137">grammar.h:137</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_acabcbac18c4d830a8de1ed8b80a11b22"><div class="ttname"><a href="class_expr_tree_visitor.html#acabcbac18c4d830a8de1ed8b80a11b22">ExprTreeVisitor::visitPrintExpr</a></div><div class="ttdeci">antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00170">grammar.h:170</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a9c8ff57757fb6c56016906c7953cc1c7"><div class="ttname"><a href="class_expr_tree_listener.html#a9c8ff57757fb6c56016906c7953cc1c7">ExprTreeListener::exitAddSub</a></div><div class="ttdeci">void exitAddSub(ExprParser::AddSubContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00118">grammar.h:118</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a63c856c88730d8a4bc92930bc7104210"><div class="ttname"><a href="class_expr_tree_listener.html#a63c856c88730d8a4bc92930bc7104210">ExprTreeListener::exitMulDiv</a></div><div class="ttdeci">void exitMulDiv(ExprParser::MulDivContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00108">grammar.h:108</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_af24baa372162d7aaf2634bd9e97528ab"><div class="ttname"><a href="class_expr_tree_visitor.html#af24baa372162d7aaf2634bd9e97528ab">ExprTreeVisitor::visitProg</a></div><div class="ttdeci">antlrcpp::Any visitProg(ExprParser::ProgContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00165">grammar.h:165</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_add_sub_context_html"><div class="ttname"><a href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00143">ExprParser.h:143</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_blank_context_html"><div class="ttname"><a href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00066">ExprParser.h:66</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_adab3baf122043f1d3ff20d95ac34e2dc"><div class="ttname"><a href="class_expr_tree_listener.html#adab3baf122043f1d3ff20d95ac34e2dc">ExprTreeListener::enterBlank</a></div><div class="ttdeci">void enterBlank(ExprParser::BlankContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00083">grammar.h:83</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_aeb3d4096a26b6708b0b2a28e88175b2a"><div class="ttname"><a href="class_expr_tree_listener.html#aeb3d4096a26b6708b0b2a28e88175b2a">ExprTreeListener::enterAddSub</a></div><div class="ttdeci">void enterAddSub(ExprParser::AddSubContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00113">grammar.h:113</a></div></div>
+<div class="ttc" id="a_expr_visitor_8h_html"><div class="ttname"><a href="_expr_visitor_8h.html">ExprVisitor.h</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_int_context_html_ae8184981bba3a07bbfea2b404e1df66b"><div class="ttname"><a href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">ExprParser::IntContext::INT</a></div><div class="ttdeci">antlr4::tree::TerminalNode * INT()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00417">ExprParser.cpp:417</a></div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_aa3104ed133f1471d0e209660eb96c1f2"><div class="ttname"><a href="class_expr_tree_listener.html#aa3104ed133f1471d0e209660eb96c1f2">ExprTreeListener::visitErrorNode</a></div><div class="ttdeci">void visitErrorNode(antlr4::tree::ErrorNode *node) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00156">grammar.h:156</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a874d2cf2ef40932e325132a380240f85"><div class="ttname"><a href="class_expr_tree_listener.html#a874d2cf2ef40932e325132a380240f85">ExprTreeListener::exitProg</a></div><div class="ttdeci">void exitProg(ExprParser::ProgContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00059">grammar.h:59</a></div></div>
+<div class="ttc" id="atest_8h_html"><div class="ttname"><a href="test_8h.html">test.h</a></div><div class="ttdoc">自动化测试相关工具</div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a969709d5fc5dc9e7632a6a38989ed51e"><div class="ttname"><a href="class_expr_tree_listener.html#a969709d5fc5dc9e7632a6a38989ed51e">ExprTreeListener::enterInt</a></div><div class="ttdeci">void enterInt(ExprParser::IntContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00133">grammar.h:133</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_ae288d9f2d72d0209a24e0cc5215e8844"><div class="ttname"><a href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">antlr4::Token::getText</a></div><div class="ttdeci">virtual std::string getText() const =0</div><div class="ttdoc">Get the text of the token.</div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a></div><div class="ttdoc">A rule invocation record for parsing.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00036">ParserRuleContext.h:36</a></div></div>
+<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a></div><div class="ttdeci">grammar_result</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00027">grammar.h:27</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a1171d24300674cc85122d95fa96df17f"><div class="ttname"><a href="class_expr_tree_listener.html#a1171d24300674cc85122d95fa96df17f">ExprTreeListener::enterMulDiv</a></div><div class="ttdeci">void enterMulDiv(ExprParser::MulDivContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00103">grammar.h:103</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html"><div class="ttname"><a href="class_expr_tree_listener.html">ExprTreeListener</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00050">grammar.h:50</a></div></div>
+<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d">GRAMMAR_FAILURE</a></div><div class="ttdeci">@ GRAMMAR_FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00029">grammar.h:29</a></div></div>
+<div class="ttc" id="a_expr_parser_8h_html"><div class="ttname"><a href="_expr_parser_8h.html">ExprParser.h</a></div></div>
+<div class="ttc" id="aantlr4-runtime_8h_html"><div class="ttname"><a href="antlr4-runtime_8h.html">antlr4-runtime.h</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_prog_context_html"><div class="ttname"><a href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00037">ExprParser.h:37</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_add_sub_context_html_a868d2a2dff096d4d8df33d68a4783bf6"><div class="ttname"><a href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">ExprParser::AddSubContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00147">ExprParser.h:147</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a12da2d057d81f1406ef5bd9095ac0677"><div class="ttname"><a href="class_expr_tree_listener.html#a12da2d057d81f1406ef5bd9095ac0677">ExprTreeListener::enterAssign</a></div><div class="ttdeci">void enterAssign(ExprParser::AssignContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00073">grammar.h:73</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_ad37f36826edf6a1e7e58c247bbaaacba"><div class="ttname"><a href="class_expr_tree_visitor.html#ad37f36826edf6a1e7e58c247bbaaacba">ExprTreeVisitor::visitBlank</a></div><div class="ttdeci">antlrcpp::Any visitBlank(ExprParser::BlankContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00180">grammar.h:180</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_print_expr_context_html"><div class="ttname"><a href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00077">ExprParser.h:77</a></div></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Auto generated config file</div></div>
+<div class="ttc" id="aclass_expr_base_listener_html"><div class="ttname"><a href="class_expr_base_listener.html">ExprBaseListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_base_listener_8h_source.html#l00016">ExprBaseListener.h:16</a></div></div>
+<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00028">grammar.h:28</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html_a13355f8e721331cb56f52ec6fa2ef696"><div class="ttname"><a href="class_expr_tree_visitor.html#a13355f8e721331cb56f52ec6fa2ef696">ExprTreeVisitor::visitAddSub</a></div><div class="ttdeci">antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00196">grammar.h:196</a></div></div>
+<div class="ttc" id="a_expr_base_visitor_8h_html"><div class="ttname"><a href="_expr_base_visitor_8h.html">ExprBaseVisitor.h</a></div></div>
+<div class="ttc" id="aoption_8h_html"><div class="ttname"><a href="option_8h.html">option.h</a></div><div class="ttdoc">解析输入字符串</div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a9bbe5252938fd12ec6c4f9dd87e09062"><div class="ttname"><a href="class_expr_tree_listener.html#a9bbe5252938fd12ec6c4f9dd87e09062">ExprTreeListener::visitTerminal</a></div><div class="ttdeci">void visitTerminal(antlr4::tree::TerminalNode *node) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00151">grammar.h:151</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a057a14fd7d4760d01eaa37bd9a1ccbe6"><div class="ttname"><a href="class_expr_tree_listener.html#a057a14fd7d4760d01eaa37bd9a1ccbe6">ExprTreeListener::exitId</a></div><div class="ttdeci">void exitId(ExprParser::IdContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00128">grammar.h:128</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_error_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_error_node.html">antlr4::tree::ErrorNode</a></div><div class="ttdef"><b>Definition:</b> <a href="_error_node_8h_source.html#l00013">ErrorNode.h:13</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_assign_context_html"><div class="ttname"><a href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00089">ExprParser.h:89</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a41984aef2feb68c1b456f147b95ef572"><div class="ttname"><a href="class_expr_tree_listener.html#a41984aef2feb68c1b456f147b95ef572">ExprTreeListener::enterId</a></div><div class="ttdeci">void enterId(ExprParser::IdContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00123">grammar.h:123</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html_a15b1dd5425f57bd2e01f21b79aad8bc1"><div class="ttname"><a href="class_expr_tree_listener.html#a15b1dd5425f57bd2e01f21b79aad8bc1">ExprTreeListener::exitAssign</a></div><div class="ttdeci">void exitAssign(ExprParser::AssignContext *ctx) override</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00078">grammar.h:78</a></div></div>
+<div class="ttc" id="aclass_expr_parser_1_1_parens_context_html"><div class="ttname"><a href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00117">ExprParser.h:117</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

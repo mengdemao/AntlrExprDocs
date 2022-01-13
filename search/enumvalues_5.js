@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hidden_2535',['HIDDEN',['../classantlr4_1_1_lexer.html#ae553f08cdbfdf27db6d740c3d58b6faea0d9933fbea13156f3a6b687a1afbab93',1,'antlr4::Lexer']]],
-  ['hidden_5fchannel_2536',['HIDDEN_CHANNEL',['../classantlr4_1_1_token.html#a94a06e0354cac672f2105350ecd875e1aee587b6ad07c54e2da6946e21a921724',1,'antlr4::Token']]]
+  ['grammar_5ffailure_2543',['GRAMMAR_FAILURE',['../grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d',1,'grammar.h']]],
+  ['grammar_5fsuccess_2544',['GRAMMAR_SUCCESS',['../grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25',1,'grammar.h']]]
 ];
