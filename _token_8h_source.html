@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
+   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> INVALID_TYPE = 0;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    enum : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97a4b728edee6a494775129eb4d87b0a03e">   21</a></span>&#160;      INVALID_TYPE = 0,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a5409a47d75e057f5ce7f51d0107e8d02a4b728edee6a494775129eb4d87b0a03e">   21</a></span>&#160;      INVALID_TYPE = 0,</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
@@ -98,9 +98,9 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> EOF = IntStream::EOF;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    enum : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0af14ac02112cac8f2a65ccab2bdfc325d">   33</a></span>&#160;      EPSILON = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(-2), <span class="comment">// std::numeric_limits&lt;size_t&gt;::max() - 1; doesn&#39;t work in VS 2013</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a8d04f88ffc3c283cf0ee166397ef3e0a">   34</a></span>&#160;      MIN_USER_TOKEN_TYPE = 1,</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">   35</a></span>&#160;      EOF = IntStream::EOF,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97af14ac02112cac8f2a65ccab2bdfc325d">   33</a></span>&#160;      EPSILON = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(-2), <span class="comment">// std::numeric_limits&lt;size_t&gt;::max() - 1; doesn&#39;t work in VS 2013</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97a8d04f88ffc3c283cf0ee166397ef3e0a">   34</a></span>&#160;      MIN_USER_TOKEN_TYPE = 1,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">   35</a></span>&#160;      EOF = IntStream::EOF,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
@@ -110,7 +110,7 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> DEFAULT_CHANNEL = 0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    enum : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">   48</a></span>&#160;      DEFAULT_CHANNEL = 0,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">   48</a></span>&#160;      DEFAULT_CHANNEL = 0,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> HIDDEN_CHANNEL = 1;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    enum : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a94a06e0354cac672f2105350ecd875e1aee587b6ad07c54e2da6946e21a921724">   58</a></span>&#160;      HIDDEN_CHANNEL = 1,</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54aee587b6ad07c54e2da6946e21a921724">   58</a></span>&#160;      HIDDEN_CHANNEL = 1,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
@@ -126,7 +126,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> MIN_USER_CHANNEL_VALUE = 2;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    enum : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#ac3e08790c5a1cd4a8b14ed0d9c2a7550a06e78d94847ed99b6be99a90aa035c48">   77</a></span>&#160;      MIN_USER_CHANNEL_VALUE = 2,</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classantlr4_1_1_token.html#a94a06e0354cac672f2105350ecd875e1a06e78d94847ed99b6be99a90aa035c48">   77</a></span>&#160;      MIN_USER_CHANNEL_VALUE = 2,</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>

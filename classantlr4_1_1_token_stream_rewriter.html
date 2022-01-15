@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
+   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -94,10 +94,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
-<tr class="memitem:a789580caa9f4ca2146eb7842178cdf30"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: size_t { <a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a789580caa9f4ca2146eb7842178cdf30a46d26fd1bfccf5cb4ee0dfbb8740e96d">PROGRAM_INIT_SIZE</a> = 100, 
-<a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a789580caa9f4ca2146eb7842178cdf30a9a3282a57ab7c756ee3596b78ba67778">MIN_TOKEN_INDEX</a> = 0
+<tr class="memitem:a87c1682d84022d0aabaa992c47d15bec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: size_t { <a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a87c1682d84022d0aabaa992c47d15beca46d26fd1bfccf5cb4ee0dfbb8740e96d">PROGRAM_INIT_SIZE</a> = 100, 
+<a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a87c1682d84022d0aabaa992c47d15beca9a3282a57ab7c756ee3596b78ba67778">MIN_TOKEN_INDEX</a> = 0
  }</td></tr>
-<tr class="separator:a789580caa9f4ca2146eb7842178cdf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a87c1682d84022d0aabaa992c47d15bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -243,8 +243,8 @@ System.out.println(rewriter.getText("pass2"));
 
 <p class="definition">在文件 <a class="el" href="_token_stream_rewriter_8h_source.html">TokenStreamRewriter.h</a> 第 <a class="el" href="_token_stream_rewriter_8h_source.html#l00086">86</a> 行定义.</p>
 </div><h2 class="groupheader">成员枚举类型说明</h2>
-<a id="a789580caa9f4ca2146eb7842178cdf30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a789580caa9f4ca2146eb7842178cdf30">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a87c1682d84022d0aabaa992c47d15bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c1682d84022d0aabaa992c47d15bec">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,8 +255,8 @@ System.out.println(rewriter.getText("pass2"));
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a789580caa9f4ca2146eb7842178cdf30a46d26fd1bfccf5cb4ee0dfbb8740e96d"></a>PROGRAM_INIT_SIZE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a789580caa9f4ca2146eb7842178cdf30a9a3282a57ab7c756ee3596b78ba67778"></a>MIN_TOKEN_INDEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a87c1682d84022d0aabaa992c47d15beca46d26fd1bfccf5cb4ee0dfbb8740e96d"></a>PROGRAM_INIT_SIZE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87c1682d84022d0aabaa992c47d15beca9a3282a57ab7c756ee3596b78ba67778"></a>MIN_TOKEN_INDEX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">在文件 <a class="el" href="_token_stream_rewriter_8h_source.html">TokenStreamRewriter.h</a> 第 <a class="el" href="_token_stream_rewriter_8h_source.html#l00093">93</a> 行定义.</p>
@@ -1067,7 +1067,7 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classantlr4_1_1_token.html">Token</a> *t = <a class="code" href="classantlr4_1_1_token_stream_rewriter.html#ac75597fb40771420ffa19c461b62da79">tokens</a>-&gt;get(i);</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (op == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="comment">// no operation at that index, just dump token</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() != <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() != <a class="code" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        buf.append(t-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>());</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      i++; <span class="comment">// move to next token</span></div>
@@ -2461,11 +2461,11 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_html_a25cbc798b5e1a24f8f4c3722338bf45a"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter.html#a25cbc798b5e1a24f8f4c3722338bf45a">antlr4::TokenStreamRewriter::insertBefore</a></div><div class="ttdeci">virtual void insertBefore(Token *t, const std::string &amp;text)</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8cpp_source.html#l00143">TokenStreamRewriter.cpp:143</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_html_a02cb3a9155d414c29104c2e4ea94a7a4"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter.html#a02cb3a9155d414c29104c2e4ea94a7a4">antlr4::TokenStreamRewriter::Delete</a></div><div class="ttdeci">virtual void Delete(size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8cpp_source.html#l00193">TokenStreamRewriter.cpp:193</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html_add9bbaf955b783d9625626ff6197c64b"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html#add9bbaf955b783d9625626ff6197c64b">antlr4::misc::Interval::a</a></div><div class="ttdeci">ssize_t a</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00025">Interval.h:25</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_html_a7b5971db6c0ab1e9a72c04b068c9171c"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter.html#a7b5971db6c0ab1e9a72c04b068c9171c">antlr4::TokenStreamRewriter::insertAfter</a></div><div class="ttdeci">virtual void insertAfter(Token *t, const std::string &amp;text)</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8cpp_source.html#l00126">TokenStreamRewriter.cpp:126</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_html_ae288d9f2d72d0209a24e0cc5215e8844"><div class="ttname"><a href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">antlr4::Token::getText</a></div><div class="ttdeci">virtual std::string getText() const =0</div><div class="ttdoc">Get the text of the token.</div></div>
 <div class="ttc" id="aclassantlr4_1_1misc_1_1_interval_html"><div class="ttname"><a href="classantlr4_1_1misc_1_1_interval.html">antlr4::misc::Interval</a></div><div class="ttdoc">An immutable inclusive interval a..b</div><div class="ttdef"><b>Definition:</b> <a href="_interval_8h_source.html#l00020">Interval.h:20</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_a9d6cc632a8936e34086610305fd0c35d"><div class="ttname"><a href="namespaceantlrcpp.html#a9d6cc632a8936e34086610305fd0c35d">antlrcpp::is</a></div><div class="ttdeci">bool is(T2 *obj)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00044">CPPUtils.h:44</a></div></div>
-<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_html_a6aebd86281a8c9878042e380217dd99a"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter.html#a6aebd86281a8c9878042e380217dd99a">antlr4::TokenStreamRewriter::_programs</a></div><div class="ttdeci">std::map&lt; std::string, std::vector&lt; RewriteOperation * &gt; &gt; _programs</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8h_source.html#l00218">TokenStreamRewriter.h:218</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_html_ae763b75d6754f62c2729efb16665b742"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter.html#ae763b75d6754f62c2729efb16665b742">antlr4::TokenStreamRewriter::getProgram</a></div><div class="ttdeci">virtual std::vector&lt; RewriteOperation * &gt; &amp; getProgram(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8cpp_source.html#l00234">TokenStreamRewriter.cpp:234</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_stream_rewriter_1_1_rewrite_operation_html_a1d3d3c3b22f030f300b3fd7c41a5ec47"><div class="ttname"><a href="classantlr4_1_1_token_stream_rewriter_1_1_rewrite_operation.html#a1d3d3c3b22f030f300b3fd7c41a5ec47">antlr4::TokenStreamRewriter::RewriteOperation::index</a></div><div class="ttdeci">size_t index</div><div class="ttdoc">What index into rewrites List are we?</div><div class="ttdef"><b>Definition:</b> <a href="_token_stream_rewriter_8h_source.html#l00166">TokenStreamRewriter.h:166</a></div></div>

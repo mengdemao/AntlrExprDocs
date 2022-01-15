@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
+   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -162,9 +162,9 @@ Public 属性</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private 类型</h2></td></tr>
-<tr class="memitem:a78a9edac35e7ce7f8c9573a27d27f90f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: size_t { <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a> = 0x40000000
+<tr class="memitem:a4a3e892792d682fa15aba66fe6df874c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: size_t { <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a> = 0x40000000
  }</td></tr>
-<tr class="separator:a78a9edac35e7ce7f8c9573a27d27f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a4a3e892792d682fa15aba66fe6df874c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>A tuple: (ATN state, predicted alt, syntactic, semantic context). The syntactic context is a graph-structured stack node whose path(s) to the root is the rule invocation(s) chain used to arrive at the state. The semantic context is the tree of semantic predicates encountered before reaching an ATN state. </p>
@@ -188,8 +188,8 @@ Private 类型</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员枚举类型说明</h2>
-<a id="a78a9edac35e7ce7f8c9573a27d27f90f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78a9edac35e7ce7f8c9573a27d27f90f">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a4a3e892792d682fa15aba66fe6df874c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3e892792d682fa15aba66fe6df874c">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,12 +209,12 @@ Private 类型</h2></td></tr>
 </div><div class="memdoc">
 <p>This field stores the bit mask for implementing the <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a2cd2c3806345787f3d3af9b4ca11ee93">isPrecedenceFilterSuppressed</a> property as a bit within the existing <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> field. </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829"></a>SUPPRESS_PRECEDENCE_FILTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829"></a>SUPPRESS_PRECEDENCE_FILTER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">在文件 <a class="el" href="_a_t_n_config_8h_source.html">ATNConfig.h</a> 第 <a class="el" href="_a_t_n_config_8h_source.html#l00120">120</a> 行定义.</p>
 <div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;         : <span class="keywordtype">size_t</span> {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a> = 0x40000000,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a> = 0x40000000,</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    };</div>
 </div><!-- fragment -->
 </div>
@@ -584,7 +584,7 @@ Private 类型</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="_a_t_n_config_8cpp_source.html">ATNConfig.cpp</a> 第 <a class="el" href="_a_t_n_config_8cpp_source.html#l00060">60</a> 行定义.</p>
 <div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                             {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp; ~<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp; ~<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
@@ -673,7 +673,7 @@ Private 类型</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="_a_t_n_config_8cpp_source.html">ATNConfig.cpp</a> 第 <a class="el" href="_a_t_n_config_8cpp_source.html#l00064">64</a> 行定义.</p>
 <div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                   {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp; <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>) != 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp; <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>) != 0;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
@@ -787,9 +787,9 @@ Private 类型</h2></td></tr>
 <p class="definition">在文件 <a class="el" href="_a_t_n_config_8cpp_source.html">ATNConfig.cpp</a> 第 <a class="el" href="_a_t_n_config_8cpp_source.html#l00068">68</a> 行定义.</p>
 <div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                                        {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span> (value) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> |= <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> |= <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp;= ~<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">reachesIntoOuterContext</a> &amp;= ~<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">SUPPRESS_PRECEDENCE_FILTER</a>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 </div><!-- fragment -->
@@ -973,7 +973,6 @@ Private 类型</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_afd8ea6c2122f79c898968f6dbae6697f"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#afd8ea6c2122f79c898968f6dbae6697f">antlr4::atn::ATNConfig::toString</a></div><div class="ttdeci">virtual std::string toString()</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8cpp_source.html#l00087">ATNConfig.cpp:87</a></div></div>
-<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a78a9edac35e7ce7f8c9573a27d27f90fa302c73edbe249da8b482b8e1adacc829">antlr4::atn::ATNConfig::SUPPRESS_PRECEDENCE_FILTER</a></div><div class="ttdeci">@ SUPPRESS_PRECEDENCE_FILTER</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00121">ATNConfig.h:121</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_ad06261312a72cfeb52a351a77c7bbb86"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#ad06261312a72cfeb52a351a77c7bbb86">antlr4::atn::ATNConfig::getOuterContextDepth</a></div><div class="ttdeci">size_t getOuterContextDepth() const</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8cpp_source.html#l00060">ATNConfig.cpp:60</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_ae2e2757839f60f245b1a30c1f83bd52d"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#ae2e2757839f60f245b1a30c1f83bd52d">antlr4::atn::ATNConfig::state</a></div><div class="ttdeci">ATNState * state</div><div class="ttdoc">The ATN state associated with this configuration.</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00038">ATNConfig.h:38</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_ab4b68e6c1b1c70197a21fd62009bf9b8"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#ab4b68e6c1b1c70197a21fd62009bf9b8">antlr4::atn::ATNConfig::alt</a></div><div class="ttdeci">const size_t alt</div><div class="ttdoc">What alt (or lexer rule) is predicted by this configuration.</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00041">ATNConfig.h:41</a></div></div>
@@ -983,6 +982,7 @@ Private 类型</h2></td></tr>
 <div class="ttc" id="aclassantlr4_1_1misc_1_1_murmur_hash_html_af97273b2763fc46f8ad80160863614a9"><div class="ttname"><a href="classantlr4_1_1misc_1_1_murmur_hash.html#af97273b2763fc46f8ad80160863614a9">antlr4::misc::MurmurHash::initialize</a></div><div class="ttdeci">static size_t initialize()</div><div class="ttdef"><b>Definition:</b> <a href="_murmur_hash_8cpp_source.html#l00052">MurmurHash.cpp:52</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a1c9db994b89d06e9d8969e78050aeff5"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a1c9db994b89d06e9d8969e78050aeff5">antlr4::atn::SemanticContext::NONE</a></div><div class="ttdeci">static const Ref&lt; SemanticContext &gt; NONE</div><div class="ttdef"><b>Definition:</b> <a href="_semantic_context_8h_source.html#l00044">SemanticContext.h:44</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a1f30878a632f67672f16b52eefb01f26"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a1f30878a632f67672f16b52eefb01f26">antlr4::atn::ATNConfig::context</a></div><div class="ttdeci">Ref&lt; PredictionContext &gt; context</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00048">ATNConfig.h:48</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a4a3e892792d682fa15aba66fe6df874ca302c73edbe249da8b482b8e1adacc829">antlr4::atn::ATNConfig::SUPPRESS_PRECEDENCE_FILTER</a></div><div class="ttdeci">@ SUPPRESS_PRECEDENCE_FILTER</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00121">ATNConfig.h:121</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a3dda5924725f5c1cb7d798dea4b4fca7"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3dda5924725f5c1cb7d798dea4b4fca7">antlr4::atn::ATNConfig::reachesIntoOuterContext</a></div><div class="ttdeci">size_t reachesIntoOuterContext</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00073">ATNConfig.h:73</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a3ec70b1cc06793d2b9d5aab1e662909b"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a3ec70b1cc06793d2b9d5aab1e662909b">antlr4::atn::ATNConfig::operator==</a></div><div class="ttdeci">bool operator==(const ATNConfig &amp;other) const</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8cpp_source.html#l00076">ATNConfig.cpp:76</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html_a2cd2c3806345787f3d3af9b4ca11ee93"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html#a2cd2c3806345787f3d3af9b4ca11ee93">antlr4::atn::ATNConfig::isPrecedenceFilterSuppressed</a></div><div class="ttdeci">bool isPrecedenceFilterSuppressed() const</div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8cpp_source.html#l00064">ATNConfig.cpp:64</a></div></div>

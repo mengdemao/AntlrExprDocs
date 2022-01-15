@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">v0.0.2-2b28456</span>
+   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -202,7 +202,7 @@ Protected 属性</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>This class extends <a class="el" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a> with functionality to filter token streams to tokens on a particular channel (tokens where <a class="el" href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">Token#getChannel</a> returns a particular value).</p>
 <p>This token stream provides access to all tokens by index or when calling methods like <a class="el" href="classantlr4_1_1_buffered_token_stream.html#ad7a1573fe9be79daf42c793ebfe1abc6">getText</a>. The channel filtering is only used for code accessing tokens via the lookahead methods <a class="el" href="classantlr4_1_1_buffered_token_stream.html#ac13d29ad96e08c0da1f0474faa035520">LA</a>, <a class="el" href="classantlr4_1_1_common_token_stream.html#ab92b8381589e1a5aacf6e7ffdcf89dfc">LT</a>, and <a class="el" href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">LB</a>.</p>
-<p>By default, tokens are placed on the default channel (<a class="el" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>), but may be reassigned by using the </p><div class="fragment"><div class="line">-&gt;channel(HIDDEN) </div>
+<p>By default, tokens are placed on the default channel (<a class="el" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>), but may be reassigned by using the </p><div class="fragment"><div class="line">-&gt;channel(HIDDEN) </div>
 </div><!-- fragment --><p> lexer command, or by using an embedded action to call <a class="el" href="classantlr4_1_1_lexer.html#a6478b16b66448d149cae041c222fe091">Lexer#setChannel</a>. </p>
 <p>Note: lexer rules which use the</p><div class="fragment"><div class="line">-&gt;skip </div>
 </div><!-- fragment --><p> lexer command or call <a class="el" href="classantlr4_1_1_lexer.html#a8d2585d70adce01584a505a25c3e179d">Lexer#skip</a> do not produce tokens at all, so input text matched by such a rule will not be available as part of the token stream, regardless of channel.</p>
@@ -224,7 +224,7 @@ Protected 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a new <a class="el" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> using the specified token source and the default token channel (<a class="el" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>).</p>
+<p>Constructs a new <a class="el" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> using the specified token source and the default token channel (<a class="el" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>).</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">tokenSource</td><td>The token source. </td></tr>
@@ -233,7 +233,7 @@ Protected 属性</h2></td></tr>
 </dl>
 
 <p class="definition">在文件 <a class="el" href="_common_token_stream_8cpp_source.html">CommonTokenStream.cpp</a> 第 <a class="el" href="_common_token_stream_8cpp_source.html#l00012">12</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                             : <a class="code" href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">CommonTokenStream</a>(tokenSource, <a class="code" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">Token::DEFAULT_CHANNEL</a>) {</div>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                             : <a class="code" href="classantlr4_1_1_common_token_stream.html#a70ef318ad41bc2f99f44549027f886e1">CommonTokenStream</a>(tokenSource, <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">Token::DEFAULT_CHANNEL</a>) {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
@@ -264,7 +264,7 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Constructs a new <a class="el" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> using the specified token source and filtering tokens to the specified channel. Only tokens whose <a class="el" href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">Token#getChannel</a> matches</p><div class="fragment"><div class="line"><a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a> </div>
-</div><!-- fragment --><p> or have the <a class="el" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">Token#getType</a> equal to <a class="el" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token#EOF</a> will be returned by the token stream lookahead methods.</p>
+</div><!-- fragment --><p> or have the <a class="el" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">Token#getType</a> equal to <a class="el" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">Token#EOF</a> will be returned by the token stream lookahead methods.</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">tokenSource</td><td>The token source. </td></tr>
@@ -345,7 +345,7 @@ Protected 属性</h2></td></tr>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">getChannel</a>() == <a class="code" href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">channel</a>) {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      n++;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == <a class="code" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (t-&gt;<a class="code" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">getType</a>() == <a class="code" href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">Token::EOF</a>) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
@@ -502,7 +502,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Specifies the channel to use for filtering tokens.</p>
-<p>The default value is <a class="el" href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>, which matches the default channel assigned to tokens created by the lexer.</p>
+<p>The default value is <a class="el" href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">Token#DEFAULT_CHANNEL</a>, which matches the default channel assigned to tokens created by the lexer.</p>
 
 <p class="definition">在文件 <a class="el" href="_common_token_stream_8h_source.html">CommonTokenStream.h</a> 第 <a class="el" href="_common_token_stream_8h_source.html#l00071">71</a> 行定义.</p>
 
@@ -513,12 +513,12 @@ Protected 属性</h2></td></tr>
 <li>runtime/<a class="el" href="_common_token_stream_8cpp_source.html">CommonTokenStream.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassantlr4_1_1_token_html_a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5"><div class="ttname"><a href="classantlr4_1_1_token.html#a7b22e52692a60e99ba91333509984b54a696b3cb32d156adb58e477ebbdc3c0c5">antlr4::Token::DEFAULT_CHANNEL</a></div><div class="ttdeci">@ DEFAULT_CHANNEL</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00048">Token.h:48</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_a2efe72e48498674a5db9d664aaea9d65"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#a2efe72e48498674a5db9d664aaea9d65">antlr4::CommonTokenStream::LB</a></div><div class="ttdeci">virtual Token * LB(size_t k) override</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8cpp_source.html#l00023">CommonTokenStream.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0a696b3cb32d156adb58e477ebbdc3c0c5">antlr4::Token::DEFAULT_CHANNEL</a></div><div class="ttdeci">@ DEFAULT_CHANNEL</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00048">Token.h:48</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_token_html_ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#ad3f8c7dc6262b9048daf59b5ddfd3e97afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_common_token_stream_html_aad59d04a125961d8ba1cffdf4a1a0bcf"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html#aad59d04a125961d8ba1cffdf4a1a0bcf">antlr4::CommonTokenStream::channel</a></div><div class="ttdeci">size_t channel</div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8h_source.html#l00071">CommonTokenStream.h:71</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_aa8ab272f9ef3f5195ef8aeb4da15f9ca"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">antlr4::BufferedTokenStream::_p</a></div><div class="ttdeci">size_t _p</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8h_source.html#l00123">BufferedTokenStream.h:123</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_html_a92991c0566e4cb00ae2c5f9e7d8fe6b4"><div class="ttname"><a href="classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4">antlr4::Token::getChannel</a></div><div class="ttdeci">virtual size_t getChannel() const =0</div></div>
-<div class="ttc" id="aclassantlr4_1_1_token_html_a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082"><div class="ttname"><a href="classantlr4_1_1_token.html#a10eff51205a1ce912a9c6e2c9beb9eb0afa21cda0255f8484073c2b00de815082">antlr4::Token::EOF</a></div><div class="ttdeci">@ EOF</div><div class="ttdef"><b>Definition:</b> <a href="_token_8h_source.html#l00035">Token.h:35</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_html_a518342431db9dd9d982880a59ef0e4f4"><div class="ttname"><a href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">antlr4::Token::getType</a></div><div class="ttdeci">virtual size_t getType() const =0</div><div class="ttdoc">Get the token type of the token</div></div>
 <div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_ac681a8540466ec9aab6cff49bbcbdb4b"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">antlr4::BufferedTokenStream::_tokens</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Token &gt; &gt; _tokens</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8h_source.html#l00108">BufferedTokenStream.h:108</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html_a373c27c4d4ec7358ba6985f4839e988a"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html#a373c27c4d4ec7358ba6985f4839e988a">antlr4::BufferedTokenStream::fill</a></div><div class="ttdeci">virtual void fill()</div><div class="ttdoc">Get all tokens from lexer until EOF.</div><div class="ttdef"><b>Definition:</b> <a href="_buffered_token_stream_8cpp_source.html#l00400">BufferedTokenStream.cpp:400</a></div></div>
