@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
+   &#160;<span id="projectnumber">0.0.3-14aaee4</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -196,6 +196,9 @@ $(function() {
 <li>getLastRewriteTokenIndex()
 : <a class="el" href="classantlr4_1_1_token_stream_rewriter.html#aa8af7cc9edaee1221aabdbcfbc7ec6ed">antlr4::TokenStreamRewriter</a>
 </li>
+<li>getLeft()
+: <a class="el" href="classast_1_1_ast_base.html#a9a6ec1c7539a2f8ed9458735a41f5ed1">ast::AstBase</a>
+</li>
 <li>getLexerActionExecutor()
 : <a class="el" href="classantlr4_1_1atn_1_1_lexer_a_t_n_config.html#ad68d0e91f5556f0bb1f59a93fdee08bd">antlr4::atn::LexerATNConfig</a>
 </li>
@@ -226,8 +229,14 @@ $(function() {
 , <a class="el" href="class_expr_lexer.html#af3ad9803be6a52cca533786e16ff0784">ExprLexer</a>
 , <a class="el" href="class_x_path_lexer.html#a2901d6cf7543e6b0a7336f962b042af8">XPathLexer</a>
 </li>
+<li>getNode()
+: <a class="el" href="classast_1_1_ast_base.html#ae4629e79a43bbd9c0dac9074bc9a6a99">ast::AstBase</a>
+</li>
 <li>getNodeText()
 : <a class="el" href="classantlr4_1_1tree_1_1_trees.html#a194c79806c6d475d702f1415ea050fae">antlr4::tree::Trees</a>
+</li>
+<li>getNum()
+: <a class="el" href="classast_1_1_ast_num.html#a7b3ae8bc0b6f6c21a0d06a17fe52745a">ast::AstNum</a>
 </li>
 <li>getNumberOfOnChannelTokens()
 : <a class="el" href="classantlr4_1_1_common_token_stream.html#aafecb98aeb51496b59bc3bb19e228128">antlr4::CommonTokenStream</a>
@@ -278,6 +287,9 @@ $(function() {
 , <a class="el" href="classantlr4_1_1atn_1_1_empty_prediction_context.html#a50f13a4b417ac47340985f3212fd81f1">antlr4::atn::EmptyPredictionContext</a>
 , <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html#aa168e57807979310366f45074092bdff">antlr4::atn::PredictionContext</a>
 , <a class="el" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a3c321d139560065118fd161ec9bc20bd">antlr4::atn::SingletonPredictionContext</a>
+</li>
+<li>getRoot()
+: <a class="el" href="classast_1_1_ast_base.html#a8d23243f12675a45db0a999b5452e51b">ast::AstBase</a>
 </li>
 <li>getRootContext()
 : <a class="el" href="classantlr4_1_1_parser_interpreter.html#a451ec3d6780fe95f9396ffbe582edec2">antlr4::ParserInterpreter</a>
@@ -393,18 +405,21 @@ $(function() {
 : <a class="el" href="classantlr4_1_1_common_token.html#ad896be62187eb93d6f0e0e7930d7a500">antlr4::CommonToken</a>
 , <a class="el" href="classantlr4_1_1_token.html#a813d966d66613c76f6af1e843a4b3359">antlr4::Token</a>
 </li>
+<li>getSym()
+: <a class="el" href="classast_1_1_ast_sym.html#a7f214a71807ed073258dc7d05344d9ea">ast::AstSym</a>
+</li>
 <li>getSymbol()
 : <a class="el" href="classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879">antlr4::tree::TerminalNode</a>
 , <a class="el" href="classantlr4_1_1tree_1_1_terminal_node_impl.html#a3fab300e33e2135a0e224c05cd6cef87">antlr4::tree::TerminalNodeImpl</a>
 </li>
 <li>getText()
 : <a class="el" href="classantlr4_1_1_a_n_t_l_r_input_stream.html#a24450f62298de76d6a8bc251540d79c2">antlr4::ANTLRInputStream</a>
-, <a class="el" href="classantlr4_1_1_buffered_token_stream.html#a2090d846bb61a625a8ca23483571cebd">antlr4::BufferedTokenStream</a>
+, <a class="el" href="classantlr4_1_1_buffered_token_stream.html#ad7a1573fe9be79daf42c793ebfe1abc6">antlr4::BufferedTokenStream</a>
 , <a class="el" href="classantlr4_1_1_common_token.html#abd1d06568aa3d4aa0180b9ca316ecfcd">antlr4::CommonToken</a>
 , <a class="el" href="classantlr4_1_1_lexer.html#aafc9e77d18978addc5c1fb99cc458f27">antlr4::Lexer</a>
 , <a class="el" href="classantlr4_1_1_rule_context.html#a33302ceb47c02e06e24beffac9b8564e">antlr4::RuleContext</a>
 , <a class="el" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">antlr4::Token</a>
-, <a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a9891307cfb3f923da031a292965b7cf2">antlr4::TokenStreamRewriter</a>
+, <a class="el" href="classantlr4_1_1_token_stream_rewriter.html#a4c8eb9cc4661e42941c90278caa6fd29">antlr4::TokenStreamRewriter</a>
 , <a class="el" href="classantlr4_1_1tree_1_1_terminal_node_impl.html#ab1a82ffc1a8ce0d927baec060f4a3098">antlr4::tree::TerminalNodeImpl</a>
 </li>
 <li>getToken()
@@ -435,7 +450,7 @@ $(function() {
 , <a class="el" href="class_x_path_lexer.html#a6d2373c466f6a3d92ced0a2d79380a0d">XPathLexer</a>
 </li>
 <li>getTokens()
-: <a class="el" href="classantlr4_1_1_buffered_token_stream.html#a1da75f1766b2758b16be452bc1e06681">antlr4::BufferedTokenStream</a>
+: <a class="el" href="classantlr4_1_1_buffered_token_stream.html#a18ddeab3509ccc606731b07a0c81725e">antlr4::BufferedTokenStream</a>
 , <a class="el" href="classantlr4_1_1_parser_rule_context.html#a642538341e37d3391db1ad558cbb30ab">antlr4::ParserRuleContext</a>
 </li>
 <li>getTokenSource()
@@ -474,6 +489,9 @@ $(function() {
 : <a class="el" href="classantlr4_1_1_common_token.html#ac0b41ca2dab18549439230ecd832be6b">antlr4::CommonToken</a>
 , <a class="el" href="classantlr4_1_1_lexer.html#ad294d5e5045a598c18dd17744792edcd">antlr4::Lexer</a>
 , <a class="el" href="classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4">antlr4::Token</a>
+</li>
+<li>getVar()
+: <a class="el" href="classast_1_1_ast_var.html#a303a763bf7d86acace8b1f05916f0ea9">ast::AstVar</a>
 </li>
 <li>getVocabulary()
 : <a class="el" href="classantlr4_1_1_lexer_interpreter.html#addd24350f968e05ba45f2c8490b16e9e">antlr4::LexerInterpreter</a>

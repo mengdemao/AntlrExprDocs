@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-ea9e7ed</span>
+   &#160;<span id="projectnumber">0.0.3-14aaee4</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -67,27 +67,148 @@ $(function() {
 <div class="title">编译原理 </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md4">词法分析</a><ul><li class="level2"><a href="#autotoc_md5">&lt;tt&gt;正则表达式&lt;/tt&gt;</a></li>
+<li class="level2"><a href="#autotoc_md6">&lt;tt&gt;有限状态自动机(FA)&lt;/tt&gt;</a><ul><li class="level3"><a href="#autotoc_md7">数学描述</a></li>
+<li class="level3"><a href="#autotoc_md8">例子</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md9">自动生成</a><ul><li class="level3"><a href="#autotoc_md10">Thompson算法</a><ul><li class="level4"><a href="#autotoc_md11">解释</a></li>
+</ul>
+</li>
+<li class="level3"><a href="#autotoc_md12">例子</a></li>
+<li class="level3"><a href="#autotoc_md13">子集构造算法</a></li>
+<li class="level3"><a href="#autotoc_md14">Hopcroft算法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md15">语法分析</a><ul><li class="level2"><a href="#autotoc_md16">自顶向下</a><ul><li class="level3"><a href="#autotoc_md17">LL(1)分析文法</a><ul><li class="level4"><a href="#autotoc_md18">&lt;tt&gt;FIRST&lt;/tt&gt;集</a></li>
+<li class="level4"><a href="#autotoc_md19">&lt;tt&gt;FOLLOW&lt;/tt&gt;集</a></li>
+<li class="level4"><a href="#autotoc_md20">&lt;tt&gt;SELECT&lt;/tt&gt;集</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md21">自底向上</a><ul><li class="level3"><a href="#autotoc_md22">&lt;tt&gt;LR(0)分析算法&lt;/tt&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md23">语义分析</a></li>
+</ul>
+</div>
 <div class="textblock"><blockquote class="doxtable">
 <p>只涉及到了编译原理前端,可以学习ANTLR的基础知识即可 </p>
 </blockquote>
+<div class="image">
+<img src="compiler.png" alt=""/>
+<div class="caption">
+编译器结构</div></div>
+   <h1><a class="anchor" id="autotoc_md4"></a>
+词法分析</h1>
 <h2><a class="anchor" id="autotoc_md5"></a>
-词法分析</h2>
-<h3><a class="anchor" id="autotoc_md6"></a>
-RE2NFA</h3>
-<h3><a class="anchor" id="autotoc_md7"></a>
-NFA2DFA</h3>
+&lt;tt&gt;正则表达式&lt;/tt&gt;</h2>
+<ul>
+<li>对于给定的正则表达式 $\Sigma$={c1, c2, c3...cn}</li>
+<li>归纳定义:<ul>
+<li>对于空串是正则表达式$\epsilon$是正则表达式</li>
+<li>对于任何$c\in\Sigma$,$c$是正则表达式</li>
+<li>如果M和N都是正则表达式,那么下面的也是正则表达式<ul>
+<li>选择: M | N = {M, N}</li>
+<li>连接: MN = {mn| m $\in$ M, n, $\in$ M }</li>
+<li>闭包: M* = {$\epsilon$, M, MM, MMMM....}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+&lt;tt&gt;有限状态自动机(FA)&lt;/tt&gt;</h2>
+<div class="fragment"><div class="line">graph LR</div>
+<div class="line"> </div>
+<div class="line">输入的字符串 --&gt; 有限状态自动机</div>
+<div class="line">有限状态自动机 --&gt; 判断结果[&quot;{Yes, No}&quot;]</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
+数学描述</h3>
+<p>M = ($\Epsilon$, $S$, $q0$, $F$, $\delta$)</p><ul>
+<li>$\Epsilon$ 字母表</li>
+<li>$S$ 状态集</li>
+<li>$q0$ 初始状态</li>
+<li>$F$ 终止状态</li>
+<li>$\delta$ 转移函数</li>
+</ul>
 <h3><a class="anchor" id="autotoc_md8"></a>
-mDFA</h3>
+例子</h3>
+<ul>
+<li>下面什么样子的串可以接受 <div class="fragment"><div class="line">graph LR</div>
+<div class="line"> </div>
+<div class="line">状态1((0))</div>
+<div class="line">状态2((1))</div>
+<div class="line">状态3((2))</div>
+<div class="line"> </div>
+<div class="line">状态1--b--&gt;状态1</div>
+<div class="line">状态1--a--&gt;状态2</div>
+<div class="line"> </div>
+<div class="line">状态2--b--&gt;状态2</div>
+<div class="line">状态2--a--&gt;状态3</div>
+<div class="line"> </div>
+<div class="line">状态3--a,b--&gt;状态3</div>
+</div><!-- fragment --></li>
+<li>转移函数<ul>
+<li>($q0$, a) --&gt; $q1$, ($q0$, b) --&gt; $q0$,</li>
+<li>($q1$, a) --&gt; $q2$, ($q1$, b) --&gt; $q1$,</li>
+<li>($q2$, a) --&gt; $q2$, ($q2$, b) --&gt; $q2$,</li>
+</ul>
+</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md9"></a>
-语法分析</h2>
-<h3><a class="anchor" id="autotoc_md10"></a>
-自顶向下</h3>
-<h3><a class="anchor" id="autotoc_md11"></a>
+自动生成</h2>
+<div class="fragment"><div class="line">graph LR</div>
+<div class="line">RE[正则表达式]</div>
+<div class="line">NFA[非确定有限自动机]</div>
+<div class="line">DFA[确定有限状态自动机]</div>
+<div class="line">mDFA[最简有限状态自动机]</div>
+<div class="line">RE--Thompson--&gt;NFA--子集构造--&gt;DFA--Hopcroft--&gt;mDFA</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md10"></a>
+Thompson算法</h3>
+<h4><a class="anchor" id="autotoc_md11"></a>
+解释</h4>
+<ul>
+<li>基于RE的结构进行归纳<ul>
+<li>对基本的RE进行直接构造</li>
+<li>对于复合的RE进行递归构造</li>
+</ul>
+</li>
+<li>递归,容易实现<ul>
+<li>代码实现较少</li>
+</ul>
+</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md12"></a>
+例子</h3>
+<p>$a(b|c)*$ </p><div class="image">
+<img src="Thompson.png" alt=""/>
+<div class="caption">
+Thompson解释</div></div>
+   <h3><a class="anchor" id="autotoc_md13"></a>
+子集构造算法</h3>
+<h3><a class="anchor" id="autotoc_md14"></a>
+Hopcroft算法</h3>
+<h1><a class="anchor" id="autotoc_md15"></a>
+语法分析</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+自顶向下</h2>
+<h3><a class="anchor" id="autotoc_md17"></a>
 LL(1)分析文法</h3>
 <blockquote class="doxtable">
 <p>鉴于自定向下分析法存在回溯的问题,对于现代编译器设计是不可以接受的;由此提出了LL(1)分析文法 </p>
 </blockquote>
-<p>给出文法 </p><div class="fragment"><div class="line">0: S -&gt; N V M</div>
+<div class="image">
+<img src="LL1.png" alt=""/>
+<div class="caption">
+LL(1)语法分析</div></div>
+   <p>给出文法 </p><div class="fragment"><div class="line">0: S -&gt; N V M</div>
 <div class="line">1: N -&gt; s</div>
 <div class="line">2:   | t</div>
 <div class="line">3:   | g</div>
@@ -101,51 +222,26 @@ LL(1)分析文法</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter"><code>S</code> </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">0 </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>N</code> </td><td class="markdownTableBodyCenter">1 </td><td class="markdownTableBodyCenter">2 </td><td class="markdownTableBodyCenter">3 </td><td class="markdownTableBodyCenter">4 </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td></tr>
+<td class="markdownTableBodyCenter"><code>N</code> </td><td class="markdownTableBodyCenter">1 </td><td class="markdownTableBodyCenter">2 </td><td class="markdownTableBodyCenter">3 </td><td class="markdownTableBodyCenter">4 </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>V</code> </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">5 </td><td class="markdownTableBodyCenter">6  </td></tr>
+<td class="markdownTableBodyCenter"><code>V</code> </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">X </td><td class="markdownTableBodyCenter">5 </td><td class="markdownTableBodyCenter">6  </td></tr>
 </table>
 <p>那么在分析<code>g d w</code>语句的时候,可以得到如下的分析</p>
 <p>解析算法 </p><div class="fragment"><div class="line">tokens[];</div>
 <div class="line">i=0;</div>
 </div><!-- fragment --><p>那么就可以得到一个没有回溯的分析算法,但是怎么得到这个分析表呢？</p>
-<h4><a class="anchor" id="autotoc_md12"></a>
+<h4><a class="anchor" id="autotoc_md18"></a>
 &lt;tt&gt;FIRST&lt;/tt&gt;集</h4>
-<div class="fragment"><div class="line">令G是一个不含左递归的文法，对G的所有非终结符的每个候选a定义它的终结首符集FIRST(a)为：</div>
-<div class="line">FIRST(α) = { a│α ⇒∗ a…, a∈VT }</div>
-<div class="line">若α ⇒∗ ε ，则规定ε∈FIRST(α)。</div>
-</div><!-- fragment --><p>构造FIRST集</p>
-<ul>
-<li>第一种说明： <blockquote class="doxtable">
-<p>对于文法G的每个文法符号X∈VT∪VN： </p>
-</blockquote>
-<ul>
-<li>若 X ∈ VT，则 FIRST(X) = { X }</li>
-<li>若 X ∈ NULLABLE，则把 ε 加入FIRST(X)</li>
-<li>若 X ∈ VN，且 X → a…, a ∈ VT，则把a加入到FIRST(X)中</li>
-<li>若 X ∈ VN，且 X → Y…, Y ∈ VN，则把FIRST(Y) - {ε}加到FIRST(X)中</li>
-<li>若 X →Y1Y2 … Yi , 且 Y1, Y2, … ,Yi-1 ∈ nullable，则把 FIRST(Yi) - {ε}加到FIRST(X)中</li>
-<li>若 FIRST(Ym) ∈ NULLABLE(1&lt;=m&lt;=i)，则ε∈FIRST(X)</li>
-</ul>
-</li>
-<li>第二种说明： <blockquote class="doxtable">
-<p>对每一X∈VT∪VN，连续使用下面的规则，直至每个集合FIRST不再增大为止： </p>
-</blockquote>
-<ul>
-<li>若X ∈ VT，则FIRST(X)＝{X}。</li>
-<li>若X ∈ VN，且有产生式X→a…，则把a加入到FIRST(X)中；若X→ε也是一条产生式，则把 ε 也加到FIRST(X)中。</li>
-<li>若X→Y…是一个产生式且Y ∈ VN，则把FIRST(Y)中的所有非 ε- 元素都加到FIRST(X)中；若X→Y1Y2…Yi-1Yi…Yk是一个产生式，Y1，…，Yi-1都是非终结符，对于任何j，1&lt;=j&lt;=i-1，FIRST(Yj)都含有 ε (即Y1…Yi-1 ⇒∗ε)， 则把FIRST(Yi)中的所有非 ε-元素都加到FIRST(X)中；若所有的FIRST(Yj)均含有 ε，j＝1，2，…，k，则把 ε 加到FIRST(X)中。</li>
-</ul>
-</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md13"></a>
+<h4><a class="anchor" id="autotoc_md19"></a>
 &lt;tt&gt;FOLLOW&lt;/tt&gt;集</h4>
-<h4><a class="anchor" id="autotoc_md14"></a>
+<h4><a class="anchor" id="autotoc_md20"></a>
 &lt;tt&gt;SELECT&lt;/tt&gt;集</h4>
-<h3><a class="anchor" id="autotoc_md15"></a>
-自底向上</h3>
-<h2><a class="anchor" id="autotoc_md16"></a>
-语义分析</h2>
+<h2><a class="anchor" id="autotoc_md21"></a>
+自底向上</h2>
+<h3><a class="anchor" id="autotoc_md22"></a>
+&lt;tt&gt;LR(0)分析算法&lt;/tt&gt;</h3>
+<h1><a class="anchor" id="autotoc_md23"></a>
+语义分析</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

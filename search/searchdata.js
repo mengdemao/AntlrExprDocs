@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "abcdefgilmnoprstuvwx提生编语",
   4: "_abcdefghijlmnoprstuvwx~",
   5: "_abcdefghilmnoprstuv",
-  6: "prsu",
+  6: "aprsu",
   7: "aglops",
   8: "abcdeghilmnoprstw",
   9: "o",
