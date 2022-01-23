@@ -5,8 +5,8 @@
 <area shape="rect" id="node4" href="$main_8cc.html" title="AntlrExpr主文件" alt="" coords="153,229,226,256"/>
 <area shape="rect" id="node5" href="$grammar_8cc.html" title="Expr语法处理文件" alt="" coords="344,229,467,256"/>
 <area shape="rect" id="node6" href="$ast_8cc.html" title="AST实现" alt="" coords="21,155,104,181"/>
-<area shape="rect" id="node7" href="$svm_8h.html" title="栈式虚拟机实现" alt="" coords="291,80,376,107"/>
-<area shape="rect" id="node8" href="$svm_8cc.html" title="栈式虚拟机实现" alt="" coords="371,155,461,181"/>
+<area shape="rect" id="node7" href="$svm_8h.html" title="虚拟机实现" alt="" coords="291,80,376,107"/>
+<area shape="rect" id="node8" href="$svm_8cc.html" title="虚拟机实现" alt="" coords="371,155,461,181"/>
 <area shape="rect" id="node9" href="$option_8cc.html" title="解析输入的命令行" alt="" coords="536,80,640,107"/>
 <area shape="rect" id="node10" href="$test_8cc.html" title="测试程序" alt="" coords="664,80,752,107"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-bc679ad</span>
+   &#160;<span id="projectnumber">0.0.3-60974df</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -85,6 +85,7 @@ $(function() {
 <code>#include &lt;fmt/core.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="grammar_8h_source.html">grammar.h</a>&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;llvm/Support/TargetSelect.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="option_8h_source.html">option.h</a>&gt;</code><br />
 <code>#include &lt;stack&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -95,27 +96,28 @@ main.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cc__incl.png" border="0" usemap="#main_8cc" alt=""/></div>
 <map name="main_8cc" id="main_8cc">
-<area shape="rect" title="AntlrExpr主文件" alt="" coords="2539,5,2613,32"/>
-<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="1723,169,1859,196"/>
-<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="1801,393,1929,420"/>
-<area shape="rect" title=" " alt="" coords="2591,543,2671,569"/>
-<area shape="rect" title=" " alt="" coords="2729,543,2786,569"/>
-<area shape="rect" title=" " alt="" coords="2931,543,2989,569"/>
-<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="1813,244,1917,271"/>
-<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="1903,319,2006,345"/>
-<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="1601,169,1698,196"/>
-<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="2085,169,2232,196"/>
-<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="2578,169,2633,196"/>
-<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="3046,244,3119,271"/>
-<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2947,244,3021,271"/>
-<area shape="rect" href="test_8h.html" title="自动化测试相关工具" alt="" coords="2459,244,2517,271"/>
-<area shape="rect" title=" " alt="" coords="3257,80,3420,121"/>
-<area shape="rect" title=" " alt="" coords="3445,87,3510,114"/>
-<area shape="rect" title=" " alt="" coords="3534,87,3623,114"/>
-<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="2375,87,2468,114"/>
-<area shape="rect" href="svm_8h.html" title="栈式虚拟机实现" alt="" coords="2726,169,2789,196"/>
-<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1287,468,1422,495"/>
-<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="1786,468,1945,495"/>
+<area shape="rect" title="AntlrExpr主文件" alt="" coords="2383,5,2457,32"/>
+<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="1549,169,1685,196"/>
+<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="1601,393,1729,420"/>
+<area shape="rect" title=" " alt="" coords="2423,543,2503,569"/>
+<area shape="rect" title=" " alt="" coords="2557,543,2614,569"/>
+<area shape="rect" title=" " alt="" coords="2759,543,2817,569"/>
+<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="1613,244,1717,271"/>
+<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="1703,319,1806,345"/>
+<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="1427,169,1525,196"/>
+<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="1861,169,2008,196"/>
+<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="2393,169,2447,196"/>
+<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="2719,244,2793,271"/>
+<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2520,244,2595,271"/>
+<area shape="rect" href="test_8h.html" title="自动化测试相关工具" alt="" coords="2285,244,2344,271"/>
+<area shape="rect" title=" " alt="" coords="3071,80,3233,121"/>
+<area shape="rect" title=" " alt="" coords="3258,87,3323,114"/>
+<area shape="rect" title=" " alt="" coords="3347,87,3437,114"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="2151,87,2244,114"/>
+<area shape="rect" href="svm_8h.html" title="虚拟机实现" alt="" coords="2626,169,2689,196"/>
+<area shape="rect" title=" " alt="" coords="3461,87,3662,114"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1238,468,1373,495"/>
+<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="1586,468,1745,495"/>
 <area shape="rect" title=" " alt="" coords="5,543,91,569"/>
 <area shape="rect" title=" " alt="" coords="115,543,189,569"/>
 <area shape="rect" title=" " alt="" coords="213,543,280,569"/>
@@ -141,10 +143,9 @@ main.cc 的引用(Include)关系图:</div>
 <area shape="rect" title=" " alt="" coords="2140,543,2204,569"/>
 <area shape="rect" title=" " alt="" coords="2229,543,2315,569"/>
 <area shape="rect" title=" " alt="" coords="2340,543,2399,569"/>
-<area shape="rect" title=" " alt="" coords="2423,543,2566,569"/>
-<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="2059,244,2173,271"/>
-<area shape="rect" title=" " alt="" coords="2643,244,2719,271"/>
-<area shape="rect" title=" " alt="" coords="2509,319,2613,345"/>
+<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="1843,244,1957,271"/>
+<area shape="rect" title=" " alt="" coords="2619,244,2695,271"/>
+<area shape="rect" title=" " alt="" coords="2336,319,2440,345"/>
 </map>
 </div>
 </div>
@@ -200,28 +201,35 @@ main.cc 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 返回数据 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00037">37</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">string</span> InputString;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span> InputResult = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// avoid warning</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    (void)InputResult;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a>(argc, argv)) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    InputString = argv[1];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    InputString.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00038">38</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> InputString;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span> InputResult = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// avoid warning</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    (void)InputResult;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// llvm初始化</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    llvm::InitializeAllTargetInfos();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    llvm::InitializeAllTargets();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    llvm::InitializeAllTargetMCs();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    llvm::InitializeAllAsmParsers();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    llvm::InitializeAllAsmPrinters();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a15231a615e449dced0da029f78c5946a">grammar_main</a>(InputString)) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a>(argc, argv)) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    InputString = argv[1];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    InputString.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a15231a615e449dced0da029f78c5946a">grammar_main</a>(InputString)) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
