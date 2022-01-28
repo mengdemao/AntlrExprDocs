@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-60974df</span>
+   &#160;<span id="projectnumber">0.0.3-04443fa</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -75,51 +75,52 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">config.h</a>&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="grammar_8h.html">grammar.h</a>&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="grammar_8cc.html#a15231a615e449dced0da029f78c5946a">   18</a></span>&#160;<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a> <a class="code" href="grammar_8cc.html#a15231a615e449dced0da029f78c5946a">grammar_main</a>(std::string InputString)</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="grammar_8cc.html#a413e0b8f1a8b028cb58198d389473861">   18</a></span>&#160;<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a> <a class="code" href="grammar_8cc.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a>(std::string InputString)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// 生成解析字符串</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input(InputString);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// 生成解析字符串</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> InputStream(InputString);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// 词法解析</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> lexer(&amp;input);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> <a class="code" href="classantlr4_1_1_lexer.html">Lexer</a>(&amp;InputStream);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// 分割单词</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;lexer);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> Tokens(&amp;<a class="code" href="classantlr4_1_1_lexer.html">Lexer</a>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// 解析语法单元</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> <a class="code" href="classantlr4_1_1_parser.html">Parser</a>(&amp;Tokens);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// 生成语法树</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* tree = parser.<a class="code" href="class_expr_parser.html#ac9b130a06acdd6208bfe3ef85c9b9f2a">prog</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* Tree = <a class="code" href="classantlr4_1_1_parser.html">Parser</a>.prog();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// 1. Listener模式解析语法树</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_expr_tree_listener.html">ExprTreeListener</a> listener;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a>  walker;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;listener, tree);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_expr_tree_listener.html">ExprTreeListener</a> Listener;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a>  Walker;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;Listener, Tree);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// 2. Visitor模式校验语法树</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_expr_tree_visitor.html">ExprTreeVisitor</a> visitor;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(tree);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_expr_tree_visitor.html">ExprTreeVisitor</a> Visitor;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(Tree);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_expr_tree_visitor_html"><div class="ttname"><a href="class_expr_tree_visitor.html">ExprTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00162">grammar.h:162</a></div></div>
+<div class="ttc" id="aclass_expr_tree_visitor_html"><div class="ttname"><a href="class_expr_tree_visitor.html">ExprTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00157">grammar.h:157</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_input_stream_html"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_input_stream.html">antlr4::ANTLRInputStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_input_stream_8h_source.html#l00015">ANTLRInputStream.h:15</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00020">ParseTree.h:20</a></div></div>
 <div class="ttc" id="agrammar_8h_html"><div class="ttname"><a href="grammar_8h.html">grammar.h</a></div><div class="ttdoc">Expr语法处理文件</div></div>
 <div class="ttc" id="aclass_expr_parser_html"><div class="ttname"><a href="class_expr_parser.html">ExprParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00012">ExprParser.h:12</a></div></div>
-<div class="ttc" id="agrammar_8cc_html_a15231a615e449dced0da029f78c5946a"><div class="ttname"><a href="grammar_8cc.html#a15231a615e449dced0da029f78c5946a">grammar_main</a></div><div class="ttdeci">grammar_result grammar_main(std::string InputString)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00018">grammar.cc:18</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a2f0e9c7e0c581b3ec08d59d216d7554d"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">antlr4::tree::AbstractParseTreeVisitor::visit</a></div><div class="ttdeci">virtual antlrcpp::Any visit(ParseTree *tree) override</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_parse_tree_visitor_8h_source.html#l00017">AbstractParseTreeVisitor.h:17</a></div></div>
 <div class="ttc" id="aclass_expr_lexer_html"><div class="ttname"><a href="class_expr_lexer.html">ExprLexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_lexer_8h_source.html#l00012">ExprLexer.h:12</a></div></div>
-<div class="ttc" id="aclass_expr_parser_html_ac9b130a06acdd6208bfe3ef85c9b9f2a"><div class="ttname"><a href="class_expr_parser.html#ac9b130a06acdd6208bfe3ef85c9b9f2a">ExprParser::prog</a></div><div class="ttdeci">ProgContext * prog()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00074">ExprParser.cpp:74</a></div></div>
+<div class="ttc" id="agrammar_8cc_html_a413e0b8f1a8b028cb58198d389473861"><div class="ttname"><a href="grammar_8cc.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a></div><div class="ttdeci">grammar_result grammarMain(std::string InputString)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00018">grammar.cc:18</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_common_token_stream_html"><div class="ttname"><a href="classantlr4_1_1_common_token_stream.html">antlr4::CommonTokenStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_common_token_stream_8h_source.html#l00036">CommonTokenStream.h:36</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_walker_html_a6b5fdb6419bf62860a87dfde5c9815fb"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">antlr4::tree::ParseTreeWalker::walk</a></div><div class="ttdeci">virtual void walk(ParseTreeListener *listener, ParseTree *t) const</div><div class="ttdoc">Performs a walk on the given parse tree starting at the root and going down recursively with depth-fi...</div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_walker_8cpp_source.html#l00023">ParseTreeWalker.cpp:23</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_lexer_html"><div class="ttname"><a href="classantlr4_1_1_lexer.html">antlr4::Lexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_lexer_8h_source.html#l00019">Lexer.h:19</a></div></div>
 <div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a></div><div class="ttdeci">grammar_result</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00027">grammar.h:27</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_walker_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree_walker.html">antlr4::tree::ParseTreeWalker</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_walker_8h_source.html#l00013">ParseTreeWalker.h:13</a></div></div>
-<div class="ttc" id="aclass_expr_tree_listener_html"><div class="ttname"><a href="class_expr_tree_listener.html">ExprTreeListener</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00050">grammar.h:50</a></div></div>
+<div class="ttc" id="aclass_expr_tree_listener_html"><div class="ttname"><a href="class_expr_tree_listener.html">ExprTreeListener</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00046">grammar.h:46</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Auto generated config file</div></div>
 <div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00028">grammar.h:28</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_html"><div class="ttname"><a href="classantlr4_1_1_parser.html">antlr4::Parser</a></div><div class="ttdoc">This is all the parsing support code essentially; most of it is error recovery stuff.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8h_source.html#l00018">Parser.h:18</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

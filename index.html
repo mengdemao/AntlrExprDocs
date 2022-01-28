@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-60974df</span>
+   &#160;<span id="projectnumber">0.0.3-04443fa</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -69,32 +69,56 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><object type="image/svg+xml" data="https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master" style="pointer-events: none;">Github Action</object> <img src="https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic" alt="Travis" class="inline"/> <img src="https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr" alt="GitHub code size in bytes" class="inline"/> <img src="https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total" alt="GitHub all releases" class="inline"/> <img src="https://img.shields.io/github/license/mengdemao/AntlrExpr" alt="GitHub" class="inline"/> <img src="https://img.shields.io/github/v/tag/mengdemao/AntlrExpr" alt="GitHub tag (latest by date)" class="inline"/> <img src="https://img.shields.io/github/commit-activity/y/mengdemao/AntlrExpr" alt="GitHub commit activity" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md36"></a>
-语法文件</h1>
-<h2><a class="anchor" id="autotoc_md37"></a>
+程序结构</h1>
+<div class="fragment"><div class="line">.</div>
+<div class="line">├── bin </div>
+<div class="line">├── build.sh</div>
+<div class="line">├── CMakeLists.txt</div>
+<div class="line">├── doc</div>
+<div class="line">├── Doxyfile.in</div>
+<div class="line">├── Expr.g4</div>
+<div class="line">├── grammar</div>
+<div class="line">├── inc</div>
+<div class="line">├── LICENSE</div>
+<div class="line">├── main.cc</div>
+<div class="line">├── README.md</div>
+<div class="line">├── runtime</div>
+<div class="line">├── src</div>
+<div class="line">└── tool</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md37"></a>
 编译指令</h2>
+<h2><a class="anchor" id="autotoc_md38"></a>
+设置antlr编译器</h2>
+<ol type="1">
+<li>设置java运行环境</li>
+<li>下载antlr执行文件</li>
+<li>设置环境变量</li>
+</ol>
 <div class="fragment"><div class="line">export CLASSPATH=&quot;.:${pwd}/bin/antlr-complete.jar:$CLASSPATH&quot;</div>
 <div class="line">alias antlr4=&#39;java -jar ${pwd}/bin/antlr-complete.jar&#39;</div>
 <div class="line">alias grun=&#39;java org.antlr.v4.gui.TestRig&#39;</div>
-</div><!-- fragment --><p>antlr4脚本内容 </p><div class="fragment"><div class="line"># antlr4编译脚本</div>
-<div class="line">java org.antlr.v4.Tool %*</div>
-<div class="line"> </div>
-<div class="line"># grun运行程序</div>
-<div class="line">java org.antlr.v4.gui.TestRig %*</div>
-<div class="line"> </div>
-<div class="line"># 编译G4文件</div>
-<div class="line">antlr4 Test.g4</div>
+</div><!-- fragment --><ol type="1">
+<li>测试G4文件</li>
+</ol>
+<div class="fragment"><div class="line"># 编译G4文件</div>
+<div class="line">antlr4 Expr.g4</div>
 <div class="line"> </div>
 <div class="line"># 编译java</div>
 <div class="line">javac *.java</div>
 <div class="line"> </div>
 <div class="line"># 运行程序</div>
-<div class="line">grun Test prog -gui</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md38"></a>
+<div class="line">grun Expr prog -gui</div>
+</div><!-- fragment --><p>测试语句<code>"1 + ( 2 - 3 ) * 4 / 5"</code>,按<code>Ctrl+Z</code>执行</p>
+<p>生成结果如下 </p><div class="image">
+<img src="Expr.png" alt=""/>
+<div class="caption">
+表达式自动生成</div></div>
+   <h1><a class="anchor" id="autotoc_md39"></a>
 antlr运行时</h1>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 生成法分析树</h2>
 <blockquote class="doxtable">
-<p>写法相对固定,携程如下的固定即可 </p>
+<p>写法相对固定,写成如下的固定即可 </p>
 </blockquote>
 <div class="fragment"><div class="line"><span class="comment">// 输入字符串</span></div>
 <div class="line">ANTLRInputStream input(InputString);</div>
@@ -108,21 +132,20 @@ antlr运行时</h1>
 <div class="line"><span class="comment">// 解析语法单元</span></div>
 <div class="line"><a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// 生成语法树</span></div>
+<div class="line"><span class="comment">// 生成语法分析树</span></div>
 <div class="line">ParseTree *tree = parser.prog();</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md41"></a>
 分析语法分析树</h2>
 <p>测试语句</p>
 <div class="fragment"><div class="line">./AntlrExpr &quot;1 + ( 2 - 3 ) * 4 / 5&quot;</div>
-</div><!-- fragment --><div class="image">
-<img src="Expr.png" alt=""/>
-<div class="caption">
-表达式自动生成</div></div>
-   <h3><a class="anchor" id="autotoc_md41"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md42"></a>
 监听器(Listener)</h3>
 <p>为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的<code>enter</code>和<code>exit</code>规则</p>
-<h3><a class="anchor" id="autotoc_md42"></a>
+<h3><a class="anchor" id="autotoc_md43"></a>
 访问器(Visitor)</h3>
+<h2><a class="anchor" id="autotoc_md44"></a>
+总体框架</h2>
+<p>监听器生成抽象语法树并且运算结果, 访问器校验抽象语法树使用LLVM校验结果 </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <div class="ttc" id="aclass_expr_parser_html"><div class="ttname"><a href="class_expr_parser.html">ExprParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00012">ExprParser.h:12</a></div></div>
