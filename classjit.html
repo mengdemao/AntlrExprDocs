@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: jit类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classjit-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">jit类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="llvm_8h_source.html">llvm.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5d22d1cf1c97ff215b628f711f4545fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjit.html#a5d22d1cf1c97ff215b628f711f4545fc">jit</a> (std::unique_ptr&lt; llvm::orc::LLJIT &gt; <a class="el" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>)</td></tr>
+<tr class="separator:a5d22d1cf1c97ff215b628f711f4545fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55b5377aae954560958f46e4faf74df"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;std::is_pointer&lt;T&gt;::value &amp;&amp; std::is_function&lt;std::remove_pointer_t&lt;T&gt;&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:ae55b5377aae954560958f46e4faf74df"><td class="memTemplItemLeft" align="right" valign="top">llvm::Expected&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classjit.html#ae55b5377aae954560958f46e4faf74df">lookup</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:ae55b5377aae954560958f46e4faf74df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381968a82faa0bd499cf283acdbdd55e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;std::is_function&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a381968a82faa0bd499cf283acdbdd55e"><td class="memTemplItemLeft" align="right" valign="top">llvm::Expected&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classjit.html#a381968a82faa0bd499cf283acdbdd55e">lookup</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a381968a82faa0bd499cf283acdbdd55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac737d61580438a0d22c1031b9a1bf9e2"><td class="memItemLeft" align="right" valign="top">static llvm::Expected&lt; <a class="el" href="classjit.html">jit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjit.html#ac737d61580438a0d22c1031b9a1bf9e2">create</a> (std::unique_ptr&lt; llvm::Module &gt; &amp;module, std::unique_ptr&lt; llvm::LLVMContext &gt; &amp;context)</td></tr>
+<tr class="separator:ac737d61580438a0d22c1031b9a1bf9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ad330e59e7adf687c5eb6a9c765df61b8"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; llvm::orc::LLJIT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a></td></tr>
+<tr class="separator:ad330e59e7adf687c5eb6a9c765df61b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00041">41</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5d22d1cf1c97ff215b628f711f4545fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d22d1cf1c97ff215b628f711f4545fc">&#9670;&nbsp;</a></span>jit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">jit::jit </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; llvm::orc::LLJIT &gt;&#160;</td>
+          <td class="paramname"><em>lljit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                           : <a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>(std::move(<a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>))</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">/* No Body */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classjit_a5d22d1cf1c97ff215b628f711f4545fc_icgraph.png" border="0" usemap="#classjit_a5d22d1cf1c97ff215b628f711f4545fc_icgraph" alt=""/></div>
+<map name="classjit_a5d22d1cf1c97ff215b628f711f4545fc_icgraph" id="classjit_a5d22d1cf1c97ff215b628f711f4545fc_icgraph">
+<area shape="rect" title=" " alt="" coords="137,5,193,32"/>
+<area shape="rect" href="classjit.html#ac737d61580438a0d22c1031b9a1bf9e2" title=" " alt="" coords="5,5,89,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac737d61580438a0d22c1031b9a1bf9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac737d61580438a0d22c1031b9a1bf9e2">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static llvm::Expected&lt;<a class="el" href="classjit.html">jit</a>&gt; jit::create </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; llvm::Module &gt; &amp;&#160;</td>
+          <td class="paramname"><em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; llvm::LLVMContext &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00071">71</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">auto</span> <a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a> = llvm::orc::LLJITBuilder().create();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">auto</span> &amp;jd = <a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>.get()-&gt;getMainJITDylib();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        jd.addGenerator(llvm::cantFail(llvm::orc::DynamicLibrarySearchGenerator::GetForCurrentProcess(<span class="charliteral">&#39;_&#39;</span>)));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>.takeError();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">auto</span> err = <a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>.get()-&gt;addIRModule(llvm::orc::ThreadSafeModule(std::move(module), std::move(context))))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> std::move(err);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classjit.html#a5d22d1cf1c97ff215b628f711f4545fc">jit</a>(std::move(<a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>.get()));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classjit_ac737d61580438a0d22c1031b9a1bf9e2_cgraph.png" border="0" usemap="#classjit_ac737d61580438a0d22c1031b9a1bf9e2_cgraph" alt=""/></div>
+<map name="classjit_ac737d61580438a0d22c1031b9a1bf9e2_cgraph" id="classjit_ac737d61580438a0d22c1031b9a1bf9e2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,89,32"/>
+<area shape="rect" href="classjit.html#a5d22d1cf1c97ff215b628f711f4545fc" title=" " alt="" coords="137,5,193,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae55b5377aae954560958f46e4faf74df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55b5377aae954560958f46e4faf74df">&#9670;&nbsp;</a></span>lookup() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = std::enable_if_t&lt;std::is_pointer&lt;T&gt;::value &amp;&amp; std::is_function&lt;std::remove_pointer_t&lt;T&gt;&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">llvm::Expected&lt;T&gt; jit::lookup </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00053">53</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">auto</span> symbol = this-&gt;<a class="code" href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">lljit</a>-&gt;lookup(name);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (!symbol)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> symbol.takeError();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> (T)symbol.get().getAddress();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a381968a82faa0bd499cf283acdbdd55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381968a82faa0bd499cf283acdbdd55e">&#9670;&nbsp;</a></span>lookup() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = std::enable_if_t&lt;std::is_function&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">llvm::Expected&lt;T *&gt; jit::lookup </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00066">66</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> this-&gt;lookup&lt;T *&gt;(name);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ad330e59e7adf687c5eb6a9c765df61b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad330e59e7adf687c5eb6a9c765df61b8">&#9670;&nbsp;</a></span>lljit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;llvm::orc::LLJIT&gt; jit::lljit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>inc/<a class="el" href="llvm_8h_source.html">llvm.h</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassjit_html_a5d22d1cf1c97ff215b628f711f4545fc"><div class="ttname"><a href="classjit.html#a5d22d1cf1c97ff215b628f711f4545fc">jit::jit</a></div><div class="ttdeci">jit(std::unique_ptr&lt; llvm::orc::LLJIT &gt; lljit)</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8h_source.html#l00047">llvm.h:47</a></div></div>
+<div class="ttc" id="aclassjit_html_ad330e59e7adf687c5eb6a9c765df61b8"><div class="ttname"><a href="classjit.html#ad330e59e7adf687c5eb6a9c765df61b8">jit::lljit</a></div><div class="ttdeci">std::unique_ptr&lt; llvm::orc::LLJIT &gt; lljit</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8h_source.html#l00044">llvm.h:44</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

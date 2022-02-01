@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-3aa9dbe</span>
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -107,9 +107,9 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a4bd46a384cbd6868a594fbdd102a750e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">optionMain</a> (int Argc, char *Argv[])</td></tr>
-<tr class="memdesc:a4bd46a384cbd6868a594fbdd102a750e"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">更多...</a><br /></td></tr>
-<tr class="separator:a4bd46a384cbd6868a594fbdd102a750e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d36ee209ab7021194b626237b73934b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a5d36ee209ab7021194b626237b73934b"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">更多...</a><br /></td></tr>
+<tr class="separator:a5d36ee209ab7021194b626237b73934b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>解析输入字符串 </p>
@@ -144,23 +144,23 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">函数说明</h2>
-<a id="a4bd46a384cbd6868a594fbdd102a750e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bd46a384cbd6868a594fbdd102a750e">&#9670;&nbsp;</a></span>optionMain()</h2>
+<a id="a5d36ee209ab7021194b626237b73934b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d36ee209ab7021194b626237b73934b">&#9670;&nbsp;</a></span>option_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> optionMain </td>
+          <td class="memname"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> option_main </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>Argc</em>, </td>
+          <td class="paramname"><em>argc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>Argv</em>[]&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,8 +173,8 @@ $(function() {
 <p>解析输入的命令行 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Argc</td><td>输入参数个数 </td></tr>
-    <tr><td class="paramname">Argv</td><td>输入参数内容 </td></tr>
+    <tr><td class="paramname">argc</td><td>输入参数个数 </td></tr>
+    <tr><td class="paramname">argv</td><td>输入参数内容 </td></tr>
   </table>
   </dd>
 </dl>
@@ -188,10 +188,10 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        description.add_options()(<span class="stringliteral">&quot;help,h&quot;</span>, <span class="stringliteral">&quot;Display this information.&quot;</span>)(<span class="stringliteral">&quot;version,v&quot;</span>, <span class="stringliteral">&quot;Display compiler version information.&quot;</span>)(<span class="stringliteral">&quot;file,f&quot;</span>, <span class="stringliteral">&quot;Use file as input.&quot;</span>)(<span class="stringliteral">&quot;text,t&quot;</span>, <span class="stringliteral">&quot;Use string as input&quot;</span>)(</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="stringliteral">&quot;pipe,p&quot;</span>, <span class="stringliteral">&quot;Use pipe as input&quot;</span>)(<span class="stringliteral">&quot;debug,d&quot;</span>, <span class="stringliteral">&quot;Run as debug mode&quot;</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        store(parse_command_line(Argc, Argv, description), variables_map);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        store(parse_command_line(argc, argv, description), variables_map);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        notify(variables_map);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (1 == Argc) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (1 == argc) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
@@ -225,9 +225,9 @@ $(function() {
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="option_8h_a4bd46a384cbd6868a594fbdd102a750e_icgraph.png" border="0" usemap="#option_8h_a4bd46a384cbd6868a594fbdd102a750e_icgraph" alt=""/></div>
-<map name="option_8h_a4bd46a384cbd6868a594fbdd102a750e_icgraph" id="option_8h_a4bd46a384cbd6868a594fbdd102a750e_icgraph">
-<area shape="rect" title="解析输入的命令行" alt="" coords="108,5,203,32"/>
+<div class="center"><img src="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph.png" border="0" usemap="#option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" alt=""/></div>
+<map name="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" id="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph">
+<area shape="rect" title="解析输入的命令行" alt="" coords="108,5,211,32"/>
 <area shape="rect" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title="主函数" alt="" coords="5,5,60,32"/>
 </map>
 </div>

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: scope类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classscope-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">scope类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="llvm_8h_source.html">llvm.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a745337a2e6474479085ff358f1aecd8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscope.html#a745337a2e6474479085ff358f1aecd8e">scope</a> (llvm::Function *pcurrent_function=nullptr)</td></tr>
+<tr class="separator:a745337a2e6474479085ff358f1aecd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec2c8ccfe67f14be5a56a135758031d"><td class="memItemLeft" align="right" valign="top">llvm::Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">set_variable</a> (const std::string &amp;name, llvm::Value *)</td></tr>
+<tr class="separator:acec2c8ccfe67f14be5a56a135758031d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa6e5b7c51d2552dee1800fd9fc7a3f"><td class="memItemLeft" align="right" valign="top">llvm::Value *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">get_variable</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a7fa6e5b7c51d2552dee1800fd9fc7a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a61e9200a60f64733b19dff8a113a39b0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, llvm::Value * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a></td></tr>
+<tr class="separator:a61e9200a60f64733b19dff8a113a39b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72edc197c16232c6cefaa7658923415"><td class="memItemLeft" align="right" valign="top">llvm::Function *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscope.html#ab72edc197c16232c6cefaa7658923415">current_function</a> = nullptr</td></tr>
+<tr class="separator:ab72edc197c16232c6cefaa7658923415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00023">23</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a745337a2e6474479085ff358f1aecd8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745337a2e6474479085ff358f1aecd8e">&#9670;&nbsp;</a></span>scope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">scope::scope </td>
+          <td>(</td>
+          <td class="paramtype">llvm::Function *&#160;</td>
+          <td class="paramname"><em>pcurrent_function</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00032">32</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                     : <a class="code" href="classscope.html#ab72edc197c16232c6cefaa7658923415">current_function</a>(pcurrent_function) </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">/* No Body */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7fa6e5b7c51d2552dee1800fd9fc7a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa6e5b7c51d2552dee1800fd9fc7a3f">&#9670;&nbsp;</a></span>get_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">llvm::Value * scope::get_variable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8cc_source.html">llvm.cc</a> 第 <a class="el" href="llvm_8cc_source.html#l00035">35</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>.at(name);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acec2c8ccfe67f14be5a56a135758031d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec2c8ccfe67f14be5a56a135758031d">&#9670;&nbsp;</a></span>set_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">llvm::Value * scope::set_variable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">llvm::Value *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8cc_source.html">llvm.cc</a> 第 <a class="el" href="llvm_8cc_source.html#l00029">29</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>[name] = value;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab72edc197c16232c6cefaa7658923415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72edc197c16232c6cefaa7658923415">&#9670;&nbsp;</a></span>current_function</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">llvm::Function* scope::current_function = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a61e9200a60f64733b19dff8a113a39b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e9200a60f64733b19dff8a113a39b0">&#9670;&nbsp;</a></span>variables</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, llvm::Value*&gt; scope::variables</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="llvm_8h_source.html">llvm.h</a> 第 <a class="el" href="llvm_8h_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>inc/<a class="el" href="llvm_8h_source.html">llvm.h</a></li>
+<li>src/<a class="el" href="llvm_8cc_source.html">llvm.cc</a></li>
+</ul>
+</div><!-- contents -->
+<div class="ttc" id="aclassscope_html_ab72edc197c16232c6cefaa7658923415"><div class="ttname"><a href="classscope.html#ab72edc197c16232c6cefaa7658923415">scope::current_function</a></div><div class="ttdeci">llvm::Function * current_function</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8h_source.html#l00028">llvm.h:28</a></div></div>
+<div class="ttc" id="aclassscope_html_a61e9200a60f64733b19dff8a113a39b0"><div class="ttname"><a href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">scope::variables</a></div><div class="ttdeci">std::unordered_map&lt; std::string, llvm::Value * &gt; variables</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8h_source.html#l00027">llvm.h:27</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

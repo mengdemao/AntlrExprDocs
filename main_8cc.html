@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-3aa9dbe</span>
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -85,7 +85,8 @@ $(function() {
 <code>#include &lt;fmt/core.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="grammar_8h_source.html">grammar.h</a>&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;llvm/Support/TargetSelect.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="llvm_8h_source.html">llvm.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="option_8h_source.html">option.h</a>&gt;</code><br />
 <code>#include &lt;stack&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -96,56 +97,56 @@ main.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cc__incl.png" border="0" usemap="#main_8cc" alt=""/></div>
 <map name="main_8cc" id="main_8cc">
-<area shape="rect" title="AntlrExpr主文件" alt="" coords="2383,5,2457,32"/>
-<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="1549,169,1685,196"/>
-<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="1601,393,1729,420"/>
-<area shape="rect" title=" " alt="" coords="2423,543,2503,569"/>
-<area shape="rect" title=" " alt="" coords="2557,543,2614,569"/>
-<area shape="rect" title=" " alt="" coords="2759,543,2817,569"/>
-<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="1613,244,1717,271"/>
-<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="1703,319,1806,345"/>
-<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="1427,169,1525,196"/>
-<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="1861,169,2008,196"/>
-<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="2393,169,2447,196"/>
-<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="2719,244,2793,271"/>
-<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2520,244,2595,271"/>
-<area shape="rect" href="test_8h.html" title="自动化测试相关工具" alt="" coords="2285,244,2344,271"/>
-<area shape="rect" title=" " alt="" coords="3071,80,3233,121"/>
-<area shape="rect" title=" " alt="" coords="3258,87,3323,114"/>
-<area shape="rect" title=" " alt="" coords="3347,87,3437,114"/>
-<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="2151,87,2244,114"/>
-<area shape="rect" href="svm_8h.html" title="虚拟机实现" alt="" coords="2626,169,2689,196"/>
-<area shape="rect" title=" " alt="" coords="3461,87,3662,114"/>
-<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1238,468,1373,495"/>
-<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="1586,468,1745,495"/>
-<area shape="rect" title=" " alt="" coords="5,543,91,569"/>
-<area shape="rect" title=" " alt="" coords="115,543,189,569"/>
-<area shape="rect" title=" " alt="" coords="213,543,280,569"/>
-<area shape="rect" title=" " alt="" coords="304,543,371,569"/>
-<area shape="rect" title=" " alt="" coords="395,543,469,569"/>
-<area shape="rect" title=" " alt="" coords="493,543,563,569"/>
-<area shape="rect" title=" " alt="" coords="588,543,647,569"/>
-<area shape="rect" title=" " alt="" coords="671,543,742,569"/>
-<area shape="rect" title=" " alt="" coords="767,543,809,569"/>
-<area shape="rect" title=" " alt="" coords="833,543,884,569"/>
-<area shape="rect" title=" " alt="" coords="908,543,985,569"/>
-<area shape="rect" title=" " alt="" coords="1009,543,1052,569"/>
-<area shape="rect" title=" " alt="" coords="1076,543,1151,569"/>
-<area shape="rect" title=" " alt="" coords="1175,543,1246,569"/>
-<area shape="rect" title=" " alt="" coords="1270,543,1341,569"/>
-<area shape="rect" title=" " alt="" coords="1365,543,1440,569"/>
-<area shape="rect" title=" " alt="" coords="1465,543,1541,569"/>
-<area shape="rect" title=" " alt="" coords="1565,543,1657,569"/>
-<area shape="rect" title=" " alt="" coords="1681,543,1805,569"/>
-<area shape="rect" title=" " alt="" coords="1829,543,1944,569"/>
-<area shape="rect" title=" " alt="" coords="1969,543,2029,569"/>
-<area shape="rect" title=" " alt="" coords="2053,543,2115,569"/>
-<area shape="rect" title=" " alt="" coords="2140,543,2204,569"/>
-<area shape="rect" title=" " alt="" coords="2229,543,2315,569"/>
-<area shape="rect" title=" " alt="" coords="2340,543,2399,569"/>
-<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="1843,244,1957,271"/>
-<area shape="rect" title=" " alt="" coords="2619,244,2695,271"/>
-<area shape="rect" title=" " alt="" coords="2336,319,2440,345"/>
+<area shape="rect" title="AntlrExpr主文件" alt="" coords="1747,5,1821,32"/>
+<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="325,169,461,196"/>
+<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="719,393,847,420"/>
+<area shape="rect" title=" " alt="" coords="1468,550,1548,577"/>
+<area shape="rect" title=" " alt="" coords="1363,550,1421,577"/>
+<area shape="rect" title=" " alt="" coords="1616,550,1675,577"/>
+<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="443,244,547,271"/>
+<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="599,319,702,345"/>
+<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="859,169,957,196"/>
+<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="688,169,835,196"/>
+<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="1977,169,2031,196"/>
+<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="1709,244,1782,271"/>
+<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2059,244,2133,271"/>
+<area shape="rect" href="test_8h.html" title="自动化测试相关工具" alt="" coords="1524,244,1583,271"/>
+<area shape="rect" title=" " alt="" coords="2309,80,2472,121"/>
+<area shape="rect" title=" " alt="" coords="2497,87,2562,114"/>
+<area shape="rect" title=" " alt="" coords="2586,87,2675,114"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="1408,87,1501,114"/>
+<area shape="rect" href="llvm_8h.html" title=" " alt="" coords="2158,468,2221,495"/>
+<area shape="rect" href="svm_8h.html" title="虚拟机实现" alt="" coords="1787,169,1850,196"/>
+<area shape="rect" href="logger_8h.html" title="日志打印封装" alt="" coords="2700,87,2775,114"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="731,468,866,495"/>
+<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="890,468,1049,495"/>
+<area shape="rect" title=" " alt="" coords="460,550,545,577"/>
+<area shape="rect" title=" " alt="" coords="569,550,644,577"/>
+<area shape="rect" title=" " alt="" coords="668,550,735,577"/>
+<area shape="rect" title=" " alt="" coords="759,550,825,577"/>
+<area shape="rect" title=" " alt="" coords="850,550,923,577"/>
+<area shape="rect" title=" " alt="" coords="947,550,1018,577"/>
+<area shape="rect" title=" " alt="" coords="1043,550,1101,577"/>
+<area shape="rect" title=" " alt="" coords="1126,550,1197,577"/>
+<area shape="rect" title=" " alt="" coords="1221,550,1264,577"/>
+<area shape="rect" title=" " alt="" coords="1288,550,1339,577"/>
+<area shape="rect" title=" " alt="" coords="1699,550,1776,577"/>
+<area shape="rect" title=" " alt="" coords="5,550,48,577"/>
+<area shape="rect" title=" " alt="" coords="72,550,147,577"/>
+<area shape="rect" title=" " alt="" coords="171,550,242,577"/>
+<area shape="rect" title=" " alt="" coords="266,550,337,577"/>
+<area shape="rect" title=" " alt="" coords="361,550,436,577"/>
+<area shape="rect" title=" " alt="" coords="1801,550,1893,577"/>
+<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="688,244,803,271"/>
+<area shape="rect" title=" " alt="" coords="1806,244,1882,271"/>
+<area shape="rect" title=" " alt="" coords="1568,319,1672,345"/>
+<area shape="rect" title=" " alt="" coords="1518,169,1661,196"/>
+<area shape="rect" title=" " alt="" coords="1185,169,1391,196"/>
+<area shape="rect" title=" " alt="" coords="1917,543,2080,584"/>
+<area shape="rect" title=" " alt="" coords="2105,550,2274,577"/>
+<area shape="rect" title=" " alt="" coords="2298,550,2430,577"/>
+<area shape="rect" title=" " alt="" coords="2455,550,2575,577"/>
+<area shape="rect" title=" " alt="" coords="2599,550,2801,577"/>
 </map>
 </div>
 </div>
@@ -201,58 +202,61 @@ main.cc 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int 返回数据 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00038">38</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> input_string;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span> input_result = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// avoid warning</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    (void)input_result;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// llvm初始化</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    llvm::InitializeAllTargetInfos();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    llvm::InitializeAllTargets();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    llvm::InitializeAllTargetMCs();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    llvm::InitializeAllAsmParsers();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    llvm::InitializeAllAsmPrinters();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">optionMain</a>(argc, argv)) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    input_string = argv[1];</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// 生成语法树</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a>(input_string)) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="main_8cc_source.html">main.cc</a> 第 <a class="el" href="main_8cc_source.html#l00039">39</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">string</span> input_string;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">double</span> input_result = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// avoid warning</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    (void)input_result;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a>(argc, argv)) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    input_string = argv[1];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// 生成语法树</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a021cd7290d7a4dff33f28489afb87824">grammar_main</a>(input_string)) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cc_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#main_8cc_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="main_8cc_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="main_8cc_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="主函数" alt="" coords="5,70,60,97"/>
-<area shape="rect" href="grammar_8h.html#a413e0b8f1a8b028cb58198d389473861" title=" " alt="" coords="108,45,223,71"/>
-<area shape="rect" href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e" title="解析输入的命令行" alt="" coords="118,95,213,122"/>
-<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d" title=" " alt="" coords="279,5,470,47"/>
-<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb" title="Performs a walk on the given parse tree starting at the root and going down recursively with depth&#45;fi..." alt="" coords="271,71,479,112"/>
-<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#ad736ceae08c0838ccd34ce716c8ea8cb" title=" " alt="" coords="527,37,743,79"/>
-<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#a1b18d7e13cb0e59cca877c99115da90f" title=" " alt="" coords="527,103,743,144"/>
+<area shape="rect" title="主函数" alt="" coords="5,151,60,178"/>
+<area shape="rect" href="grammar_8h.html#a021cd7290d7a4dff33f28489afb87824" title=" " alt="" coords="108,101,231,127"/>
+<area shape="rect" href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da" title="LLVM相关库的初始化" alt="" coords="130,151,209,178"/>
+<area shape="rect" href="option_8h.html#a5d36ee209ab7021194b626237b73934b" title="解析输入的命令行" alt="" coords="118,202,221,229"/>
+<area shape="rect" href="classantlr4_1_1_lexer.html#a409c001d60382ba3e0c3b9874978fc3e" title="Gets the number of syntax errors reported during parsing. This value is incremented each time #notify..." alt="" coords="291,5,475,47"/>
+<area shape="rect" href="class_expr_parser.html#ac9b130a06acdd6208bfe3ef85c9b9f2a" title=" " alt="" coords="319,71,447,98"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d" title=" " alt="" coords="287,123,478,164"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb" title="Performs a walk on the given parse tree starting at the root and going down recursively with depth&#45;fi..." alt="" coords="279,188,487,229"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#a04755e8c634599894ce85d1179a34431" title=" " alt="" coords="799,123,939,164"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#a01f30b45ab12a03262826e23382c8a89" title="Indicate that the recognizer has changed internal state that is consistent with the ATN state passed ..." alt="" coords="799,5,939,47"/>
+<area shape="rect" href="class_expr_parser.html#a89c382d4633b68c4736d225883db9c77" title=" " alt="" coords="581,71,705,98"/>
+<area shape="rect" href="class_expr_parser.html#a904a3234d315618196d11dc611929360" title=" " alt="" coords="805,71,933,98"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#ad736ceae08c0838ccd34ce716c8ea8cb" title=" " alt="" coords="535,245,751,287"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#a1b18d7e13cb0e59cca877c99115da90f" title=" " alt="" coords="535,180,751,221"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aoption_8h_html_a4bd46a384cbd6868a594fbdd102a750e"><div class="ttname"><a href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">optionMain</a></div><div class="ttdeci">option_result optionMain(int Argc, char *Argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00030">option.cc:30</a></div></div>
-<div class="ttc" id="agrammar_8h_html_a413e0b8f1a8b028cb58198d389473861"><div class="ttname"><a href="grammar_8h.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a></div><div class="ttdeci">grammar_result grammarMain(std::string InputString)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00018">grammar.cc:18</a></div></div>
+<div class="ttc" id="aoption_8h_html_a5d36ee209ab7021194b626237b73934b"><div class="ttname"><a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a></div><div class="ttdeci">option_result option_main(int argc, char *argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00030">option.cc:30</a></div></div>
 <div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
-<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00028">grammar.h:28</a></div></div>
+<div class="ttc" id="allvm_8h_html_ac37fe7a82c2de0da6644f4fe563648da"><div class="ttname"><a href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a></div><div class="ttdeci">void llvm_init(void)</div><div class="ttdoc">LLVM相关库的初始化</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00020">llvm.cc:20</a></div></div>
+<div class="ttc" id="agrammar_8h_html_a021cd7290d7a4dff33f28489afb87824"><div class="ttname"><a href="grammar_8h.html#a021cd7290d7a4dff33f28489afb87824">grammar_main</a></div><div class="ttdeci">grammar_result grammar_main(std::string input_string)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00019">grammar.cc:19</a></div></div>
+<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00031">grammar.h:31</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

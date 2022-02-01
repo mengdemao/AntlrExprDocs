@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: inc/proto.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">proto.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="proto_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __PROTO_H__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __PROTO_H__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="proto_8h.html#ad785daae6584e0030e128c99f6bdc8b0">   18</a></span>&#160;<span class="keyword">typedef</span> uint64_t <a class="code" href="proto_8h.html#ad785daae6584e0030e128c99f6bdc8b0">code</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structdata.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdata.html">data</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structdata.html#ad1f661a9259bcf189da3bd0b5a4e26bb">   21</a></span>&#160;    std::string <a class="code" href="structdata.html#ad1f661a9259bcf189da3bd0b5a4e26bb">name</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84">   22</a></span>&#160;    uint64_t <a class="code" href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84">data</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <a class="code" href="proto_8h.html#a493583f6fc164cf849745e01e4c04ab5">data</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classproto.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classproto.html">proto</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classproto.html#ad3b1d03016c466172817d05c9ef27fd2">   27</a></span>&#160;    uint64_t <a class="code" href="classproto.html#ad3b1d03016c466172817d05c9ef27fd2">pc</a>;    <span class="comment">// 指令计数器</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classproto.html#aba49fbedf99d4e1341e12e2223dd6aeb">   28</a></span>&#160;    uint64_t <a class="code" href="classproto.html#aba49fbedf99d4e1341e12e2223dd6aeb">lr</a>;    <span class="comment">// 连接计数器</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classproto.html#a9cb453d27306ce40eb02f6e171853859">   30</a></span>&#160;    <a class="code" href="proto_8h.html#ad785daae6584e0030e128c99f6bdc8b0">code</a> *<a class="code" href="classproto.html#a9cb453d27306ce40eb02f6e171853859">pcode</a>;    <span class="comment">// 代码段</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classproto.html#ad1beb09b16e46e0241d6365e12c5b70f">   31</a></span>&#160;    <a class="code" href="structdata.html">data</a> *<a class="code" href="classproto.html#ad1beb09b16e46e0241d6365e12c5b70f">pdata</a>;    <span class="comment">// 数据段</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classproto.html#a2d1004e63a4c876aecd4e3a633a62f34">proto</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classproto.html#a47ecd88ad6162d276b68d3b20eb32ee4">~proto</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="proto_8h.html#ad785daae6584e0030e128c99f6bdc8b0">code</a> <a class="code" href="classproto.html#afd8967870ff65268884386fe5e20caac">next</a>(<span class="keywordtype">void</span>);            <span class="comment">/* 获取下一个指令 */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classproto.html#a78fd84dbfea193e3aab063a89ec8787f">do_jmp</a>(uint64_t <a class="code" href="classproto.html#ad3b1d03016c466172817d05c9ef27fd2">pc</a>);   <span class="comment">/* 执行跳转 */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classproto.html#af5489be50778a2ff011c8473c9e6770b">do_ret</a>(<span class="keywordtype">void</span>);          <span class="comment">/* 执行返回 */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classproto.html#a3b6d7011e7ab9f89a556ef6e22e15d8f">do_cal</a>(uint64_t <a class="code" href="classproto.html#ad3b1d03016c466172817d05c9ef27fd2">pc</a>);   <span class="comment">/* 函数调用 */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __PROTO_H__ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassproto_html_a78fd84dbfea193e3aab063a89ec8787f"><div class="ttname"><a href="classproto.html#a78fd84dbfea193e3aab063a89ec8787f">proto::do_jmp</a></div><div class="ttdeci">void do_jmp(uint64_t pc)</div><div class="ttdoc">执行跳转</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00039">proto.cc:39</a></div></div>
+<div class="ttc" id="aclassproto_html_afd8967870ff65268884386fe5e20caac"><div class="ttname"><a href="classproto.html#afd8967870ff65268884386fe5e20caac">proto::next</a></div><div class="ttdeci">code next(void)</div><div class="ttdoc">获取下一个指令</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00030">proto.cc:30</a></div></div>
+<div class="ttc" id="aclassproto_html_a47ecd88ad6162d276b68d3b20eb32ee4"><div class="ttname"><a href="classproto.html#a47ecd88ad6162d276b68d3b20eb32ee4">proto::~proto</a></div><div class="ttdeci">~proto()=default</div></div>
+<div class="ttc" id="astructdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00020">proto.h:20</a></div></div>
+<div class="ttc" id="aclassproto_html_ad3b1d03016c466172817d05c9ef27fd2"><div class="ttname"><a href="classproto.html#ad3b1d03016c466172817d05c9ef27fd2">proto::pc</a></div><div class="ttdeci">uint64_t pc</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00027">proto.h:27</a></div></div>
+<div class="ttc" id="aproto_8h_html_a493583f6fc164cf849745e01e4c04ab5"><div class="ttname"><a href="proto_8h.html#a493583f6fc164cf849745e01e4c04ab5">data</a></div><div class="ttdeci">struct data data</div></div>
+<div class="ttc" id="aclassproto_html_a9cb453d27306ce40eb02f6e171853859"><div class="ttname"><a href="classproto.html#a9cb453d27306ce40eb02f6e171853859">proto::pcode</a></div><div class="ttdeci">code * pcode</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00030">proto.h:30</a></div></div>
+<div class="ttc" id="aclassproto_html_af5489be50778a2ff011c8473c9e6770b"><div class="ttname"><a href="classproto.html#af5489be50778a2ff011c8473c9e6770b">proto::do_ret</a></div><div class="ttdeci">void do_ret(void)</div><div class="ttdoc">执行返回</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00047">proto.cc:47</a></div></div>
+<div class="ttc" id="aclassproto_html_aba49fbedf99d4e1341e12e2223dd6aeb"><div class="ttname"><a href="classproto.html#aba49fbedf99d4e1341e12e2223dd6aeb">proto::lr</a></div><div class="ttdeci">uint64_t lr</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00028">proto.h:28</a></div></div>
+<div class="ttc" id="aclassproto_html_a2d1004e63a4c876aecd4e3a633a62f34"><div class="ttname"><a href="classproto.html#a2d1004e63a4c876aecd4e3a633a62f34">proto::proto</a></div><div class="ttdeci">proto()</div><div class="ttdoc">Construct a new proto::proto object</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00017">proto.cc:17</a></div></div>
+<div class="ttc" id="astructdata_html_ad1f661a9259bcf189da3bd0b5a4e26bb"><div class="ttname"><a href="structdata.html#ad1f661a9259bcf189da3bd0b5a4e26bb">data::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00021">proto.h:21</a></div></div>
+<div class="ttc" id="aproto_8h_html_ad785daae6584e0030e128c99f6bdc8b0"><div class="ttname"><a href="proto_8h.html#ad785daae6584e0030e128c99f6bdc8b0">code</a></div><div class="ttdeci">uint64_t code</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00018">proto.h:18</a></div></div>
+<div class="ttc" id="aclassproto_html"><div class="ttname"><a href="classproto.html">proto</a></div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00025">proto.h:25</a></div></div>
+<div class="ttc" id="aclassproto_html_ad1beb09b16e46e0241d6365e12c5b70f"><div class="ttname"><a href="classproto.html#ad1beb09b16e46e0241d6365e12c5b70f">proto::pdata</a></div><div class="ttdeci">data * pdata</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00031">proto.h:31</a></div></div>
+<div class="ttc" id="astructdata_html_a7cde0e46e1fec2dd7803928a5faead84"><div class="ttname"><a href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84">data::data</a></div><div class="ttdeci">uint64_t data</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00022">proto.h:22</a></div></div>
+<div class="ttc" id="aclassproto_html_a3b6d7011e7ab9f89a556ef6e22e15d8f"><div class="ttname"><a href="classproto.html#a3b6d7011e7ab9f89a556ef6e22e15d8f">proto::do_cal</a></div><div class="ttdeci">void do_cal(uint64_t pc)</div><div class="ttdoc">函数调用</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00056">proto.cc:56</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

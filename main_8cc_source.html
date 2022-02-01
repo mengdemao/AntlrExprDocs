@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-3aa9dbe</span>
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -81,62 +81,61 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;fmt/core.h&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="grammar_8h.html">grammar.h</a>&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;llvm/Support/TargetSelect.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="option_8h.html">option.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="svm_8h.html">svm.h</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="test_8h.html">test.h</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">   38</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> input_string;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span> input_result = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// avoid warning</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    (void)input_result;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// llvm初始化</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    llvm::InitializeAllTargetInfos();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    llvm::InitializeAllTargets();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    llvm::InitializeAllTargetMCs();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    llvm::InitializeAllAsmParsers();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    llvm::InitializeAllAsmPrinters();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">optionMain</a>(argc, argv)) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    input_string = argv[1];</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// 生成语法树</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a>(input_string)) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="llvm_8h.html">llvm.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">logger.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="option_8h.html">option.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="svm_8h.html">svm.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="test_8h.html">test.h</a>&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">   39</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">string</span> input_string;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">double</span> input_result = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// avoid warning</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    (void)input_result;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a>(argc, argv)) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    input_string = argv[1];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// 生成语法树</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#a021cd7290d7a4dff33f28489afb87824">grammar_main</a>(input_string)) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_expr_lexer_8h_html"><div class="ttname"><a href="_expr_lexer_8h.html">ExprLexer.h</a></div></div>
+<div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志打印封装</div></div>
 <div class="ttc" id="agrammar_8h_html"><div class="ttname"><a href="grammar_8h.html">grammar.h</a></div><div class="ttdoc">Expr语法处理文件</div></div>
+<div class="ttc" id="aoption_8h_html_a5d36ee209ab7021194b626237b73934b"><div class="ttname"><a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a></div><div class="ttdeci">option_result option_main(int argc, char *argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00030">option.cc:30</a></div></div>
 <div class="ttc" id="aast_8h_html"><div class="ttname"><a href="ast_8h.html">ast.h</a></div><div class="ttdoc">AST实现</div></div>
-<div class="ttc" id="aoption_8h_html_a4bd46a384cbd6868a594fbdd102a750e"><div class="ttname"><a href="option_8h.html#a4bd46a384cbd6868a594fbdd102a750e">optionMain</a></div><div class="ttdeci">option_result optionMain(int Argc, char *Argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00030">option.cc:30</a></div></div>
 <div class="ttc" id="a_expr_base_listener_8h_html"><div class="ttname"><a href="_expr_base_listener_8h.html">ExprBaseListener.h</a></div></div>
 <div class="ttc" id="asvm_8h_html"><div class="ttname"><a href="svm_8h.html">svm.h</a></div><div class="ttdoc">虚拟机实现</div></div>
-<div class="ttc" id="agrammar_8h_html_a413e0b8f1a8b028cb58198d389473861"><div class="ttname"><a href="grammar_8h.html#a413e0b8f1a8b028cb58198d389473861">grammarMain</a></div><div class="ttdeci">grammar_result grammarMain(std::string InputString)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00018">grammar.cc:18</a></div></div>
+<div class="ttc" id="allvm_8h_html"><div class="ttname"><a href="llvm_8h.html">llvm.h</a></div></div>
 <div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
-<div class="ttc" id="amain_8cc_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">主函数</div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00038">main.cc:38</a></div></div>
+<div class="ttc" id="amain_8cc_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">主函数</div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00039">main.cc:39</a></div></div>
 <div class="ttc" id="a_expr_visitor_8h_html"><div class="ttname"><a href="_expr_visitor_8h.html">ExprVisitor.h</a></div></div>
 <div class="ttc" id="atest_8h_html"><div class="ttname"><a href="test_8h.html">test.h</a></div><div class="ttdoc">自动化测试相关工具</div></div>
+<div class="ttc" id="allvm_8h_html_ac37fe7a82c2de0da6644f4fe563648da"><div class="ttname"><a href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a></div><div class="ttdeci">void llvm_init(void)</div><div class="ttdoc">LLVM相关库的初始化</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00020">llvm.cc:20</a></div></div>
 <div class="ttc" id="a_expr_parser_8h_html"><div class="ttname"><a href="_expr_parser_8h.html">ExprParser.h</a></div></div>
 <div class="ttc" id="aantlr4-runtime_8h_html"><div class="ttname"><a href="antlr4-runtime_8h.html">antlr4-runtime.h</a></div></div>
+<div class="ttc" id="agrammar_8h_html_a021cd7290d7a4dff33f28489afb87824"><div class="ttname"><a href="grammar_8h.html#a021cd7290d7a4dff33f28489afb87824">grammar_main</a></div><div class="ttdeci">grammar_result grammar_main(std::string input_string)</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00019">grammar.cc:19</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00132">ATNConfig.h:132</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Auto generated config file</div></div>
-<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00028">grammar.h:28</a></div></div>
+<div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00031">grammar.h:31</a></div></div>
 <div class="ttc" id="a_expr_base_visitor_8h_html"><div class="ttname"><a href="_expr_base_visitor_8h.html">ExprBaseVisitor.h</a></div></div>
 <div class="ttc" id="aoption_8h_html"><div class="ttname"><a href="option_8h.html">option.h</a></div><div class="ttdoc">解析输入字符串</div></div>
 <!-- start footer part -->

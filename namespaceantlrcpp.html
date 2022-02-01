@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-3aa9dbe</span>
+   &#160;<span id="projectnumber">0.0.3-31cba7f</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -103,7 +103,7 @@ $(function() {
 <tr class="separator:a70f43b77dd07d83a921dbe5a5d3f0cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab872865ce6358753d8b51e521d4b94c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#ab872865ce6358753d8b51e521d4b94c8">toHexString</a> (const int t)</td></tr>
 <tr class="separator:ab872865ce6358753d8b51e521d4b94c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ea228343730365ed4159f2420ad2aa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">arrayToString</a> (const std::vector&lt; std::string &gt; &amp;data)</td></tr>
+<tr class="memitem:ac6ea228343730365ed4159f2420ad2aa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">arrayToString</a> (const std::vector&lt; std::string &gt; &amp;<a class="el" href="structdata.html">data</a>)</td></tr>
 <tr class="separator:ac6ea228343730365ed4159f2420ad2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6e4b922dc9b28b53382cec7f2b29ce"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#a8a6e4b922dc9b28b53382cec7f2b29ce">replaceString</a> (const std::string &amp;s, const std::string &amp;from, const std::string &amp;to)</td></tr>
 <tr class="separator:a8a6e4b922dc9b28b53382cec7f2b29ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +135,7 @@ $(function() {
 <tr class="memitem:ae60d77de3a127a9c8d58df512abaf49d"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#ae60d77de3a127a9c8d58df512abaf49d">s2ws</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:ae60d77de3a127a9c8d58df512abaf49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96059d7dde2be33ac4a527760951a0c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a96059d7dde2be33ac4a527760951a0c9"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#a96059d7dde2be33ac4a527760951a0c9">utf32_to_utf8</a> (T const &amp;data)</td></tr>
+<tr class="memitem:a96059d7dde2be33ac4a527760951a0c9"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#a96059d7dde2be33ac4a527760951a0c9">utf32_to_utf8</a> (T const &amp;<a class="el" href="structdata.html">data</a>)</td></tr>
 <tr class="separator:a96059d7dde2be33ac4a527760951a0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a562c43b69d1a0ee899155398131ee51d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="antlr4-common_8h.html#abbb501ea6ef10b66ea7e628e3136b53a">UTF32String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlrcpp.html#a562c43b69d1a0ee899155398131ee51d">utf8_to_utf32</a> (const char *first, const char *last)</td></tr>
 <tr class="separator:a562c43b69d1a0ee899155398131ee51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +195,7 @@ template&lt;class T &gt; </div>
 <p class="definition">在文件 <a class="el" href="_c_p_p_utils_8cpp_source.html">CPPUtils.cpp</a> 第 <a class="el" href="_c_p_p_utils_8cpp_source.html#l00073">73</a> 行定义.</p>
 <div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                            {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string answer;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> sub: data) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> sub: <a class="code" href="structdata.html">data</a>) {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      answer += sub;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> answer;</div>
@@ -896,18 +896,27 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      thread_local <a class="code" href="namespaceantlrcpp.html#af4d1140234072af598367fb77453b0f2">UTF32Converter</a> converter;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">      #if defined(_MSC_VER) &amp;&amp; _MSC_VER &gt;= 1900 &amp;&amp; _MSC_VER &lt; 2000</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> p = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>int32_t *<span class="keyword">&gt;</span>(data.data());</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> converter.to_bytes(p, p + data.size());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> p = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>int32_t *<span class="keyword">&gt;</span>(<a class="code" href="structdata.html">data</a>.<a class="code" href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84">data</a>());</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> converter.to_bytes(p, p + <a class="code" href="structdata.html">data</a>.size());</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">      #else</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> converter.to_bytes(data);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> converter.to_bytes(<a class="code" href="structdata.html">data</a>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">      #endif</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    #else</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      std::string narrow;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      utf8::utf32to8(data.begin(), data.end(), std::back_inserter(narrow));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      utf8::utf32to8(<a class="code" href="structdata.html">data</a>.begin(), <a class="code" href="structdata.html">data</a>.end(), std::back_inserter(narrow));</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">return</span> narrow;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
 </div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_cgraph.png" border="0" usemap="#namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_cgraph" alt=""/></div>
+<map name="namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_cgraph" id="namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,32"/>
+<area shape="rect" href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84" title=" " alt="" coords="224,5,312,32"/>
+</map>
+</div>
+<div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_icgraph.png" border="0" usemap="#namespaceantlrcpp_a96059d7dde2be33ac4a527760951a0c9_icgraph" alt=""/></div>
@@ -1085,9 +1094,11 @@ template&lt;typename T &gt; </div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="anamespaceantlrcpp_html_a0463db1f334c73d4f37238fdac8570c0"><div class="ttname"><a href="namespaceantlrcpp.html#a0463db1f334c73d4f37238fdac8570c0">antlrcpp::get_nested</a></div><div class="ttdeci">std::exception_ptr get_nested(const T &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00155">CPPUtils.cpp:155</a></div></div>
+<div class="ttc" id="astructdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00020">proto.h:20</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_af4d1140234072af598367fb77453b0f2"><div class="ttname"><a href="namespaceantlrcpp.html#af4d1140234072af598367fb77453b0f2">antlrcpp::UTF32Converter</a></div><div class="ttdeci">std::wstring_convert&lt; std::codecvt_utf8&lt; char32_t &gt;, char32_t &gt; UTF32Converter</div><div class="ttdef"><b>Definition:</b> <a href="_string_utils_8h_source.html#l00026">StringUtils.h:26</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_aef8e81879ec73b9c0b331cb115cc7482"><div class="ttname"><a href="namespaceantlrcpp.html#aef8e81879ec73b9c0b331cb115cc7482">antlrcpp::join</a></div><div class="ttdeci">std::string join(std::vector&lt; std::string &gt; strings, const std::string &amp;separator)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00010">CPPUtils.cpp:10</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_aab499b1852046271f8ace62a76456788"><div class="ttname"><a href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">antlrcpp::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, const std::string &amp;sep, int count)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00100">CPPUtils.cpp:100</a></div></div>
+<div class="ttc" id="astructdata_html_a7cde0e46e1fec2dd7803928a5faead84"><div class="ttname"><a href="structdata.html#a7cde0e46e1fec2dd7803928a5faead84">data::data</a></div><div class="ttdeci">uint64_t data</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00022">proto.h:22</a></div></div>
 <div class="ttc" id="aantlr4-common_8h_html_abbb501ea6ef10b66ea7e628e3136b53a"><div class="ttname"><a href="antlr4-common_8h.html#abbb501ea6ef10b66ea7e628e3136b53a">UTF32String</a></div><div class="ttdeci">std::u32string UTF32String</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00100">antlr4-common.h:100</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
