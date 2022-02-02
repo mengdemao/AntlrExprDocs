@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-8935673</span>
+   &#160;<span id="projectnumber">0.0.3-828c453</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -143,9 +143,9 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> stream.str();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">   73</a></span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">arrayToString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="structdata.html">data</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">   73</a></span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">arrayToString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;data) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string answer;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> sub: <a class="code" href="structdata.html">data</a>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> sub: data) {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      answer += sub;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> answer;</div>
@@ -317,7 +317,6 @@ $(function() {
 <div class="ttc" id="anamespaceantlrcpp_html_a70f43b77dd07d83a921dbe5a5d3f0cdd"><div class="ttname"><a href="namespaceantlrcpp.html#a70f43b77dd07d83a921dbe5a5d3f0cdd">antlrcpp::escapeWhitespace</a></div><div class="ttdeci">std::string escapeWhitespace(std::string str, bool escapeSpaces)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00031">CPPUtils.cpp:31</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_a0463db1f334c73d4f37238fdac8570c0"><div class="ttname"><a href="namespaceantlrcpp.html#a0463db1f334c73d4f37238fdac8570c0">antlrcpp::get_nested</a></div><div class="ttdeci">std::exception_ptr get_nested(const T &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00155">CPPUtils.cpp:155</a></div></div>
 <div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_ad6a4d9c7c2bacdccf5acf079c7ae9e58"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ad6a4d9c7c2bacdccf5acf079c7ae9e58">antlrcpp::SingleWriteMultipleReadLock::_waitingWriters</a></div><div class="ttdeci">size_t _waitingWriters</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00078">CPPUtils.h:78</a></div></div>
-<div class="ttc" id="astructdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00020">proto.h:20</a></div></div>
 <div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a4d9717794f49faa731785384c3c24879"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a4d9717794f49faa731785384c3c24879">antlrcpp::SingleWriteMultipleReadLock::readUnlock</a></div><div class="ttdeci">void readUnlock()</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00215">CPPUtils.cpp:215</a></div></div>
 <div class="ttc" id="anamespaceantlrcpp_html_a8a6e4b922dc9b28b53382cec7f2b29ce"><div class="ttname"><a href="namespaceantlrcpp.html#a8a6e4b922dc9b28b53382cec7f2b29ce">antlrcpp::replaceString</a></div><div class="ttdeci">std::string replaceString(const std::string &amp;s, const std::string &amp;from, const std::string &amp;to)</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8cpp_source.html#l00081">CPPUtils.cpp:81</a></div></div>
 <div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a394aaff6f23a089b1d4555b9f8a5d9d5"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a394aaff6f23a089b1d4555b9f8a5d9d5">antlrcpp::SingleWriteMultipleReadLock::_activeReaders</a></div><div class="ttdeci">size_t _activeReaders</div><div class="ttdef"><b>Definition:</b> <a href="_c_p_p_utils_8h_source.html#l00077">CPPUtils.h:77</a></div></div>

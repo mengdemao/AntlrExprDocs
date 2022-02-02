@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-8935673</span>
+   &#160;<span id="projectnumber">0.0.3-828c453</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -159,43 +159,48 @@ option.cc 的引用(Include)关系图:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        variables_map       variables_map;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        options_description description(<span class="stringliteral">&quot;Usage: AntlrExpr [options] text...&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        description.add_options()(<span class="stringliteral">&quot;help,h&quot;</span>, <span class="stringliteral">&quot;Display this information.&quot;</span>)(<span class="stringliteral">&quot;version,v&quot;</span>, <span class="stringliteral">&quot;Display compiler version information.&quot;</span>)(<span class="stringliteral">&quot;file,f&quot;</span>, <span class="stringliteral">&quot;Use file as input.&quot;</span>)(<span class="stringliteral">&quot;text,t&quot;</span>, <span class="stringliteral">&quot;Use string as input&quot;</span>)(</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="stringliteral">&quot;pipe,p&quot;</span>, <span class="stringliteral">&quot;Use pipe as input&quot;</span>)(<span class="stringliteral">&quot;debug,d&quot;</span>, <span class="stringliteral">&quot;Run as debug mode&quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        store(parse_command_line(argc, argv, description), variables_map);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        notify(variables_map);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (1 == argc) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        description.add_options()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    (<span class="stringliteral">&quot;help,h&quot;</span>,      <span class="stringliteral">&quot;Display this information.&quot;</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    (<span class="stringliteral">&quot;version,v&quot;</span>,   <span class="stringliteral">&quot;Display compiler version information.&quot;</span>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    (<span class="stringliteral">&quot;file,f&quot;</span>,      <span class="stringliteral">&quot;Use file as input.&quot;</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    (<span class="stringliteral">&quot;text,t&quot;</span>,      <span class="stringliteral">&quot;Use string as input&quot;</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    (<span class="stringliteral">&quot;pipe,p&quot;</span>,      <span class="stringliteral">&quot;Use pipe as input&quot;</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    (<span class="stringliteral">&quot;debug,d&quot;</span>,     <span class="stringliteral">&quot;Run as debug mode&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        store(parse_command_line(argc, argv, description), variables_map);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        notify(variables_map);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (1 == argc) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;version&quot;</span>)) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;AntlrExpr &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#ab03b31275849638bca75523dd5953140">AntlrExpr_BUILD</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                         <span class="stringliteral">&quot;Copyright (C) 2022 MengDemao mengdemao19951021@163.com \n&quot;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                         <span class="stringliteral">&quot;This is free software; see the source for copying conditions.  There is NO\n&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                         <span class="stringliteral">&quot;warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                      &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Exception of unknown type!\n&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::cout &lt;&lt; description &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;version&quot;</span>)) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;AntlrExpr &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="version_8h.html#ab03b31275849638bca75523dd5953140">AntlrExpr_BUILD</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                         <span class="stringliteral">&quot;Copyright (C) 2022 MengDemao mengdemao19951021@163.com \n&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                         <span class="stringliteral">&quot;This is free software; see the source for copying conditions.  There is NO\n&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                         <span class="stringliteral">&quot;warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Exception of unknown type!\n&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">

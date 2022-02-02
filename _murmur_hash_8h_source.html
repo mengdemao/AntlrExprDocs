@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-8935673</span>
+   &#160;<span id="projectnumber">0.0.3-828c453</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -114,13 +114,13 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> finish(<span class="keywordtype">size_t</span> hash, <span class="keywordtype">size_t</span> entryCount);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="comment">// where T is C array type</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> hashCode(<span class="keyword">const</span> std::vector&lt;<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;T&gt;</a>&gt; &amp;<a class="code" href="structdata.html">data</a>, <span class="keywordtype">size_t</span> seed) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> hashCode(<span class="keyword">const</span> std::vector&lt;<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;T&gt;</a>&gt; &amp;data, <span class="keywordtype">size_t</span> seed) {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordtype">size_t</span> hash = initialize(seed);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> entry : <a class="code" href="structdata.html">data</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> entry : data) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        hash = update(hash, entry-&gt;hashCode());</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> finish(hash, <a class="code" href="structdata.html">data</a>.size());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> finish(hash, data.size());</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  };</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -128,7 +128,6 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace antlr4</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00106">antlr4-common.h:106</a></div></div>
-<div class="ttc" id="astructdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00020">proto.h:20</a></div></div>
 <div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_error_listener_8h_source.html#l00014">ANTLRErrorListener.h:14</a></div></div>
 <div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> <a href="antlr4-common_8h_source.html#l00139">antlr4-common.h:139</a></div></div>
 <div class="ttc" id="aantlr4-common_8h_html"><div class="ttname"><a href="antlr4-common_8h.html">antlr4-common.h</a></div></div>

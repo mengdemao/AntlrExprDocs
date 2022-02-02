@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-8935673</span>
+   &#160;<span id="projectnumber">0.0.3-828c453</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -149,7 +149,7 @@ Private 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00127">127</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00126">126</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a64dfce0bf34a006204ff8ca4f4e8aa27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64dfce0bf34a006204ff8ca4f4e8aa27">&#9670;&nbsp;</a></span>expr_visitor()</h2>
@@ -174,13 +174,13 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00136">136</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                   : <a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>(std::make_unique&lt;llvm::LLVMContext&gt;()), </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <a class="code" href="classexpr__visitor.html#afc92fdb6b029b6618dc817e4a2b353d1">builder</a>(*this-&gt;<a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>), </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        <a class="code" href="classexpr__visitor.html#af7e2bb6db2969accf622d268a6156b97">module</a>(std::make_unique&lt;llvm::Module&gt;(<span class="stringliteral">&quot;output&quot;</span>, *this-&gt;<a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>)) </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">/* No return */</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00135">135</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                   : <a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>(std::make_unique&lt;llvm::LLVMContext&gt;()), </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <a class="code" href="classexpr__visitor.html#afc92fdb6b029b6618dc817e4a2b353d1">builder</a>(*this-&gt;<a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>), </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <a class="code" href="classexpr__visitor.html#af7e2bb6db2969accf622d268a6156b97">module</a>(std::make_unique&lt;llvm::Module&gt;(<span class="stringliteral">&quot;output&quot;</span>, *this-&gt;<a class="code" href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">llvm_context</a>)) </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">/* No return */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,11 +281,11 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#a7bbbe4b649e4133fde60b265ceb54bbf">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00182">182</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00181">181</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -324,10 +324,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#afc856a25a21bc0aa759b47b96150e904">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00161">161</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00160">160</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -357,10 +357,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#a0ab4259d2a8195e350f45c2430c6894f">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00166">166</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00165">165</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -390,11 +390,11 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#acd39dbe2a108246ec9ab972d6a670229">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00188">188</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ID</a>()-&gt;getText();</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00187">187</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ID</a>()-&gt;getText();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -433,11 +433,11 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#ac9d4e6e011c94d0ddab50162784671a3">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00194">194</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">INT</a>()-&gt;getText();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00193">193</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">INT</a>()-&gt;getText();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -476,11 +476,11 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#a3c91e5c9d5b3f927d284f51b65a02b09">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00176">176</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00175">175</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        std::string text = context-&gt;<a class="code" href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">op</a>-&gt;<a class="code" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">getText</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -519,10 +519,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#a00ed7109ba92395375d104c4ae038e90">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00171">171</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00170">170</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -552,10 +552,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#adc55bbf11bb32be990027edb4ea954ea">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00156">156</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00155">155</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -586,10 +586,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="class_expr_visitor.html#ad82face939ecb9a7260342975c62986e">ExprVisitor</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00151">151</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00150">150</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(context);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -614,7 +614,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00131">131</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00130">130</a> 行定义.</p>
 
 </div>
 </div>
@@ -638,7 +638,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00130">130</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00129">129</a> 行定义.</p>
 
 </div>
 </div>
@@ -662,7 +662,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00132">132</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00131">131</a> 行定义.</p>
 
 </div>
 </div>
@@ -686,7 +686,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00133">133</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="grammar_8h_source.html">grammar.h</a> 第 <a class="el" href="grammar_8h_source.html#l00132">132</a> 行定义.</p>
 
 </div>
 </div>
@@ -697,11 +697,11 @@ Private 属性</h2></td></tr>
 <div class="ttc" id="aclass_expr_parser_1_1_mul_div_context_html_aaccbd4ca2cb00acc1f9b625400dfd1d3"><div class="ttname"><a href="class_expr_parser_1_1_mul_div_context.html#aaccbd4ca2cb00acc1f9b625400dfd1d3">ExprParser::MulDivContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00132">ExprParser.h:132</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a38605a51f1b8828eedb2f2ccb9e6c705"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">antlr4::tree::AbstractParseTreeVisitor::visitChildren</a></div><div class="ttdeci">virtual antlrcpp::Any visitChildren(ParseTree *node) override</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_parse_tree_visitor_8h_source.html#l00034">AbstractParseTreeVisitor.h:34</a></div></div>
 <div class="ttc" id="aclass_expr_parser_1_1_id_context_html_a824b39b78ab8b22f3fca72e20471368a"><div class="ttname"><a href="class_expr_parser_1_1_id_context.html#a824b39b78ab8b22f3fca72e20471368a">ExprParser::IdContext::ID</a></div><div class="ttdeci">antlr4::tree::TerminalNode * ID()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00392">ExprParser.cpp:392</a></div></div>
-<div class="ttc" id="aclassexpr__visitor_html_aad603aa5fce33d70c377216e49007b59"><div class="ttname"><a href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">expr_visitor::llvm_context</a></div><div class="ttdeci">std::unique_ptr&lt; llvm::LLVMContext &gt; llvm_context</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00130">grammar.h:130</a></div></div>
-<div class="ttc" id="aclassexpr__visitor_html_afc92fdb6b029b6618dc817e4a2b353d1"><div class="ttname"><a href="classexpr__visitor.html#afc92fdb6b029b6618dc817e4a2b353d1">expr_visitor::builder</a></div><div class="ttdeci">llvm::IRBuilder builder</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00131">grammar.h:131</a></div></div>
+<div class="ttc" id="aclassexpr__visitor_html_aad603aa5fce33d70c377216e49007b59"><div class="ttname"><a href="classexpr__visitor.html#aad603aa5fce33d70c377216e49007b59">expr_visitor::llvm_context</a></div><div class="ttdeci">std::unique_ptr&lt; llvm::LLVMContext &gt; llvm_context</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00129">grammar.h:129</a></div></div>
+<div class="ttc" id="aclassexpr__visitor_html_afc92fdb6b029b6618dc817e4a2b353d1"><div class="ttname"><a href="classexpr__visitor.html#afc92fdb6b029b6618dc817e4a2b353d1">expr_visitor::builder</a></div><div class="ttdeci">llvm::IRBuilder builder</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00130">grammar.h:130</a></div></div>
 <div class="ttc" id="aclass_expr_parser_1_1_int_context_html_ae8184981bba3a07bbfea2b404e1df66b"><div class="ttname"><a href="class_expr_parser_1_1_int_context.html#ae8184981bba3a07bbfea2b404e1df66b">ExprParser::IntContext::INT</a></div><div class="ttdeci">antlr4::tree::TerminalNode * INT()</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8cpp_source.html#l00417">ExprParser.cpp:417</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1_token_html_ae288d9f2d72d0209a24e0cc5215e8844"><div class="ttname"><a href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">antlr4::Token::getText</a></div><div class="ttdeci">virtual std::string getText() const =0</div><div class="ttdoc">Get the text of the token.</div></div>
-<div class="ttc" id="aclassexpr__visitor_html_af7e2bb6db2969accf622d268a6156b97"><div class="ttname"><a href="classexpr__visitor.html#af7e2bb6db2969accf622d268a6156b97">expr_visitor::module</a></div><div class="ttdeci">std::unique_ptr&lt; llvm::Module &gt; module</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00132">grammar.h:132</a></div></div>
+<div class="ttc" id="aclassexpr__visitor_html_af7e2bb6db2969accf622d268a6156b97"><div class="ttname"><a href="classexpr__visitor.html#af7e2bb6db2969accf622d268a6156b97">expr_visitor::module</a></div><div class="ttdeci">std::unique_ptr&lt; llvm::Module &gt; module</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00131">grammar.h:131</a></div></div>
 <div class="ttc" id="aclass_expr_parser_1_1_add_sub_context_html_a868d2a2dff096d4d8df33d68a4783bf6"><div class="ttname"><a href="class_expr_parser_1_1_add_sub_context.html#a868d2a2dff096d4d8df33d68a4783bf6">ExprParser::AddSubContext::op</a></div><div class="ttdeci">antlr4::Token * op</div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00147">ExprParser.h:147</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

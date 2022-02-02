@@ -45,7 +45,10 @@ var menudata={children:[
 {text:"函数",url:"namespacemembers_func.html"},
 {text:"类型定义",url:"namespacemembers_type.html"},
 {text:"枚举",url:"namespacemembers_enum.html"},
-{text:"枚举值",url:"namespacemembers_eval.html"}]}]},
+{text:"枚举值",url:"namespacemembers_eval.html",children:[
+{text:"o",url:"namespacemembers_eval.html#index_o"},
+{text:"s",url:"namespacemembers_eval.html#index_s"},
+{text:"t",url:"namespacemembers_eval.html#index_t"}]}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
 {text:"类索引",url:"classes.html"},
@@ -145,7 +148,6 @@ var menudata={children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
-{text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
 {text:"f",url:"globals.html#index_f"},
 {text:"g",url:"globals.html#index_g"},
