@@ -11,9 +11,10 @@ var searchData=
   ['findallrulenodes_442',['findAllRuleNodes',['../classantlr4_1_1tree_1_1_trees.html#a582916967d9dc52fb621644e0b52c661',1,'antlr4::tree::Trees']]],
   ['findalltokennodes_443',['findAllTokenNodes',['../classantlr4_1_1tree_1_1_trees.html#a65df1be874230244c0f8efc3da521784',1,'antlr4::tree::Trees']]],
   ['findnodesuchthat_444',['findNodeSuchThat',['../classantlr4_1_1tree_1_1_trees.html#a2e870a18be6a1dfda86d8be8945a44e5',1,'antlr4::tree::Trees']]],
-  ['followstate_445',['followState',['../classantlr4_1_1atn_1_1_rule_transition.html#a9ba63114a2ee50709140026ca76b9a99',1,'antlr4::atn::RuleTransition']]],
-  ['force_5finline_446',['FORCE_INLINE',['../_murmur_hash_8cpp.html#ac032d233a8ebfcd82fd49d0824eefb18',1,'MurmurHash.cpp']]],
-  ['from_447',['from',['../classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4',1,'antlr4::atn::RangeTransition']]],
-  ['fromrulecontext_448',['fromRuleContext',['../classantlr4_1_1atn_1_1_prediction_context.html#acb46f102c66b1ae67b44f092e9d78da4',1,'antlr4::atn::PredictionContext']]],
-  ['fullctx_449',['fullCtx',['../classantlr4_1_1atn_1_1_a_t_n_config_set.html#af5ef274bd4b6185f2865add7f943633c',1,'antlr4::atn::ATNConfigSet']]]
+  ['flag_445',['flag',['../classproto_1_1svm.html#a7bb9d1aad9df48282361b36fa2aa7fab',1,'proto::svm']]],
+  ['followstate_446',['followState',['../classantlr4_1_1atn_1_1_rule_transition.html#a9ba63114a2ee50709140026ca76b9a99',1,'antlr4::atn::RuleTransition']]],
+  ['force_5finline_447',['FORCE_INLINE',['../_murmur_hash_8cpp.html#ac032d233a8ebfcd82fd49d0824eefb18',1,'MurmurHash.cpp']]],
+  ['from_448',['from',['../classantlr4_1_1atn_1_1_range_transition.html#ac4de64f5aaacba16f5a30801264649b4',1,'antlr4::atn::RangeTransition']]],
+  ['fromrulecontext_449',['fromRuleContext',['../classantlr4_1_1atn_1_1_prediction_context.html#acb46f102c66b1ae67b44f092e9d78da4',1,'antlr4::atn::PredictionContext']]],
+  ['fullctx_450',['fullCtx',['../classantlr4_1_1atn_1_1_a_t_n_config_set.html#af5ef274bd4b6185f2865add7f943633c',1,'antlr4::atn::ATNConfigSet']]]
 ];

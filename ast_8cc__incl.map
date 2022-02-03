@@ -1,12 +1,10 @@
 <map id="src/ast.cc" name="src/ast.cc">
-<area shape="rect" id="node1" title="AST实现" alt="" coords="249,5,332,32"/>
-<area shape="rect" id="node2" href="$ast_8h.html" title="AST实现" alt="" coords="296,80,351,107"/>
-<area shape="rect" id="node3" href="$config_8h.html" title="Auto generated config file" alt="" coords="32,155,106,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="285,229,365,256"/>
-<area shape="rect" id="node5" href="$option_8h.html" title="解析输入字符串" alt="" coords="130,155,205,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="230,155,287,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="362,155,421,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="446,155,522,181"/>
-<area shape="rect" id="node9" href="$test_8h.html" title="自动化测试相关工具" alt="" coords="546,155,605,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="524,229,628,256"/>
+<area shape="rect" id="node1" title="AST实现" alt="" coords="237,5,319,32"/>
+<area shape="rect" id="node2" href="$ast_8h.html" title="AST实现" alt="" coords="251,80,305,107"/>
+<area shape="rect" id="node3" href="$config_8h.html" title="Auto generated config file" alt="" coords="5,155,79,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="103,155,183,181"/>
+<area shape="rect" id="node5" href="$option_8h.html" title="解析输入字符串" alt="" coords="207,155,282,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="307,155,364,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="389,155,447,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="472,155,548,181"/>
 </map>

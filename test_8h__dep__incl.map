@@ -1,9 +1,0 @@
-<map id="inc/test.h" name="inc/test.h">
-<area shape="rect" id="node1" title="自动化测试相关工具" alt="" coords="213,5,296,32"/>
-<area shape="rect" id="node2" href="$ast_8h.html" title="AST实现" alt="" coords="139,80,216,107"/>
-<area shape="rect" id="node3" href="$grammar_8h.html" title="Expr语法处理文件" alt="" coords="22,155,138,181"/>
-<area shape="rect" id="node4" href="$main_8cc.html" title="AntlrExpr主文件" alt="" coords="153,229,226,256"/>
-<area shape="rect" id="node6" href="$ast_8cc.html" title="AST实现" alt="" coords="213,155,296,181"/>
-<area shape="rect" id="node7" href="$test_8cc.html" title="测试程序" alt="" coords="371,80,459,107"/>
-<area shape="rect" id="node5" href="$grammar_8cc.html" title="Expr语法处理文件" alt="" coords="5,229,128,256"/>
-</map>

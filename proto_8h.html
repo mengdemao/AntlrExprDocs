@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-da26e45</span>
+   &#160;<span id="projectnumber">0.0.3-a3a9b0b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -77,22 +77,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>代码生成  
+<p>代码生成与虚拟机实现  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;stack&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 proto.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="proto_8h__incl.png" border="0" usemap="#inc_2proto_8h" alt=""/></div>
 <map name="inc_2proto_8h" id="inc_2proto_8h">
-<area shape="rect" title="代码生成" alt="" coords="137,5,228,32"/>
+<area shape="rect" title="代码生成与虚拟机实现" alt="" coords="184,5,275,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,72,107"/>
 <area shape="rect" title=" " alt="" coords="96,80,176,107"/>
 <area shape="rect" title=" " alt="" coords="201,80,258,107"/>
 <area shape="rect" title=" " alt="" coords="283,80,341,107"/>
+<area shape="rect" title=" " alt="" coords="366,80,429,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -100,10 +102,10 @@ proto.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="proto_8h__dep__incl.png" border="0" usemap="#inc_2proto_8hdep" alt=""/></div>
 <map name="inc_2proto_8hdep" id="inc_2proto_8hdep">
-<area shape="rect" title="代码生成" alt="" coords="119,5,210,32"/>
+<area shape="rect" title="代码生成与虚拟机实现" alt="" coords="119,5,210,32"/>
 <area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,80,79,107"/>
 <area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="103,80,226,107"/>
-<area shape="rect" href="proto_8cc.html" title="代码生成" alt="" coords="251,80,348,107"/>
+<area shape="rect" href="proto_8cc.html" title="代码生成与虚拟机实现" alt="" coords="251,80,348,107"/>
 </map>
 </div>
 </div>
@@ -115,6 +117,10 @@ proto.h 的引用(Include)关系图:</div>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机指令码 16 : op_code 32 : op_data  <a href="structproto_1_1proto__code.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__data.html">proto::proto_data</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局变量描述  <a href="structproto_1_1proto__data.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1svm__flags.html">proto::svm_flags</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机标志位  <a href="structproto_1_1svm__flags.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html">proto::svm</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +134,8 @@ proto.h 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
+<tr class="memitem:a35f227f7275ef8ca4d8262f154928114"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a35f227f7275ef8ca4d8262f154928114">proto::op_cond</a></td></tr>
+<tr class="separator:a35f227f7275ef8ca4d8262f154928114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d06138fae4aed334274dd58477c3bf"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a87d06138fae4aed334274dd58477c3bf">proto::op_data</a></td></tr>
 <tr class="separator:a87d06138fae4aed334274dd58477c3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -178,7 +186,7 @@ proto.h 的引用(Include)关系图:</div>
 <tr class="separator:ac5ee766482f24e50d20f24c3bc777be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>代码生成 </p>
+<div class="textblock"><p>代码生成与虚拟机实现 </p>
 <dl class="section author"><dt>作者</dt><dd>mengdemao (<a href="#" onclick="location.href='mai'+'lto:'+'men'+'gd'+'ema'+'o1'+'995'+'10'+'21@'+'16'+'3.c'+'om'; return false;">mengd<span style="display: none;">.nosp@m.</span>emao<span style="display: none;">.nosp@m.</span>19951<span style="display: none;">.nosp@m.</span>021@<span style="display: none;">.nosp@m.</span>163.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.1 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2022-01-30</dd></dl>

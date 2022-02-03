@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-da26e45</span>
+   &#160;<span id="projectnumber">0.0.3-a3a9b0b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
 <a href="classproto_1_1svm-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
 <div class="title">proto::svm类 参考</div>  </div>
@@ -77,34 +78,53 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="proto_8h_source.html">proto.h</a>&gt;</code></p>
+<div class="dynheader">
+proto::svm 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classproto_1_1svm__coll__graph.png" border="0" usemap="#proto_1_1svm_coll__map" alt="Collaboration graph"/></div>
+<map name="proto_1_1svm_coll__map" id="proto_1_1svm_coll__map">
+<area shape="rect" title=" " alt="" coords="25,95,117,121"/>
+<area shape="rect" href="classproto_1_1proto.html" title=" " alt="" coords="21,184,120,211"/>
+<area shape="rect" href="structproto_1_1svm__flags.html" title="虚拟机标志位" alt="" coords="5,5,136,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a027509656a10eef323e5369280edb748"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a027509656a10eef323e5369280edb748">svm</a> ()</td></tr>
-<tr class="memdesc:a027509656a10eef323e5369280edb748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classproto_1_1svm.html#a027509656a10eef323e5369280edb748" title="Construct a new svm::svm object">svm::svm</a> object  <a href="classproto_1_1svm.html#a027509656a10eef323e5369280edb748">更多...</a><br /></td></tr>
-<tr class="separator:a027509656a10eef323e5369280edb748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1880948187412cbe3eb2d6b9f6fdb6d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a1880948187412cbe3eb2d6b9f6fdb6d8">svm</a> (<a class="el" href="classproto_1_1proto.html">proto</a> *<a class="el" href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">sproto</a>)</td></tr>
+<tr class="memdesc:a1880948187412cbe3eb2d6b9f6fdb6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classproto_1_1svm.html#a1880948187412cbe3eb2d6b9f6fdb6d8" title="Construct a new svm::svm object">svm::svm</a> object  <a href="classproto_1_1svm.html#a1880948187412cbe3eb2d6b9f6fdb6d8">更多...</a><br /></td></tr>
+<tr class="separator:a1880948187412cbe3eb2d6b9f6fdb6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c87eb5fb4af712c6fd17fc42faa940e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a7c87eb5fb4af712c6fd17fc42faa940e">~svm</a> ()=default</td></tr>
 <tr class="separator:a7c87eb5fb4af712c6fd17fc42faa940e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3bb9b62aa3a4bdfb05a041c2af773b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a> (int32_t sym)</td></tr>
 <tr class="separator:a3c3bb9b62aa3a4bdfb05a041c2af773b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae54927206ba56ed7b74badfd36704be9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a> (void)</td></tr>
 <tr class="separator:ae54927206ba56ed7b74badfd36704be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7531c6cbf7129cb01d1d17501fceb03a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a7531c6cbf7129cb01d1d17501fceb03a">call</a> (<a class="el" href="structproto_1_1proto__code.html">proto_code</a> pcode)</td></tr>
-<tr class="separator:a7531c6cbf7129cb01d1d17501fceb03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f31c2dbb7444c5d6fb03b2d89b73715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a4f31c2dbb7444c5d6fb03b2d89b73715">disp</a> (void)</td></tr>
-<tr class="separator:a4f31c2dbb7444c5d6fb03b2d89b73715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffb0850e577101ae1e81431bd64c792"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a3ffb0850e577101ae1e81431bd64c792">exe</a> (<a class="el" href="structproto_1_1proto__code.html">proto_code</a> pcode)</td></tr>
+<tr class="separator:a3ffb0850e577101ae1e81431bd64c792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c28ebbddd56011ec596ae8e61b2823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a55c28ebbddd56011ec596ae8e61b2823">dis</a> (void)</td></tr>
+<tr class="separator:a55c28ebbddd56011ec596ae8e61b2823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 属性</h2></td></tr>
-<tr class="memitem:a16a45c0ce12c0f371926359061c4ba53"><td class="memItemLeft" align="right" valign="top">std::stack&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">call_stack</a></td></tr>
-<tr class="separator:a16a45c0ce12c0f371926359061c4ba53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04112e1ee2acbfca643b78c84fd2d37c"><td class="memItemLeft" align="right" valign="top">std::stack&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">call</a></td></tr>
+<tr class="separator:a04112e1ee2acbfca643b78c84fd2d37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb9d1aad9df48282361b36fa2aa7fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structproto_1_1svm__flags.html">svm_flags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a7bb9d1aad9df48282361b36fa2aa7fab">flag</a></td></tr>
+<tr class="separator:a7bb9d1aad9df48282361b36fa2aa7fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301492051a57375a271da2b1a12599d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classproto_1_1proto.html">proto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">sproto</a></td></tr>
+<tr class="separator:a301492051a57375a271da2b1a12599d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a2c1c919418b0007e530ede08c58f5c0b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html#a2c1c919418b0007e530ede08c58f5c0b">proto</a></td></tr>
+<tr class="separator:a2c1c919418b0007e530ede08c58f5c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00088">88</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00100">100</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a027509656a10eef323e5369280edb748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027509656a10eef323e5369280edb748">&#9670;&nbsp;</a></span>svm()</h2>
+<a id="a1880948187412cbe3eb2d6b9f6fdb6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1880948187412cbe3eb2d6b9f6fdb6d8">&#9670;&nbsp;</a></span>svm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,18 +132,20 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">proto::svm::svm </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classproto_1_1proto.html">proto</a> *&#160;</td>
+          <td class="paramname"><em>sproto</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classproto_1_1svm.html#a027509656a10eef323e5369280edb748" title="Construct a new svm::svm object">svm::svm</a> object </p>
+<p>Construct a new <a class="el" href="classproto_1_1svm.html#a1880948187412cbe3eb2d6b9f6fdb6d8" title="Construct a new svm::svm object">svm::svm</a> object </p>
 
-<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00182">182</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">/* No Body */</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00202">202</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    assert(<a class="code" href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">sproto</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    this-&gt;<a class="code" href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">sproto</a> = <a class="code" href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">sproto</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -153,14 +175,38 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a7531c6cbf7129cb01d1d17501fceb03a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7531c6cbf7129cb01d1d17501fceb03a">&#9670;&nbsp;</a></span>call()</h2>
+<a id="a55c28ebbddd56011ec596ae8e61b2823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c28ebbddd56011ec596ae8e61b2823">&#9670;&nbsp;</a></span>dis()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int proto::svm::call </td>
+          <td class="memname">void proto::svm::dis </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00231">231</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">double</span> ret = <a class="code" href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">call</a>.top();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    std::cout &lt;&lt; ret &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3ffb0850e577101ae1e81431bd64c792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ffb0850e577101ae1e81431bd64c792">&#9670;&nbsp;</a></span>exe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int proto::svm::exe </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structproto_1_1proto__code.html">proto_code</a>&#160;</td>
           <td class="paramname"><em>pcode</em></td><td>)</td>
@@ -176,103 +222,111 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>int </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00221">221</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    int32_t sym1 = 0, sym2 = 0;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    int32_t res = 0;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">switch</span> (pcode.code) {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e">OP_NOP</a>:</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2">OP_MOV</a>:</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        res = pcode.data;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca">OP_LDR</a>:</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4">OP_STR</a>:</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192">OP_ADD</a>:</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        res  = sym1 + sym2;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732">OP_SUB</a>:</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        res  = sym1 - sym2;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad">OP_MUL</a>:</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        res  = sym1 * sym2;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00242">242</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    int32_t sym1 = 0, sym2 = 0;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    int32_t res = 0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">switch</span> (pcode.code) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e">OP_NOP</a>:</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2">OP_MOV</a>:</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        res = pcode.data;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca">OP_LDR</a>:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4">OP_STR</a>:</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76">OP_DIV</a>:</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192">OP_ADD</a>:</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        res  = sym1 / sym2;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        res  = sym1 % sym2;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        res  = sym1 + sym2;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732">OP_SUB</a>:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        res  = sym1 - sym2;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad">OP_MUL</a>:</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        res  = sym1 * sym2;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76">OP_DIV</a>:</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        res  = sym1 / sym2;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>:</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        res  = sym1 % sym2;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aacf84fa241b0cc748505126f01c95180">OP_POW</a>:</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        res  = pow(sym1, sym2);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a9182cb0c282ed67804b031f051fa7875">OP_UNM</a>:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        res  = abs(sym2);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af3436cae9a1e5869a04e1d36ed58b06f">OP_AND</a>:</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        res  = sym1 &amp; sym2;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a6fb74e532c30f1116322889ec70e24a6">OP_ORR</a>:</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        sym2 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        res  = sym1 | sym2;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af598aeda29fa663d973a0f36b06ca5c3">OP_NOT</a>:</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        sym1 = <a class="code" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">pop</a>();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        res  = ~sym1;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <a class="code" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">psh</a>(res);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="classproto_1_1svm_a7531c6cbf7129cb01d1d17501fceb03a_cgraph.png" border="0" usemap="#classproto_1_1svm_a7531c6cbf7129cb01d1d17501fceb03a_cgraph" alt=""/></div>
-<map name="classproto_1_1svm_a7531c6cbf7129cb01d1d17501fceb03a_cgraph" id="classproto_1_1svm_a7531c6cbf7129cb01d1d17501fceb03a_cgraph">
+<div class="center"><img src="classproto_1_1svm_a3ffb0850e577101ae1e81431bd64c792_cgraph.png" border="0" usemap="#classproto_1_1svm_a3ffb0850e577101ae1e81431bd64c792_cgraph" alt=""/></div>
+<map name="classproto_1_1svm_a3ffb0850e577101ae1e81431bd64c792_cgraph" id="classproto_1_1svm_a3ffb0850e577101ae1e81431bd64c792_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,128,57"/>
 <area shape="rect" href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9" title=" " alt="" coords="176,5,300,32"/>
 <area shape="rect" href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b" title=" " alt="" coords="177,56,299,83"/>
 </map>
 </div>
 
-</div>
-</div>
-<a id="a4f31c2dbb7444c5d6fb03b2d89b73715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f31c2dbb7444c5d6fb03b2d89b73715">&#9670;&nbsp;</a></span>disp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void proto::svm::disp </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00210">210</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">double</span> ret = <a class="code" href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">call_stack</a>.top();</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    std::cout &lt;&lt; ret &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="ae54927206ba56ed7b74badfd36704be9"></a>
@@ -292,19 +346,19 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>返回</dt><dd>int32_t </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00200">200</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    int32_t ret = <a class="code" href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">call_stack</a>.top();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">call_stack</a>.pop();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00221">221</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    int32_t ret = <a class="code" href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">call</a>.top();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">call</a>.pop();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classproto_1_1svm_ae54927206ba56ed7b74badfd36704be9_icgraph.png" border="0" usemap="#classproto_1_1svm_ae54927206ba56ed7b74badfd36704be9_icgraph" alt=""/></div>
 <map name="classproto_1_1svm_ae54927206ba56ed7b74badfd36704be9_icgraph" id="classproto_1_1svm_ae54927206ba56ed7b74badfd36704be9_icgraph">
 <area shape="rect" title=" " alt="" coords="176,5,300,32"/>
-<area shape="rect" href="classproto_1_1svm.html#a7531c6cbf7129cb01d1d17501fceb03a" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classproto_1_1svm.html#a3ffb0850e577101ae1e81431bd64c792" title=" " alt="" coords="5,5,128,32"/>
 </map>
 </div>
 
@@ -332,25 +386,25 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00191">191</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">call_stack</a>.push(sym);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="proto_8cc_source.html">proto.cc</a> 第 <a class="el" href="proto_8cc_source.html#l00212">212</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">call</a>.push(sym);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classproto_1_1svm_a3c3bb9b62aa3a4bdfb05a041c2af773b_icgraph.png" border="0" usemap="#classproto_1_1svm_a3c3bb9b62aa3a4bdfb05a041c2af773b_icgraph" alt=""/></div>
 <map name="classproto_1_1svm_a3c3bb9b62aa3a4bdfb05a041c2af773b_icgraph" id="classproto_1_1svm_a3c3bb9b62aa3a4bdfb05a041c2af773b_icgraph">
 <area shape="rect" title=" " alt="" coords="176,5,299,32"/>
-<area shape="rect" href="classproto_1_1svm.html#a7531c6cbf7129cb01d1d17501fceb03a" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classproto_1_1svm.html#a3ffb0850e577101ae1e81431bd64c792" title=" " alt="" coords="5,5,128,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a16a45c0ce12c0f371926359061c4ba53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16a45c0ce12c0f371926359061c4ba53">&#9670;&nbsp;</a></span>call_stack</h2>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a2c1c919418b0007e530ede08c58f5c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1c919418b0007e530ede08c58f5c0b">&#9670;&nbsp;</a></span>proto</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +413,32 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::stack&lt;int32_t&gt; proto::svm::call_stack</td>
+          <td class="memname">friend class <a class="el" href="classproto_1_1proto.html">proto</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00112">112</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a04112e1ee2acbfca643b78c84fd2d37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04112e1ee2acbfca643b78c84fd2d37c">&#9670;&nbsp;</a></span>call</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::stack&lt;int32_t&gt; proto::svm::call</td>
         </tr>
       </table>
   </td>
@@ -369,7 +448,55 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00101">101</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00113">113</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7bb9d1aad9df48282361b36fa2aa7fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb9d1aad9df48282361b36fa2aa7fab">&#9670;&nbsp;</a></span>flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structproto_1_1svm__flags.html">svm_flags</a> proto::svm::flag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00114">114</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a301492051a57375a271da2b1a12599d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301492051a57375a271da2b1a12599d3">&#9670;&nbsp;</a></span>sproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproto_1_1proto.html">proto</a>* proto::svm::sproto</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00115">115</a> 行定义.</p>
 
 </div>
 </div>
@@ -378,18 +505,24 @@ Private 属性</h2></td></tr>
 <li>src/<a class="el" href="proto_8cc_source.html">proto.cc</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00032">proto.h:32</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a></div><div class="ttdeci">@ OP_STR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00028">proto.h:28</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a></div><div class="ttdeci">@ OP_MOD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00034">proto.h:34</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a></div><div class="ttdeci">@ OP_NOP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00024">proto.h:24</a></div></div>
-<div class="ttc" id="aclassproto_1_1svm_html_a16a45c0ce12c0f371926359061c4ba53"><div class="ttname"><a href="classproto_1_1svm.html#a16a45c0ce12c0f371926359061c4ba53">proto::svm::call_stack</a></div><div class="ttdeci">std::stack&lt; int32_t &gt; call_stack</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00101">proto.h:101</a></div></div>
-<div class="ttc" id="aclassproto_1_1svm_html_ae54927206ba56ed7b74badfd36704be9"><div class="ttname"><a href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">proto::svm::pop</a></div><div class="ttdeci">int32_t pop(void)</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00200">proto.cc:200</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2">proto::OP_MOV</a></div><div class="ttdeci">@ OP_MOV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00026">proto.h:26</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a></div><div class="ttdeci">@ OP_DIV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00033">proto.h:33</a></div></div>
-<div class="ttc" id="aclassproto_1_1svm_html_a3c3bb9b62aa3a4bdfb05a041c2af773b"><div class="ttname"><a href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">proto::svm::psh</a></div><div class="ttdeci">void psh(int32_t sym)</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00191">proto.cc:191</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a></div><div class="ttdeci">@ OP_SUB</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00031">proto.h:31</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a></div><div class="ttdeci">@ OP_ADD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00030">proto.h:30</a></div></div>
-<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a></div><div class="ttdeci">@ OP_LDR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00027">proto.h:27</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a6fb74e532c30f1116322889ec70e24a6"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a6fb74e532c30f1116322889ec70e24a6">proto::OP_ORR</a></div><div class="ttdeci">@ OP_ORR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00040">proto.h:40</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00033">proto.h:33</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0af598aeda29fa663d973a0f36b06ca5c3"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a></div><div class="ttdeci">@ OP_NOT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00041">proto.h:41</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a></div><div class="ttdeci">@ OP_STR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00029">proto.h:29</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a></div><div class="ttdeci">@ OP_MOD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00035">proto.h:35</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a9182cb0c282ed67804b031f051fa7875"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a9182cb0c282ed67804b031f051fa7875">proto::OP_UNM</a></div><div class="ttdeci">@ OP_UNM</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00037">proto.h:37</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0af3436cae9a1e5869a04e1d36ed58b06f"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af3436cae9a1e5869a04e1d36ed58b06f">proto::OP_AND</a></div><div class="ttdeci">@ OP_AND</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00039">proto.h:39</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a></div><div class="ttdeci">@ OP_NOP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00025">proto.h:25</a></div></div>
+<div class="ttc" id="aclassproto_1_1svm_html_ae54927206ba56ed7b74badfd36704be9"><div class="ttname"><a href="classproto_1_1svm.html#ae54927206ba56ed7b74badfd36704be9">proto::svm::pop</a></div><div class="ttdeci">int32_t pop(void)</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00221">proto.cc:221</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2">proto::OP_MOV</a></div><div class="ttdeci">@ OP_MOV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00027">proto.h:27</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a></div><div class="ttdeci">@ OP_DIV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00034">proto.h:34</a></div></div>
+<div class="ttc" id="aclassproto_1_1svm_html_a3c3bb9b62aa3a4bdfb05a041c2af773b"><div class="ttname"><a href="classproto_1_1svm.html#a3c3bb9b62aa3a4bdfb05a041c2af773b">proto::svm::psh</a></div><div class="ttdeci">void psh(int32_t sym)</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00212">proto.cc:212</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a></div><div class="ttdeci">@ OP_SUB</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00032">proto.h:32</a></div></div>
+<div class="ttc" id="aclassproto_1_1svm_html_a301492051a57375a271da2b1a12599d3"><div class="ttname"><a href="classproto_1_1svm.html#a301492051a57375a271da2b1a12599d3">proto::svm::sproto</a></div><div class="ttdeci">proto * sproto</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00115">proto.h:115</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a></div><div class="ttdeci">@ OP_ADD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00031">proto.h:31</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a></div><div class="ttdeci">@ OP_LDR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00028">proto.h:28</a></div></div>
+<div class="ttc" id="anamespaceproto_html_ac5ee766482f24e50d20f24c3bc777be0aacf84fa241b0cc748505126f01c95180"><div class="ttname"><a href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a></div><div class="ttdeci">@ OP_POW</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00036">proto.h:36</a></div></div>
+<div class="ttc" id="aclassproto_1_1svm_html_a04112e1ee2acbfca643b78c84fd2d37c"><div class="ttname"><a href="classproto_1_1svm.html#a04112e1ee2acbfca643b78c84fd2d37c">proto::svm::call</a></div><div class="ttdeci">std::stack&lt; int32_t &gt; call</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00113">proto.h:113</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
