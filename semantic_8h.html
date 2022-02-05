@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: inc/semantic.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">0.0.3-79cdf44</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">semantic.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>语义分析  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="antlr4-runtime_8h_source.html">antlr4-runtime.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_parse_tree_property_8h_source.html">tree/ParseTreeProperty.h</a>&quot;</code><br />
+<code>#include &lt;boost/uuid/uuid.hpp&gt;</code><br />
+<code>#include &lt;boost/uuid/uuid_generators.hpp&gt;</code><br />
+<code>#include &lt;boost/uuid/uuid_io.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="proto_8h_source.html">proto.h</a>&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+semantic.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="semantic_8h__incl.png" border="0" usemap="#inc_2semantic_8h" alt=""/></div>
+<map name="inc_2semantic_8h" id="inc_2semantic_8h">
+<area shape="rect" title="语义分析" alt="" coords="3113,5,3231,32"/>
+<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="1655,80,1783,107"/>
+<area shape="rect" title=" " alt="" coords="2077,528,2136,555"/>
+<area shape="rect" title=" " alt="" coords="3121,528,3183,555"/>
+<area shape="rect" href="_parse_tree_property_8h.html" title=" " alt="" coords="1319,155,1497,181"/>
+<area shape="rect" title=" " alt="" coords="3097,80,3247,107"/>
+<area shape="rect" title=" " alt="" coords="3272,80,3499,107"/>
+<area shape="rect" title=" " alt="" coords="3523,80,3693,107"/>
+<area shape="rect" href="proto_8h.html" title="代码生成与虚拟机实现" alt="" coords="3046,453,3114,480"/>
+<area shape="rect" title=" " alt="" coords="3769,80,3839,107"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1341,379,1475,405"/>
+<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="1522,155,1681,181"/>
+<area shape="rect" title=" " alt="" coords="2645,453,2731,480"/>
+<area shape="rect" title=" " alt="" coords="2755,453,2829,480"/>
+<area shape="rect" title=" " alt="" coords="2853,453,2920,480"/>
+<area shape="rect" title=" " alt="" coords="5,453,72,480"/>
+<area shape="rect" title=" " alt="" coords="97,453,170,480"/>
+<area shape="rect" title=" " alt="" coords="1189,528,1269,555"/>
+<area shape="rect" title=" " alt="" coords="246,453,317,480"/>
+<area shape="rect" title=" " alt="" coords="341,453,400,480"/>
+<area shape="rect" title=" " alt="" coords="425,453,495,480"/>
+<area shape="rect" title=" " alt="" coords="520,453,563,480"/>
+<area shape="rect" title=" " alt="" coords="587,453,637,480"/>
+<area shape="rect" title=" " alt="" coords="661,453,739,480"/>
+<area shape="rect" title=" " alt="" coords="763,453,805,480"/>
+<area shape="rect" title=" " alt="" coords="829,453,904,480"/>
+<area shape="rect" title=" " alt="" coords="535,528,606,555"/>
+<area shape="rect" title=" " alt="" coords="979,453,1050,480"/>
+<area shape="rect" title=" " alt="" coords="948,528,1023,555"/>
+<area shape="rect" title=" " alt="" coords="2938,528,2995,555"/>
+<area shape="rect" title=" " alt="" coords="1315,453,1391,480"/>
+<area shape="rect" title=" " alt="" coords="1415,453,1507,480"/>
+<area shape="rect" title=" " alt="" coords="1531,453,1655,480"/>
+<area shape="rect" title=" " alt="" coords="1680,453,1795,480"/>
+<area shape="rect" title=" " alt="" coords="1819,453,1879,480"/>
+<area shape="rect" title=" " alt="" coords="1904,453,1968,480"/>
+<area shape="rect" title=" " alt="" coords="1993,453,2079,480"/>
+<area shape="rect" title=" " alt="" coords="2104,453,2163,480"/>
+<area shape="rect" title=" " alt="" coords="2187,453,2330,480"/>
+<area shape="rect" title=" " alt="" coords="2354,453,2427,480"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="1075,453,1189,480"/>
+<area shape="rect" href="_declarations_8h.html" title=" " alt="" coords="2451,453,2621,480"/>
+<area shape="rect" title=" " alt="" coords="1091,528,1165,555"/>
+<area shape="rect" href="_recognition_exception_8h.html" title=" " alt="" coords="1482,229,1657,256"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1470,304,1575,331"/>
+<area shape="rect" title=" " alt="" coords="3029,528,3096,555"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="semantic_8h__dep__incl.png" border="0" usemap="#inc_2semantic_8hdep" alt=""/></div>
+<map name="inc_2semantic_8hdep" id="inc_2semantic_8hdep">
+<area shape="rect" title="语义分析" alt="" coords="117,5,234,32"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="45,80,161,107"/>
+<area shape="rect" href="semantic_8cc.html" title="语义分析" alt="" coords="186,80,309,107"/>
+<area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,155,79,181"/>
+<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="103,155,226,181"/>
+</map>
+</div>
+</div>
+<p><a href="semantic_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsemantic_1_1attr.html">semantic::attr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsemantic_1_1sym__table.html">semantic::sym_table</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsemantic_1_1sym__table_1_1sym__item.html">semantic::sym_table::sym_item</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacesemantic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesemantic.html">semantic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:af3800965213100eea50822b761f98f81"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">semantic::sym_data</a></td></tr>
+<tr class="separator:af3800965213100eea50822b761f98f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529d65453519a8af246b063547137947"><td class="memItemLeft" align="right" valign="top">typedef uuid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesemantic.html#a529d65453519a8af246b063547137947">semantic::sym_uuid</a></td></tr>
+<tr class="separator:a529d65453519a8af246b063547137947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d18e50527c4fb7647833ba4a02cebf"><td class="memItemLeft" align="right" valign="top">typedef string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">semantic::sym_name</a></td></tr>
+<tr class="separator:af6d18e50527c4fb7647833ba4a02cebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a894e9a4915d9869438e920454e279374"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374">semantic::sym_type</a> { <a class="el" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374a5cf5c726b1dd36d1a58c1258004c922d">semantic::ST_INT</a>
+ }</td></tr>
+<tr class="separator:a894e9a4915d9869438e920454e279374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>语义分析 </p>
+<dl class="section author"><dt>作者</dt><dd>mengdemao (<a href="#" onclick="location.href='mai'+'lto:'+'men'+'gd'+'ema'+'o1'+'995'+'10'+'21@'+'16'+'3.c'+'om'; return false;">mengd<span style="display: none;">.nosp@m.</span>emao<span style="display: none;">.nosp@m.</span>19951<span style="display: none;">.nosp@m.</span>021@<span style="display: none;">.nosp@m.</span>163.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-02-01</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2022 mengdemao </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="semantic_8h_source.html">semantic.h</a> 中定义.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

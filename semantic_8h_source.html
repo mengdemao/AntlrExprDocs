@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: inc/semantic.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">0.0.3-79cdf44</span>
+   </div>
+   <div id="projectbrief">AntlrExpr笔记</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">semantic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="semantic_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __SEMANTIC_H__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __SEMANTIC_H__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="antlr4-runtime_8h.html">antlr4-runtime.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_property_8h.html">tree/ParseTreeProperty.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;boost/uuid/uuid.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/uuid/uuid_generators.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;boost/uuid/uuid_io.hpp&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="proto_8h.html">proto.h</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacesemantic.html">   25</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesemantic.html">semantic</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span>boost::uuids;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsemantic_1_1attr.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsemantic_1_1attr.html">attr</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classsemantic_1_1attr.html">attr</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="classsemantic_1_1attr.html">attr</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string get_stat(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string get_expr(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> put_stat(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx, <span class="keyword">const</span> std::string&amp; stat);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> put_expr(<a class="code" href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a>* ctx, <span class="keyword">const</span> std::string&amp; expr);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsemantic_1_1attr.html#a68880cbad9570259c51fed06163457c8">   43</a></span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_property.html">antlr4::tree::ParseTreeProperty&lt;std::string&gt;</a> <a class="code" href="classsemantic_1_1attr.html#a68880cbad9570259c51fed06163457c8">stat_attr</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsemantic_1_1attr.html#a54c28dfcc76ce5f0c4f1158a5596f0c4">   44</a></span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_property.html">antlr4::tree::ParseTreeProperty&lt;std::string&gt;</a> <a class="code" href="classsemantic_1_1attr.html#a54c28dfcc76ce5f0c4f1158a5596f0c4">expr_attr</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374">   47</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374">sym_type</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374a5cf5c726b1dd36d1a58c1258004c922d">   48</a></span>&#160;    <a class="code" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374a5cf5c726b1dd36d1a58c1258004c922d">ST_INT</a>,     </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">   50</a></span>&#160;<span class="keyword">typedef</span> int32_t <a class="code" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">sym_data</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacesemantic.html#a529d65453519a8af246b063547137947">   51</a></span>&#160;<span class="keyword">typedef</span> uuid    <a class="code" href="namespacesemantic.html#a529d65453519a8af246b063547137947">sym_uuid</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">string</span>  <a class="code" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">sym_name</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classsemantic_1_1sym__table.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsemantic_1_1sym__table.html">sym_table</a> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structsemantic_1_1sym__table_1_1sym__item.html">   56</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsemantic_1_1sym__table_1_1sym__item.html">sym_item</a> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structsemantic_1_1sym__table_1_1sym__item.html#afd72954df2eed9c9dcf789cfe7ef70b2">   57</a></span>&#160;        <a class="code" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">sym_name</a> <a class="code" href="structsemantic_1_1sym__table_1_1sym__item.html#afd72954df2eed9c9dcf789cfe7ef70b2">name</a>;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structsemantic_1_1sym__table_1_1sym__item.html#ab5fff8342691919cbb3e5bec1b27194c">   58</a></span>&#160;        <a class="code" href="namespacesemantic.html#a529d65453519a8af246b063547137947">sym_uuid</a> <a class="code" href="structsemantic_1_1sym__table_1_1sym__item.html#ab5fff8342691919cbb3e5bec1b27194c">uuid</a>;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structsemantic_1_1sym__table_1_1sym__item.html#a6231f8cb1dc23f82ddab247e7b369001">   59</a></span>&#160;        <a class="code" href="namespacesemantic.html#a894e9a4915d9869438e920454e279374">sym_type</a> <a class="code" href="structsemantic_1_1sym__table_1_1sym__item.html#a6231f8cb1dc23f82ddab247e7b369001">type</a>;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structsemantic_1_1sym__table_1_1sym__item.html#a8a013863b008b4dad40cb4b9f4c7fff1">   60</a></span>&#160;        <a class="code" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">sym_data</a> <a class="code" href="structsemantic_1_1sym__table_1_1sym__item.html#a8a013863b008b4dad40cb4b9f4c7fff1">data</a>;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classsemantic_1_1sym__table.html#a9dac727487cae853783328d0e13b6d55">   68</a></span>&#160;    name_generator <a class="code" href="classsemantic_1_1sym__table.html#a9dac727487cae853783328d0e13b6d55">name_gen</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classsemantic_1_1sym__table.html#acb153d0c37a43fa0cb3bebb402ebb346">   69</a></span>&#160;    uuid <a class="code" href="classsemantic_1_1sym__table.html#acb153d0c37a43fa0cb3bebb402ebb346">uuid_gen</a>(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> name_gen(name);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classsemantic_1_1sym__table.html#ac5a0f720013b1ab6ff5f61a349a965fb">   74</a></span>&#160;    vector&lt;sym_item&gt; <a class="code" href="classsemantic_1_1sym__table.html#ac5a0f720013b1ab6ff5f61a349a965fb">item</a>; <span class="comment">// 符号表项</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classsemantic_1_1sym__table.html">sym_table</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ~<a class="code" href="classsemantic_1_1sym__table.html">sym_table</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="namespacesemantic.html#a529d65453519a8af246b063547137947">sym_uuid</a> add_var(<a class="code" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">sym_name</a> name, <a class="code" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">sym_data</a> data);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> del_var(<a class="code" href="namespacesemantic.html#a529d65453519a8af246b063547137947">sym_uuid</a> uuid);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> del_var(<a class="code" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">sym_name</a> name);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> get_var(<a class="code" href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">sym_name</a> name, <a class="code" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">sym_data</a> &amp;data);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> get_var(<a class="code" href="namespacesemantic.html#a529d65453519a8af246b063547137947">sym_uuid</a> uuid, <a class="code" href="namespacesemantic.html#af3800965213100eea50822b761f98f81">sym_data</a> &amp;data);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// namespace semantic</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __SEMANTIC_H__ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssemantic_1_1attr_html"><div class="ttname"><a href="classsemantic_1_1attr.html">semantic::attr</a></div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00030">semantic.h:30</a></div></div>
+<div class="ttc" id="anamespacesemantic_html_a894e9a4915d9869438e920454e279374"><div class="ttname"><a href="namespacesemantic.html#a894e9a4915d9869438e920454e279374">semantic::sym_type</a></div><div class="ttdeci">sym_type</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00047">semantic.h:47</a></div></div>
+<div class="ttc" id="anamespacesemantic_html"><div class="ttname"><a href="namespacesemantic.html">semantic</a></div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00025">semantic.h:25</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1attr_html_a68880cbad9570259c51fed06163457c8"><div class="ttname"><a href="classsemantic_1_1attr.html#a68880cbad9570259c51fed06163457c8">semantic::attr::stat_attr</a></div><div class="ttdeci">antlr4::tree::ParseTreeProperty&lt; std::string &gt; stat_attr</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00043">semantic.h:43</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1sym__table_html_ac5a0f720013b1ab6ff5f61a349a965fb"><div class="ttname"><a href="classsemantic_1_1sym__table.html#ac5a0f720013b1ab6ff5f61a349a965fb">semantic::sym_table::item</a></div><div class="ttdeci">vector&lt; sym_item &gt; item</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00074">semantic.h:74</a></div></div>
+<div class="ttc" id="anamespacesemantic_html_af3800965213100eea50822b761f98f81"><div class="ttname"><a href="namespacesemantic.html#af3800965213100eea50822b761f98f81">semantic::sym_data</a></div><div class="ttdeci">int32_t sym_data</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00050">semantic.h:50</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1attr_html_a54c28dfcc76ce5f0c4f1158a5596f0c4"><div class="ttname"><a href="classsemantic_1_1attr.html#a54c28dfcc76ce5f0c4f1158a5596f0c4">semantic::attr::expr_attr</a></div><div class="ttdeci">antlr4::tree::ParseTreeProperty&lt; std::string &gt; expr_attr</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00044">semantic.h:44</a></div></div>
+<div class="ttc" id="astructsemantic_1_1sym__table_1_1sym__item_html_a8a013863b008b4dad40cb4b9f4c7fff1"><div class="ttname"><a href="structsemantic_1_1sym__table_1_1sym__item.html#a8a013863b008b4dad40cb4b9f4c7fff1">semantic::sym_table::sym_item::data</a></div><div class="ttdeci">sym_data data</div><div class="ttdoc">类型</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00060">semantic.h:60</a></div></div>
+<div class="ttc" id="a_parse_tree_property_8h_html"><div class="ttname"><a href="_parse_tree_property_8h.html">ParseTreeProperty.h</a></div></div>
+<div class="ttc" id="astructsemantic_1_1sym__table_1_1sym__item_html_afd72954df2eed9c9dcf789cfe7ef70b2"><div class="ttname"><a href="structsemantic_1_1sym__table_1_1sym__item.html#afd72954df2eed9c9dcf789cfe7ef70b2">semantic::sym_table::sym_item::name</a></div><div class="ttdeci">sym_name name</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00057">semantic.h:57</a></div></div>
+<div class="ttc" id="aproto_8h_html"><div class="ttname"><a href="proto_8h.html">proto.h</a></div><div class="ttdoc">代码生成与虚拟机实现</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_property_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree_property.html">antlr4::tree::ParseTreeProperty&lt; std::string &gt;</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1sym__table_html_a9dac727487cae853783328d0e13b6d55"><div class="ttname"><a href="classsemantic_1_1sym__table.html#a9dac727487cae853783328d0e13b6d55">semantic::sym_table::name_gen</a></div><div class="ttdeci">name_generator name_gen</div><div class="ttdoc">符号表UUID生成</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00068">semantic.h:68</a></div></div>
+<div class="ttc" id="anamespacesemantic_html_a529d65453519a8af246b063547137947"><div class="ttname"><a href="namespacesemantic.html#a529d65453519a8af246b063547137947">semantic::sym_uuid</a></div><div class="ttdeci">uuid sym_uuid</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00051">semantic.h:51</a></div></div>
+<div class="ttc" id="anamespacesemantic_html_af6d18e50527c4fb7647833ba4a02cebf"><div class="ttname"><a href="namespacesemantic.html#af6d18e50527c4fb7647833ba4a02cebf">semantic::sym_name</a></div><div class="ttdeci">string sym_name</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00052">semantic.h:52</a></div></div>
+<div class="ttc" id="aclassantlr4_1_1_parser_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_parser_rule_context.html">antlr4::ParserRuleContext</a></div><div class="ttdoc">A rule invocation record for parsing.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_rule_context_8h_source.html#l00036">ParserRuleContext.h:36</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1sym__table_html"><div class="ttname"><a href="classsemantic_1_1sym__table.html">semantic::sym_table</a></div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00054">semantic.h:54</a></div></div>
+<div class="ttc" id="aantlr4-runtime_8h_html"><div class="ttname"><a href="antlr4-runtime_8h.html">antlr4-runtime.h</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_t_n_config_8h_source.html#l00132">ATNConfig.h:132</a></div></div>
+<div class="ttc" id="aclasssemantic_1_1sym__table_html_acb153d0c37a43fa0cb3bebb402ebb346"><div class="ttname"><a href="classsemantic_1_1sym__table.html#acb153d0c37a43fa0cb3bebb402ebb346">semantic::sym_table::uuid_gen</a></div><div class="ttdeci">uuid uuid_gen(string name)</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00069">semantic.h:69</a></div></div>
+<div class="ttc" id="astructsemantic_1_1sym__table_1_1sym__item_html_a6231f8cb1dc23f82ddab247e7b369001"><div class="ttname"><a href="structsemantic_1_1sym__table_1_1sym__item.html#a6231f8cb1dc23f82ddab247e7b369001">semantic::sym_table::sym_item::type</a></div><div class="ttdeci">sym_type type</div><div class="ttdoc">UUID</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00059">semantic.h:59</a></div></div>
+<div class="ttc" id="astructsemantic_1_1sym__table_1_1sym__item_html_ab5fff8342691919cbb3e5bec1b27194c"><div class="ttname"><a href="structsemantic_1_1sym__table_1_1sym__item.html#ab5fff8342691919cbb3e5bec1b27194c">semantic::sym_table::sym_item::uuid</a></div><div class="ttdeci">sym_uuid uuid</div><div class="ttdoc">名字</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00058">semantic.h:58</a></div></div>
+<div class="ttc" id="astructsemantic_1_1sym__table_1_1sym__item_html"><div class="ttname"><a href="structsemantic_1_1sym__table_1_1sym__item.html">semantic::sym_table::sym_item</a></div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00056">semantic.h:56</a></div></div>
+<div class="ttc" id="anamespacesemantic_html_a894e9a4915d9869438e920454e279374a5cf5c726b1dd36d1a58c1258004c922d"><div class="ttname"><a href="namespacesemantic.html#a894e9a4915d9869438e920454e279374a5cf5c726b1dd36d1a58c1258004c922d">semantic::ST_INT</a></div><div class="ttdeci">@ ST_INT</div><div class="ttdef"><b>Definition:</b> <a href="semantic_8h_source.html#l00048">semantic.h:48</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

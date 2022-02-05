@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-a3a9b0b</span>
+   &#160;<span id="projectnumber">0.0.3-79cdf44</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -102,10 +102,13 @@ proto.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="proto_8h__dep__incl.png" border="0" usemap="#inc_2proto_8hdep" alt=""/></div>
 <map name="inc_2proto_8hdep" id="inc_2proto_8hdep">
-<area shape="rect" title="代码生成与虚拟机实现" alt="" coords="119,5,210,32"/>
-<area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,80,79,107"/>
-<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="103,80,226,107"/>
-<area shape="rect" href="proto_8cc.html" title="代码生成与虚拟机实现" alt="" coords="251,80,348,107"/>
+<area shape="rect" title="代码生成与虚拟机实现" alt="" coords="230,5,321,32"/>
+<area shape="rect" href="semantic_8h.html" title="语义分析" alt="" coords="169,80,286,107"/>
+<area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="56,229,129,256"/>
+<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="214,229,337,256"/>
+<area shape="rect" href="proto_8cc.html" title="代码生成与虚拟机实现" alt="" coords="361,80,459,107"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="169,155,285,181"/>
+<area shape="rect" href="semantic_8cc.html" title="语义分析" alt="" coords="22,155,145,181"/>
 </map>
 </div>
 </div>
@@ -114,15 +117,13 @@ proto.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__code.html">proto::proto_code</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机指令码 16 : op_code 32 : op_data  <a href="structproto_1_1proto__code.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机指令码 16 : op_code 16 : op_cond 32 : op_data  <a href="structproto_1_1proto__code.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__data.html">proto::proto_data</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局变量描述  <a href="structproto_1_1proto__data.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1svm__flags.html">proto::svm_flags</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机标志位  <a href="structproto_1_1svm__flags.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1svm.html">proto::svm</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__flags.html">proto::proto_flags</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机标志位  <a href="structproto_1_1proto__flags.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproto_1_1proto.html">proto::proto</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,56 +135,62 @@ proto.h 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:a35f227f7275ef8ca4d8262f154928114"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a35f227f7275ef8ca4d8262f154928114">proto::op_cond</a></td></tr>
-<tr class="separator:a35f227f7275ef8ca4d8262f154928114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d06138fae4aed334274dd58477c3bf"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a87d06138fae4aed334274dd58477c3bf">proto::op_data</a></td></tr>
-<tr class="separator:a87d06138fae4aed334274dd58477c3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48052d628ca84255dced2d14e110c2d0"><td class="memItemLeft" align="right" valign="top">typedef int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a48052d628ca84255dced2d14e110c2d0">proto::op_cond</a></td></tr>
+<tr class="separator:a48052d628ca84255dced2d14e110c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4b026b45901bc0a0c72f1a9b6a7b39"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a3d4b026b45901bc0a0c72f1a9b6a7b39">proto::op_data</a></td></tr>
+<tr class="separator:a3d4b026b45901bc0a0c72f1a9b6a7b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0247cdf0484a63cf6b5a383817a370c"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto::proto_value</a></td></tr>
+<tr class="memdesc:ae0247cdf0484a63cf6b5a383817a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作高精度数学计算  <a href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">更多...</a><br /></td></tr>
+<tr class="separator:ae0247cdf0484a63cf6b5a383817a370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 枚举</h2></td></tr>
-<tr class="memitem:ac5ee766482f24e50d20f24c3bc777be0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0">proto::op_code</a> { <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa00a569a30686d74c8572498726bc6b2">proto::OP_MOV</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a>, 
+<tr class="memitem:a0679d4bb32a7b0b717cdb17bb165ca34"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">proto::op_code</a> : int16_t { <br />
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">proto::OP_PSH</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d">proto::OP_POP</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a9182cb0c282ed67804b031f051fa7875">proto::OP_UNM</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af3436cae9a1e5869a04e1d36ed58b06f">proto::OP_AND</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">proto::OP_UNM</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a6fb74e532c30f1116322889ec70e24a6">proto::OP_ORR</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a0157d02ae06c3ebfcdd5d2b3a18af179">proto::OP_XOR</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a8fa3c8b97deb7d07f4a17c42c8a0359c">proto::OP_EQU</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">proto::OP_AND</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">proto::OP_ORR</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">proto::OP_XOR</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0aa2ecd6e98141a983024a671dc2ba47d7">proto::OP_NEQ</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a042bf805a6411d47b47b970aafdb3cb5">proto::OP_SHL</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a2b4a6814e8917ce0f65d1b7fa393b70e">proto::OP_SHR</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a5981fde01a34f7292581843a2266a695">proto::OP_LEN</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c">proto::OP_EQU</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7">proto::OP_NEQ</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">proto::OP_SHL</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">proto::OP_SHR</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a0b35c2e083fc86a09bc516dbe5d8489c">proto::OP_JMP</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0af97c353a62d68f876cb71e6cdb3f5f74">proto::OP_RET</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a813e1a6c668e33fd4f5ecd52feb57b67">proto::OP_OPEN</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695">proto::OP_LEN</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">proto::OP_JMP</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">proto::OP_RET</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0ac460e8a0d58eea60c2f7b1a60c37fb99">proto::OP_READ</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a25d479429d30095e044c140cab267648">proto::OP_CLOS</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a1d8a6f4f39e278919c2b3d9cd28a71e6">proto::OP_PRTF</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a5980bdb0f8772df5c81a1eb63bc3ccca">proto::OP_MALC</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">proto::OP_OPEN</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">proto::OP_READ</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648">proto::OP_CLOS</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6">proto::OP_PRTF</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">proto::OP_FREE</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a75d1fff08ad620664bae2aeddfb7941d">proto::OP_MSET</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a6df8a82f07fb1b39773585e8639b2178">proto::OP_MCMP</a>, 
-<a class="el" href="namespaceproto.html#ac5ee766482f24e50d20f24c3bc777be0a044e4995c7aa919a541d6ca2e7e1b34b">proto::OP_EXIT</a>
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca">proto::OP_MALC</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">proto::OP_FREE</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">proto::OP_MSET</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">proto::OP_MCMP</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b">proto::OP_EXIT</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">proto::OP_MARK</a>
 <br />
  }</td></tr>
-<tr class="separator:ac5ee766482f24e50d20f24c3bc777be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a0679d4bb32a7b0b717cdb17bb165ca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>代码生成与虚拟机实现 </p>

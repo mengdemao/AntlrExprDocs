@@ -1,5 +1,4 @@
 <map id="proto::proto" name="proto::proto">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$classproto_1_1svm.html" title=" " alt="" coords="81,95,173,121"/>
-<area shape="rect" id="node3" href="$structproto_1_1svm__flags.html" title="虚拟机标志位" alt="" coords="133,5,264,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="24,95,123,121"/>
+<area shape="rect" id="node2" href="$structproto_1_1proto__flags.html" title="虚拟机标志位" alt="" coords="5,5,141,32"/>
 </map>
