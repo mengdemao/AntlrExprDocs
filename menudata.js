@@ -47,8 +47,7 @@ var menudata={children:[
 {text:"枚举",url:"namespacemembers_enum.html"},
 {text:"枚举值",url:"namespacemembers_eval.html",children:[
 {text:"o",url:"namespacemembers_eval.html#index_o"},
-{text:"s",url:"namespacemembers_eval.html#index_s"},
-{text:"t",url:"namespacemembers_eval.html#index_t"}]}]}]},
+{text:"s",url:"namespacemembers_eval.html#index_s"}]}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
 {text:"类索引",url:"classes.html"},

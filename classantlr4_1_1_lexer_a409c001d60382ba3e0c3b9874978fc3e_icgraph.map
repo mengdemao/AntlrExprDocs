@@ -1,5 +1,5 @@
 <map id="antlr4::Lexer::getNumberOfSyntaxErrors" name="antlr4::Lexer::getNumberOfSyntaxErrors">
 <area shape="rect" id="node1" title="Gets the number of syntax errors reported during parsing. This value is incremented each time #notify..." alt="" coords="279,5,463,47"/>
-<area shape="rect" id="node2" href="$grammar_8cc.html#a48f90bf627a545e45676b6404396dfee" title="语法解析" alt="" coords="108,13,231,39"/>
+<area shape="rect" id="node2" href="$grammar_8cc.html#a3f1c2707df0c2935f1ae80d43891816e" title="语法解析" alt="" coords="108,13,231,39"/>
 <area shape="rect" id="node3" href="$main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title="主函数" alt="" coords="5,13,60,39"/>
 </map>

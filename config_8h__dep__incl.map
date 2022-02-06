@@ -1,10 +1,7 @@
 <map id="inc/generated/config.h" name="inc/generated/config.h">
-<area shape="rect" id="node1" title="Auto generated config file" alt="" coords="303,5,470,32"/>
-<area shape="rect" id="node2" href="$ast_8h.html" title="AST实现" alt="" coords="260,80,337,107"/>
-<area shape="rect" id="node3" href="$grammar_8h.html" title="Expr语法处理文件" alt="" coords="23,155,139,181"/>
-<area shape="rect" id="node4" href="$main_8cc.html" title="AntlrExpr主文件" alt="" coords="44,229,118,256"/>
-<area shape="rect" id="node5" href="$grammar_8cc.html" title="Expr语法处理文件" alt="" coords="313,229,436,256"/>
-<area shape="rect" id="node6" href="$ast_8cc.html" title="AST实现" alt="" coords="412,155,494,181"/>
-<area shape="rect" id="node8" href="$option_8cc.html" title="解析输入的命令行" alt="" coords="569,80,673,107"/>
-<area shape="rect" id="node7" href="$semantic_8cc.html" title="语义分析" alt="" coords="214,155,337,181"/>
+<area shape="rect" id="node1" title="Auto generated config file" alt="" coords="68,5,235,32"/>
+<area shape="rect" id="node2" href="$grammar_8h.html" title="Expr语法处理文件" alt="" coords="45,80,161,107"/>
+<area shape="rect" id="node3" href="$main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,155,79,181"/>
+<area shape="rect" id="node4" href="$grammar_8cc.html" title="Expr语法处理文件" alt="" coords="121,155,243,181"/>
+<area shape="rect" id="node5" href="$option_8cc.html" title="解析输入的命令行" alt="" coords="237,80,341,107"/>
 </map>

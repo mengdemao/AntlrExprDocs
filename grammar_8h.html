@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-79cdf44</span>
+   &#160;<span id="projectnumber">0.0.3-dbd26cd</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -79,14 +79,13 @@ $(function() {
 <p>Expr语法处理文件  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_expr_base_visitor_8h_source.html">ExprBaseVisitor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_expr_base_listener_8h_source.html">ExprBaseListener.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_expr_lexer_8h_source.html">ExprLexer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_expr_parser_8h_source.html">ExprParser.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_expr_visitor_8h_source.html">ExprVisitor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="antlr4-runtime_8h_source.html">antlr4-runtime.h</a>&quot;</code><br />
 <code>#include &lt;llvm/IR/IRBuilder.h&gt;</code><br />
 <code>#include &lt;llvm/Support/raw_ostream.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="_expr_base_listener_8h_source.html">ExprBaseListener.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="ast_8h_source.html">ast.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="config_8h_source.html">config.h</a>&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;<a class="el" href="llvm_8h_source.html">llvm.h</a>&gt;</code><br />
@@ -94,61 +93,62 @@ $(function() {
 <code>#include &lt;<a class="el" href="semantic_8h_source.html">semantic.h</a>&gt;</code><br />
 <code>#include &lt;stack&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;<a class="el" href="proto_8h_source.html">proto.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 grammar.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="grammar_8h__incl.png" border="0" usemap="#inc_2grammar_8h" alt=""/></div>
 <map name="inc_2grammar_8h" id="inc_2grammar_8h">
-<area shape="rect" title="Expr语法处理文件" alt="" coords="1597,5,1713,32"/>
-<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="645,80,781,107"/>
-<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="471,304,599,331"/>
-<area shape="rect" title=" " alt="" coords="1480,461,1560,487"/>
-<area shape="rect" title=" " alt="" coords="1585,461,1642,487"/>
-<area shape="rect" title=" " alt="" coords="1884,461,1943,487"/>
-<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="572,155,676,181"/>
-<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="759,229,862,256"/>
-<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="486,229,583,256"/>
-<area shape="rect" title=" " alt="" coords="2294,80,2437,107"/>
-<area shape="rect" title=" " alt="" coords="2461,80,2667,107"/>
-<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="935,80,1081,107"/>
-<area shape="rect" href="ast_8h.html" title="AST实现" alt="" coords="1830,80,1885,107"/>
-<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="1995,155,2069,181"/>
-<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2093,155,2168,181"/>
-<area shape="rect" href="llvm_8h.html" title=" " alt="" coords="2243,379,2306,405"/>
-<area shape="rect" href="semantic_8h.html" title="语义分析" alt="" coords="1271,229,1366,256"/>
-<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="679,379,814,405"/>
-<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="455,379,614,405"/>
-<area shape="rect" title=" " alt="" coords="285,461,371,487"/>
+<area shape="rect" title="Expr语法处理文件" alt="" coords="1827,5,1943,32"/>
+<area shape="rect" href="_expr_base_visitor_8h.html" title=" " alt="" coords="784,80,920,107"/>
+<area shape="rect" href="antlr4-runtime_8h.html" title=" " alt="" coords="711,304,839,331"/>
+<area shape="rect" title=" " alt="" coords="1465,461,1545,487"/>
+<area shape="rect" title=" " alt="" coords="1657,461,1714,487"/>
+<area shape="rect" title=" " alt="" coords="1931,461,1989,487"/>
+<area shape="rect" href="_expr_visitor_8h.html" title=" " alt="" coords="837,155,941,181"/>
+<area shape="rect" href="_expr_parser_8h.html" title=" " alt="" coords="929,229,1031,256"/>
+<area shape="rect" href="_expr_base_listener_8h.html" title=" " alt="" coords="1045,80,1192,107"/>
+<area shape="rect" href="_expr_lexer_8h.html" title=" " alt="" coords="611,155,709,181"/>
+<area shape="rect" title=" " alt="" coords="2187,80,2330,107"/>
+<area shape="rect" title=" " alt="" coords="2354,80,2561,107"/>
+<area shape="rect" href="config_8h.html" title="Auto generated config file" alt="" coords="2585,80,2658,107"/>
+<area shape="rect" href="llvm_8h.html" title=" " alt="" coords="2159,379,2222,405"/>
+<area shape="rect" href="option_8h.html" title="解析输入字符串" alt="" coords="2683,80,2757,107"/>
+<area shape="rect" href="semantic_8h.html" title="语义分析" alt="" coords="1470,229,1565,256"/>
+<area shape="rect" href="proto_8h.html" title="代码生成与虚拟机实现" alt="" coords="1839,379,1907,405"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="827,379,962,405"/>
+<area shape="rect" href="_a_n_t_l_r_error_listener_8h.html" title=" " alt="" coords="645,379,803,405"/>
+<area shape="rect" title=" " alt="" coords="384,461,469,487"/>
+<area shape="rect" title=" " alt="" coords="5,461,80,487"/>
+<area shape="rect" title=" " alt="" coords="104,461,171,487"/>
+<area shape="rect" title=" " alt="" coords="195,461,261,487"/>
+<area shape="rect" title=" " alt="" coords="286,461,359,487"/>
+<area shape="rect" title=" " alt="" coords="494,461,565,487"/>
+<area shape="rect" title=" " alt="" coords="589,461,648,487"/>
+<area shape="rect" title=" " alt="" coords="673,461,743,487"/>
+<area shape="rect" title=" " alt="" coords="768,461,811,487"/>
+<area shape="rect" title=" " alt="" coords="835,461,885,487"/>
+<area shape="rect" title=" " alt="" coords="1739,461,1816,487"/>
+<area shape="rect" title=" " alt="" coords="909,461,952,487"/>
+<area shape="rect" title=" " alt="" coords="976,461,1051,487"/>
+<area shape="rect" title=" " alt="" coords="1075,461,1146,487"/>
+<area shape="rect" title=" " alt="" coords="1170,461,1241,487"/>
 <area shape="rect" title=" " alt="" coords="1265,461,1340,487"/>
-<area shape="rect" title=" " alt="" coords="5,461,72,487"/>
-<area shape="rect" title=" " alt="" coords="96,461,163,487"/>
-<area shape="rect" title=" " alt="" coords="187,461,261,487"/>
-<area shape="rect" title=" " alt="" coords="395,461,466,487"/>
-<area shape="rect" title=" " alt="" coords="491,461,549,487"/>
-<area shape="rect" title=" " alt="" coords="574,461,645,487"/>
-<area shape="rect" title=" " alt="" coords="669,461,712,487"/>
-<area shape="rect" title=" " alt="" coords="736,461,787,487"/>
-<area shape="rect" title=" " alt="" coords="1783,461,1860,487"/>
-<area shape="rect" title=" " alt="" coords="811,461,853,487"/>
-<area shape="rect" title=" " alt="" coords="877,461,952,487"/>
-<area shape="rect" title=" " alt="" coords="977,461,1047,487"/>
-<area shape="rect" title=" " alt="" coords="1071,461,1142,487"/>
-<area shape="rect" title=" " alt="" coords="1167,461,1241,487"/>
-<area shape="rect" title=" " alt="" coords="1666,461,1758,487"/>
-<area shape="rect" title=" " alt="" coords="1365,461,1427,487"/>
-<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="856,155,971,181"/>
-<area shape="rect" title=" " alt="" coords="1895,155,1971,181"/>
-<area shape="rect" title=" " alt="" coords="2193,453,2356,495"/>
-<area shape="rect" title=" " alt="" coords="2381,461,2550,487"/>
-<area shape="rect" title=" " alt="" coords="2574,461,2706,487"/>
-<area shape="rect" title=" " alt="" coords="2731,461,2851,487"/>
-<area shape="rect" title=" " alt="" coords="1967,461,2169,487"/>
-<area shape="rect" href="_parse_tree_property_8h.html" title=" " alt="" coords="623,304,801,331"/>
-<area shape="rect" title=" " alt="" coords="1415,304,1566,331"/>
-<area shape="rect" title=" " alt="" coords="876,304,1103,331"/>
-<area shape="rect" title=" " alt="" coords="1127,304,1297,331"/>
-<area shape="rect" href="proto_8h.html" title="代码生成与虚拟机实现" alt="" coords="1599,379,1667,405"/>
-<area shape="rect" title=" " alt="" coords="1321,304,1391,331"/>
+<area shape="rect" title=" " alt="" coords="1365,461,1441,487"/>
+<area shape="rect" title=" " alt="" coords="2014,461,2106,487"/>
+<area shape="rect" title=" " alt="" coords="1570,461,1633,487"/>
+<area shape="rect" href="_expr_listener_8h.html" title=" " alt="" coords="1017,155,1132,181"/>
+<area shape="rect" title=" " alt="" coords="2501,453,2664,495"/>
+<area shape="rect" title=" " alt="" coords="2689,461,2858,487"/>
+<area shape="rect" title=" " alt="" coords="2882,461,3014,487"/>
+<area shape="rect" title=" " alt="" coords="2131,461,2251,487"/>
+<area shape="rect" title=" " alt="" coords="2275,461,2477,487"/>
+<area shape="rect" href="_parse_tree_property_8h.html" title=" " alt="" coords="913,304,1092,331"/>
+<area shape="rect" title=" " alt="" coords="1167,304,1318,331"/>
+<area shape="rect" title=" " alt="" coords="1343,304,1569,331"/>
+<area shape="rect" title=" " alt="" coords="1594,304,1763,331"/>
+<area shape="rect" title=" " alt="" coords="1787,304,1858,331"/>
+<area shape="rect" title=" " alt="" coords="1840,461,1907,487"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -180,9 +180,9 @@ grammar.h 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a48f90bf627a545e45676b6404396dfee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grammar_8h.html#a48f90bf627a545e45676b6404396dfee">grammar_main</a> (std::string input_string, <a class="el" href="classast_1_1ast__base.html">ast::ast_base</a> &amp;ast_root)</td></tr>
-<tr class="memdesc:a48f90bf627a545e45676b6404396dfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">语法解析  <a href="grammar_8h.html#a48f90bf627a545e45676b6404396dfee">更多...</a><br /></td></tr>
-<tr class="separator:a48f90bf627a545e45676b6404396dfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb676f1b7448eabfc8679ec922cc3a7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440">grammar_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a> (std::string input, <a class="el" href="classproto_1_1proto.html">proto::proto</a> &amp;proto)</td></tr>
+<tr class="memdesc:acb676f1b7448eabfc8679ec922cc3a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">语法解析  <a href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">更多...</a><br /></td></tr>
+<tr class="separator:acb676f1b7448eabfc8679ec922cc3a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Expr语法处理文件 </p>
@@ -217,8 +217,8 @@ grammar.h 的引用(Include)关系图:</div>
 </div>
 </div>
 <h2 class="groupheader">函数说明</h2>
-<a id="a48f90bf627a545e45676b6404396dfee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f90bf627a545e45676b6404396dfee">&#9670;&nbsp;</a></span>grammar_main()</h2>
+<a id="acb676f1b7448eabfc8679ec922cc3a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb676f1b7448eabfc8679ec922cc3a7e">&#9670;&nbsp;</a></span>grammar_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,8 +232,8 @@ grammar.h 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classast_1_1ast__base.html">ast::ast_base</a> &amp;&#160;</td>
-          <td class="paramname"><em>ast_root</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classproto_1_1proto.html">proto::proto</a> &amp;&#160;</td>
+          <td class="paramname"><em>proto</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -253,46 +253,46 @@ grammar.h 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>grammar_result </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="grammar_8cc_source.html">grammar.cc</a> 第 <a class="el" href="grammar_8cc_source.html#l00021">21</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// 生成解析字符串</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input_stream(input_string);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// 词法解析</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> lexer(&amp;input_stream);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// 分割单词</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;lexer);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// 解析语法单元</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// 生成语法树</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* tree = parser.prog();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// 检查词法分析和语法分析</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (lexer.getNumberOfSyntaxErrors() &gt; 0 ||</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        parser.getNumberOfSyntaxErrors() &gt; 0) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Lexical and/or syntactical errors have been found.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d">GRAMMAR_FAILURE</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// 1. Listener模式解析语法树</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classexpr__listener.html">expr_listener</a> listener;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a>  walker;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;listener, tree);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// 2. Visitor模式校验语法树</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classexpr__visitor.html">expr_visitor</a> visitor;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(tree);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<p class="definition">在文件 <a class="el" href="grammar_8cc_source.html">grammar.cc</a> 第 <a class="el" href="grammar_8cc_source.html#l00020">20</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// 生成解析字符串</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classantlr4_1_1_a_n_t_l_r_input_stream.html">ANTLRInputStream</a> input_stream(input_string);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// 词法解析</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_expr_lexer.html">ExprLexer</a> lexer(&amp;input_stream);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// 分割单词</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classantlr4_1_1_common_token_stream.html">CommonTokenStream</a> tokens(&amp;lexer);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// 解析语法单元</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_expr_parser.html">ExprParser</a> parser(&amp;tokens);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// 生成语法树</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* tree = parser.prog();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// 检查词法分析和语法分析</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (lexer.getNumberOfSyntaxErrors() &gt; 0 ||</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        parser.getNumberOfSyntaxErrors() &gt; 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Lexical and/or syntactical errors have been found.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a3d2b546ec47b5bd3604a6c65e983736d">GRAMMAR_FAILURE</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// 1. Listener模式解析语法树</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classexpr__listener.html">expr_listener</a> listener;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a> walker;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    walker.<a class="code" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">walk</a>(&amp;listener, tree);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// 2. Visitor模式校验语法树</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classexpr__visitor.html">expr_visitor</a> visitor;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    visitor.<a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(tree);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="grammar_8h_a48f90bf627a545e45676b6404396dfee_cgraph.png" border="0" usemap="#grammar_8h_a48f90bf627a545e45676b6404396dfee_cgraph" alt=""/></div>
-<map name="grammar_8h_a48f90bf627a545e45676b6404396dfee_cgraph" id="grammar_8h_a48f90bf627a545e45676b6404396dfee_cgraph">
+<div class="center"><img src="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_cgraph.png" border="0" usemap="#grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_cgraph" alt=""/></div>
+<map name="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_cgraph" id="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_cgraph">
 <area shape="rect" title="语法解析" alt="" coords="5,101,128,127"/>
 <area shape="rect" href="classantlr4_1_1_lexer.html#a409c001d60382ba3e0c3b9874978fc3e" title="Gets the number of syntax errors reported during parsing. This value is incremented each time #notify..." alt="" coords="188,5,372,47"/>
 <area shape="rect" href="class_expr_parser.html#ac9b130a06acdd6208bfe3ef85c9b9f2a" title=" " alt="" coords="216,71,344,98"/>
@@ -309,8 +309,8 @@ grammar.h 的引用(Include)关系图:</div>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="grammar_8h_a48f90bf627a545e45676b6404396dfee_icgraph.png" border="0" usemap="#grammar_8h_a48f90bf627a545e45676b6404396dfee_icgraph" alt=""/></div>
-<map name="grammar_8h_a48f90bf627a545e45676b6404396dfee_icgraph" id="grammar_8h_a48f90bf627a545e45676b6404396dfee_icgraph">
+<div class="center"><img src="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_icgraph.png" border="0" usemap="#grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_icgraph" alt=""/></div>
+<map name="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_icgraph" id="grammar_8h_acb676f1b7448eabfc8679ec922cc3a7e_icgraph">
 <area shape="rect" title="语法解析" alt="" coords="108,5,231,32"/>
 <area shape="rect" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title="主函数" alt="" coords="5,5,60,32"/>
 </map>
@@ -321,7 +321,7 @@ grammar.h 的引用(Include)关系图:</div>
 </div><!-- contents -->
 <div class="ttc" id="aclassantlr4_1_1_a_n_t_l_r_input_stream_html"><div class="ttname"><a href="classantlr4_1_1_a_n_t_l_r_input_stream.html">antlr4::ANTLRInputStream</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_n_t_l_r_input_stream_8h_source.html#l00015">ANTLRInputStream.h:15</a></div></div>
 <div class="ttc" id="aclassexpr__listener_html"><div class="ttname"><a href="classexpr__listener.html">expr_listener</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00037">grammar.h:37</a></div></div>
-<div class="ttc" id="aclassexpr__visitor_html"><div class="ttname"><a href="classexpr__visitor.html">expr_visitor</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00126">grammar.h:126</a></div></div>
+<div class="ttc" id="aclassexpr__visitor_html"><div class="ttname"><a href="classexpr__visitor.html">expr_visitor</a></div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00129">grammar.h:129</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_parse_tree_8h_source.html#l00020">ParseTree.h:20</a></div></div>
 <div class="ttc" id="aclass_expr_parser_html"><div class="ttname"><a href="class_expr_parser.html">ExprParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_expr_parser_8h_source.html#l00012">ExprParser.h:12</a></div></div>
 <div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a2f0e9c7e0c581b3ec08d59d216d7554d"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">antlr4::tree::AbstractParseTreeVisitor::visit</a></div><div class="ttdeci">virtual antlrcpp::Any visit(ParseTree *tree) override</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_parse_tree_visitor_8h_source.html#l00017">AbstractParseTreeVisitor.h:17</a></div></div>
