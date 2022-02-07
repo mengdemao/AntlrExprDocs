@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-81841db</span>
+   &#160;<span id="projectnumber">0.0.3-fe351c8</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -85,12 +85,17 @@ $(function() {
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__flags.html">proto_flags</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机标志位  <a href="structproto_1_1proto__flags.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__string.html">proto_string</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:ae0247cdf0484a63cf6b5a383817a370c"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a></td></tr>
-<tr class="memdesc:ae0247cdf0484a63cf6b5a383817a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作高精度数学计算  <a href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">更多...</a><br /></td></tr>
+<tr class="memdesc:ae0247cdf0484a63cf6b5a383817a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作高精度数学计算 FIXME: 使用新定义的数据结构  <a href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">更多...</a><br /></td></tr>
 <tr class="separator:ae0247cdf0484a63cf6b5a383817a370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#aa6461bbccd5a397a87ee70dbf5e7591a">proto_text</a></td></tr>
+<tr class="memdesc:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作动态字符串设计 FIXME: 使用新定义的数据结构  <a href="namespaceproto.html#aa6461bbccd5a397a87ee70dbf5e7591a">更多...</a><br /></td></tr>
+<tr class="separator:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48052d628ca84255dced2d14e110c2d0"><td class="memItemLeft" align="right" valign="top">typedef int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a48052d628ca84255dced2d14e110c2d0">op_cond</a></td></tr>
 <tr class="separator:a48052d628ca84255dced2d14e110c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4b026b45901bc0a0c72f1a9b6a7b39"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a3d4b026b45901bc0a0c72f1a9b6a7b39">op_data</a></td></tr>
@@ -124,10 +129,10 @@ $(function() {
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">OP_SHL</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">OP_SHR</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695">OP_LEN</a>, 
-<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">OP_JMP</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">OP_RET</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548">OP_EXT</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">OP_OPEN</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">OP_READ</a>, 
@@ -139,8 +144,7 @@ $(function() {
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">OP_MSET</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">OP_MCMP</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b">OP_EXIT</a>, 
-<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">OP_MARK</a>
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">OP_MARK</a>
 <br />
  }</td></tr>
 <tr class="separator:a0679d4bb32a7b0b717cdb17bb165ca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +162,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00079">79</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00092">92</a> 行定义.</p>
 
 </div>
 </div>
@@ -174,7 +178,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00080">80</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa6461bbccd5a397a87ee70dbf5e7591a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6461bbccd5a397a87ee70dbf5e7591a">&#9670;&nbsp;</a></span>proto_text</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string <a class="el" href="namespaceproto.html#aa6461bbccd5a397a87ee70dbf5e7591a">proto::proto_text</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>栈式虚拟机最核心的数据结构之一 用作动态字符串设计 FIXME: 使用新定义的数据结构 </p>
+
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00035">35</a> 行定义.</p>
 
 </div>
 </div>
@@ -190,9 +212,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>栈式虚拟机最核心的数据结构之一 用作高精度数学计算 </p>
+<p>栈式虚拟机最核心的数据结构之一 用作高精度数学计算 FIXME: 使用新定义的数据结构 </p>
 
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00027">27</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00028">28</a> 行定义.</p>
 
 </div>
 </div>
@@ -229,10 +251,10 @@ $(function() {
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7"></a>OP_NEQ&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5"></a>OP_SHL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e"></a>OP_SHR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695"></a>OP_LEN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026"></a>OP_CAL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c"></a>OP_JMP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74"></a>OP_RET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548"></a>OP_EXT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67"></a>OP_OPEN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99"></a>OP_READ&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648"></a>OP_CLOS&#160;</td><td class="fielddoc"></td></tr>
@@ -241,98 +263,94 @@ $(function() {
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87"></a>OP_FREE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d"></a>OP_MSET&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178"></a>OP_MCMP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b"></a>OP_EXIT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af"></a>OP_MARK&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00030">30</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;             : int16_t {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e">OP_NOP</a>,  <span class="comment">// 空指令</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// 数据操作指令</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">OP_PSH</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d">OP_POP</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca">OP_LDR</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4">OP_STR</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// 数学计算指令</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">OP_ADD</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">OP_SUB</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">OP_MUL</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">OP_DIV</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">OP_POW</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">OP_UNM</a>,  <span class="comment">//</span></div>
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00045">45</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;             : int16_t {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e">OP_NOP</a>,  <span class="comment">// 空指令</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// 逻辑计算指令</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">OP_AND</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">OP_ORR</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">OP_NOT</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">OP_XOR</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c">OP_EQU</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7">OP_NEQ</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// 位移指令</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">OP_SHL</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">OP_SHR</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695">OP_LEN</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// 跳转指令</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">OP_JMP</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">OP_RET</a>,  <span class="comment">//</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">OP_OPEN</a>,  <span class="comment">// 打开</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">OP_READ</a>,  <span class="comment">// 读取</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648">OP_CLOS</a>,  <span class="comment">// 关闭</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6">OP_PRTF</a>,  <span class="comment">// 打印</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca">OP_MALC</a>,  <span class="comment">// 内存申请</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">OP_FREE</a>,  <span class="comment">// 内存释放</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">OP_MSET</a>,  <span class="comment">// 内存清零</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">OP_MCMP</a>,  <span class="comment">// 内存拷贝</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b">OP_EXIT</a>,  <span class="comment">// 运行退出</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">OP_MARK</a>,  <span class="comment">// 操作掩码</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">op_code</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// 数据操作指令</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">OP_PSH</a>,  <span class="comment">// 入栈操作</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d">OP_POP</a>,  <span class="comment">// 出栈操作</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca">OP_LDR</a>,  <span class="comment">// 加载变量</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4">OP_STR</a>,  <span class="comment">// 保存变量</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// 数学计算指令</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">OP_ADD</a>,  <span class="comment">// 加法</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">OP_SUB</a>,  <span class="comment">// 减法</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">OP_MUL</a>,  <span class="comment">// 乘法</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">OP_DIV</a>,  <span class="comment">// 除法</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>,  <span class="comment">// 模除</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">OP_POW</a>,  <span class="comment">// 乘方</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">OP_UNM</a>,  <span class="comment">// 绝对值</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 逻辑计算指令</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">OP_AND</a>,  <span class="comment">// 与</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">OP_ORR</a>,  <span class="comment">// 或</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">OP_NOT</a>,  <span class="comment">// 非 </span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">OP_XOR</a>,  <span class="comment">// 异或</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c">OP_EQU</a>,  <span class="comment">// 相等</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7">OP_NEQ</a>,  <span class="comment">// 不等</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// 位移指令</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">OP_SHL</a>,  <span class="comment">// 左移</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">OP_SHR</a>,  <span class="comment">// 右移</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// 跳转指令</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>,  <span class="comment">// 带返回的跳转</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">OP_JMP</a>,  <span class="comment">// 不返回的跳转</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">OP_RET</a>,  <span class="comment">// 程序执行返回</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548">OP_EXT</a>,  <span class="comment">// 程序运行退出</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">OP_OPEN</a>,  <span class="comment">// 打开</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">OP_READ</a>,  <span class="comment">// 读取</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648">OP_CLOS</a>,  <span class="comment">// 关闭</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6">OP_PRTF</a>,  <span class="comment">// 打印</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca">OP_MALC</a>,  <span class="comment">// 内存申请</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">OP_FREE</a>,  <span class="comment">// 内存释放</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">OP_MSET</a>,  <span class="comment">// 内存清零</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">OP_MCMP</a>,  <span class="comment">// 内存拷贝</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">OP_MARK</a>,  <span class="comment">// 操作掩码</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">op_code</a>;</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">proto::OP_PSH</a></div><div class="ttdeci">@ OP_PSH</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00034">proto.h:34</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00042">proto.h:42</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">proto::OP_JMP</a></div><div class="ttdeci">@ OP_JMP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00064">proto.h:64</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d">proto::OP_POP</a></div><div class="ttdeci">@ OP_POP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00035">proto.h:35</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c">proto::OP_EQU</a></div><div class="ttdeci">@ OP_EQU</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00053">proto.h:53</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">proto::OP_OPEN</a></div><div class="ttdeci">@ OP_OPEN</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00067">proto.h:67</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">proto::op_code</a></div><div class="ttdeci">op_code</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00030">proto.h:30</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a></div><div class="ttdeci">@ OP_POW</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00045">proto.h:45</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a></div><div class="ttdeci">@ OP_CAL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00063">proto.h:63</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a></div><div class="ttdeci">@ OP_NOT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00051">proto.h:51</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a></div><div class="ttdeci">@ OP_DIV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00043">proto.h:43</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695">proto::OP_LEN</a></div><div class="ttdeci">@ OP_LEN</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00060">proto.h:60</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a></div><div class="ttdeci">@ OP_STR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00037">proto.h:37</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7">proto::OP_NEQ</a></div><div class="ttdeci">@ OP_NEQ</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00054">proto.h:54</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">proto::OP_MSET</a></div><div class="ttdeci">@ OP_MSET</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00073">proto.h:73</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a></div><div class="ttdeci">@ OP_MOD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00044">proto.h:44</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">proto::OP_SHL</a></div><div class="ttdeci">@ OP_SHL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00057">proto.h:57</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca">proto::OP_MALC</a></div><div class="ttdeci">@ OP_MALC</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00071">proto.h:71</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">proto::OP_SHR</a></div><div class="ttdeci">@ OP_SHR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00058">proto.h:58</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">proto::OP_READ</a></div><div class="ttdeci">@ OP_READ</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00068">proto.h:68</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">proto::OP_UNM</a></div><div class="ttdeci">@ OP_UNM</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00046">proto.h:46</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">proto::OP_MARK</a></div><div class="ttdeci">@ OP_MARK</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00076">proto.h:76</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a></div><div class="ttdeci">@ OP_NOP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00031">proto.h:31</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648">proto::OP_CLOS</a></div><div class="ttdeci">@ OP_CLOS</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00069">proto.h:69</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">proto::OP_RET</a></div><div class="ttdeci">@ OP_RET</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00065">proto.h:65</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b">proto::OP_EXIT</a></div><div class="ttdeci">@ OP_EXIT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00075">proto.h:75</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6">proto::OP_PRTF</a></div><div class="ttdeci">@ OP_PRTF</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00070">proto.h:70</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a></div><div class="ttdeci">@ OP_SUB</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00041">proto.h:41</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">proto::OP_FREE</a></div><div class="ttdeci">@ OP_FREE</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00072">proto.h:72</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">proto::OP_AND</a></div><div class="ttdeci">@ OP_AND</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00049">proto.h:49</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">proto::OP_XOR</a></div><div class="ttdeci">@ OP_XOR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00052">proto.h:52</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a></div><div class="ttdeci">@ OP_ADD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00040">proto.h:40</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a></div><div class="ttdeci">@ OP_LDR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00036">proto.h:36</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">proto::OP_MCMP</a></div><div class="ttdeci">@ OP_MCMP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00074">proto.h:74</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">proto::OP_ORR</a></div><div class="ttdeci">@ OP_ORR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00050">proto.h:50</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">proto::OP_PSH</a></div><div class="ttdeci">@ OP_PSH</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00049">proto.h:49</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00057">proto.h:57</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">proto::OP_JMP</a></div><div class="ttdeci">@ OP_JMP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00077">proto.h:77</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a7fb9e957c1be662d3b198e84d9309d6d">proto::OP_POP</a></div><div class="ttdeci">@ OP_POP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00050">proto.h:50</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a8fa3c8b97deb7d07f4a17c42c8a0359c">proto::OP_EQU</a></div><div class="ttdeci">@ OP_EQU</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00068">proto.h:68</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">proto::OP_OPEN</a></div><div class="ttdeci">@ OP_OPEN</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00081">proto.h:81</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548">proto::OP_EXT</a></div><div class="ttdeci">@ OP_EXT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00079">proto.h:79</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">proto::op_code</a></div><div class="ttdeci">op_code</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00045">proto.h:45</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a></div><div class="ttdeci">@ OP_POW</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00060">proto.h:60</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a></div><div class="ttdeci">@ OP_CAL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00076">proto.h:76</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a></div><div class="ttdeci">@ OP_NOT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00066">proto.h:66</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">proto::OP_DIV</a></div><div class="ttdeci">@ OP_DIV</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00058">proto.h:58</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a489208b2f70546133befa23496e0b4b4">proto::OP_STR</a></div><div class="ttdeci">@ OP_STR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00052">proto.h:52</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aa2ecd6e98141a983024a671dc2ba47d7">proto::OP_NEQ</a></div><div class="ttdeci">@ OP_NEQ</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00069">proto.h:69</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">proto::OP_MSET</a></div><div class="ttdeci">@ OP_MSET</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00087">proto.h:87</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">proto::OP_MOD</a></div><div class="ttdeci">@ OP_MOD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00059">proto.h:59</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">proto::OP_SHL</a></div><div class="ttdeci">@ OP_SHL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00072">proto.h:72</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5980bdb0f8772df5c81a1eb63bc3ccca">proto::OP_MALC</a></div><div class="ttdeci">@ OP_MALC</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00085">proto.h:85</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">proto::OP_SHR</a></div><div class="ttdeci">@ OP_SHR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00073">proto.h:73</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">proto::OP_READ</a></div><div class="ttdeci">@ OP_READ</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00082">proto.h:82</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">proto::OP_UNM</a></div><div class="ttdeci">@ OP_UNM</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00061">proto.h:61</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">proto::OP_MARK</a></div><div class="ttdeci">@ OP_MARK</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00089">proto.h:89</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac0d9cbf8639d3938a2f427556c951c1e">proto::OP_NOP</a></div><div class="ttdeci">@ OP_NOP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00046">proto.h:46</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a25d479429d30095e044c140cab267648">proto::OP_CLOS</a></div><div class="ttdeci">@ OP_CLOS</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00083">proto.h:83</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">proto::OP_RET</a></div><div class="ttdeci">@ OP_RET</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00078">proto.h:78</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a1d8a6f4f39e278919c2b3d9cd28a71e6">proto::OP_PRTF</a></div><div class="ttdeci">@ OP_PRTF</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00084">proto.h:84</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">proto::OP_SUB</a></div><div class="ttdeci">@ OP_SUB</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00056">proto.h:56</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9a37a8ecdb5cbcf2f0c5f0d3f1ed5b87">proto::OP_FREE</a></div><div class="ttdeci">@ OP_FREE</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00086">proto.h:86</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">proto::OP_AND</a></div><div class="ttdeci">@ OP_AND</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00064">proto.h:64</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">proto::OP_XOR</a></div><div class="ttdeci">@ OP_XOR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00067">proto.h:67</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">proto::OP_ADD</a></div><div class="ttdeci">@ OP_ADD</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00055">proto.h:55</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a072f6126ee5b635aeedfeebf1ff1b1ca">proto::OP_LDR</a></div><div class="ttdeci">@ OP_LDR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00051">proto.h:51</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">proto::OP_MCMP</a></div><div class="ttdeci">@ OP_MCMP</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00088">proto.h:88</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">proto::OP_ORR</a></div><div class="ttdeci">@ OP_ORR</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00065">proto.h:65</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

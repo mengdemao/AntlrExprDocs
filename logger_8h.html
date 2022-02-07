@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-81841db</span>
+   &#160;<span id="projectnumber">0.0.3-fe351c8</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -77,15 +77,35 @@ $(function() {
 
 <p>日志打印封装  
 <a href="#details">更多...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;fmt/color.h&gt;</code><br />
+<code>#include &lt;fmt/compile.h&gt;</code><br />
+<code>#include &lt;fmt/core.h&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
+<code>#include &lt;fmt/os.h&gt;</code><br />
+<code>#include &lt;fmt/printf.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+logger.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="logger_8h__incl.png" border="0" usemap="#inc_2logger_8h" alt=""/></div>
+<map name="inc_2logger_8h" id="inc_2logger_8h">
+<area shape="rect" title="日志打印封装" alt="" coords="315,5,412,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,97,107"/>
+<area shape="rect" title=" " alt="" coords="121,80,235,107"/>
+<area shape="rect" title=" " alt="" coords="259,80,348,107"/>
+<area shape="rect" title=" " alt="" coords="372,80,477,107"/>
+<area shape="rect" title=" " alt="" coords="501,80,577,107"/>
+<area shape="rect" title=" " alt="" coords="601,80,696,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8h__dep__incl.png" border="0" usemap="#inc_2logger_8hdep" alt=""/></div>
 <map name="inc_2logger_8hdep" id="inc_2logger_8hdep">
-<area shape="rect" title="日志打印封装" alt="" coords="41,5,139,32"/>
-<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="80,80,196,107"/>
+<area shape="rect" title="日志打印封装" alt="" coords="55,5,152,32"/>
+<area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="45,80,161,107"/>
 <area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,155,79,181"/>
-<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="103,155,226,181"/>
+<area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="121,155,243,181"/>
 </map>
 </div>
 </div>
@@ -93,20 +113,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
-<tr class="memitem:ad6149814d33c590e8f2b2d8425bfbe45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()&#160;&#160;&#160;std::cout &lt;&lt; &quot;[&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;]&quot; &lt;&lt; &quot;[&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;]&quot; &lt;&lt; &quot;[&quot; &lt;&lt; __func__ &lt;&lt; &quot;] &quot;</td></tr>
-<tr class="separator:ad6149814d33c590e8f2b2d8425bfbe45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2883ddc1051951212e3af77bfa434107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a2883ddc1051951212e3af77bfa434107">log_trace</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:a2883ddc1051951212e3af77bfa434107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed34c128e83f037b764c025033b93ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a7ed34c128e83f037b764c025033b93ff">log_debug</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:a7ed34c128e83f037b764c025033b93ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc2770d229cd597b82b3220ed7d6c3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a5fc2770d229cd597b82b3220ed7d6c3d">log_info</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:a5fc2770d229cd597b82b3220ed7d6c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84edf417bd52bfb4d6196c8cc9aa2fb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a84edf417bd52bfb4d6196c8cc9aa2fb4">log_warning</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:a84edf417bd52bfb4d6196c8cc9aa2fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfc425eede9721b7c61a13aa315f622c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abfc425eede9721b7c61a13aa315f622c">log_error</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:abfc425eede9721b7c61a13aa315f622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c68748e30a6e5f4c0049c60a034dce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a21c68748e30a6e5f4c0049c60a034dce">log_critical</a>()&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td></tr>
-<tr class="separator:a21c68748e30a6e5f4c0049c60a034dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc8600d2ff9d05fcab3b0fc15e3d901"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:abcc8600d2ff9d05fcab3b0fc15e3d901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8073730ddb11563c36ae1362f9fac88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a8073730ddb11563c36ae1362f9fac88c">log_debug</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:a8073730ddb11563c36ae1362f9fac88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76882eaa7958050b86772c7d5ef06b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ab76882eaa7958050b86772c7d5ef06b1">log_info</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:ab76882eaa7958050b86772c7d5ef06b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b13449fd73544347bd0e85a2e1328c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a3b13449fd73544347bd0e85a2e1328c7">log_warning</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:a3b13449fd73544347bd0e85a2e1328c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08859378593fd71943ca4d82533c351f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a08859378593fd71943ca4d82533c351f">log_error</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:a08859378593fd71943ca4d82533c351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3b22efa78556bf6dd0b68e43fb4c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1c3b22efa78556bf6dd0b68e43fb4c50">log_critical</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="separator:a1c3b22efa78556bf6dd0b68e43fb4c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 枚举</h2></td></tr>
@@ -131,136 +149,99 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 中定义.</p>
 </div><h2 class="groupheader">宏定义说明</h2>
-<a id="a21c68748e30a6e5f4c0049c60a034dce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21c68748e30a6e5f4c0049c60a034dce">&#9670;&nbsp;</a></span>log_critical</h2>
+<a id="a1c3b22efa78556bf6dd0b68e43fb4c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3b22efa78556bf6dd0b68e43fb4c50">&#9670;&nbsp;</a></span>log_critical</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_critical</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
+          <td class="memname">#define log_critical&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00031">31</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00051">51</a> 行定义.</p>
 
 </div>
 </div>
-<a id="a7ed34c128e83f037b764c025033b93ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ed34c128e83f037b764c025033b93ff">&#9670;&nbsp;</a></span>log_debug</h2>
+<a id="a8073730ddb11563c36ae1362f9fac88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8073730ddb11563c36ae1362f9fac88c">&#9670;&nbsp;</a></span>log_debug</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_debug</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
+          <td class="memname">#define log_debug&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00027">27</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00047">47</a> 行定义.</p>
 
 </div>
 </div>
-<a id="abfc425eede9721b7c61a13aa315f622c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfc425eede9721b7c61a13aa315f622c">&#9670;&nbsp;</a></span>log_error</h2>
+<a id="a08859378593fd71943ca4d82533c351f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08859378593fd71943ca4d82533c351f">&#9670;&nbsp;</a></span>log_error</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_error</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
+          <td class="memname">#define log_error&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00030">30</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00050">50</a> 行定义.</p>
 
 </div>
 </div>
-<a id="a5fc2770d229cd597b82b3220ed7d6c3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fc2770d229cd597b82b3220ed7d6c3d">&#9670;&nbsp;</a></span>log_info</h2>
+<a id="ab76882eaa7958050b86772c7d5ef06b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76882eaa7958050b86772c7d5ef06b1">&#9670;&nbsp;</a></span>log_info</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_info</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
+          <td class="memname">#define log_info&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00028">28</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00048">48</a> 行定义.</p>
 
 </div>
 </div>
-<a id="ad6149814d33c590e8f2b2d8425bfbe45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6149814d33c590e8f2b2d8425bfbe45">&#9670;&nbsp;</a></span>log_print</h2>
+<a id="abcc8600d2ff9d05fcab3b0fc15e3d901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc8600d2ff9d05fcab3b0fc15e3d901">&#9670;&nbsp;</a></span>log_trace</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_print</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;std::cout &lt;&lt; &quot;[&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;]&quot; &lt;&lt; &quot;[&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;]&quot; &lt;&lt; &quot;[&quot; &lt;&lt; __func__ &lt;&lt; &quot;] &quot;</td>
+          <td class="memname">#define log_trace&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00024">24</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00046">46</a> 行定义.</p>
 
 </div>
 </div>
-<a id="a2883ddc1051951212e3af77bfa434107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2883ddc1051951212e3af77bfa434107">&#9670;&nbsp;</a></span>log_trace</h2>
+<a id="a3b13449fd73544347bd0e85a2e1328c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b13449fd73544347bd0e85a2e1328c7">&#9670;&nbsp;</a></span>log_warning</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_trace</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
+          <td class="memname">#define log_warning&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00026">26</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a84edf417bd52bfb4d6196c8cc9aa2fb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84edf417bd52bfb4d6196c8cc9aa2fb4">&#9670;&nbsp;</a></span>log_warning</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define log_warning</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="logger_8h.html#ad6149814d33c590e8f2b2d8425bfbe45">log_print</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00029">29</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00049">49</a> 行定义.</p>
 
 </div>
 </div>
@@ -285,25 +266,25 @@ $(function() {
 <tr><td class="fieldname"><a id="ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e"></a>LL_CRITICAL&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00015">15</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;               {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd">LL_TRACE</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358">LL_DEBUG</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771">LL_INFO</a>,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab">LL_WARNING</a>,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15">LL_ERROR</a>,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e">LL_CRITICAL</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<p class="definition">在文件 <a class="el" href="logger_8h_source.html">logger.h</a> 第 <a class="el" href="logger_8h_source.html#l00022">22</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;               {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd">LL_TRACE</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358">LL_DEBUG</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771">LL_INFO</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab">LL_WARNING</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15">LL_ERROR</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="logger_8h.html#ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e">LL_CRITICAL</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771">LL_INFO</a></div><div class="ttdeci">@ LL_INFO</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00018">logger.h:18</a></div></div>
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358">LL_DEBUG</a></div><div class="ttdeci">@ LL_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00017">logger.h:17</a></div></div>
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15">LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00020">logger.h:20</a></div></div>
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e">LL_CRITICAL</a></div><div class="ttdeci">@ LL_CRITICAL</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00021">logger.h:21</a></div></div>
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab">LL_WARNING</a></div><div class="ttdeci">@ LL_WARNING</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00019">logger.h:19</a></div></div>
-<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd">LL_TRACE</a></div><div class="ttdeci">@ LL_TRACE</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00016">logger.h:16</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771">LL_INFO</a></div><div class="ttdeci">@ LL_INFO</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00025">logger.h:25</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358">LL_DEBUG</a></div><div class="ttdeci">@ LL_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00024">logger.h:24</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea50717458baf49c204bb0645418e0da15">LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00027">logger.h:27</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea51049ae686bb98587090fd364382044e">LL_CRITICAL</a></div><div class="ttdeci">@ LL_CRITICAL</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00028">logger.h:28</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea83d7e526917b34d6dac8751c98cb77ab">LL_WARNING</a></div><div class="ttdeci">@ LL_WARNING</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00026">logger.h:26</a></div></div>
+<div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748eac3d5eeff2f636c96f5aab91b3dc90afd">LL_TRACE</a></div><div class="ttdeci">@ LL_TRACE</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00023">logger.h:23</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

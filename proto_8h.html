@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-81841db</span>
+   &#160;<span id="projectnumber">0.0.3-fe351c8</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
 <a href="#enum-members">枚举</a>  </div>
   <div class="headertitle">
@@ -122,6 +123,8 @@ proto.h 的引用(Include)关系图:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__data.html">proto::proto_data</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局变量描述  <a href="structproto_1_1proto__data.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__string.html">proto::proto_string</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproto_1_1proto__flags.html">proto::proto_flags</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟机标志位  <a href="structproto_1_1proto__flags.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,11 +136,20 @@ proto.h 的引用(Include)关系图:</div>
 <tr class="memitem:namespaceproto"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html">proto</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a38abd3cec625ffd840605720f7649838"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proto_8h.html#a38abd3cec625ffd840605720f7649838">PROTO_SYMMAX</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a38abd3cec625ffd840605720f7649838"><td class="mdescLeft">&#160;</td><td class="mdescRight">参数个数  <a href="proto_8h.html#a38abd3cec625ffd840605720f7649838">更多...</a><br /></td></tr>
+<tr class="separator:a38abd3cec625ffd840605720f7649838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:ae0247cdf0484a63cf6b5a383817a370c"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto::proto_value</a></td></tr>
-<tr class="memdesc:ae0247cdf0484a63cf6b5a383817a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作高精度数学计算  <a href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">更多...</a><br /></td></tr>
+<tr class="memdesc:ae0247cdf0484a63cf6b5a383817a370c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作高精度数学计算 FIXME: 使用新定义的数据结构  <a href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">更多...</a><br /></td></tr>
 <tr class="separator:ae0247cdf0484a63cf6b5a383817a370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#aa6461bbccd5a397a87ee70dbf5e7591a">proto::proto_text</a></td></tr>
+<tr class="memdesc:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈式虚拟机最核心的数据结构之一 用作动态字符串设计 FIXME: 使用新定义的数据结构  <a href="namespaceproto.html#aa6461bbccd5a397a87ee70dbf5e7591a">更多...</a><br /></td></tr>
+<tr class="separator:aa6461bbccd5a397a87ee70dbf5e7591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48052d628ca84255dced2d14e110c2d0"><td class="memItemLeft" align="right" valign="top">typedef int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a48052d628ca84255dced2d14e110c2d0">proto::op_cond</a></td></tr>
 <tr class="separator:a48052d628ca84255dced2d14e110c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4b026b45901bc0a0c72f1a9b6a7b39"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto.html#a3d4b026b45901bc0a0c72f1a9b6a7b39">proto::op_data</a></td></tr>
@@ -171,10 +183,10 @@ proto.h 的引用(Include)关系图:</div>
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">proto::OP_SHL</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">proto::OP_SHR</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a5981fde01a34f7292581843a2266a695">proto::OP_LEN</a>, 
-<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a>, 
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">proto::OP_JMP</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">proto::OP_RET</a>, 
+<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af7eb350ea97a15e3e4deae085d462548">proto::OP_EXT</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a813e1a6c668e33fd4f5ecd52feb57b67">proto::OP_OPEN</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ac460e8a0d58eea60c2f7b1a60c37fb99">proto::OP_READ</a>, 
@@ -186,8 +198,7 @@ proto.h 的引用(Include)关系图:</div>
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a75d1fff08ad620664bae2aeddfb7941d">proto::OP_MSET</a>, 
 <a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6df8a82f07fb1b39773585e8639b2178">proto::OP_MCMP</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a044e4995c7aa919a541d6ca2e7e1b34b">proto::OP_EXIT</a>, 
-<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">proto::OP_MARK</a>
+&#160;&#160;<a class="el" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a88decd50d3492376c342d6f81e03f2af">proto::OP_MARK</a>
 <br />
  }</td></tr>
 <tr class="separator:a0679d4bb32a7b0b717cdb17bb165ca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +211,26 @@ proto.h 的引用(Include)关系图:</div>
 <dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2022 mengdemao </dd></dl>
 
 <p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 中定义.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a38abd3cec625ffd840605720f7649838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38abd3cec625ffd840605720f7649838">&#9670;&nbsp;</a></span>PROTO_SYMMAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROTO_SYMMAX&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参数个数 </p>
+
+<p class="definition">在文件 <a class="el" href="proto_8h_source.html">proto.h</a> 第 <a class="el" href="proto_8h_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
