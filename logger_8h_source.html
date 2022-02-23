@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-a17611f</span>
+   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -106,15 +106,14 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// #define log_error(format, ...)       log_print(LL_ERROR,     format, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// #define log_critical(format, ...)    log_print(LL_CRITICAL,  format, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">   46</a></span>&#160;<span class="preprocessor">#define log_trace fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="logger_8h.html#a8073730ddb11563c36ae1362f9fac88c">   47</a></span>&#160;<span class="preprocessor">#define log_debug fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="logger_8h.html#ab76882eaa7958050b86772c7d5ef06b1">   48</a></span>&#160;<span class="preprocessor">#define log_info fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="logger_8h.html#a3b13449fd73544347bd0e85a2e1328c7">   49</a></span>&#160;<span class="preprocessor">#define log_warning fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="logger_8h.html#a08859378593fd71943ca4d82533c351f">   50</a></span>&#160;<span class="preprocessor">#define log_error fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="logger_8h.html#a1c3b22efa78556bf6dd0b68e43fb4c50">   51</a></span>&#160;<span class="preprocessor">#define log_critical fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">   46</a></span>&#160;<span class="preprocessor">#define log_trace fmt::print(&quot;[{}][{}]:\t&quot;,__func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="logger_8h.html#a8073730ddb11563c36ae1362f9fac88c">   47</a></span>&#160;<span class="preprocessor">#define log_debug fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="logger_8h.html#ab76882eaa7958050b86772c7d5ef06b1">   48</a></span>&#160;<span class="preprocessor">#define log_info fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="logger_8h.html#a3b13449fd73544347bd0e85a2e1328c7">   49</a></span>&#160;<span class="preprocessor">#define log_warning fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="logger_8h.html#a08859378593fd71943ca4d82533c351f">   50</a></span>&#160;<span class="preprocessor">#define log_error fmt::print(&quot;[{}][{}]:\t&quot;,  __func__, __LINE__); fmt::print</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="logger_8h.html#a1c3b22efa78556bf6dd0b68e43fb4c50">   51</a></span>&#160;<span class="preprocessor">#define log_critical fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __LOGGER_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __LOGGER_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea3d0aabc1a000a1668922ab44aeca5771">LL_INFO</a></div><div class="ttdeci">@ LL_INFO</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00025">logger.h:25</a></div></div>
 <div class="ttc" id="alogger_8h_html_ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358"><div class="ttname"><a href="logger_8h.html#ac91d55174d383848b976a34de843748ea4739b8d0b3d22bcb07c145601a79c358">LL_DEBUG</a></div><div class="ttdeci">@ LL_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00024">logger.h:24</a></div></div>

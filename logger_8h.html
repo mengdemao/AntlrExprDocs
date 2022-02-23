@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-a17611f</span>
+   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -102,10 +102,11 @@ logger.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8h__dep__incl.png" border="0" usemap="#inc_2logger_8hdep" alt=""/></div>
 <map name="inc_2logger_8hdep" id="inc_2logger_8hdep">
-<area shape="rect" title="日志打印封装" alt="" coords="55,5,152,32"/>
+<area shape="rect" title="日志打印封装" alt="" coords="103,5,200,32"/>
 <area shape="rect" href="grammar_8h.html" title="Expr语法处理文件" alt="" coords="45,80,161,107"/>
 <area shape="rect" href="main_8cc.html" title="AntlrExpr主文件" alt="" coords="5,155,79,181"/>
 <area shape="rect" href="grammar_8cc.html" title="Expr语法处理文件" alt="" coords="121,155,243,181"/>
+<area shape="rect" href="proto_8cc.html" title="代码生成与虚拟机实现" alt="" coords="237,80,335,107"/>
 </map>
 </div>
 </div>
@@ -113,17 +114,17 @@ logger.h 的引用(Include)关系图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
-<tr class="memitem:abcc8600d2ff9d05fcab3b0fc15e3d901"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:abcc8600d2ff9d05fcab3b0fc15e3d901"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;,__func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:abcc8600d2ff9d05fcab3b0fc15e3d901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8073730ddb11563c36ae1362f9fac88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a8073730ddb11563c36ae1362f9fac88c">log_debug</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:a8073730ddb11563c36ae1362f9fac88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a8073730ddb11563c36ae1362f9fac88c">log_debug</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:a8073730ddb11563c36ae1362f9fac88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76882eaa7958050b86772c7d5ef06b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ab76882eaa7958050b86772c7d5ef06b1">log_info</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:ab76882eaa7958050b86772c7d5ef06b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ab76882eaa7958050b86772c7d5ef06b1">log_info</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:ab76882eaa7958050b86772c7d5ef06b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b13449fd73544347bd0e85a2e1328c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a3b13449fd73544347bd0e85a2e1328c7">log_warning</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:a3b13449fd73544347bd0e85a2e1328c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a3b13449fd73544347bd0e85a2e1328c7">log_warning</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:a3b13449fd73544347bd0e85a2e1328c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08859378593fd71943ca4d82533c351f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a08859378593fd71943ca4d82533c351f">log_error</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:a08859378593fd71943ca4d82533c351f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a08859378593fd71943ca4d82533c351f">log_error</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;,  __func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:a08859378593fd71943ca4d82533c351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c3b22efa78556bf6dd0b68e43fb4c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1c3b22efa78556bf6dd0b68e43fb4c50">log_critical</a>&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td></tr>
+<tr class="memitem:a1c3b22efa78556bf6dd0b68e43fb4c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1c3b22efa78556bf6dd0b68e43fb4c50">log_critical</a>&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td></tr>
 <tr class="separator:a1c3b22efa78556bf6dd0b68e43fb4c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -156,7 +157,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_critical&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_critical&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,7 +173,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_debug&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_debug&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -188,7 +189,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_error&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_error&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;,  __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,7 +205,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_info&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_info&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -220,7 +221,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_trace&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_trace&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;,__func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,7 +237,7 @@ logger.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define log_warning&#160;&#160;&#160;fmt::print(&quot;\r\n[{}][{}][{}]:\t&quot;, __FILE__, __func__, __LINE__); fmt::print</td>
+          <td class="memname">#define log_warning&#160;&#160;&#160;fmt::print(&quot;[{}][{}]:\t&quot;, __func__, __LINE__); fmt::print</td>
         </tr>
       </table>
 </div><div class="memdoc">
