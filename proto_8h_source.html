@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
+   &#160;<span id="projectnumber">1.0.0-e26694b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -208,44 +208,46 @@ $(function() {
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">void</span> make_code_div(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> make_code_cal(int32_t addr);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">void</span> make_code_jmp(int32_t addr);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> make_code_lbl(int32_t addr);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">void</span> make_code_ret(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> make_code_mod(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> make_code_cal(int32_t addr);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> make_code_jmp(int32_t addr);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">void</span> make_code_lbl(int32_t addr);</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> make_code_ext(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> make_code_ret(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">void</span> optimize(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">void</span> make_code_ext(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> execute(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> next(<span class="keywordtype">void</span>); <span class="comment">// 获取下一个指令</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> prev(<span class="keywordtype">void</span>); <span class="comment">// 获取上一个指令</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> encode(std::string buffer); <span class="comment">/* 生成字符指令 */</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">void</span> decode(std::string buffer); <span class="comment">/* 编译字符指令 */</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">void</span> do_jmp(uint64_t pc); <span class="comment">/* 执行跳转 */</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">void</span> do_cal(uint64_t pc); <span class="comment">/* 函数调用 */</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">void</span> do_ret(<span class="keywordtype">void</span>);        <span class="comment">/* 执行返回 */</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">void</span> optimize(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> execute(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> next(<span class="keywordtype">void</span>); <span class="comment">// 获取下一个指令</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> prev(<span class="keywordtype">void</span>); <span class="comment">// 获取上一个指令</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> set_var(int32_t index, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value);      <span class="comment">// 修改变量值</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">int</span> set_var(std::string name, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value);   <span class="comment">// 修改变量值</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">int</span> get_var(int32_t index, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a>&amp; value);     <span class="comment">// 获取变量值</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">int</span> get_var(std::string name, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a>&amp; value);  <span class="comment">// 获取变量值</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">int</span> set_str(int32_t index, <a class="code" href="structproto_1_1proto__string.html">proto_string</a> value);     <span class="comment">// 修改字符串</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">int</span> set_str(std::string name, <a class="code" href="structproto_1_1proto__string.html">proto_string</a> value);  <span class="comment">// 修改字符串</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">int</span> get_str(int32_t index, <a class="code" href="structproto_1_1proto__string.html">proto_string</a>&amp; value);    <span class="comment">// 获取字符串</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordtype">int</span> get_str(std::string name, <a class="code" href="structproto_1_1proto__string.html">proto_string</a>&amp; value); <span class="comment">// 获取字符串</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;};</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}  <span class="comment">// namespace proto</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __PROTO_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">void</span> encode(std::string buffer); <span class="comment">/* 生成字符指令 */</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">void</span> decode(std::string buffer); <span class="comment">/* 编译字符指令 */</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> do_jmp(uint64_t pc); <span class="comment">/* 执行跳转 */</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">void</span> do_cal(uint64_t pc); <span class="comment">/* 函数调用 */</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">void</span> do_ret(<span class="keywordtype">void</span>);        <span class="comment">/* 执行返回 */</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">int</span> set_var(int32_t index, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value);      <span class="comment">// 修改变量值</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordtype">int</span> set_var(std::string name, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value);   <span class="comment">// 修改变量值</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">int</span> get_var(int32_t index, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a>&amp; value);     <span class="comment">// 获取变量值</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">int</span> get_var(std::string name, <a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a>&amp; value);  <span class="comment">// 获取变量值</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">int</span> set_str(int32_t index, <a class="code" href="structproto_1_1proto__string.html">proto_string</a> value);     <span class="comment">// 修改字符串</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">int</span> set_str(std::string name, <a class="code" href="structproto_1_1proto__string.html">proto_string</a> value);  <span class="comment">// 修改字符串</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">int</span> get_str(int32_t index, <a class="code" href="structproto_1_1proto__string.html">proto_string</a>&amp; value);    <span class="comment">// 获取字符串</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">int</span> get_str(std::string name, <a class="code" href="structproto_1_1proto__string.html">proto_string</a>&amp; value); <span class="comment">// 获取字符串</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;};</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}  <span class="comment">// namespace proto</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __PROTO_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">proto::OP_PSH</a></div><div class="ttdeci">@ OP_PSH</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00060">proto.h:60</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00068">proto.h:68</a></div></div>
@@ -262,7 +264,7 @@ $(function() {
 <div class="ttc" id="aclassproto_1_1proto_html_af4a9a619f2c3e0f743f310cf06590316"><div class="ttname"><a href="classproto_1_1proto.html#af4a9a619f2c3e0f743f310cf06590316">proto::proto::swap</a></div><div class="ttdeci">proto_value swap</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00150">proto.h:150</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34">proto::op_code</a></div><div class="ttdeci">op_code</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00056">proto.h:56</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a></div><div class="ttdeci">@ OP_POW</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00071">proto.h:71</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a56df14f5789cd85f21be65cef3bc4058"><div class="ttname"><a href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto::proto_value_cast</a></div><div class="ttdeci">void proto_value_cast(proto_value value, int &amp;data)</div><div class="ttdoc">proto_value类型转化为标准类型</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00618">proto.cc:618</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a56df14f5789cd85f21be65cef3bc4058"><div class="ttname"><a href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto::proto_value_cast</a></div><div class="ttdeci">void proto_value_cast(proto_value value, int &amp;data)</div><div class="ttdoc">proto_value类型转化为标准类型</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00631">proto.cc:631</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a></div><div class="ttdeci">@ OP_CAL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00087">proto.h:87</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a48052d628ca84255dced2d14e110c2d0"><div class="ttname"><a href="namespaceproto.html#a48052d628ca84255dced2d14e110c2d0">proto::op_cond</a></div><div class="ttdeci">int16_t op_cond</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00104">proto.h:104</a></div></div>
 <div class="ttc" id="astructproto_1_1proto__string_html_ab751bebce095d63149f2424497fa653e"><div class="ttname"><a href="structproto_1_1proto__string.html#ab751bebce095d63149f2424497fa653e">proto::proto_string::text</a></div><div class="ttdeci">proto_text text</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00129">proto.h:129</a></div></div>

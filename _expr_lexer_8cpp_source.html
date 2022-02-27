@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
+   &#160;<span id="projectnumber">1.0.0-e26694b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -133,7 +133,7 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;std::vector&lt;uint16_t&gt; <a class="code" href="class_expr_lexer.html#a0ee3ec5aeee9752ae59acacfe6a0e11d">ExprLexer::_serializedATN</a>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_expr_lexer.html#a70902000f24346d516786fb03b007297">ExprLexer::_ruleNames</a> = {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="stringliteral">&quot;T__0&quot;</span>, <span class="stringliteral">&quot;T__1&quot;</span>, <span class="stringliteral">&quot;T__2&quot;</span>, <span class="stringliteral">&quot;MOD&quot;</span>, <span class="stringliteral">&quot;MUL&quot;</span>, <span class="stringliteral">&quot;DIV&quot;</span>, <span class="stringliteral">&quot;ADD&quot;</span>, <span class="stringliteral">&quot;SUB&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;INT&quot;</span>, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="stringliteral">&quot;T__0&quot;</span>, <span class="stringliteral">&quot;T__1&quot;</span>, <span class="stringliteral">&quot;ASG&quot;</span>, <span class="stringliteral">&quot;MOD&quot;</span>, <span class="stringliteral">&quot;MUL&quot;</span>, <span class="stringliteral">&quot;DIV&quot;</span>, <span class="stringliteral">&quot;ADD&quot;</span>, <span class="stringliteral">&quot;SUB&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;INT&quot;</span>, </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="stringliteral">&quot;NEWLINE&quot;</span>, <span class="stringliteral">&quot;WS&quot;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
@@ -146,11 +146,11 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_expr_lexer.html#a5827ddebde70811ddb1957841a4689bc">ExprLexer::_literalNames</a> = {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&#39;=&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;(&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;)&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;%&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;*&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;/&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;+&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;-&#39;&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&#39;(&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;)&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;=&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;%&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;*&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;/&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;+&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;-&#39;&quot;</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="class_expr_lexer.html#a2ec2facdb1624ec45a5668320036e533">ExprLexer::_symbolicNames</a> = {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;MOD&quot;</span>, <span class="stringliteral">&quot;MUL&quot;</span>, <span class="stringliteral">&quot;DIV&quot;</span>, <span class="stringliteral">&quot;ADD&quot;</span>, <span class="stringliteral">&quot;SUB&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;INT&quot;</span>, <span class="stringliteral">&quot;NEWLINE&quot;</span>, </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;ASG&quot;</span>, <span class="stringliteral">&quot;MOD&quot;</span>, <span class="stringliteral">&quot;MUL&quot;</span>, <span class="stringliteral">&quot;DIV&quot;</span>, <span class="stringliteral">&quot;ADD&quot;</span>, <span class="stringliteral">&quot;SUB&quot;</span>, <span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;INT&quot;</span>, <span class="stringliteral">&quot;NEWLINE&quot;</span>, </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="stringliteral">&quot;WS&quot;</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
@@ -200,9 +200,9 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;       0x2, 0xd, 0x25, 0x3, 0x2, 0x2, 0x2, 0xf, 0x27, 0x3, 0x2, 0x2, 0x2, </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;       0x11, 0x29, 0x3, 0x2, 0x2, 0x2, 0x13, 0x2c, 0x3, 0x2, 0x2, 0x2, 0x15, </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;       0x31, 0x3, 0x2, 0x2, 0x2, 0x17, 0x36, 0x3, 0x2, 0x2, 0x2, 0x19, 0x3b, </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;       0x3, 0x2, 0x2, 0x2, 0x1b, 0x1c, 0x7, 0x3f, 0x2, 0x2, 0x1c, 0x4, 0x3, </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;       0x2, 0x2, 0x2, 0x1d, 0x1e, 0x7, 0x2a, 0x2, 0x2, 0x1e, 0x6, 0x3, 0x2, </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       0x2, 0x2, 0x1f, 0x20, 0x7, 0x2b, 0x2, 0x2, 0x20, 0x8, 0x3, 0x2, 0x2, </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;       0x3, 0x2, 0x2, 0x2, 0x1b, 0x1c, 0x7, 0x2a, 0x2, 0x2, 0x1c, 0x4, 0x3, </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;       0x2, 0x2, 0x2, 0x1d, 0x1e, 0x7, 0x2b, 0x2, 0x2, 0x1e, 0x6, 0x3, 0x2, </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       0x2, 0x2, 0x1f, 0x20, 0x7, 0x3f, 0x2, 0x2, 0x20, 0x8, 0x3, 0x2, 0x2, </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;       0x2, 0x21, 0x22, 0x7, 0x27, 0x2, 0x2, 0x22, 0xa, 0x3, 0x2, 0x2, 0x2, </div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;       0x23, 0x24, 0x7, 0x2c, 0x2, 0x2, 0x24, 0xc, 0x3, 0x2, 0x2, 0x2, 0x25, </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;       0x26, 0x7, 0x31, 0x2, 0x2, 0x26, 0xe, 0x3, 0x2, 0x2, 0x2, 0x27, 0x28, </div>

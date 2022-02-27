@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
+   &#160;<span id="projectnumber">1.0.0-e26694b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -99,42 +99,49 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// 解析命令行参数</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> != <a class="code" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a>(argc, argv)) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// TODO: 解析输入的数据作为参数使用</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    input_string = argv[1];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// 语义分析与代码生成</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a>(input_string, proto_svm)) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// 执行程序</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> result = proto_svm.<a class="code" href="classproto_1_1proto.html#a955f6d1e38d9e33b3bb41fc3f09c6911">execute</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="structoption__value.html">option_value</a> <a class="code" href="structoption__value.html">option_value</a>; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> = <a class="code" href="option_8h.html#adb43292dbd863f13a0b0e32b4fde39ef">option_main</a>(argc, argv, <a class="code" href="structoption__value.html">option_value</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a> == <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        input_string = argv[1];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        input_string.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a> == <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        input_string = <a class="code" href="structoption__value.html">option_value</a>.<a class="code" href="structoption__value.html#a0145e24fdcb9bef37f115d3d9c4388bd">input_string</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// 语义分析与代码生成</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a>(input_string, proto_svm)) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;execute\t&quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 执行程序</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> result = proto_svm.<a class="code" href="classproto_1_1proto.html#a955f6d1e38d9e33b3bb41fc3f09c6911">execute</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;execute\t&quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_expr_lexer_8h_html"><div class="ttname"><a href="_expr_lexer_8h.html">ExprLexer.h</a></div></div>
+<div class="ttc" id="astructoption__value_html"><div class="ttname"><a href="structoption__value.html">option_value</a></div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00017">option.h:17</a></div></div>
 <div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志打印封装</div></div>
 <div class="ttc" id="agrammar_8h_html"><div class="ttname"><a href="grammar_8h.html">grammar.h</a></div><div class="ttdoc">Expr语法处理文件</div></div>
-<div class="ttc" id="aoption_8h_html_a5d36ee209ab7021194b626237b73934b"><div class="ttname"><a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a></div><div class="ttdeci">option_result option_main(int argc, char *argv[])</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00031">option.cc:31</a></div></div>
 <div class="ttc" id="agrammar_8h_html_acb676f1b7448eabfc8679ec922cc3a7e"><div class="ttname"><a href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a></div><div class="ttdeci">grammar_result grammar_main(std::string input, proto::proto &amp;proto)</div><div class="ttdoc">语法解析</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8cc_source.html#l00024">grammar.cc:24</a></div></div>
 <div class="ttc" id="a_expr_base_listener_8h_html"><div class="ttname"><a href="_expr_base_listener_8h.html">ExprBaseListener.h</a></div></div>
 <div class="ttc" id="aproto_8h_html"><div class="ttname"><a href="proto_8h.html">proto.h</a></div><div class="ttdoc">代码生成与虚拟机实现</div></div>
 <div class="ttc" id="allvm_8h_html"><div class="ttname"><a href="llvm_8h.html">llvm.h</a></div></div>
-<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a></div><div class="ttdeci">option_result</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00012">option.h:12</a></div></div>
 <div class="ttc" id="amain_8cc_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">主函数</div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00034">main.cc:34</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a></div><div class="ttdeci">@ OPTION_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00013">option.h:13</a></div></div>
 <div class="ttc" id="a_expr_visitor_8h_html"><div class="ttname"><a href="_expr_visitor_8h.html">ExprVisitor.h</a></div></div>
+<div class="ttc" id="astructoption__value_html_a0145e24fdcb9bef37f115d3d9c4388bd"><div class="ttname"><a href="structoption__value.html#a0145e24fdcb9bef37f115d3d9c4388bd">option_value::input_string</a></div><div class="ttdeci">std::string input_string</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00018">option.h:18</a></div></div>
 <div class="ttc" id="allvm_8h_html_ac37fe7a82c2de0da6644f4fe563648da"><div class="ttname"><a href="llvm_8h.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a></div><div class="ttdeci">void llvm_init(void)</div><div class="ttdoc">LLVM相关库的初始化</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00023">llvm.cc:23</a></div></div>
 <div class="ttc" id="aclassproto_1_1proto_html_a955f6d1e38d9e33b3bb41fc3f09c6911"><div class="ttname"><a href="classproto_1_1proto.html#a955f6d1e38d9e33b3bb41fc3f09c6911">proto::proto::execute</a></div><div class="ttdeci">proto_value execute(void)</div><div class="ttdoc">程序运行</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00088">proto.cc:88</a></div></div>
 <div class="ttc" id="a_expr_parser_8h_html"><div class="ttname"><a href="_expr_parser_8h.html">ExprParser.h</a></div></div>
 <div class="ttc" id="aantlr4-runtime_8h_html"><div class="ttname"><a href="antlr4-runtime_8h.html">antlr4-runtime.h</a></div></div>
+<div class="ttc" id="aoption_8h_html_adb43292dbd863f13a0b0e32b4fde39ef"><div class="ttname"><a href="option_8h.html#adb43292dbd863f13a0b0e32b4fde39ef">option_main</a></div><div class="ttdeci">option_result option_main(int argc, char *argv[], option_value &amp;value)</div><div class="ttdoc">解析输入的命令行</div><div class="ttdef"><b>Definition:</b> <a href="option_8cc_source.html#l00031">option.cc:31</a></div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Auto generated config file</div></div>
 <div class="ttc" id="agrammar_8h_html_ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25"><div class="ttname"><a href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a></div><div class="ttdeci">@ GRAMMAR_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="grammar_8h_source.html#l00031">grammar.h:31</a></div></div>
 <div class="ttc" id="a_expr_base_visitor_8h_html"><div class="ttname"><a href="_expr_base_visitor_8h.html">ExprBaseVisitor.h</a></div></div>

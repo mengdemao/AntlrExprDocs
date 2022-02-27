@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
+   &#160;<span id="projectnumber">1.0.0-e26694b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -205,62 +205,62 @@ $(function() {
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34ae0e9fede6e6e74ac2208882ae755d192">OP_ADD</a>:</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        res  = sym[0] + sym[1];</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        res  = sym[1] + sym[0];</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a90356f6bd7958172dc3953b383376732">OP_SUB</a>:</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        res = sym[0]- sym[1];</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        res = sym[1] - sym[0];</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">OP_MUL</a>:</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        res  = sym[0] * sym[1];</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        res  = sym[1] * sym[0];</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a884f3f4a95c8a8e42259fa4063ad5c76">OP_DIV</a>:</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        res  = sym[1] / sym[0];</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        res  = sym[0] / sym[1];</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>:</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        res  = sym[0] % sym[1];</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        res  = sym[1] % sym[0];</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">OP_POW</a>:</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        res  = pow(sym[0], sym[1]);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        res  = pow(sym[1], sym[0]);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a9182cb0c282ed67804b031f051fa7875">OP_UNM</a>:</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        sym[0] = pop();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        res  = abs(sym[1]);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        res  = abs(sym[0]);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af3436cae9a1e5869a04e1d36ed58b06f">OP_AND</a>:</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        res  = sym[0] &amp;&amp; sym[1];</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        res  = sym[1] &amp;&amp; sym[0];</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a6fb74e532c30f1116322889ec70e24a6">OP_ORR</a>:</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        res  = sym[0] || sym[1];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        res  = sym[1] || sym[0];</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0157d02ae06c3ebfcdd5d2b3a18af179">OP_XOR</a>:</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        res  = sym[0] ^ sym[1];</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        res  = sym[1] ^ sym[0];</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
@@ -281,7 +281,7 @@ $(function() {
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        sym[1] = pop();</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        res = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (sym[0] == sym[1]) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (sym[1] == sym[0]) {</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            res = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        psh(res);</div>
@@ -291,7 +291,7 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        sym[1] = pop();</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        res = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (sym[0] != sym[1]) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (sym[1] != sym[0]) {</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            res = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        psh(res);</div>
@@ -300,14 +300,14 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a042bf805a6411d47b47b970aafdb3cb5">OP_SHL</a>:</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        res = sym[0] &lt;&lt; sym[1];</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        res = sym[1] &lt;&lt; sym[0];</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a2b4a6814e8917ce0f65d1b7fa393b70e">OP_SHR</a>:</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        sym[0] = pop();</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        sym[1] = pop();</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        res = sym[0] &gt;&gt; sym[1];</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        res = sym[1] &gt;&gt; sym[0];</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        psh(res);</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
@@ -457,56 +457,64 @@ $(function() {
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <a class="code" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>(<span class="stringliteral">&quot;div\n&quot;</span>);</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;}</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
-<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a09a4f3e1788a1e0d519da3506567dad6">  562</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_cal(int32_t addr)</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;{</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#a8e8b7e8e450b1267ec50bb8368d41495">data</a> = addr;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    pcode.push_back(code);</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <a class="code" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>(<span class="stringliteral">&quot;cal {}\n&quot;</span>, addr);</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;}</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00577"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a2d3882600d6ad73dedd2cc5186ffd494">  577</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_jmp(int32_t addr)</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;{</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">OP_JMP</a>;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#a8e8b7e8e450b1267ec50bb8368d41495">data</a> = addr;</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    pcode.push_back(code);</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;}</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
-<div class="line"><a name="l00590"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a6171fc310fc11fd8a5d993d4be8eb1ae">  590</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_ret(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00561"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#ad67b996faa418552ba258b1bd71fd6d1">  561</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_mod(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;{</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a973e75bc99e7cd7239938b8dfe165dc5">OP_MOD</a>;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    pcode.push_back(code);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <a class="code" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>(<span class="stringliteral">&quot;mod\n&quot;</span>);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;}</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a09a4f3e1788a1e0d519da3506567dad6">  575</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_cal(int32_t addr)</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;{</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">OP_CAL</a>;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#a8e8b7e8e450b1267ec50bb8368d41495">data</a> = addr;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    pcode.push_back(code);</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <a class="code" href="logger_8h.html#abcc8600d2ff9d05fcab3b0fc15e3d901">log_trace</a>(<span class="stringliteral">&quot;cal {}\n&quot;</span>, addr);</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;}</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160; </div>
+<div class="line"><a name="l00590"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a2d3882600d6ad73dedd2cc5186ffd494">  590</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_jmp(int32_t addr)</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;{</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">OP_RET</a>;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    pcode.push_back(code);</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;}</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
-<div class="line"><a name="l00603"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a59b8bd56e7ae7474dbf3d2140cd06d4c">  603</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_lbl(int32_t addr)</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a0b35c2e083fc86a09bc516dbe5d8489c">OP_JMP</a>;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#a8e8b7e8e450b1267ec50bb8368d41495">data</a> = addr;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    pcode.push_back(code);</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;}</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
+<div class="line"><a name="l00603"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a6171fc310fc11fd8a5d993d4be8eb1ae">  603</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_ret(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;{</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;}</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
-<div class="line"><a name="l00613"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a7b657b02360bc392e4c3ef87825a75fe">  613</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_ext(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;{</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;}</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160; </div>
-<div class="line"><a name="l00618"></a><span class="lineno"><a class="line" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">  618</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">int</span> &amp;data)</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;{</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;}</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
-<div class="line"><a name="l00623"></a><span class="lineno"><a class="line" href="namespaceproto.html#ac63cfd95b8d6e3b5a45a2794003c4c78">  623</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">double</span> &amp;data)</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;{</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;}</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
-<div class="line"><a name="l00628"></a><span class="lineno"><a class="line" href="namespaceproto.html#a186aa617b3f00261914b6a09374ec387">  628</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">bool</span> &amp;data)</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;{</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;}</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160; </div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;}  <span class="comment">// namespace proto</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <a class="code" href="structproto_1_1proto__code.html">proto_code</a> code;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    code.<a class="code" href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">code</a> = <a class="code" href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af97c353a62d68f876cb71e6cdb3f5f74">OP_RET</a>;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    pcode.push_back(code);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;}</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00616"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a59b8bd56e7ae7474dbf3d2140cd06d4c">  616</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_lbl(int32_t addr)</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;{</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;}</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160; </div>
+<div class="line"><a name="l00626"></a><span class="lineno"><a class="line" href="classproto_1_1proto.html#a7b657b02360bc392e4c3ef87825a75fe">  626</a></span>&#160;<span class="keywordtype">void</span> proto::make_code_ext(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;{</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;}</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
+<div class="line"><a name="l00631"></a><span class="lineno"><a class="line" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">  631</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">int</span> &amp;data)</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;{</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;}</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00636"></a><span class="lineno"><a class="line" href="namespaceproto.html#ac63cfd95b8d6e3b5a45a2794003c4c78">  636</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">double</span> &amp;data)</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;{</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;}</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160; </div>
+<div class="line"><a name="l00641"></a><span class="lineno"><a class="line" href="namespaceproto.html#a186aa617b3f00261914b6a09374ec387">  641</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto_value_cast</a>(<a class="code" href="namespaceproto.html#ae0247cdf0484a63cf6b5a383817a370c">proto_value</a> value, <span class="keywordtype">bool</span> &amp;data)</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;{</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <span class="comment">// TODO: 暂时未实现</span></div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;}</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160; </div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;}  <span class="comment">// namespace proto</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a755a6ae136d770c51527fbebc77c7041">proto::OP_PSH</a></div><div class="ttdeci">@ OP_PSH</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00060">proto.h:60</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a55068530741a7705f1d8fe2edae27aad">proto::OP_MUL</a></div><div class="ttdeci">@ OP_MUL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00068">proto.h:68</a></div></div>
@@ -518,7 +526,7 @@ $(function() {
 <div class="ttc" id="astructproto_1_1proto__code_html_aeb63a86ffe699102227de7758c04e8ac"><div class="ttname"><a href="structproto_1_1proto__code.html#aeb63a86ffe699102227de7758c04e8ac">proto::proto_code::code</a></div><div class="ttdeci">op_code code</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00114">proto.h:114</a></div></div>
 <div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc">日志打印封装</div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34aacf84fa241b0cc748505126f01c95180">proto::OP_POW</a></div><div class="ttdeci">@ OP_POW</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00071">proto.h:71</a></div></div>
-<div class="ttc" id="anamespaceproto_html_a56df14f5789cd85f21be65cef3bc4058"><div class="ttname"><a href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto::proto_value_cast</a></div><div class="ttdeci">void proto_value_cast(proto_value value, int &amp;data)</div><div class="ttdoc">proto_value类型转化为标准类型</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00618">proto.cc:618</a></div></div>
+<div class="ttc" id="anamespaceproto_html_a56df14f5789cd85f21be65cef3bc4058"><div class="ttname"><a href="namespaceproto.html#a56df14f5789cd85f21be65cef3bc4058">proto::proto_value_cast</a></div><div class="ttdeci">void proto_value_cast(proto_value value, int &amp;data)</div><div class="ttdoc">proto_value类型转化为标准类型</div><div class="ttdef"><b>Definition:</b> <a href="proto_8cc_source.html#l00631">proto.cc:631</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34a37bd0de7dc9c79628852eebce6cb1026">proto::OP_CAL</a></div><div class="ttdeci">@ OP_CAL</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00087">proto.h:87</a></div></div>
 <div class="ttc" id="astructproto_1_1proto__code_html_a8e8b7e8e450b1267ec50bb8368d41495"><div class="ttname"><a href="structproto_1_1proto__code.html#a8e8b7e8e450b1267ec50bb8368d41495">proto::proto_code::data</a></div><div class="ttdeci">op_data data</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00116">proto.h:116</a></div></div>
 <div class="ttc" id="anamespaceproto_html_a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3"><div class="ttname"><a href="namespaceproto.html#a0679d4bb32a7b0b717cdb17bb165ca34af598aeda29fa663d973a0f36b06ca5c3">proto::OP_NOT</a></div><div class="ttdeci">@ OP_NOT</div><div class="ttdef"><b>Definition:</b> <a href="proto_8h_source.html#l00077">proto.h:77</a></div></div>

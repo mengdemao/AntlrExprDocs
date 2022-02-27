@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">0.0.3-c29aad9</span>
+   &#160;<span id="projectnumber">1.0.0-e26694b</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">类</a> &#124;
 <a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle">
@@ -77,7 +78,17 @@ $(function() {
 
 <p>解析输入字符串  
 <a href="#details">更多...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+option.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="option_8h__incl.png" border="0" usemap="#inc_2option_8h" alt=""/></div>
+<map name="inc_2option_8h" id="inc_2option_8h">
+<area shape="rect" title="解析输入字符串" alt="" coords="5,5,104,32"/>
+<area shape="rect" title=" " alt="" coords="25,80,84,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
 <div class="center"><img src="option_8h__dep__incl.png" border="0" usemap="#inc_2option_8hdep" alt=""/></div>
@@ -92,6 +103,11 @@ $(function() {
 </div>
 <p><a href="option_8h_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoption__value.html">option_value</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 枚举</h2></td></tr>
 <tr class="memitem:a75561444ac0609b8e6039fe59ef56a82"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a> { <a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>, 
@@ -102,9 +118,9 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a5d36ee209ab7021194b626237b73934b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#a5d36ee209ab7021194b626237b73934b">option_main</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:a5d36ee209ab7021194b626237b73934b"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#a5d36ee209ab7021194b626237b73934b">更多...</a><br /></td></tr>
-<tr class="separator:a5d36ee209ab7021194b626237b73934b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb43292dbd863f13a0b0e32b4fde39ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="option_8h.html#adb43292dbd863f13a0b0e32b4fde39ef">option_main</a> (int argc, char *argv[], <a class="el" href="structoption__value.html">option_value</a> &amp;value)</td></tr>
+<tr class="memdesc:adb43292dbd863f13a0b0e32b4fde39ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析输入的命令行  <a href="option_8h.html#adb43292dbd863f13a0b0e32b4fde39ef">更多...</a><br /></td></tr>
+<tr class="separator:adb43292dbd863f13a0b0e32b4fde39ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>解析输入字符串 </p>
@@ -129,18 +145,18 @@ $(function() {
 <tr><td class="fieldname"><a id="a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862"></a>OPTION_FAILURE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">在文件 <a class="el" href="option_8h_source.html">option.h</a> 第 <a class="el" href="option_8h_source.html#l00010">10</a> 行定义.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;             {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>,  <span class="comment">// 不需要解析</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>,  <span class="comment">// 解析成功</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>,  <span class="comment">// 解析失败</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>;</div>
+<p class="definition">在文件 <a class="el" href="option_8h_source.html">option.h</a> 第 <a class="el" href="option_8h_source.html#l00011">11</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;             {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>,  <span class="comment">// 不需要解析</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>,  <span class="comment">// 解析成功</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>,  <span class="comment">// 解析失败</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;} <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a>;</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">函数说明</h2>
-<a id="a5d36ee209ab7021194b626237b73934b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d36ee209ab7021194b626237b73934b">&#9670;&nbsp;</a></span>option_main()</h2>
+<a id="adb43292dbd863f13a0b0e32b4fde39ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb43292dbd863f13a0b0e32b4fde39ef">&#9670;&nbsp;</a></span>option_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +171,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoption__value.html">option_value</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,23 +232,44 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                      &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Exception of unknown type!\n&quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;file&quot;</span>)) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;file&quot;</span> &lt;&lt; variables_map[<span class="stringliteral">&quot;file&quot;</span>].as&lt;std::string&gt;() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;text&quot;</span>)) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;text&quot;</span> &lt;&lt; variables_map[<span class="stringliteral">&quot;text&quot;</span>].as&lt;std::string&gt;() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            value.<a class="code" href="structoption__value.html#a0145e24fdcb9bef37f115d3d9c4388bd">input_string</a> = variables_map[<span class="stringliteral">&quot;text&quot;</span>].as&lt;std::string&gt;();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;pipe&quot;</span>)) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;pipe&quot;</span> &lt;&lt; variables_map[<span class="stringliteral">&quot;pipe&quot;</span>].as&lt;std::string&gt;() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (variables_map.count(<span class="stringliteral">&quot;debug&quot;</span>)) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;debug&quot;</span> &lt;&lt; variables_map[<span class="stringliteral">&quot;debug&quot;</span>].as&lt;std::string&gt;() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Exception of unknown type!\n&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph.png" border="0" usemap="#option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" alt=""/></div>
-<map name="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph" id="option_8h_a5d36ee209ab7021194b626237b73934b_icgraph">
+<div class="center"><img src="option_8h_adb43292dbd863f13a0b0e32b4fde39ef_icgraph.png" border="0" usemap="#option_8h_adb43292dbd863f13a0b0e32b4fde39ef_icgraph" alt=""/></div>
+<map name="option_8h_adb43292dbd863f13a0b0e32b4fde39ef_icgraph" id="option_8h_adb43292dbd863f13a0b0e32b4fde39ef_icgraph">
 <area shape="rect" title="解析输入的命令行" alt="" coords="108,5,211,32"/>
 <area shape="rect" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title="主函数" alt="" coords="5,5,60,32"/>
 </map>
@@ -236,10 +279,11 @@ $(function() {
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aversion_8h_html_a4a5423e754d3191ebed42d170f2fb4bf"><div class="ttname"><a href="version_8h.html#a4a5423e754d3191ebed42d170f2fb4bf">AntlrExpr_VERSION</a></div><div class="ttdeci">#define AntlrExpr_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00021">version.h:21</a></div></div>
-<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a></div><div class="ttdeci">option_result</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00010">option.h:10</a></div></div>
-<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
-<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a></div><div class="ttdeci">@ OPTION_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00012">option.h:12</a></div></div>
-<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a></div><div class="ttdeci">@ OPTION_FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00013">option.h:13</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82">option_result</a></div><div class="ttdeci">option_result</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00011">option.h:11</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a31854c0b0f6f9bb55358579096c606fe">OPTION_NONEUSE</a></div><div class="ttdeci">@ OPTION_NONEUSE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00012">option.h:12</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82ae9eed6429d5542622d6869c76b48bf75">OPTION_SUCCESS</a></div><div class="ttdeci">@ OPTION_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00013">option.h:13</a></div></div>
+<div class="ttc" id="astructoption__value_html_a0145e24fdcb9bef37f115d3d9c4388bd"><div class="ttname"><a href="structoption__value.html#a0145e24fdcb9bef37f115d3d9c4388bd">option_value::input_string</a></div><div class="ttdeci">std::string input_string</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00018">option.h:18</a></div></div>
+<div class="ttc" id="aoption_8h_html_a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862"><div class="ttname"><a href="option_8h.html#a75561444ac0609b8e6039fe59ef56a82a698f5e0961929f04c6cca07b8533f862">OPTION_FAILURE</a></div><div class="ttdeci">@ OPTION_FAILURE</div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00014">option.h:14</a></div></div>
 <div class="ttc" id="aversion_8h_html_ab03b31275849638bca75523dd5953140"><div class="ttname"><a href="version_8h.html#ab03b31275849638bca75523dd5953140">AntlrExpr_BUILD</a></div><div class="ttdeci">#define AntlrExpr_BUILD</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00025">version.h:25</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
