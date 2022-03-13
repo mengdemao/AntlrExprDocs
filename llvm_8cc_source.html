@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">1.0.0-e26694b</span>
+   &#160;<span id="projectnumber">1.0.0-02ede81</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -89,21 +89,21 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    llvm::InitializeAllAsmPrinters();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">   32</a></span>&#160;llvm::Value* <a class="code" href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">scope::set_variable</a>(<span class="keyword">const</span> std::string&amp; name, llvm::Value* value)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>[name] = value;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">   38</a></span>&#160;llvm::Value* <a class="code" href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">scope::get_variable</a>(<span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>.at(name);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">   40</a></span>&#160;llvm::Value* <a class="code" href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">scope::set_variable</a>(<span class="keyword">const</span> std::string&amp; name, llvm::Value* value)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>[name] = value;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">   53</a></span>&#160;llvm::Value* <a class="code" href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">scope::get_variable</a>(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">variables</a>.at(name);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassscope_html_a7fa6e5b7c51d2552dee1800fd9fc7a3f"><div class="ttname"><a href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">scope::get_variable</a></div><div class="ttdeci">llvm::Value * get_variable(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00038">llvm.cc:38</a></div></div>
+<div class="ttc" id="aclassscope_html_a7fa6e5b7c51d2552dee1800fd9fc7a3f"><div class="ttname"><a href="classscope.html#a7fa6e5b7c51d2552dee1800fd9fc7a3f">scope::get_variable</a></div><div class="ttdeci">llvm::Value * get_variable(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00053">llvm.cc:53</a></div></div>
 <div class="ttc" id="allvm_8h_html"><div class="ttname"><a href="llvm_8h.html">llvm.h</a></div></div>
 <div class="ttc" id="allvm_8cc_html_ac37fe7a82c2de0da6644f4fe563648da"><div class="ttname"><a href="llvm_8cc.html#ac37fe7a82c2de0da6644f4fe563648da">llvm_init</a></div><div class="ttdeci">void llvm_init(void)</div><div class="ttdoc">LLVM相关库的初始化</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00023">llvm.cc:23</a></div></div>
-<div class="ttc" id="aclassscope_html_acec2c8ccfe67f14be5a56a135758031d"><div class="ttname"><a href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">scope::set_variable</a></div><div class="ttdeci">llvm::Value * set_variable(const std::string &amp;name, llvm::Value *)</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00032">llvm.cc:32</a></div></div>
+<div class="ttc" id="aclassscope_html_acec2c8ccfe67f14be5a56a135758031d"><div class="ttname"><a href="classscope.html#acec2c8ccfe67f14be5a56a135758031d">scope::set_variable</a></div><div class="ttdeci">llvm::Value * set_variable(const std::string &amp;name, llvm::Value *)</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8cc_source.html#l00040">llvm.cc:40</a></div></div>
 <div class="ttc" id="aclassscope_html_a61e9200a60f64733b19dff8a113a39b0"><div class="ttname"><a href="classscope.html#a61e9200a60f64733b19dff8a113a39b0">scope::variables</a></div><div class="ttdeci">std::unordered_map&lt; std::string, llvm::Value * &gt; variables</div><div class="ttdef"><b>Definition:</b> <a href="llvm_8h_source.html#l00027">llvm.h:27</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

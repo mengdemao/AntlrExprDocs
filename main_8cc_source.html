@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">1.0.0-e26694b</span>
+   &#160;<span id="projectnumber">1.0.0-02ede81</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -110,18 +110,24 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// 语义分析与代码生成</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a>(input_string, proto_svm)) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 执行程序</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> result = proto_svm.<a class="code" href="classproto_1_1proto.html#a955f6d1e38d9e33b3bb41fc3f09c6911">execute</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;execute\t&quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">const</span> std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// 语义分析与代码生成</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="grammar_8h.html#ab11355cc89610b07af6d377c96335440a623e969020e037c5363f026dd43e2d25">GRAMMAR_SUCCESS</a> != <a class="code" href="grammar_8h.html#acb676f1b7448eabfc8679ec922cc3a7e">grammar_main</a>(input_string, proto_svm)) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// 执行程序</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> result = proto_svm.<a class="code" href="classproto_1_1proto.html#a955f6d1e38d9e33b3bb41fc3f09c6911">execute</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;execute\t&quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> elapsed_time = std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(end - start);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Compilation Time: &quot;</span> &lt;&lt; elapsed_time.count() &lt;&lt; <span class="stringliteral">&quot; microseconds\n&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_expr_lexer_8h_html"><div class="ttname"><a href="_expr_lexer_8h.html">ExprLexer.h</a></div></div>
 <div class="ttc" id="astructoption__value_html"><div class="ttname"><a href="structoption__value.html">option_value</a></div><div class="ttdef"><b>Definition:</b> <a href="option_8h_source.html#l00017">option.h:17</a></div></div>
